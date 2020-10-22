@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wean Cuisine</title>
+</head>
+<body>
+    {% for recipe in recipes %}
+        {{ recipe.recipe_name }}<br>
+        {{ recipe.cuisine_name }}<br>
+        {{ recipe.recipe_serving }}<br>
+        {{ recipe.recipe_time }}<br>
+        {{ recipe.food_category }}<br>
+        {{ recipe.age_range }}<br>
+        {{ recipe.ingredients }}<br>
+        {{ recipe.method }}<br>
+    {% endfor %}
+</body>
+</html>
