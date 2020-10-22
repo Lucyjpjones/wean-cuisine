@@ -10,6 +10,7 @@
       crossorigin="anonymous"
       type="text/css"
     />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles %}
@@ -19,20 +20,25 @@
 <body>
 
     <header>
-        <!--Main Navbar-->
-        <div class="navbar-fixed">
-            <nav class="site-header-inner">
-                <div id="nav-bar" class="nav-wrapper">                       
-                     <a href="#!" logo>                            
-                        <img id="logo" class="responsive-img" src="{{ url_for('static', filename='assets/images/logo.png') }}" alt="Wean Cuisine Logo">
-                     </a>
-                     <ul class="right hide-on-med-and-down">
-                        <li><a id="login-btn" class="btn" href="sass.html">Login</a></li>
-                        <li><a id="menu-bars" class="fas fa-bars" href="badges.html"></a></li>
-                    </ul>
-                </div>
-            </nav>
+        <!-- Dropdown Structure -->
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="#!">one</a></li>
+            <li><a href="#!">two</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">three</a></li>
+        </ul>
+        <nav>
+        <div id="header-inner" class="nav-wrapper">
+            <a href="#!" class="brand-logo">
+                <img id="logo" class="responsive-img" src="{{ url_for('static', filename='assets/images/logo.png') }}" alt="Wean Cuisine Logo">
+            </a>
+            <ul class="nav-btns right">
+                <li><a id="login-btn" class="btn" href="sass.html">Login</a></li>
+                <!-- Dropdown Trigger -->
+                <li><a id="menu" class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons right">menu</i></a></li>
+            </ul>
         </div>
+        </nav>
     </header>
 
     {% block content %}
