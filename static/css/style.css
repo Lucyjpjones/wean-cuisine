@@ -1,0 +1,36 @@
+body {
+    background-color: #fafafa;
+}
+.site-header {
+    margin: 10px;
+    min-height: 100px;
+}
+
+.navbar-fixed {
+    min-height: inherit;
+}
+
+.site-header-inner {
+    min-height: inherit;
+    border-bottom: 2px solid #666666;
+}
+
+#nav-bar {
+    background-color: #fafafa;
+    box-shadow: none;
+}
+
+#logo {
+    margin: 10px 20px;
+}
+
+#login-btn {
+    background-color: #FFF7AE;
+    border: 1px solid #666666;
+    color: #666666;
+}
+
+#menu-bars {
+    font-size: 30px;
+    color: #C89F98;
+}
