@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 /* -------------------- General*/
 
@@ -18,6 +18,16 @@ row {
 
 row.col {
     padding: 0;
+}
+
+.container {
+    margin: auto;
+    margin-top: 5%;
+}
+
+hr {
+    width: 200px;
+    margin-bottom: 5%;
 }
 
 /* -------------------- Header*/
@@ -161,3 +171,24 @@ input#password, input#username {
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
 }
 
+/* -------------------- How does it work?*/
+
+.title {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.title span {
+    font-family: 'Kalam', sans-serif;
+    font-size: 26px;
+    color: #C89F98;
+    font-weight: 600;
+}
+
+.img-circle {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
