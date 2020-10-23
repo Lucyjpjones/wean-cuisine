@@ -43,3 +43,36 @@ nav .brand-logo {
     margin-top:90px;
     text-align: center;
 }
+
+/* -------------------- Login/Register modal*/
+
+.modal {
+    width: 50%;
+}
+
+.modal-content h4 {
+    color:#C89F98;
+}
+
+#modal-btn-inner {
+    background-color:#C89F98;
+}
+
+#modal-close {
+    color: #666666;
+    padding: 0;
+    font-size: 30px;
+}
+
+.divider {
+    margin-bottom: 20px;
+}
+
+input#password, input#username {
+    width: 95%;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding-left: 10px;
+}
+

@@ -23,22 +23,46 @@
     <header>
       <nav id="inner-header">
          <div class="nav-wrapper">
+            <!-- logo -->
             <a href="{{ url_for('get_recipes') }}" class="brand-logo">
                 <img class="responsive-img" src="{{ url_for('static', filename='assets/images/logo.png') }}" alt="Wean Cuisine Logo">
             </a>
+            <!-- Nav elements -->
             <ul class="nav-btns right">
                 <!-- Modal login Trigger -->
-                <li><a id="login-btn" class="btn modal-trigger" href="#modal1">Login</a></li>
+                <li><a id="login-btn" class="btn modal-trigger" href="#modal1">LOG IN</a></li>
                 <!-- Modal login Structure -->
                 <div id="modal1" class="modal">
                     <div class="modal-content">
-                    <h4>Modal Header</h4>
-                    <p>A bunch of text</p>
-                    </div>
-                    <div class="modal-footer">
-                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                        <h4>Log In
+                            <a href="#!" id="modal-close" class="modal-close material-icons right">close</a>
+                        </h4>
+                        <div class="divider"></div>
+                        <!-- Username -->
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input placeholder="Enter username" id="username" name="username" type="text" class="validate">
+                                <label for="username">Username</label>
+                            </div>
+                        </div>
+                        <!-- Password -->
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input placeholder="Enter password" id="password" name= "password" type="password" class="validate">
+                                <label for="password">Password</label>
+                            </div>
+                        </div>
+                        <!-- Link to Register -->
+
+                        <!-- Submit btn -->
+                        <div class="row">
+                            <button type="submit" id="modal-btn-inner" class="col s-12 btn-large">
+                            LOG IN
+                            </button>
+                        </div>
                     </div>
                 </div>
+
                 <!-- Sidenav menu Trigger -->
                 <li><a href="#" id="menu" data-target="menu-items" class="sidenav-trigger show-on-large"><i id="menu-icon" class="material-icons">menu</i></a></li>
             </ul>
