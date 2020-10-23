@@ -3,6 +3,19 @@
 
 body {
     background-color: #fafafa;
+    text-transform: uppercase;
+}
+
+p {
+    margin: 0;
+}
+
+row {
+    margin-bottom: 20px;
+}
+
+row.col {
+    padding: 0;
 }
 
 /* -------------------- Header*/
@@ -50,12 +63,25 @@ nav .brand-logo {
     width: 50%;
 }
 
-.modal-content h4 {
-    color:#C89F98;
+.modal .modal-content {
+    padding: 24px 30px 0px 30px;
 }
 
+.modal-content h4 {
+    color:#C89F98;
+    font-size: 2rem;
+}
+#modal-btn-outer {
+    margin-top: 30px;
+    width: 20%;
+}
 #modal-btn-inner {
     background-color:#C89F98;
+    color: #666666;
+    padding: 10px;
+    border: 1px solid #666666;
+    border-radius: 5px;
+    width: 100%
 }
 
 #modal-close {
@@ -76,3 +102,14 @@ input#password, input#username {
     padding-left: 10px;
 }
 
+#modal-link {
+    text-transform: capitalize;
+    line-height: 1;
+    color: #666666;
+}
+
+#modal-link a {
+    display: inline;
+    color: #C89F98;
+    font-weight:500;
+}

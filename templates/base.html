@@ -30,7 +30,7 @@
             <!-- Nav elements -->
             <ul class="nav-btns right">
                 <!-- Modal login Trigger -->
-                <li><a id="login-btn" class="btn modal-trigger" href="#modal1">LOG IN</a></li>
+                <li><a id="login-btn" class="btn modal-trigger" href="#modal1">Log in</a></li>
                 <!-- Modal login Structure -->
                 <div id="modal1" class="modal">
                     <div class="modal-content">
@@ -53,10 +53,13 @@
                             </div>
                         </div>
                         <!-- Link to Register -->
-
+                        <div class="row" id="modal-link">
+                            <p class="col s-12">Not registered?<a href="#"><u>Register</u></a>
+                            </p>
+                        </div>
                         <!-- Submit btn -->
-                        <div class="row">
-                            <button type="submit" id="modal-btn-inner" class="col s-12 btn-large">
+                        <div class="row" id="modal-btn-outer">
+                            <button type="submit" id="modal-btn-inner" class="col s-12">
                             LOG IN
                             </button>
                         </div>
