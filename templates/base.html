@@ -20,25 +20,23 @@
 <body>
 
     <header>
-        <!-- Dropdown Structure -->
-        <ul id="dropdown1" class="dropdown-content">
-            <li><a href="#!">one</a></li>
-            <li><a href="#!">two</a></li>
-            <li class="divider"></li>
-            <li><a href="#!">three</a></li>
-        </ul>
-        <nav>
-        <div id="header-inner" class="nav-wrapper">
+      <nav id="inner-header">
+         <div class="nav-wrapper">
             <a href="#!" class="brand-logo">
-                <img id="logo" class="responsive-img" src="{{ url_for('static', filename='assets/images/logo.png') }}" alt="Wean Cuisine Logo">
+                <img class="responsive-img" src="{{ url_for('static', filename='assets/images/logo.png') }}" alt="Wean Cuisine Logo">
             </a>
             <ul class="nav-btns right">
                 <li><a id="login-btn" class="btn" href="sass.html">Login</a></li>
-                <!-- Dropdown Trigger -->
-                <li><a id="menu" class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons right">menu</i></a></li>
+                <li><a href="#" id="menu" data-target="menu-items" class="sidenav-trigger show-on-large"><i id="menu-icon" class="material-icons">menu</i></a></li>
+            </ul>
+            <ul id= "menu-items" class="sidenav right">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">How does Wean Cuisine work?</a></li>
+                <li><a href="#">Recipes</a></li>
+                <li><a href="#">Shop Recipe Books</a></li>
             </ul>
         </div>
-        </nav>
+      </nav>
     </header>
 
     {% block content %}
