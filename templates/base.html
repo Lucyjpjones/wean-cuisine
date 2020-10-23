@@ -19,18 +19,32 @@
 </head>
 <body>
 
+    <!-- Header -->
     <header>
       <nav id="inner-header">
          <div class="nav-wrapper">
-            <a href="#!" class="brand-logo">
+            <a href="{{ url_for('get_recipes') }}" class="brand-logo">
                 <img class="responsive-img" src="{{ url_for('static', filename='assets/images/logo.png') }}" alt="Wean Cuisine Logo">
             </a>
             <ul class="nav-btns right">
-                <li><a id="login-btn" class="btn" href="sass.html">Login</a></li>
+                <!-- Modal login Trigger -->
+                <li><a id="login-btn" class="btn modal-trigger" href="#modal1">Login</a></li>
+                <!-- Modal login Structure -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                    <h4>Modal Header</h4>
+                    <p>A bunch of text</p>
+                    </div>
+                    <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                    </div>
+                </div>
+                <!-- Sidenav menu Trigger -->
                 <li><a href="#" id="menu" data-target="menu-items" class="sidenav-trigger show-on-large"><i id="menu-icon" class="material-icons">menu</i></a></li>
             </ul>
+            <!-- Sidenav menu list -->
             <ul id= "menu-items" class="sidenav right">
-                <li><a href="#">Home</a></li>
+                <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
                 <li><a href="#">How does Wean Cuisine work?</a></li>
                 <li><a href="#">Recipes</a></li>
                 <li><a href="#">Shop Recipe Books</a></li>
@@ -38,6 +52,7 @@
         </div>
       </nav>
     </header>
+  
 
     {% block content %}
     {% endblock %}
