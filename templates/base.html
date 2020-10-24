@@ -83,32 +83,37 @@
 
     <main>
         <!--call out-->
-          <img id="bg-img" class="responsive-img" src="{{ url_for('static', filename='assets/images/bg-img.jpg') }}" alt="background">
-          <div id="overlay-text">
-            <h3>Taste the word</h3>
-            <h5>One weany step at a time</h5>
-            <div id="callout-btns">
-                <a class="btn" href="#">Explore recipes</a>
-                <a class="btn" href="#">Add recipe</a>
+        <section id="callout-outer">
+            <img id="bg-img" src="{{ url_for('static', filename='assets/images/bg-img.jpg') }}" alt="background">
+            <div id="overlay-text">
+                <h3>Taste the word</h3>
+                <h5>One weany step at a time</h5>
+                <div id="callout-btns">
+                    <a class="btn" href="#">Explore recipes</a>
+                    <a class="btn" href="#">Add recipe</a>
+                </div>
             </div>
-          </div>
-          <div class="container">
-            <h4 class="title" >How does <span>Wean Cuisine</span> work?</h4>
+        </section>
+        <div class="container">
+            <h5 class="title" >How does <span>Wean Cuisine</span> work?</h5>
             <div class="center-align">
-                <img class="img-circle" src="{{ url_for('static', filename='assets/images/connect.png') }}" alt="connect">
-                <p>Connect</p>
+                <img class="img-circle" src="{{ url_for('static', filename='assets/images/connect-icon.png') }}" alt="connect">
+                <p class="info-title">Connect</p>
+                <p class="info" >Become part of a weaning-focused social network, connecting with other parents from around the globe.</p>
             </div>
             <br>
             <div class="center-align">
-                <img class="img-circle" src="{{ url_for('static', filename='assets/images/bg-img.jpg') }}" alt="explore">
-                <p>Explore</p>
+                <img class="img-circle" src="{{ url_for('static', filename='assets/images/explore-icon.png') }}" alt="explore">
+                <p class="info-title">Explore</p>
+                <p class="info" >Discover a variety of weaning recipes with bites of inspiration from every cuisine.</p>
             </div>
             <br>
             <div class="center-align">
-                <img class="img-circle" src="{{ url_for('static', filename='assets/images/bg-img.jpg') }}" alt="share">
-                <p>Share</p>
+                <img class="img-circle" src="{{ url_for('static', filename='assets/images/share-icon.png') }}" alt="share">
+                <p class="info-title">Share</p>
+                <p class="info" >Add your own weaning recipes you help other parents on their weaning journey.</p>
             </div>
-          </div>
+        </div>
     </main>
   
 
