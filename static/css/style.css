@@ -192,7 +192,7 @@ input#password, input#username {
     text-align: center;
     font-size: 13px;
     margin-top: 25px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-weight: 500;
 }
 
@@ -218,6 +218,7 @@ input#password, input#username {
     font-size: 11px;
     width: 65%;
     margin: auto;
+    margin-bottom: 20px;
 }
 
 /* -------------------- Media Queries*/
