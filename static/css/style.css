@@ -265,7 +265,7 @@ input#password, input#username {
 
 #shop-books {
     position: relative;
-    width: 80%;
+    width: 85%;
     margin: auto;
     top: -100px;
 }
@@ -297,12 +297,11 @@ input#password, input#username {
 /* --------------------Footer */
 footer {
     position: relative;
-    top: -50px;
     background-color: #CEF3ED;
     min-height: 30px;
-    padding-bottom: 0;
     text-align: center;
     padding: 10px 0px;
+    margin-top: -50px;
 }
 
 footer h6 {
