@@ -86,7 +86,7 @@ nav .brand-logo {
 /* -------------------- Login/Register modal*/
 
 .modal {
-    width: 50%;
+    width: 80%;
 }
 
 .modal .modal-content {
@@ -95,16 +95,16 @@ nav .brand-logo {
 
 .modal-content h4 {
     color:#C89F98;
-    font-size: 2rem;
+    font-size: 24px;
 }
 #modal-btn-outer {
-    margin-top: 30px;
+    margin-top: 20px;
     width: 30%;
 }
 #modal-btn-inner {
     background-color:#C89F98;
     color: #666666;
-    padding: 10px;
+    padding: 6px;
     border: 1px solid #666666;
     border-radius: 6px;
     width: 100%
@@ -126,18 +126,25 @@ input#password, input#username {
     border-radius: 6px;
     margin-top: 20px;
     padding-left: 10px;
+    height: 2rem;
 }
 
 #modal-link {
+    font-size: 12px;
     text-transform: capitalize;
     line-height: 1;
     color: #666666;
+    padding-left: 10px;
 }
 
 #modal-link a {
     display: inline;
     color: #C89F98;
     font-weight:500;
+}
+
+.form-row {
+    margin-bottom: 10px;
 }
 
 /* -------------------- Callout*/
