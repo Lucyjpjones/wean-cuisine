@@ -246,14 +246,14 @@ input#password, input#username {
 }
 
 .carousel-item p {
-    color: #fafafa;
+    color: #666666;
     font-size: 14px;
     font-weight: 500;
-    background-color: #666666;
-    opacity: 0.8;
-    padding: 3px 5px 3px 5px;
-    border: 1px solid #666666;
+    background-color: #FFF7AE;
+    opacity: 0.9;
+    padding: 5px 10px 5px 10px;
     border-radius: 6px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -292,13 +292,14 @@ input#password, input#username {
     background-color: #8CE3D5;
     color: #fafafa;
     border-radius: 6px;
-    display: inline;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
     position: absolute;
     top: 80%;
     left: 50%;
     transform: translate(-50%,-50%);
     line-height: normal;
+    padding: 5px 10px 5px 10px;
+    height: auto;
 }
 
 /* --------------------Footer */
