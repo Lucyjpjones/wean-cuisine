@@ -306,11 +306,78 @@ footer {
 footer h6 {
     font-size: 10px;
 }
+/* --------------------Page title */
+
+#page-callout {
+    position: relative;
+}
+
+#page-img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    opacity: 0.9;
+}
+
+#page-overlay-text {
+    width: 85%;
+    background-color: #fafafa;
+    color: #666666;
+    border-radius: 6px;
+    padding: 20px 20px 10px 20px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+#page-overlay-text h3 {
+    font-size: 20px;
+    font-weight: 500px;
+}
+
+#page-overlay-text a {
+    font-size: 12px;
+    font-weight: 500;
+    background-color: #C89F98;
+    color: #4d4c4c;
+    border-radius: 6px;
+    display: inline;
+    padding: 3px 10px 3px 10px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+#page-overlay-text a i {
+    vertical-align: bottom;
+    padding-bottom: 1px;
+}
+
+/* --------------------Search bar */
+
+#search-bar {
+    padding: 0 10px 0 10px;
+    margin: 10px 0px;
+}
+
+#iput-outer {
+    margin-bottom: 0;
+}
+
+button#search-btn {
+    background-color:#fafafa;
+    border: none;
+    color: #8CE3D5;
+    font: 16px;
+}
+
 
 /* --------------------Recipe cards */
 
 .card {
     padding: 10px;
+    margin-top: 30px;
 }
 #card-container {
     width: 95%;
@@ -322,7 +389,7 @@ footer h6 {
 }
 
 #card-info {
-    padding: 10px 0px 10px 10px;
+    padding: 10px 10px 10px 10px;
     margin: 0;
 }
 
@@ -332,11 +399,25 @@ footer h6 {
 }
 
 #card-edit, #card-del  {
-    font-size: 10px;
-    padding: 2px 5px 2px 5px;
+    font-size: 8px;
+    font-weight: 500;
+    padding: 2px;
     line-height: normal;
-    height: 20px;
+    height: 15px;
     margin-bottom: 3px;
     background-color: #F9DCE4;
     color: #666666;
+}
+
+#card-title {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#car-info p {
+    margin-bottom: 10px;
+}
+
+#card-edit-row, #card-delete-row {
+    padding-right: 0px;
 }
