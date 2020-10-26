@@ -23,22 +23,22 @@
                     </div>
                 </div>
 
-                <!--Recipe name inout field-->
+                <!--Recipe name input field-->
                 <div class="row form-row">
                     <div class="input-field col s12">
-                        <textarea id="recipe-name" class="materialize-textarea"></textarea>
-                        <label for="recipe-name">Recipe Name</label>
+                        <textarea id="recipe_name" name="recipe_name" type="text" minlength="5" maxlength="50" class="materialize-textarea validate" required></textarea>
+                        <label for="recipe_name">Recipe Name</label>
                     </div>
                 </div>
 
                 <!--Serving text input, time text input and food cat select-->
                 <div class="row form-row">
                     <div class="input-field col s3">
-                        <textarea id="serving" class="materialize-textarea"></textarea>
+                        <textarea id="serving" name="serving" type="text" minlength="1" maxlength="2" class="materialize-textarea validate" required></textarea>
                         <label for="serving">Serving</label>
                     </div>
-                    <div class="input-field col s4">
-                        <textarea id="time" class="materialize-textarea"></textarea>
+                    <div class="input-field inline col s4">
+                        <textarea id="time" name="time" type="number" minlength="1" maxlength="3" class="materialize-textarea validate" required></textarea>
                         <label for="time">Time</label>
                     </div>
                     <div class="col s5">
@@ -84,19 +84,30 @@
                 <div class="row form-row">
                     <!--Ingredients-->
                     <div class="input-field col s9">
-                        <textarea id="ingredients" class="materialize-textarea"></textarea>
+                        <textarea id="ingredients" name="ingredients" cols="1" rows= "15" class="materialize-textarea validate" required></textarea>
                         <label for="ingredients">Ingredients</label>
                     </div>
                     <!--Photo-->
+                    <!-- Modal Trigger -->
                     <div class="input-field col s3">
-                        <textarea id="photo" class="materialize-textarea"></textarea>
-                        <label for="photo"><i id="photo-icon" class="material-icons">add_a_photo</i></label>
+                        <a class="modal-trigger" href="#photo-modal"><i id="photo-icon" class="material-icons">add_a_photo</i></a>
+                        <div id="photo-modal" class="modal">
+                            <div id="photo-modal-content" class="modal-content">
+                                <div class="input-field">
+                                    <textarea id="photo" type="text" minlength="5" pattern="https://.*" class="materialize-textarea validate" required></textarea>
+                                    <label for="photo">Please enter the photo URL</label>
+                                </div>
+                                <button type="submit" name="action">
+                                    <i class="material-icons">add_circle</i>
+                                </button> 
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!--Method-->
                 <div class="row">
                     <div class="input-field col s12">
-                        <textarea id="method" class="materialize-textarea"></textarea>
+                        <textarea id="method" name="method" cols="1" rows= "15" class="materialize-textarea validate" required></textarea>
                         <label for="method">Method</label>
                     </div>
                 </div>

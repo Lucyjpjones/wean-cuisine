@@ -549,3 +549,35 @@ textarea#photo {
     color: #8CE3D5;
     text-align: center;
 }
+
+/* --------------------Photo modal */
+
+#photo-modal{
+    border-radius: 6px;
+}
+
+#photo-modal-content {
+    padding: 25px 20px 0px 20px;
+}
+
+textarea#photo.materialize-textarea {
+    border: 1px solid #9e9e99;
+    border-radius: 6px;
+    padding: 10px 3px 3px 10px;
+    color: #666666;
+    margin: 10px 0px 0px 0px;
+}
+
+select option {
+    font-size: 10px;
+}
+
+#select-options-f887f309-4256-1049-9ebc-2cb32164536e {
+    height: auto;
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+    font-size: 12px;
+    padding: 5px 10px;
+    color: #C89F98;
+}
