@@ -56,6 +56,16 @@ def add_recipe():
                            categories=categories)
 
 
+@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+def edit_recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId()})
+    cuisines = mongo.db.cuisines.find().sort("cuisine_name", 1)
+    categories = mongo.db.categories.find().sort("food_category", 1)
+    ages = mongo.db.ages.find().sort("age_range", 1)
+    return render_template("edit_recipe.html", recipe=recipe, cuisines=cuisines, ages=ages,
+                           categories=categories)
+
+
 @app.route("/")
 @app.route("/shop_books")
 def shop_books():
