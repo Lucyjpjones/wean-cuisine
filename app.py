@@ -31,8 +31,24 @@ def get_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
-@app.route("/add_recipe")
+@app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+    if request.method == "POST":
+        recipe = {
+            "cuisine_name": request.form.get("cuisine_name"),
+            "recipe_name": request.form.get("recipe_name"),
+            "recipe_serving": request.form.get("recipe_serving"),
+            "recipe_time": request.form.get("recipe_time"),
+            "food_category": request.form.getlist("food_category"),
+            "age_range": request.form.getlist("age_range"),
+            "img_url": request.form.get("img_url"),
+            "ingredients": request.form.get("ingredients"),
+            "method": request.form.get("method"),
+        }
+        mongo.db.recipes.insert_one(recipe)
+        flash("Recipe Added")
+        return redirect(url_for("get_recipes"))
+
     cuisines = mongo.db.cuisines.find().sort("cuisine_name", 1)
     categories = mongo.db.categories.find().sort("food_category", 1)
     ages = mongo.db.ages.find().sort("age_range", 1)

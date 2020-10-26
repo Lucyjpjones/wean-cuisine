@@ -1,102 +1,167 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "base.html" %} {% block content %}
 
-    <section class="container">
-        <h3 class="add-header" >Add Recipe</h3>
+<section class="container">
+  <h3 class="add-header">Add Recipe</h3>
 
-        <!--Form-->
-        <div class="row">
-            <form id="recipe-form" class="col s12" method="POST" action="">
-
-                <!--Cuisine select-->
-                <div class="input-field row form-row">
-                    <div class="col s12">
-                        <select id="cuisine_name" name="cuisine_name" class="validate" required>
-                            <option id="dd-text" value="" disabled selected>Choose Cuisine</option>
-                            {% for cuisine in cuisines %}
-                            <option value="{{ cuisine.cuisine_name }}">{{ cuisine.cuisine_name }}</option>
-                            {% endfor %}
-                        </select>
-                    </div>
-                </div>
-
-                <!--Recipe name input field-->
-                <div class="row form-row">
-                    <div class="input-field col s12">
-                        <input id="recipe_name" name="recipe_name" type="text" minlength="5" maxlength="50" class="validate" required>
-                        <label for="recipe_name">Recipe Name</label>
-                    </div>
-                </div>
-
-                <!--Serving text input, time text input and food cat select-->
-                <div class="row form-row">
-                    <div class="input-field col s3">
-                        <input id="recipe_serving" name="recipe_serving" type="text" minlength="1" maxlength="2" class="validate" required>
-                        <label for="recipe_serving">Serving</label>
-                    </div>
-                    <div class="input-field inline col s4">
-                        <input id="recipe_time" name="recipe_time" type="number" minlength="1" maxlength="3" class="validate" required>
-                        <label for="recipe_time">Time</label>
-                    </div>
-                    <div class="input-field col s5">
-                        <select id="food_category" name="food_category" class="validate" required>
-                            <option class="dd-text" value="" disabled selected>Category</option>
-                            {% for category in categories %}
-                            <option value="{{ category.food_category }}">{{ category.food_category }}</option>
-                            {% endfor %}
-                        </select>
-                    </div>
-                </div>
-
-                <!--Age checkbox-->
-                <p class="input-field">Ages</p>
-                <div class="row form-row">
-                {% for age in ages %}
-                    <div class="col s4">
-                        <p>
-                            <label id="age_range" name="age_range" class="validate" required>
-                                <input type="checkbox" value="{{ age.age_range }}"/>
-                                <span>{{ age.age_range }}</span>
-                            </label>
-                        </p>
-                    </div>
-                    {% endfor %}
-                </div>
-
-                <!--Photo-->
-                <div class="row form-row">
-                    <div class="input-field col s12">
-                        <i id="photo-icon" class="material-icons prefix">add_a_photo</i>
-                        <input id="img-url" name="img-url" type="text" minlength="5" pattern="https://.*" class="validate" required>
-                        <label for="img-url"></label>
-                        <span class="helper-text" data-error="wrong" data-success="right">To add an image, please enter a valid URL.</span>
-                    </div>
-                </div>
-
-                <!--Ingredients-->
-                <div class="row form-row">
-                    <div class="input-field col s12">
-                        <textarea id="ingredients" name="ingredients" cols="1" rows= "15" class="materialize-textarea validate" required></textarea>
-                        <label for="ingredients">Ingredients</label>
-                        <span class="helper-text" data-error="wrong" data-success="right">Add each ingredient on individual line.</span>
-                    </div>
-                </div>
-
-                <!--Method-->
-                <div class="form-row row">
-                    <div class="input-field col s12">
-                        <textarea id="method" name="method" cols="1" rows= "15" class="materialize-textarea validate" required></textarea>
-                        <label for="method">Method</label>
-                        <span class="helper-text" data-error="wrong" data-success="right">Add each step on individual line.</span>
-                    </div>
-                </div>
-                <!--Add recipe btn-->
-                <button type="submit" name="action">
-                    <i class="material-icons">add_circle</i>
-                </button>
-            </form>
+  <!--Form-->
+  <div class="row">
+    <form id="recipe-form" class="col s12" method="POST" action="">
+      <!--Cuisine select-->
+      <div class="input-field row form-row">
+        <div class="col s12">
+          <select
+            id="cuisine_name"
+            name="cuisine_name"
+            class="validate"
+            required
+          >
+            <option id="dd-text" value="" disabled selected>
+              Choose Cuisine
+            </option>
+            {% for cuisine in cuisines %}
+            <option value="{{ cuisine.cuisine_name }}">
+              {{ cuisine.cuisine_name }}
+            </option>
+            {% endfor %}
+          </select>
         </div>
+      </div>
 
-    </section>
+      <!--Recipe name input field-->
+      <div class="row form-row">
+        <div class="input-field col s12">
+          <input
+            id="recipe_name"
+            name="recipe_name"
+            type="text"
+            minlength="5"
+            maxlength="50"
+            class="validate"
+            required
+          />
+          <label for="recipe_name">Recipe Name</label>
+        </div>
+      </div>
+
+      <!--Serving text input, time text input and food cat select-->
+      <div class="row form-row">
+        <div class="input-field col s3">
+          <input
+            id="recipe_serving"
+            name="recipe_serving"
+            type="text"
+            minlength="1"
+            maxlength="2"
+            class="validate"
+            required
+          />
+          <label for="recipe_serving">Serving</label>
+        </div>
+        <div class="input-field inline col s4">
+          <input
+            id="recipe_time"
+            name="recipe_time"
+            type="number"
+            minlength="1"
+            maxlength="3"
+            class="validate"
+            required
+          />
+          <label for="recipe_time">Time</label>
+        </div>
+        <div class="input-field col s5">
+          <select
+            id="food_category"
+            name="food_category"
+            class="validate"
+            required
+          >
+            <option class="dd-text" value="" disabled selected>Category</option>
+            {% for category in categories %}
+            <option value="{{ category.food_category }}">
+              {{ category.food_category }}
+            </option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+
+      <!--Age checkbox-->
+      <p class="input-field">Ages</p>
+      <div class="row form-row">
+        {% for age in ages %}
+        <div class="col s4">
+          <p>
+            <label id="age_range" name="age_range" class="validate" required>
+              <input type="checkbox" value="{{ age.age_range }}" />
+              <span>{{ age.age_range }}</span>
+            </label>
+          </p>
+        </div>
+        {% endfor %}
+      </div>
+
+      <!--Photo-->
+      <div class="row form-row">
+        <div class="input-field col s12">
+          <i id="photo-icon" class="material-icons prefix">add_a_photo</i>
+          <input
+            id="img-url"
+            name="img-url"
+            type="text"
+            minlength="5"
+            pattern="https://*"
+            class="validate"
+            required
+          />
+          <label for="img-url"></label>
+          <span class="helper-text" data-error="wrong" data-success="right"
+            >To add an image, please enter a valid URL.</span
+          >
+        </div>
+      </div>
+
+      <!--Ingredients-->
+      <div class="row form-row">
+        <div class="input-field col s12">
+          <textarea
+            id="ingredients"
+            name="ingredients"
+            cols="1"
+            rows="15"
+            class="materialize-textarea validate"
+            required
+          ></textarea>
+          <label for="ingredients">Ingredients</label>
+          <span class="helper-text" data-error="wrong" data-success="right"
+            >Add each ingredient on an individual line.</span
+          >
+        </div>
+      </div>
+
+      <!--Method-->
+      <div class="form-row row">
+        <div class="input-field col s12">
+          <textarea
+            id="method"
+            name="method"
+            cols="1"
+            rows="15"
+            class="materialize-textarea validate"
+            required
+          ></textarea>
+          <label for="method">Method</label>
+          <span class="helper-text" data-error="wrong" data-success="right"
+            >Add each step on an individual line.</span
+          >
+        </div>
+      </div>
+      <!--Add recipe btn-->
+      <button type="submit" name="action">
+        <i class="material-icons">add_circle</i>
+      </button>
+    </form>
+  </div>
+</section>
 
 {% endblock %}
