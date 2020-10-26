@@ -494,3 +494,58 @@ button#search-btn {
     font-size: 20px;
     font-weight: 500;
 }
+
+#recipe-form {
+    border-radius: 6px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    margin-top: 20px;
+    padding: 20px 30px 15px 30px;
+}
+
+#recipe-form label, #recipe-form label span, #recipe-form p, #recipe-form input {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #666666;
+}
+
+#recipe-form label span {
+    font-size: 9px;
+    line-height: 9px;
+}
+
+#recipe-form input {
+    border: 1px solid #9e9e9e;
+    border-radius: 6px;
+    padding-left: 10px;
+    height: 26px;
+}
+
+textarea#photo {
+    border-bottom: 0;
+    padding: 0;
+}
+
+#photo-icon {
+    font-size: 32px;
+    color: #C89F98;
+}
+
+.input-field{
+    margin: 0;
+}
+
+.form-row {
+    margin-bottom: 10px;
+}
+
+#recipe-form button {
+    width: 100%;
+    background-color: #fafafa;
+    border: none;
+}
+
+#recipe-form button i {
+    font-size: 35px;
+    color: #8CE3D5;
+    text-align: center;
+}

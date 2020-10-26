@@ -6,23 +6,25 @@
 
         <!--Form-->
         <div class="row">
-            <form class="col s12" method="POST" action="">
+            <form id="recipe-form" class="col s12" method="POST" action="">
 
                 <!--Cuisine select-->
-                <div class="input-field col s12">
-                    <select>
-                        <option value="" disabled selected>Choose Cuisine</option>
-                        <option value="1">British</option>
-                        <option value="2">Indian</option>
-                        <option value="3">Italian</option>
-                        <option value="3">Japanese</option>
-                        <option value="3">thai</option>
-                        <option value="3">Mexican</option>
-                    </select>
+                <div class="row form-row">
+                    <div class="col s12">
+                        <select>
+                            <option id="dd-text" value="" disabled selected>Choose Cuisine</option>
+                            <option value="1">British</option>
+                            <option value="2">Indian</option>
+                            <option value="3">Italian</option>
+                            <option value="3">Japanese</option>
+                            <option value="3">thai</option>
+                            <option value="3">Mexican</option>
+                        </select>
+                    </div>
                 </div>
 
                 <!--Recipe name inout field-->
-                <div class="row">
+                <div class="row form-row">
                     <div class="input-field col s12">
                         <textarea id="recipe-name" class="materialize-textarea"></textarea>
                         <label for="recipe-name">Recipe Name</label>
@@ -30,8 +32,8 @@
                 </div>
 
                 <!--Serving text input, time text input and food cat select-->
-                <div class="row">
-                    <div class="input-field col s4">
+                <div class="row form-row">
+                    <div class="input-field col s3">
                         <textarea id="serving" class="materialize-textarea"></textarea>
                         <label for="serving">Serving</label>
                     </div>
@@ -39,9 +41,9 @@
                         <textarea id="time" class="materialize-textarea"></textarea>
                         <label for="time">Time</label>
                     </div>
-                    <div class="input-field col s4">
+                    <div class="col s5">
                         <select>
-                            <option value="" disabled selected>Category</option>
+                            <option class="dd-text" value="" disabled selected>Category</option>
                             <option value="1">Starter</option>
                             <option value="2">Main Course</option>
                             <option value="3">Dessert</option>
@@ -51,9 +53,9 @@
                 </div>
 
                 <!--Age checkbox-->
-                <div class="row">
-                    <p>Ages</p>
-                        <div class="col s4">
+                <p>Ages</p>
+                <div class="row form-row">
+                    <div class="col s4">
                             <p>
                                 <label>
                                     <input type="checkbox" />
@@ -76,14 +78,19 @@
                                     <span>6-12 months</span>
                                 </label>
                             </p>
-                        </div>
+                    </div>
                 </div>
                 
-                <!--Ingredients-->
-                <div class="row">
-                    <div class="input-field col s12">
+                <div class="row form-row">
+                    <!--Ingredients-->
+                    <div class="input-field col s9">
                         <textarea id="ingredients" class="materialize-textarea"></textarea>
                         <label for="ingredients">Ingredients</label>
+                    </div>
+                    <!--Photo-->
+                    <div class="input-field col s3">
+                        <textarea id="photo" class="materialize-textarea"></textarea>
+                        <label for="photo"><i id="photo-icon" class="material-icons">add_a_photo</i></label>
                     </div>
                 </div>
                 <!--Method-->
@@ -93,6 +100,10 @@
                         <label for="method">Method</label>
                     </div>
                 </div>
+                <!--Add recipe btn-->
+                <button type="submit" name="action">
+                    <i class="material-icons">add_circle</i>
+                </button>
             </form>
         </div>
 
