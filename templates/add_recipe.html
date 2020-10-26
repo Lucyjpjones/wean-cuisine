@@ -9,7 +9,7 @@
             <form id="recipe-form" class="col s12" method="POST" action="">
 
                 <!--Cuisine select-->
-                <div class="row form-row">
+                <div class="input-field row form-row">
                     <div class="col s12">
                         <select>
                             <option id="dd-text" value="" disabled selected>Choose Cuisine</option>
@@ -34,14 +34,14 @@
                 <!--Serving text input, time text input and food cat select-->
                 <div class="row form-row">
                     <div class="input-field col s3">
-                        <input id="serving" name="serving" type="text" minlength="1" maxlength="2" class="validate" required>
-                        <label for="serving">Serving</label>
+                        <input id="recipe_serving" name="recipe_serving" type="text" minlength="1" maxlength="2" class="validate" required>
+                        <label for="recipe_serving">Serving</label>
                     </div>
                     <div class="input-field inline col s4">
-                        <input id="time" name="time" type="number" minlength="1" maxlength="3" class="validate" required>
-                        <label for="time">Time</label>
+                        <input id="recipe_time" name="recipe_time" type="number" minlength="1" maxlength="3" class="validate" required>
+                        <label for="recipe_time">Time</label>
                     </div>
-                    <div class="col s5">
+                    <div class="input-field col s5">
                         <select>
                             <option class="dd-text" value="" disabled selected>Category</option>
                             <option value="1">Starter</option>
@@ -53,7 +53,7 @@
                 </div>
 
                 <!--Age checkbox-->
-                <p>Ages</p>
+                <p class="input-field">Ages</p>
                 <div class="row form-row">
                     <div class="col s4">
                             <p>
@@ -80,36 +80,32 @@
                             </p>
                     </div>
                 </div>
-                
+
+                <!--Photo-->
                 <div class="row form-row">
-                    <!--Ingredients-->
-                    <div class="input-field col s9">
-                        <textarea id="ingredients" name="ingredients" cols="1" rows= "15" class="materialize-textarea validate" required></textarea>
-                        <label for="ingredients">Ingredients</label>
-                    </div>
-                    <!--Photo-->
-                    <!-- Modal Trigger -->
-                    <div class="input-field col s3">
-                        <a class="modal-trigger" href="#photo-modal"><i id="photo-icon" class="material-icons">add_a_photo</i></a>
-                        <div id="photo-modal" class="modal">
-                            <div id="photo-modal-content" class="modal-content">
-                                <div class="input-field">
-                                    <a href="#!" id="modal-close" class="modal-close material-icons right">close</a>
-                                    <input id="photo" type="text" minlength="5" pattern="https://.*" class="validate" required>
-                                    <label for="photo">Please enter the photo URL</label>
-                                </div>
-                                <button type="submit" name="action">
-                                    <i class="material-icons">add_circle</i>
-                                </button> 
-                            </div>
-                        </div>
+                    <div class="input-field col s12">
+                        <i id="photo-icon" class="material-icons prefix">add_a_photo</i></a>
+                        <input id="img-url" name="img-url" type="text" minlength="5" pattern="https://.*" class="validate" required>
+                        <label for="img-url"></label>
+                        <span class="helper-text" data-error="wrong" data-success="right">To add an image, please enter a valid URL.</span>
                     </div>
                 </div>
+
+                <!--Ingredients-->
+                <div class="row form-row">
+                    <div class="input-field col s12">
+                        <textarea id="ingredients" name="ingredients" cols="1" rows= "15" class="materialize-textarea validate" required></textarea>
+                        <label for="ingredients">Ingredients</label>
+                        <span class="helper-text" data-error="wrong" data-success="right">Add each ingredient on individual line.</span>
+                    </div>
+                </div>
+
                 <!--Method-->
-                <div class="row">
+                <div class="form-row row">
                     <div class="input-field col s12">
                         <textarea id="method" name="method" cols="1" rows= "15" class="materialize-textarea validate" required></textarea>
                         <label for="method">Method</label>
+                        <span class="helper-text" data-error="wrong" data-success="right">Add each step on individual line.</span>
                     </div>
                 </div>
                 <!--Add recipe btn-->

@@ -499,7 +499,7 @@ button#search-btn {
     border-radius: 6px;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
     margin-top: 20px;
-    padding: 20px 30px 15px 30px;
+    padding: 15px 30px 15px 30px;
 }
 
 #recipe-form label, #recipe-form label span, #recipe-form p, #recipe-form input {
@@ -513,29 +513,13 @@ button#search-btn {
     line-height: 9px;
 }
 
-#recipe-form input {
-    border: 1px solid #9e9e9e;
-    border-radius: 6px;
-    padding-left: 10px;
-    height: 26px;
-}
-
-textarea#photo {
-    border-bottom: 0;
-    padding: 0;
-}
-
 #photo-icon {
-    font-size: 32px;
+    font-size: 25px;
     color: #C89F98;
 }
 
-.input-field{
-    margin: 0;
-}
-
 .form-row {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 #recipe-form button {
@@ -550,23 +534,6 @@ textarea#photo {
     text-align: center;
 }
 
-/* --------------------Photo modal */
-
-#photo-modal{
-    border-radius: 6px;
-}
-
-#photo-modal-content {
-    padding: 25px 20px 0px 20px;
-}
-
-textarea#photo.materialize-textarea {
-    border: 1px solid #9e9e99;
-    border-radius: 6px;
-    padding: 10px 3px 3px 10px;
-    color: #666666;
-    margin: 10px 0px 0px 0px;
-}
 
 select option {
     font-size: 10px;
@@ -582,9 +549,23 @@ select option {
     color: #C89F98;
 }
 
-input#recipe_name, input#serving, input#time, input#photo {
-    border: none;
-    border-bottom: 1px solid #9e9e9e;
-    padding-bottom: 10px;
-    border-radius: 0;
+.input-field {
+    margin: 15px 0px 0px 0px;
+}
+
+.input-field .prefix ~ input {
+    width: 100%;
+    margin-left: 0;
+}
+
+.input-field .helper-text {
+    font-size: 9px;
+}
+
+.input-field .prefix ~ .helper-text {
+    margin-left: 0px;
+}
+
+textarea.materialize-textarea {
+    margin-bottom: 0px;;
 }
