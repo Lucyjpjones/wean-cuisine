@@ -11,14 +11,11 @@
                 <!--Cuisine select-->
                 <div class="input-field row form-row">
                     <div class="col s12">
-                        <select>
+                        <select id="cuisine_name" name="cuisine_name" class="validate" required>
                             <option id="dd-text" value="" disabled selected>Choose Cuisine</option>
-                            <option value="1">British</option>
-                            <option value="2">Indian</option>
-                            <option value="3">Italian</option>
-                            <option value="3">Japanese</option>
-                            <option value="3">thai</option>
-                            <option value="3">Mexican</option>
+                            {% for cuisine in cuisines %}
+                            <option value="{{ cuisine.cuisine_name }}">{{ cuisine.cuisine_name }}</option>
+                            {% endfor %}
                         </select>
                     </div>
                 </div>
@@ -42,12 +39,11 @@
                         <label for="recipe_time">Time</label>
                     </div>
                     <div class="input-field col s5">
-                        <select>
+                        <select id="food_category" name="food_category" class="validate" required>
                             <option class="dd-text" value="" disabled selected>Category</option>
-                            <option value="1">Starter</option>
-                            <option value="2">Main Course</option>
-                            <option value="3">Dessert</option>
-                            <option value="3">Snack</option>
+                            {% for category in categories %}
+                            <option value="{{ category.food_category }}">{{ category.food_category }}</option>
+                            {% endfor %}
                         </select>
                     </div>
                 </div>
@@ -55,36 +51,22 @@
                 <!--Age checkbox-->
                 <p class="input-field">Ages</p>
                 <div class="row form-row">
+                {% for age in ages %}
                     <div class="col s4">
-                            <p>
-                                <label>
-                                    <input type="checkbox" />
-                                    <span>6 months</span>
-                                </label>
-                            </p>
-                        </div>
-                        <div class="col s4">
-                            <p>
-                                <label>
-                                    <input type="checkbox" />
-                                    <span>6-9 months</span>
-                                </label>
-                            </p>
-                        </div>
-                        <div class="col s4">
-                            <p>
-                                <label>
-                                    <input type="checkbox" />
-                                    <span>6-12 months</span>
-                                </label>
-                            </p>
+                        <p>
+                            <label id="age_range" name="age_range" class="validate" required>
+                                <input type="checkbox" value="{{ age.age_range }}"/>
+                                <span>{{ age.age_range }}</span>
+                            </label>
+                        </p>
                     </div>
+                    {% endfor %}
                 </div>
 
                 <!--Photo-->
                 <div class="row form-row">
                     <div class="input-field col s12">
-                        <i id="photo-icon" class="material-icons prefix">add_a_photo</i></a>
+                        <i id="photo-icon" class="material-icons prefix">add_a_photo</i>
                         <input id="img-url" name="img-url" type="text" minlength="5" pattern="https://.*" class="validate" required>
                         <label for="img-url"></label>
                         <span class="helper-text" data-error="wrong" data-success="right">To add an image, please enter a valid URL.</span>

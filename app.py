@@ -33,15 +33,17 @@ def get_recipes():
 
 @app.route("/add_recipe")
 def add_recipe():
-    return render_template ("add_recipe.html")
+    cuisines = mongo.db.cuisines.find().sort("cuisine_name", 1)
+    categories = mongo.db.categories.find().sort("food_category", 1)
+    ages = mongo.db.ages.find().sort("age_range", 1)
+    return render_template("add_recipe.html", cuisines=cuisines, ages=ages,
+                           categories=categories)
 
 
 @app.route("/")
 @app.route("/shop_books")
 def shop_books():
     return render_template("shop-books.html")
-
-
 
 
 if __name__ == "__main__":
