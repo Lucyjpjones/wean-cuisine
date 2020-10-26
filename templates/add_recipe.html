@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <section class="container">
+        <h3 class="add-header" >Add Recipe</h3>
+
+        <!--Form-->
+        <div class="row">
+            <form class="col s12" method="POST" action="">
+
+                <!--Cuisine select-->
+                <div class="input-field col s12">
+                    <select>
+                        <option value="" disabled selected>Choose Cuisine</option>
+                        <option value="1">British</option>
+                        <option value="2">Indian</option>
+                        <option value="3">Italian</option>
+                        <option value="3">Japanese</option>
+                        <option value="3">thai</option>
+                        <option value="3">Mexican</option>
+                    </select>
+                </div>
+
+                <!--Recipe name inout field-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="recipe-name" class="materialize-textarea"></textarea>
+                        <label for="recipe-name">Recipe Name</label>
+                    </div>
+                </div>
+
+                <!--Serving text input, time text input and food cat select-->
+                <div class="row">
+                    <div class="input-field col s4">
+                        <textarea id="serving" class="materialize-textarea"></textarea>
+                        <label for="serving">Serving</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <textarea id="time" class="materialize-textarea"></textarea>
+                        <label for="time">Time</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <select>
+                            <option value="" disabled selected>Category</option>
+                            <option value="1">Starter</option>
+                            <option value="2">Main Course</option>
+                            <option value="3">Dessert</option>
+                            <option value="3">Snack</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!--Age checkbox-->
+                <div class="row">
+                    <p>Ages</p>
+                        <div class="col s4">
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>6 months</span>
+                                </label>
+                            </p>
+                        </div>
+                        <div class="col s4">
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>6-9 months</span>
+                                </label>
+                            </p>
+                        </div>
+                        <div class="col s4">
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>6-12 months</span>
+                                </label>
+                            </p>
+                        </div>
+                </div>
+                
+                <!--Ingredients-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="ingredients" class="materialize-textarea"></textarea>
+                        <label for="ingredients">Ingredients</label>
+                    </div>
+                </div>
+                <!--Method-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="method" class="materialize-textarea"></textarea>
+                        <label for="method">Method</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </section>
+
+{% endblock %}

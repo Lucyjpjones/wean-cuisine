@@ -31,10 +31,17 @@ def get_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
+@app.route("/add_recipe")
+def add_recipe():
+    return render_template ("add_recipe.html")
+
+
 @app.route("/")
 @app.route("/shop_books")
 def shop_books():
     return render_template("shop-books.html")
+
+
 
 
 if __name__ == "__main__":

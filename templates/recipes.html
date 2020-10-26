@@ -1,24 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 
-
-    {% for recipe in recipes %}
-        {{ recipe.recipe_name }}<br>
-        {{ recipe.cuisine_name }}<br>
-        {{ recipe.recipe_serving }}<br>
-        {{ recipe.recipe_time }}<br>
-        {{ recipe.food_category }}<br>
-        {{ recipe.age_range }}<br>
-        {{ recipe.ingredients }}<br>
-        {{ recipe.method }}<br>
-
     <section class="container" id="page-callout">
             <img id="page-img" src="{{ url_for('static', filename='assets/images/recipes-img.jpg') }}" alt="background">
             <div id="page-overlay-text">
                 <!--Page Title-->
                 <h3>Recipes</h3>
                 <!--Add recipes btn-->
-                <a class="btn" href="#">Add recipe <i class="material-icons">add_circle_outline</i> </a>
+                <a class="btn" href="{{ url_for('add_recipe') }}">Add recipe <i class="material-icons">add_circle_outline</i> </a>
                 <!--Search bar-->
                 <div id="search-bar" class="row card-panel grey lighten-5">
 	                <form action="#" method="POST" class="col s8">
@@ -38,6 +27,8 @@
                 </div>
              </div>
     </section>
+
+    {% for recipe in recipes %}
 
     <div id="card-container">
         <div class="row">
