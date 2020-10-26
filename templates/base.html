@@ -71,9 +71,9 @@
             <!-- Sidenav menu list -->
             <ul id= "menu-items" class="sidenav right">
                 <li><a href="{{ url_for('homepage') }}">Home</a></li>
-                <li><a href="#">How does Wean Cuisine work?</a></li>
-                <li><a href="#">Recipes</a></li>
-                <li><a href="#">Shop Recipe Books</a></li>
+                <li><a href="#section1">How does Wean Cuisine work?</a></li>
+                <li><a href="{{ url_for('get_recipes') }}">Recipes</a></li>
+                <li><a href="{{ url_for('shop_books') }}">Shop Recipe Books</a></li>
             </ul>
         </div>
       </nav>

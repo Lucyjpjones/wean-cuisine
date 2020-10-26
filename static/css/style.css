@@ -79,7 +79,7 @@ nav .brand-logo {
 
 .sidenav {
     width: 100%;
-    margin-top:90px;
+    margin-top:80px;
     text-align: center;
 }
 
@@ -169,6 +169,7 @@ input#password, input#username {
     top: 65%;
     left: 32%;
     transform: translate(-50%,-50%);
+    margin-left: 10px;
 }
 
 #overlay-text h3 {
@@ -191,8 +192,12 @@ input#password, input#username {
     color: #4d4c4c;
     border-radius: 6px;
     display: inline;
-    padding: 3px;
+    padding: 3px 5px 3px 5px;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+#callout-btns a i {
+    vertical-align: bottom;
 }
 
 /* -------------------- How does it work?*/
@@ -217,6 +222,7 @@ input#password, input#username {
     width: 120px;
     height: 120px;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    opacity: .9;
 }
 
 .info-title {
@@ -243,6 +249,7 @@ input#password, input#username {
 
 .carousel-img {
     border-radius: 50%;
+    opacity: 0.8;
 }
 
 .carousel-item p {
@@ -277,7 +284,7 @@ input#password, input#username {
 #shop-books-img {
     position: relative;
     width: 100%;
-    opacity: 0.7;
+    opacity: 0.8;
     border-radius: 6px;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
 }
@@ -290,6 +297,7 @@ input#password, input#username {
     font-size: 13px;
     font-weight: 500;
     background-color: #8CE3D5;
+    opacity: 0.9;
     color: #fafafa;
     border-radius: 6px;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
@@ -412,7 +420,7 @@ button#search-btn {
 }
 
 #card-info {
-    padding: 10px 10px 10px 10px;
+    padding: 10px 10px 0px 10px;
     margin: 0;
 }
 
