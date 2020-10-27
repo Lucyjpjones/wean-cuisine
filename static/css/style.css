@@ -359,7 +359,7 @@ footer h6 {
     font-weight: 500px;
 }
 
-#page-overlay-text a {
+#page-overlay-text #add-recipe-btn {
     font-size: 12px;
     font-weight: 500;
     background-color: #C89F98;
@@ -370,7 +370,7 @@ footer h6 {
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
 }
 
-#page-overlay-text a i {
+#page-overlay-text #add-recipe-btn i {
     vertical-align: bottom;
     padding-bottom: 1px;
 }
@@ -400,10 +400,23 @@ footer h6 {
 }
 
 button#search-btn {
-    background-color:#fafafa;
+    background:none;
     border: none;
     color: #8CE3D5;
-    font: 16px;
+}
+
+a#clear-btn {
+    background-color: none;
+    border: none;
+    color: red;
+}
+
+div.col.s1 {
+    padding: 0px;
+}
+
+button#search-btn i, a#clear-btn i {
+    font-size: 18px;
 }
 
 

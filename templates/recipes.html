@@ -10,12 +10,12 @@
     <!--Page Title-->
     <h3>Recipes</h3>
     <!--Add recipes btn-->
-    <a class="btn" href="{{ url_for('add_recipe') }}"
+    <a id="add-recipe-btn" class="btn" href="{{ url_for('add_recipe') }}"
       >Add recipe <i class="material-icons">add_circle_outline</i>
     </a>
     <!--Search bar-->
     <div id="search-bar" class="row card-panel grey lighten-5">
-      <form action="#" method="POST" class="col s8">
+      <form action="{{ url_for('search') }}" method="POST" class="col s8">
         <div id="input-outer" class="row valign-wrapper center-align">
           <div class="input-field col s10">
             <input
@@ -29,7 +29,12 @@
             <label for="query">Search Recipes</label>
           </div>
           <!--Search btn-->
-          <div class="col s2">
+          <div class="col s1">
+            <a id="clear-btn" href="{{ url_for('get_recipes') }}">
+              <i class="material-icons">cancel</i>
+            </a>
+          </div>
+          <div class="col s1">
             <button id="search-btn" type="submit">
               <i class="material-icons">search</i>
             </button>
@@ -40,11 +45,9 @@
   </div>
 </section>
 
-
-
 <div id="card-container">
   <div class="row">
-  {% for recipe in recipes %}
+    {% for recipe in recipes %}
     <div class="col s6 m4 l3">
       <div href="" id="recipe-card" class="card">
         <div class="card-image" id="card-img">
@@ -58,10 +61,20 @@
           </div>
           <div id="card-btns">
             <div id="card-edit-row" class="col s12">
-              <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" id="card-edit" class="btn right">Edit</a>
+              <a
+                href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+                id="card-edit"
+                class="btn right"
+                >Edit</a
+              >
             </div>
             <div id="card-delete-row" class="col s12">
-              <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" id="card-del" class="btn right">Delete</a>
+              <a
+                href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+                id="card-del"
+                class="btn right"
+                >Delete</a
+              >
             </div>
           </div>
         </div>
