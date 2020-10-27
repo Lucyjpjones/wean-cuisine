@@ -502,10 +502,15 @@ button#search-btn {
     padding: 15px 30px 10px 30px;
 }
 
-#recipe-form label, #recipe-form label span, #recipe-form p, #recipe-form input {
+#recipe-form label span, #recipe-form p, #recipe-form input, textarea.materialize-textarea {
     font-size: 11px;
     text-transform: uppercase;
     color: #666666;
+}
+
+#recipe-form label {
+    color: #C89F98;
+    font-size: 11px;
 }
 
 #recipe-form label span {
@@ -552,11 +557,6 @@ select option {
 
 .input-field {
     margin: 15px 0px 0px 0px;
-}
-
-.input-field .prefix ~ input {
-    width: 100%;
-    margin-left: 0;
 }
 
 .input-field .helper-text {

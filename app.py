@@ -39,8 +39,8 @@ def add_recipe():
             "recipe_name": request.form.get("recipe_name"),
             "recipe_serving": request.form.get("recipe_serving"),
             "recipe_time": request.form.get("recipe_time"),
-            "food_category": request.form.getlist("food_category"),
-            "age_range": request.form.getlist("age_range"),
+            "food_category": request.form.get("food_category"),
+            "age_range": request.form.get("age_range"),
             "img_url": request.form.get("img_url"),
             "ingredients": request.form.get("ingredients"),
             "method": request.form.get("method"),
@@ -58,7 +58,24 @@ def add_recipe():
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
+    if request.method == "POST":
+        submit = {
+            "cuisine_name": request.form.get("cuisine_name"),
+            "recipe_name": request.form.get("recipe_name"),
+            "recipe_serving": request.form.get("recipe_serving"),
+            "recipe_time": request.form.get("recipe_time"),
+            "food_category": request.form.get("food_category"),
+            "age_range": request.form.get("age_range"),
+            "img_url": request.form.get("img_url"),
+            "ingredients": request.form.get("ingredients"),
+            "method": request.form.get("method"),
+        }
+
+        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
+        flash("Task Successfully Updated")
+
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+
     cuisines = mongo.db.cuisines.find().sort("cuisine_name", 1)
     categories = mongo.db.categories.find().sort("food_category", 1)
     ages = mongo.db.ages.find().sort("age_range", 1)

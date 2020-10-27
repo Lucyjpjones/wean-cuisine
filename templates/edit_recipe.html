@@ -12,17 +12,15 @@
       action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
     >
       <!--Cuisine select-->
-      <div class="input-field row form-row">
-        <div class="col s12">
+      <div class="row form-row">
+        <div class="input-field col s12">
           <select
             id="cuisine_name"
             name="cuisine_name"
             class="validate"
             required
           >
-            <option id="dd-text" value="" disabled selected>
-              Choose Cuisine
-            </option>
+            <option value="" disabled>Choose Cuisine</option>
             {% for cuisine in cuisines %} {% if cuisine.cuisine_name ==
             recipe.cuisine_name %}
             <option value="{{ cuisine.cuisine_name }}" selected>
@@ -34,6 +32,7 @@
             </option>
             {% endif %} {% endfor %}
           </select>
+          <label for="cuisine_name">Choose Cuisine</label>
         </div>
       </div>
 
@@ -69,7 +68,7 @@
           />
           <label for="recipe_serving">Serving</label>
         </div>
-        <div class="input-field inline col s4">
+        <div class="input-field inline col s3">
           <input
             id="recipe_time"
             name="recipe_time"
@@ -82,14 +81,14 @@
           />
           <label for="recipe_time">Time</label>
         </div>
-        <div class="input-field col s5">
+        <div class="input-field col s6">
           <select
             id="food_category"
             name="food_category"
             class="validate"
             required
           >
-            <option class="dd-text" value="" disabled selected>Category</option>
+            <option value="" disabled>Category</option>
             {% for category in categories %} {% if category.food_category ==
             recipe.food_category %}
             <option value="{{ category.food_category }}" selected>
@@ -101,6 +100,7 @@
             </option>
             {% endif %} {% endfor %}
           </select>
+          <label for="food_category">Choose Category</label>
         </div>
       </div>
 
@@ -110,15 +110,28 @@
         {% for age in ages %}
         <div class="col s4">
           <p>
-            <label id="age_range" name="age_range" class="validate" required>
+            <label for="age_range">
               {% if age.age_range == recipe.age_range %}
-              <input type="checkbox" value="{{ age.age_range }}" checked />
+              <input
+                type="checkbox"
+                id="age_range"
+                name="age_range"
+                class="validate"
+                value="{{ age.age_range }}"
+                checked="checked"
+              />
               <span>{{ age.age_range }}</span>
               {% else %}
-              <input type="checkbox" value="{{ age.age_range }}" />
+              <input
+                type="checkbox"
+                id="age_range"
+                name="age_range"
+                class="validate"
+                value="{{ age.age_range }}"
+              />
               <span>{{ age.age_range }}</span>
-              {% endif %}
             </label>
+            {% endif %}
           </p>
         </div>
         {% endfor %}
