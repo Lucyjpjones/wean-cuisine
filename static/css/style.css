@@ -316,7 +316,6 @@ footer {
     background-color: #CEF3ED;
     text-align: center;
     position: absolute;
-    margin-bottom: 10%;
     width: 100%;
 }
 
@@ -408,7 +407,7 @@ button#search-btn {
 a#clear-btn {
     background-color: none;
     border: none;
-    color: red;
+    color: #C89F98;
 }
 
 div.col.s1 {
@@ -417,6 +416,13 @@ div.col.s1 {
 
 button#search-btn i, a#clear-btn i {
     font-size: 18px;
+}
+
+#no-results{
+    font-size: 18px;
+    font-weight: 500;
+    color: #C89F98;
+    text-align: center;
 }
 
 
