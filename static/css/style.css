@@ -677,3 +677,11 @@ textarea.materialize-textarea {
     background-color: transparent;
     color: #c89f98;
 }
+
+.tabs .indicator {
+    background-color: #c89f98;
+}
+
+#page-callout p {
+    font-size: 11px;
+}
