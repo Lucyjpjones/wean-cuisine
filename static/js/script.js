@@ -4,6 +4,7 @@ $(document).ready(function () {
   $(".carousel").carousel();
   $(".dropdown-trigger").dropdown();
   $("select").formSelect();
+  $('.tabs').tabs();
 
   validateMaterializeSelect();
   function validateMaterializeSelect() {

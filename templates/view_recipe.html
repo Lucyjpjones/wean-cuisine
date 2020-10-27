@@ -1,0 +1,54 @@
+{% extends "base.html" %} {% block content %}
+
+<section class="container" id="page-callout">
+  <img id="view-recipe-img" src="{{ recipe.img_url }}" alt="background" />
+  <div id="page-overlay-text">
+    <!--Page Title-->
+    <h3>{{ recipe.recipe_name }}</h3>
+    <p>by:</p>
+    <p><i class="fas fa-globe"></i> {{ recipe.cuisine_name }}</p>
+  </div>
+</section>
+
+<!--Serving & time-->
+<div id="yellow-container" class="container">
+  <div id="yellow-container-inner" class="row">
+    <div class="col s3">
+      <i class="material-icons">child_care</i>
+      <p>{{ recipe.recipe_serving }}</p>
+    </div>
+    <div class="col s4">
+      <i class="material-icons">timer</i>
+      <p>{{ recipe.recipe_time }} mins</p>
+    </div>
+    <div class="col s5">
+      <i class="material-icons">local_dining</i>
+      <p>{{ recipe.food_category }}</p>
+    </div>
+  </div>
+</div>
+
+<!--Ingredients & method tab-->
+<div id="tab-container" class="container">
+  <div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3">
+          <a class="active" href="#ingredients">Ingredients</a>
+        </li>
+        <li class="tab col s3"><a href="#menu">Method</a></li>
+      </ul>
+    </div>
+    {% for ingredient in recipe.ingredients.splitlines() %}
+    <div id="ingredients" class="col s12">
+      <p>{{ ingredient }}</p>
+    </div>
+    {% endfor %} {% for step in recipe.method.splitlines() %}
+    <div id="method" class="col s12">
+      <p>{{ step }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

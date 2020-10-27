@@ -53,7 +53,9 @@
     <div class="col s6 m4 l3">
       <div href="" id="recipe-card" class="card">
         <div class="card-image" id="card-img">
-          <img src="{{ recipe.img_url }}" alt="Recipe image" />
+            <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}">
+                <img src="{{ recipe.img_url }}" alt="Recipe image" />
+            </a>
         </div>
         <div id="card-info" class="row card-content">
           <div class="col s12">
