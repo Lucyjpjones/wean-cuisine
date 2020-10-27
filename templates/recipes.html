@@ -53,9 +53,9 @@
     <div class="col s6 m4 l3">
       <div href="" id="recipe-card" class="card">
         <div class="card-image" id="card-img">
-            <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}">
-                <img src="{{ recipe.img_url }}" alt="Recipe image" />
-            </a>
+          <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}">
+            <img src="{{ recipe.img_url }}" alt="Recipe image" />
+          </a>
         </div>
         <div id="card-info" class="row card-content">
           <div class="col s12">
@@ -73,12 +73,33 @@
               >
             </div>
             <div id="card-delete-row" class="col s12">
+              <!-- Modal Trigger -->
               <a
-                href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+                href="#confirm-del"
                 id="card-del"
-                class="btn right"
+                class="btn right modal-trigger"
                 >Delete</a
               >
+
+              <!-- Modal Structure -->
+              <div id="confirm-del" class="modal">
+                <div class="modal-content">
+                  <a
+                    href="#!"
+                    id="modal-close"
+                    class="modal-close material-icons right"
+                    >close</a
+                  >
+                  <h4>Are you sure you would like to delete?</h4>
+                </div>
+                <div class="modal-footer">
+                  <a
+                    href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+                    class="waves-effect waves-green btn-flat"
+                    >Confirm</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -88,7 +109,5 @@
   </div>
 </div>
 {% else %}
-    <h3 id="no-results">No results found</h3>
-{% endif %}
-
-{% endblock %}
+<h3 id="no-results">No results found</h3>
+{% endif %} {% endblock %}
