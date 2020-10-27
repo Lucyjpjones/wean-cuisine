@@ -97,8 +97,8 @@
         {% for age in ages %}
         <div class="col s4">
           <p>
-            <label id="age_range" name="age_range" class="validate" required>
-              <input type="checkbox" value="{{ age.age_range }}" />
+            <label for="{{ age.age_range }}">
+              <input type="radio" id="{{ age.age_range }}" name="age_range" class="with-gap validate" required />
               <span>{{ age.age_range }}</span>
             </label>
           </p>
@@ -162,7 +162,7 @@
         </div>
       </div>
       <!--Add recipe btn-->
-      <button type="submit" name="action">
+      <button type="submit">
         <i class="material-icons">add_circle</i>
       </button>
     </form>
