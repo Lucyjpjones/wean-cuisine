@@ -163,6 +163,52 @@ def logout():
     return redirect(url_for("login"))
 
 
+@app.route("/get_cuisines")
+def get_cuisines():
+    cuisines = list(mongo.db.cuisines.find().sort("cuisine_name", 1))
+    return render_template("cuisines.html", cuisines=cuisines)
+
+
+@app.route("/add_cuisine", methods=["GET", "POST"])
+def add_cuisine():
+    if request.method == "POST":
+        cuisine = {
+            "cuisine_name": request.form.get("cuisine_name")
+        }
+        mongo.db.categories.insert_one(cuisine)
+        flash("New Cuisine Added")
+        return redirect(url_for("get_cuisines"))
+
+    return render_template("add_cuisine.html")
+
+
+@app.route("/edit_cuisine/<cuisine_id>", methods=["GET", "POST"])
+def edit_cuisine(cuisine_id):
+    if request.method == "POST":
+        submit = {
+            "cuisine_name": request.form.get("cuisine_name")
+        }
+        mongo.db.cuisines.update({"_id": ObjectId(cuisine_id)}, submit)
+        flash("Cuisine Successfully Updated")
+        return redirect(url_for("get_cuisines"))
+
+    cuisine = mongo.db.cuisines.find_one({"_id": ObjectId(cuisine_id)})
+    return render_template("edit_cuisine.html", cuisine=cuisine)
+
+
+@app.route("/delete_cuisine/<cuisine_id>")
+def delete_cuisine(cuisine_id):
+    mongo.db.cuisines.remove({"_id": ObjectId(cuisine_id)})
+    flash("Category Successfully Deleted")
+    return redirect(url_for("get_cuisines"))
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    # note that we set the 404 status explicitly
+    return render_template('404.html'), 404
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
