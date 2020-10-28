@@ -25,7 +25,7 @@ row.col {
 
 .container {
   margin: auto;
-  margin-top: 10%;
+  padding-top: 10%;
   margin-bottom: 10%;
 }
 
@@ -86,6 +86,15 @@ nav .brand-logo {
   text-align: center;
 }
 
+#menu-items {
+    padding-top: 40px;
+}
+
+#menu-items li a {
+    font-size: 14px;
+    text-transform: none;
+}
+
 /* -------------------- Login/Register modal*/
 
 .modal {
@@ -113,10 +122,14 @@ nav .brand-logo {
   width: 100%;
 }
 
-#modal-close {
+#login-modal-close {
   color: #666666;
   padding: 0;
   font-size: 30px;
+}
+
+.tabs {
+    background-color: #fafafa;
 }
 
 .divider {
@@ -149,6 +162,36 @@ input#username {
 
 .form-row {
   margin-bottom: 10px;
+}
+
+#login-btn-inner {
+  background-color: #c89f98;
+  color: #666666;
+  padding: 6px;
+  border: 1px solid #666666;
+  border-radius: 6px;
+  width: 100%;
+  text-align: center;
+}
+
+#login-btn-outer {
+    width: 40%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+div#login.col.s12, div#register.col.s12 {
+    margin-top: 20px;
+}
+
+.modal-login-content {
+    padding: 10px;
+}
+
+.modal-login-content h4 {
+  color: #c89f98;
+  font-size: 18px;
+  line-height: 2.5;
 }
 
 /* -------------------- Callout*/

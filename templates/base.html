@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -10,88 +10,210 @@
       crossorigin="anonymous"
       type="text/css"
     />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
-    {% block styles %}
-    {% endblock %}
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+      type="text/css"
+    />
+    {% block styles %} {% endblock %}
     <title>Wean Cuisine</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <!-- Header -->
     <header>
       <nav id="inner-header">
-         <div class="nav-wrapper">
-            <!-- logo -->
-            <a href="{{ url_for('homepage') }}" class="brand-logo">
-                <img class="responsive-img" src="{{ url_for('static', filename='assets/images/logo.png') }}" alt="Wean Cuisine Logo">
-            </a>
-            <!-- Nav elements -->
-            <ul class="nav-btns right">
-                <!-- Modal login Trigger -->
-                <li><a id="login-btn" class="btn modal-trigger" href="#modal1">Log in</a></li>
-                <!-- Modal login Structure -->
-                <div id="modal1" class="modal">
-                    <div class="modal-content">
-                        <h4>Log In
-                            <a href="#!" id="modal-close" class="modal-close material-icons right">close</a>
-                        </h4>
-                        <div class="divider"></div>
-                        <!-- Username -->
-                        <div class="row form-row">
-                         <div class="input-field col s12">
-                             <input placeholder="Enter username" id="username" name="username" type="text" class="validate">
-                             <label for="username">Username</label>
-                         </div>
-                    </div>
-                    <!-- Password -->
-                    <div class="row form-row">
-                        <div class="input-field col s12">
-                            <input placeholder="Enter password" id="password" name= "password" type="password" class="validate">
-                            <label for="password">Password</label>
-                        </div>
-                    </div>
-                    <!-- Link to Register -->
-                    <div class="row form-row" id="modal-link">
-                        <p class="col s-12">Not registered?<a href="#"><u>Register</u></a></p>
-                    </div>
-                    <!-- Submit btn -->
-                    <div class="row" id="modal-btn-outer">
-                         <button type="submit" id="modal-btn-inner" class="col s-12">
-                        LOG IN
-                        </button>
-                    </div>
-                </div>
-             </div>
+        <div class="nav-wrapper">
+          <!-- logo -->
+          <a href="{{ url_for('homepage') }}" class="brand-logo">
+            <img
+              class="responsive-img"
+              src="{{ url_for('static', filename='assets/images/logo.png') }}"
+              alt="Wean Cuisine Logo"
+            />
+          </a>
+          <!-- Nav elements -->
+          <ul class="nav-btns right">
+            <!-- Modal login Trigger -->
+            {% if session.user %}
+            <li>
+              <a id="login-btn" class="btn modal-trigger" href="{{ url_for('logout') }}"
+                >Log out</a
+              >
+            </li>
+            {% else %}
+            <li>
+              <a id="login-btn" class="btn modal-trigger" href="#login-modal"
+                >Log in</a
+              >
+            </li>
+            {% endif %}
 
-                <!-- Sidenav menu Trigger -->
-            <li><a href="#" id="menu" data-target="menu-items" class="sidenav-trigger show-on-large"><i id="menu-icon" class="material-icons">menu</i></a></li>
-            </ul>
-            <!-- Sidenav menu list -->
-            <ul id= "menu-items" class="sidenav right">
-                <li><a href="{{ url_for('homepage') }}">Home</a></li>
-                <li><a href="#section1">How does Wean Cuisine work?</a></li>
-                <li><a href="{{ url_for('get_recipes') }}">Recipes</a></li>
-                <li><a href="{{ url_for('shop_books') }}">Shop Recipe Books</a></li>
-            </ul>
+            <!-- Modal login Structure -->
+            <div id="login-modal" class="modal">
+              <div class="modal-login-content">
+                <a
+                  href="#!"
+                  id="login-modal-close"
+                  class="modal-close material-icons right"
+                  >close</a
+                >
+                <div class="row">
+                  <div class="col s12">
+                    <ul class="tabs">
+                      <li class="tab col s6">
+                        <a class="active" href="#login"><h4>Login</h4></a>
+                      </li>
+                      <li class="tab col s6">
+                        <a href="#register"><h4>Register</h4> </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Login tab -->
+                  <div id="login" class="col s12">
+                    <form method="POST" action="{{ url_for('login') }}">
+                      <div class="row form-row">
+                        <div class="input-field col s12">
+                          <input
+                            placeholder="Enter username"
+                            id="username"
+                            name="username"
+                            type="text"
+                            minlength="5"
+                            maxlength="15"
+                            pattern="^[a-zA-Z0-9]{5,15}$"
+                            class="validate"
+                            required
+                          />
+                          <label for="username">Username</label>
+                        </div>
+                      </div>
+                      <!-- Password -->
+                      <div class="row form-row">
+                        <div class="input-field col s12">
+                          <input
+                            placeholder="Enter password"
+                            id="password"
+                            name="password"
+                            type="password"
+                            minlength="5"
+                            maxlength="15"
+                            pattern="^[a-zA-Z0-9]{5,15}$"
+                            class="validate"
+                          />
+                          <label for="password">Password</label>
+                        </div>
+                      </div>
+                      <!-- Submit btn -->
+                      <div class="row" id="login-btn-outer">
+                        <button
+                          type="submit"
+                          id="login-btn-inner"
+                          class="col s-12"
+                        >
+                          LOG IN
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- Register tab -->
+                  <div id="register" class="col s12">
+                    <form method="POST" action="{{ url_for('register') }}">
+                      <div class="row form-row">
+                        <div class="input-field col s12">
+                          <input
+                            placeholder="Enter username"
+                            id="username"
+                            name="username"
+                            type="text"
+                            minlength="5"
+                            maxlength="15"
+                            pattern="^[a-zA-Z0-9]{5,15}$"
+                            class="validate"
+                            required
+                          />
+                          <label for="username">Username</label>
+                        </div>
+                      </div>
+                      <!-- Password -->
+                      <div class="row form-row">
+                        <div class="input-field col s12">
+                          <input
+                            placeholder="Enter password"
+                            id="password"
+                            name="password"
+                            type="password"
+                            minlength="5"
+                            maxlength="15"
+                            pattern="^[a-zA-Z0-9]{5,15}$"
+                            class="validate"
+                            required
+                          />
+                          <label for="password">Password</label>
+                        </div>
+                      </div>
+                      <!-- Submit btn -->
+                      <div class="row" id="login-btn-outer">
+                        <button
+                          type="submit"
+                          id="login-btn-inner"
+                          class="col s-12"
+                        >
+                          REGISTER
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sidenav menu Trigger -->
+            <li>
+              <a
+                href="#"
+                id="menu"
+                data-target="menu-items"
+                class="sidenav-trigger show-on-large"
+                ><i id="menu-icon" class="material-icons">menu</i></a
+              >
+            </li>
+          </ul>
+          <!-- Sidenav menu list -->
+          <ul id="menu-items" class="sidenav right">
+            <li><a class="sidenav-close" href="{{ (url_for('homepage') + '#section1') }}">How does it work?</a></li>
+            <li><a class="sidenav-close" href="{{ url_for('get_recipes') }}">All recipes</a></li>
+            {% if session.user %}
+            <li><a class="sidenav-close" href="{{ url_for('add_recipe') }}">Add recipe</a></li>
+            {% endif %}
+            <li><a class="sidenav-close" href="{{ url_for('shop_books') }}">Shop Recipe Books</a></li>
+          </ul>
         </div>
       </nav>
     </header>
 
     <!-- HTML content -->
-    <main>
-        {% block content %} {% endblock %}
-    </main>
+    <main>{% block content %} {% endblock %}</main>
 
     <footer>
-            <h6 class="copyright">Copyright © 2020 Lucy J P Jones</h6>
+      <h6 class="copyright">Copyright © 2020 Lucy J P Jones</h6>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-     {% block scripts %}
-    {% endblock %}
-</body>
+    {% block scripts %} {% endblock %}
+  </body>
 </html>
