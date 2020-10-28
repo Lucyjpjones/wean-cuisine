@@ -173,7 +173,8 @@ def get_cuisines():
 def add_cuisine():
     if request.method == "POST":
         cuisine = {
-            "cuisine_name": request.form.get("cuisine_name")
+            "cuisine_name": request.form.get("cuisine_name"),
+            "img_url": request.form.get("img_url")
         }
         mongo.db.categories.insert_one(cuisine)
         flash("New Cuisine Added")
@@ -186,7 +187,8 @@ def add_cuisine():
 def edit_cuisine(cuisine_id):
     if request.method == "POST":
         submit = {
-            "cuisine_name": request.form.get("cuisine_name")
+            "cuisine_name": request.form.get("cuisine_name"),
+            "img_url": request.form.get("img_url")
         }
         mongo.db.cuisines.update({"_id": ObjectId(cuisine_id)}, submit)
         flash("Cuisine Successfully Updated")
