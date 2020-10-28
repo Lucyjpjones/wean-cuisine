@@ -75,14 +75,14 @@
             <div id="card-delete-row" class="col s12">
               <!-- Modal Trigger -->
               <a
-                href="#confirm-del"
+                data-target="{{ recipe._id }}"
                 id="card-del"
                 class="btn right modal-trigger"
                 >Delete</a
               >
 
               <!-- Modal Structure -->
-              <div id="confirm-del" class="modal">
+              <div id="{{ recipe._id }}" class="modal">
                 <div class="modal-content">
                   <h5>Are you sure you want to delete this recipe?</h5>
                 </div>
