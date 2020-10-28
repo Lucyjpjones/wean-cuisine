@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* -------------------- General*/
-
 body {
   background-color: #fafafa;
   text-transform: uppercase;
@@ -40,17 +39,14 @@ a.btn:focus {
 }
 
 /* -------------------- Header*/
-header {
-  background-color: #cef3ed;
-  height: 80px;
-  padding-top: 15px;
-}
 
-#inner-header {
-  max-width: 95%;
-  margin: auto;
-  box-shadow: none;
-  background-color: #cef3ed;
+.navbar-fixed {
+    position:fixed;
+    top: 0;
+    width: 100%;
+    background-color: #cef3ed;
+    height: 70px;
+    padding: 6px;
 }
 
 nav .brand-logo {
@@ -64,11 +60,11 @@ nav .brand-logo {
 #login-btn {
   background-color: #fff7ae;
   color: #666666;
-  font-size: 13px;
+  font-size: 11px;
   border-radius: 6px;
   font-weight: 500;
   margin: 0;
-  padding: 0 12px;
+  padding: 0 10px;
 }
 
 #menu {
@@ -82,7 +78,7 @@ nav .brand-logo {
 
 .sidenav {
   width: 100%;
-  margin-top: 80px;
+  margin-top: 70px;
   text-align: center;
 }
 
@@ -197,6 +193,7 @@ div#login.col.s12, div#register.col.s12 {
 /* -------------------- Callout*/
 
 #callout-outer {
+    margin-top: 70px;
   position: relative;
 }
 #bg-img {
