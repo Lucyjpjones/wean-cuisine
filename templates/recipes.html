@@ -84,18 +84,20 @@
               <!-- Modal Structure -->
               <div id="confirm-del" class="modal">
                 <div class="modal-content">
+                  <h5>Are you sure you want to delete this recipe?</h5>
+                </div>
+                <br>
+                <div class="modal-footer">
                   <a
                     href="#!"
                     id="modal-close"
-                    class="modal-close material-icons right"
-                    >close</a
+                    class="modal-close btn"
+                    >cancel</a
                   >
-                  <h4>Are you sure you would like to delete?</h4>
-                </div>
-                <div class="modal-footer">
                   <a
                     href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
-                    class="waves-effect waves-green btn-flat"
+                    id="modal-confirm"
+                    class="btn"
                     >Confirm</a
                   >
                 </div>

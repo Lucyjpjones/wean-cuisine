@@ -670,18 +670,50 @@ textarea.materialize-textarea {
 }
 
 .tabs .tab a {
-    color: #666666;
+  color: #666666;
 }
 
-.tabs .tab a:hover, .tabs .tab a.active {
-    background-color: transparent;
-    color: #c89f98;
+.tabs .tab a:hover,
+.tabs .tab a.active {
+  background-color: transparent;
+  color: #c89f98;
 }
 
 .tabs .indicator {
-    background-color: #c89f98;
+  background-color: #c89f98;
 }
 
 #page-callout p {
-    font-size: 11px;
+  font-size: 11px;
+}
+
+/* --------------------Delete recipe modal */
+
+.modal {
+  border-radius: 6px;
+  padding: 0 10px;
+}
+
+#modal-close,
+#modal-confirm {
+  font-size: 10px;
+  font-weight: 600px;
+  background-color: #f9dce4;
+  color: #666666;
+  border-radius: 6px;
+  margin: 6px 3px;
+  padding: 0 8px;
+  height: 20px;
+  line-height: 20px;
+}
+.modal-content h5 {
+  font-size: 16px;
+  color: #666666;
+  text-transform: none;
+  text-align: center;
+}
+
+.modal .modal-footer {
+  height: 50px;
+  text-align: center;
 }
