@@ -165,7 +165,7 @@ def logout():
 
 @app.route("/get_cuisines")
 def get_cuisines():
-    cuisines = list(mongo.db.cuisines.find().sort("cuisine_name", 1))
+    cuisines = mongo.db.cuisines.find().sort("cuisine_name", 1)
     return render_template("cuisines.html", cuisines=cuisines)
 
 

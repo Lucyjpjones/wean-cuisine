@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block content %}
 
-<section class="container" id="page-callout">
+<section class="container" id="cuisine-callout">
   <img
     id="page-img"
     src="{{ url_for('static', filename='assets/images/recipes-img.jpg') }}"
@@ -15,39 +15,12 @@
       >Add cuisine <i class="material-icons">add_circle_outline</i>
     </a>
     {% endif %}
-    <!--Search bar-->
-    <div id="search-bar" class="row card-panel grey lighten-5">
-      <form action="{{ url_for('search') }}" method="POST" class="col s8">
-        <div id="input-outer" class="row valign-wrapper center-align">
-          <div class="input-field col s10">
-            <input
-              type="text"
-              name="query"
-              id="query"
-              minlength="3"
-              class="validate"
-              required
-            />
-            <label for="query">Search Cuisines</label>
-          </div>
-          <!--Search btn-->
-          <div class="col s1">
-            <a id="clear-btn" href="{{ url_for('get_cuisines') }}">
-              <i class="material-icons">cancel</i>
-            </a>
-          </div>
-          <div class="col s1">
-            <button id="search-btn" type="submit">
-              <i class="material-icons">search</i>
-            </button>
-          </div>
-        </div>
-      </form>
+    <!--Paragraph text-->
+    <div class="row form-row">
+        <p id="cuisine-p">Travel the world from your own kitchen with a wide collection of tasty cuisines.</p>
     </div>
   </div>
 </section>
-
-{% if cuisines|length > 0 %}
 
 <div id="card-container">
   <div class="row">
@@ -56,12 +29,13 @@
       <div href="" id="recipe-card" class="card">
         <div class="card-image" id="card-img">
           <a href="#">
-            <img src="" alt="Cuisine image" />
+            <img src="{{ cuisine.img_url }}" alt="Cuisine image" />
           </a>
         </div>
         <div id="card-info" class="row card-content">
           <div class="col s12">
             <p id="card-title"><strong>{{ cuisine.cuisine_name }}</strong></p>
+            <p>Cuisine</p>
           </div>
           <div id="card-btns">
             <div id="card-edit-row" class="col s12">
@@ -109,6 +83,4 @@
     {% endfor %}
   </div>
 </div>
-{% else %}
-<h3 id="no-results">No results found</h3>
-{% endif %} {% endblock %}
+{% endblock %}
