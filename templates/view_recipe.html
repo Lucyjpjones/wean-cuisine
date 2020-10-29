@@ -38,22 +38,23 @@
     <div class="col s12">
       <ul class="tabs">
         <li class="tab col s6">
-          <a class="active" href="#ingredients">Ingredients</a>
+          <a class= "active" href="#ingredients">Ingredients</a>
         </li>
         <li class="tab col s6">
           <a href="#menu">Method</a>
         </li>
       </ul>
     </div>
-    {% for ingredient in recipe.ingredients.splitlines() %}
     <div id="ingredients" class="col s12">
+      {% for ingredient in recipe.ingredients.splitlines() %}
       <p>{{ ingredient }}</p>
+      {% endfor %}
     </div>
-    {% endfor %} {% for step in recipe.method.splitlines() %}
     <div id="method" class="col s12">
+      {% for step in recipe.method.splitlines() %}
       <p>{{ step }}</p>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
 </div>
 

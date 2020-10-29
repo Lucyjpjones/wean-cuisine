@@ -205,6 +205,13 @@ def delete_cuisine(cuisine_id):
     return redirect(url_for("get_cuisines"))
 
 
+@app.route("/cuisine_filter", methods=["GET", "POST"])
+def cuisine_filter():
+    filter = request.form.get("filter")
+    cuisines = list(mongo.db.recipes.find({"$text": {"$search": filter}}))
+    return render_template("cuisines.html", cuisines=cuisines)
+
+
 @app.errorhandler(404)
 def page_not_found(e):
     # note that we set the 404 status explicitly
