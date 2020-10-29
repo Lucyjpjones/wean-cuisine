@@ -77,7 +77,7 @@ nav .brand-logo {
   max-width: 150px;
 }
 
-#login-btn {
+#login-btn, #logout-btn {
   background-color: #fff7ae;
   color: #666666;
   font-size: 11px;
@@ -180,7 +180,7 @@ input#username {
   margin-bottom: 10px;
 }
 
-#login-btn-inner {
+#login-btn-inner, #register-btn-inner {
   background-color: #c89f98;
   color: #666666;
   padding: 6px;
@@ -190,7 +190,7 @@ input#username {
   text-align: center;
 }
 
-#login-btn-outer {
+#login-btn-outer, #register-btn-inner {
   width: 40%;
   margin: auto;
   margin-top: 10px;
@@ -829,4 +829,8 @@ textarea.materialize-textarea {
 
 #cuisine-card {
   height: 200px;
+}
+
+.add-container {
+    padding-top: 15%;
 }

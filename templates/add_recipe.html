@@ -1,9 +1,10 @@
 {% extends "base.html" %} {% block content %}
 
-<section class="container">
+<!--Page header-->
+<section class="container add-container">
   <h3 class="add-header">Add Recipe</h3>
 
-  <!--Form-->
+  <!--Add recipe form-->
   <div class="row">
     <form
       id="recipe-form"
@@ -47,8 +48,8 @@
         </div>
       </div>
 
-      <!--Serving text input, time text input and food cat select-->
       <div class="row form-row">
+        <!--Serving input field-->
         <div class="input-field col s3">
           <input
             id="recipe_serving"
@@ -61,6 +62,7 @@
           />
           <label for="recipe_serving">Serving</label>
         </div>
+        <!--Serving input field-->
         <div class="input-field inline col s3">
           <input
             id="recipe_time"
@@ -73,6 +75,7 @@
           />
           <label for="recipe_time">Time</label>
         </div>
+        <!--Food category select-->
         <div class="input-field col s6">
           <select
             id="food_category"
@@ -91,14 +94,20 @@
         </div>
       </div>
 
-      <!--Age checkbox-->
+      <!--Ages radio buttons-->
       <p class="input-field">Ages</p>
       <div class="row form-row">
         {% for age in ages %}
         <div class="col s4">
           <p>
             <label for="{{ age.age_range }}">
-              <input type="radio" id="{{ age.age_range }}" name="age_range" class="with-gap validate" required />
+              <input
+                type="radio"
+                id="{{ age.age_range }}"
+                name="age_range"
+                class="with-gap validate"
+                required
+              />
               <span>{{ age.age_range }}</span>
             </label>
           </p>
@@ -106,7 +115,7 @@
         {% endfor %}
       </div>
 
-      <!--Photo-->
+      <!--Image URL input field-->
       <div class="row form-row">
         <div class="input-field col s12">
           <i id="photo-icon" class="material-icons prefix">add_a_photo</i>
@@ -126,7 +135,7 @@
         </div>
       </div>
 
-      <!--Ingredients-->
+      <!--Ingredients input field-->
       <div class="row form-row">
         <div class="input-field col s12">
           <textarea
@@ -144,7 +153,7 @@
         </div>
       </div>
 
-      <!--Method-->
+      <!--Method input field-->
       <div class="form-row row">
         <div class="input-field col s12">
           <textarea
@@ -161,6 +170,7 @@
           >
         </div>
       </div>
+
       <!--Add recipe btn-->
       <button type="submit">
         <i class="material-icons">add_circle</i>

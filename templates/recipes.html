@@ -1,5 +1,6 @@
 {% extends "base.html" %} {% block content %}
 
+<!--Page callout header-->
 <section class="container" id="page-callout">
   <img
     id="page-img"
@@ -45,28 +46,34 @@
   </div>
 </section>
 
-<!--Checks if any results from search bar, if no results skip to else statement-->
+<!--Checks if any results from search bar, if no results skips to else statement-->
 {% if recipes|length > 0 %}
 
+<!--Recipe card structure-->
 <div id="card-container">
   <div class="row">
     {% for recipe in recipes %}
     <div class="col s6 m4 l3">
       <div href="" id="recipe-card" class="card">
+        <!--Recipe card image-->
         <div class="card-image" id="card-img">
           <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}">
             <img src="{{ recipe.img_url }}" alt="Recipe image" />
           </a>
         </div>
+        <!--Recipe card recipe name, created by and cuisine name-->
         <div id="card-info" class="row card-content">
           <div class="col s12">
             <p id="card-title"><strong>{{ recipe.recipe_name }}</strong></p>
             <p>by: {{ recipe.created_by }}</p>
             <p><i class="fas fa-globe-europe"></i> {{ recipe.cuisine_name }}</p>
           </div>
+
+          <!--Recipe card edit & delete btns, only visible to user who added recipe card-->
           <div id="card-btns">
             <div id="card-edit-row" class="col s12">
               {% if session.user|lower == recipe.created_by|lower %}
+              <!--Edit btn-->
               <a
                 href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
                 id="card-edit"
@@ -74,8 +81,9 @@
                 >Edit</a
               >
             </div>
+            <!--Delete btn and modal for delete confirmation-->
             <div id="card-delete-row" class="col s12">
-              <!-- Modal Trigger -->
+              <!-- Delete btn and modal trigger -->
               <a
                 data-target="{{ recipe._id }}"
                 id="card-del"
@@ -110,6 +118,7 @@
     {% endfor %}
   </div>
 </div>
+<!--If no results found for keywords in search bar-->
 {% else %}
 <h3 id="no-results">No results found</h3>
 {% endif %} {% endblock %}

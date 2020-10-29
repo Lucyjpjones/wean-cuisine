@@ -1,30 +1,37 @@
 {% extends "base.html" %} {% block content %}
 
+<!--Page header-->
 <section class="container" id="cuisine-callout">
+  <!--Recipe image-->
   <img id="view-recipe-img" src="{{ recipe.img_url }}" alt="background" />
   <div id="page-overlay-text">
-    <!--Page Title-->
+    <!--Recipe name title-->
     <h3>{{ recipe.recipe_name }}</h3>
     <br />
+    <!--Recipe created by-->
     <p>by: {{ recipe.created_by }}</p>
+    <!--Recipe cuisine name-->
     <p><i class="fas fa-globe"></i> {{ recipe.cuisine_name }}</p>
   </div>
+  <!--Recipe age-range circle-->
   <div id="age-circle">
     <p>{{ recipe.age_range }}</p>
   </div>
 </section>
 
-<!--Serving & time-->
 <div id="yellow-container" class="container">
   <div id="yellow-container-inner" class="row">
+    <!--Recipe serving size-->
     <div class="col s4">
       <i class="material-icons">child_care</i>
       <p>{{ recipe.recipe_serving }}</p>
     </div>
+    <!--Recipe time-->
     <div class="col s4">
       <i class="material-icons">timer</i>
       <p>{{ recipe.recipe_time }} mins</p>
     </div>
+    <!--Recipe food category-->
     <div class="col s4">
       <i class="material-icons">local_dining</i>
       <p>{{ recipe.food_category }}</p>
@@ -32,24 +39,26 @@
   </div>
 </div>
 
-<!--Ingredients & method tab-->
+<!--Ingredients & method tabs-->
 <div id="tab-container" class="container">
   <div class="row">
     <div class="col s12">
       <ul class="tabs">
         <li class="tab col s6">
-          <a class= "active" href="#ingredients">Ingredients</a>
+          <a class="active" href="#ingredients">Ingredients</a>
         </li>
         <li class="tab col s6">
           <a href="#menu">Method</a>
         </li>
       </ul>
     </div>
+    <!--Ingredients tab-->
     <div id="ingredients" class="col s12">
       {% for ingredient in recipe.ingredients.splitlines() %}
       <p>{{ ingredient }}</p>
       {% endfor %}
     </div>
+    <!--Method tab-->
     <div id="method" class="col s12">
       {% for step in recipe.method.splitlines() %}
       <p>{{ step }}</p>

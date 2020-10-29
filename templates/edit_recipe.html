@@ -1,9 +1,10 @@
 {% extends "base.html" %} {% block content %}
 
+<!--Page header-->
 <section class="container">
   <h3 class="add-header">Edit Recipe</h3>
 
-  <!--Form-->
+  <!--Edit recipe form-->
   <div class="row">
     <form
       id="recipe-form"
@@ -53,8 +54,8 @@
         </div>
       </div>
 
-      <!--Serving text input, time text input and food cat select-->
       <div class="row form-row">
+        <!--Serving input field-->
         <div class="input-field col s3">
           <input
             id="recipe_serving"
@@ -68,6 +69,7 @@
           />
           <label for="recipe_serving">Serving</label>
         </div>
+        <!--Serving input field-->
         <div class="input-field inline col s3">
           <input
             id="recipe_time"
@@ -81,6 +83,7 @@
           />
           <label for="recipe_time">Time</label>
         </div>
+        <!--Food category select-->
         <div class="input-field col s6">
           <select
             id="food_category"
@@ -104,7 +107,7 @@
         </div>
       </div>
 
-      <!--Age checkbox-->
+      <!--Ages radio buttons-->
       <p class="input-field">Ages</p>
       <div class="row form-row">
         {% for age in ages %}
@@ -118,7 +121,7 @@
                 name="age_range"
                 class="with-gap validate"
                 value="{{ age.age_range }}"
-                checked = true
+                checked="true"
               />
               <span>{{ age.age_range }}</span>
               {% else %}
@@ -137,7 +140,7 @@
         {% endfor %}
       </div>
 
-      <!--Photo-->
+      <!--Image URL input field-->
       <div class="row form-row">
         <div class="input-field col s12">
           <i id="photo-icon" class="material-icons prefix">add_a_photo</i>
@@ -158,7 +161,7 @@
         </div>
       </div>
 
-      <!--Ingredients-->
+      <!--Ingredients input field-->
       <div class="row form-row">
         <div class="input-field col s12">
           <textarea
@@ -178,7 +181,7 @@
         </div>
       </div>
 
-      <!--Method-->
+      <!--Method input field-->
       <div class="form-row row">
         <div class="input-field col s12">
           <textarea
@@ -197,7 +200,7 @@
           >
         </div>
       </div>
-      <!--Add recipe btn-->
+      <!--Edit recipe btn-->
       <button type="submit">
         <i class="material-icons">border_color</i>
       </button>

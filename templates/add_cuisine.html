@@ -1,9 +1,10 @@
 {% extends "base.html" %} {% block content %}
 
-<section class="container">
+<!--Page header-->
+<section class="container add-container">
   <h3 class="add-header">Add Cuisine</h3>
 
-  <!--Form-->
+  <!--Add cuisine form-->
   <div class="row">
     <form
       id="recipe-form"
@@ -11,7 +12,7 @@
       method="POST"
       action="{{ url_for('add_cuisine') }}"
     >
-      <!--Cuisine name-->
+      <!--Cuisine name input field-->
       <div class="row form-row">
         <div class="input-field col s12">
           <input
@@ -27,7 +28,7 @@
         </div>
       </div>
 
-      <!--Photo-->
+      <!--Image URL input field-->
       <div class="row form-row">
         <div class="input-field col s12">
           <i id="photo-icon" class="material-icons prefix">add_a_photo</i>

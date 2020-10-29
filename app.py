@@ -17,19 +17,29 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
-
+# Homepage function
 @app.route("/")
 @app.route("/homepage")
 def homepage():
     return render_template("index.html")
 
 
+# Recipes page function
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
     return render_template("recipes.html", recipes=recipes)
 
 
+# Search bar function
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
+    return render_template("recipes.html", recipes=recipes)
+
+
+# Register modal function
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -53,6 +63,7 @@ def register():
     return redirect(url_for("homepage"))
 
 
+# Login modal function
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -76,13 +87,15 @@ def login():
     return redirect(url_for("homepage"))
 
 
-@app.route("/search", methods=["GET", "POST"])
-def search():
-    query = request.form.get("query")
-    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
-    return render_template("recipes.html", recipes=recipes)
+# Logout function
+@app.route("/logout")
+def logout():
+    flash("You have been logged out")
+    session.pop("user")
+    return redirect(url_for("login"))
 
 
+# Add recipe function
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
@@ -109,6 +122,7 @@ def add_recipe():
                            categories=categories)
 
 
+# Edit recipe function
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":
@@ -138,6 +152,7 @@ def edit_recipe(recipe_id):
                            cuisines=cuisines, ages=ages, categories=categories)
 
 
+# Delete recipe function
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
@@ -145,30 +160,21 @@ def delete_recipe(recipe_id):
     return redirect(url_for("get_recipes"))
 
 
+# View recipe information function
 @app.route("/view_recipe/<recipe_id>", methods=["GET"])
 def view_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("view_recipe.html", recipe=recipe)
 
 
-@app.route("/shop_books")
-def shop_books():
-    return render_template("shop-books.html")
-
-
-@app.route("/logout")
-def logout():
-    flash("You have been logged out")
-    session.pop("user")
-    return redirect(url_for("login"))
-
-
+# Cuisines page function
 @app.route("/get_cuisines")
 def get_cuisines():
     cuisines = mongo.db.cuisines.find().sort("cuisine_name", 1)
     return render_template("cuisines.html", cuisines=cuisines)
 
 
+# Add cuisine function
 @app.route("/add_cuisine", methods=["GET", "POST"])
 def add_cuisine():
     if request.method == "POST":
@@ -183,6 +189,7 @@ def add_cuisine():
     return render_template("add_cuisine.html")
 
 
+# Edit cuisine function
 @app.route("/edit_cuisine/<cuisine_id>", methods=["GET", "POST"])
 def edit_cuisine(cuisine_id):
     if request.method == "POST":
@@ -198,6 +205,7 @@ def edit_cuisine(cuisine_id):
     return render_template("edit_cuisine.html", cuisine=cuisine)
 
 
+# Delete cuisine function
 @app.route("/delete_cuisine/<cuisine_id>")
 def delete_cuisine(cuisine_id):
     mongo.db.cuisines.remove({"_id": ObjectId(cuisine_id)})
@@ -205,13 +213,22 @@ def delete_cuisine(cuisine_id):
     return redirect(url_for("get_cuisines"))
 
 
-@app.route("/cuisine_filter", methods=["GET", "POST"])
-def cuisine_filter():
-    filter = request.form.get("filter")
-    cuisines = list(mongo.db.recipes.find({"$text": {"$search": filter}}))
-    return render_template("cuisines.html", cuisines=cuisines)
+# Filter recipes by cuisine function
+@app.route("/filter_cuisine", methods=["GET", "POST"])
+def filter_cuisine():
+    query = request.form.get("query")
+    recipes = list(mongo.db.recipes.find({"cuisine_name": query}))
+
+    return render_template("view_recipe.html", recipes=recipes)
 
 
+# Shop recipe books function
+@app.route("/shop_books")
+def shop_books():
+    return render_template("shop-books.html")
+
+
+# 404 page function
 @app.errorhandler(404)
 def page_not_found(e):
     # note that we set the 404 status explicitly

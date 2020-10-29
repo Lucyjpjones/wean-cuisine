@@ -1,9 +1,10 @@
 {% extends "base.html" %} {% block content %}
 
+<!--Page header-->
 <section class="container">
   <h3 class="add-header">Edit Cuisine</h3>
 
-  <!--Form-->
+  <!--Edit cuisine form-->
   <div class="row">
     <form
       id="recipe-form"
@@ -11,7 +12,7 @@
       method="POST"
       action="{{ url_for('edit_cuisine', cuisine_id=cuisine._id) }}"
     >
-      <!--Cuisine name-->
+      <!--Cuisine name input field-->
       <div class="row form-row">
         <div class="input-field col s12">
           <input
@@ -28,7 +29,7 @@
         </div>
       </div>
 
-      <!--Photo-->
+      <!--Image URL input field-->
       <div class="row form-row">
         <div class="input-field col s12">
           <i id="photo-icon" class="material-icons prefix">add_a_photo</i>
@@ -49,7 +50,7 @@
         </div>
       </div>
 
-      <!--Add cuisine btn-->
+      <!--Edit cuisine btn-->
       <button type="submit">
         <i class="material-icons">border_color</i>
       </button>
