@@ -205,15 +205,22 @@
                   >All recipes</a
                 >
               </li>
+              {% if session.user %}
+              <li>
+                <a class="sidenav-close" href="{{ url_for('add_recipe') }}"
+                  >Add recipe</a
+                >
+              </li>
+              {% endif %}
               <li>
                 <a class="sidenav-close" href="{{ url_for('get_cuisines') }}"
                   >Cuisines</a
                 >
               </li>
-              {% if session.user %}
+              {% if session.user|lower == "susan"|lower %}
               <li>
-                <a class="sidenav-close" href="{{ url_for('add_recipe') }}"
-                  >Add recipe</a
+                <a class="sidenav-close" href="{{ url_for('add_cuisine') }}"
+                  >Add cuisine</a
                 >
               </li>
               {% endif %}
