@@ -1,20 +1,23 @@
 {% extends "base.html" %} {% block content %}
 
-<section class="container" id="page-callout">
+<section class="container" id="cuisine-callout">
   <img id="view-recipe-img" src="{{ recipe.img_url }}" alt="background" />
   <div id="page-overlay-text">
     <!--Page Title-->
     <h3>{{ recipe.recipe_name }}</h3>
-    <br>
+    <br />
     <p>by: {{ recipe.created_by }}</p>
     <p><i class="fas fa-globe"></i> {{ recipe.cuisine_name }}</p>
+  </div>
+  <div id="age-circle">
+    <p>{{ recipe.age_range }}</p>
   </div>
 </section>
 
 <!--Serving & time-->
 <div id="yellow-container" class="container">
   <div id="yellow-container-inner" class="row">
-    <div class="col s3">
+    <div class="col s4">
       <i class="material-icons">child_care</i>
       <p>{{ recipe.recipe_serving }}</p>
     </div>
@@ -22,7 +25,7 @@
       <i class="material-icons">timer</i>
       <p>{{ recipe.recipe_time }} mins</p>
     </div>
-    <div class="col s5">
+    <div class="col s4">
       <i class="material-icons">local_dining</i>
       <p>{{ recipe.food_category }}</p>
     </div>
@@ -38,7 +41,7 @@
           <a class="active" href="#ingredients">Ingredients</a>
         </li>
         <li class="tab col s6">
-            <a href="#menu">Method</a>
+          <a href="#menu">Method</a>
         </li>
       </ul>
     </div>
