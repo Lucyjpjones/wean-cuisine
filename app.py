@@ -176,7 +176,7 @@ def add_cuisine():
             "cuisine_name": request.form.get("cuisine_name"),
             "img_url": request.form.get("img_url")
         }
-        mongo.db.categories.insert_one(cuisine)
+        mongo.db.cuisines.insert_one(cuisine)
         flash("New Cuisine Added")
         return redirect(url_for("get_cuisines"))
 

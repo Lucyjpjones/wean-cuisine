@@ -10,9 +10,11 @@
     <!--Page Title-->
     <h3>Cuisines</h3>
     <!--Add recipes btn-->
+    {% if session.user|lower == "susan"|lower %}
     <a id="add-recipe-btn" class="btn" href="{{ url_for('add_cuisine') }}"
       >Add cuisine <i class="material-icons">add_circle_outline</i>
     </a>
+    {% endif %}
     <!--Search bar-->
     <div id="search-bar" class="row card-panel grey lighten-5">
       <form action="{{ url_for('search') }}" method="POST" class="col s8">
