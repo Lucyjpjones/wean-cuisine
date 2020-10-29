@@ -86,7 +86,11 @@ I was inspired to create this application after finding out I was due to become 
 
 ### **<u>User Experience</u>**
 
-<img src="static/assets/images/readme/my-user.jpeg">
+<img src="static/assets/images/readme/flowchart.png">
+
+**User profile**
+
+As a first time mum, Katie  wants to be able to connect with other parents to find inspiring weaning recipes. Since Katie is a working mum, anything she can do to save time in the kitchen without comprising on nourishment is highly valuable. She wants to share her experience with others and be part of a diverse community as she begins her weaning journey.
 
 **User stories**
 
@@ -108,6 +112,14 @@ I was inspired to create this application after finding out I was due to become 
 
 **9.** Browse and purchase recipe books
 
+| Needs/Goals                                                 | Task                                                                             |
+|-------------------------------------------------------------|----------------------------------------------------------------------------------|
+| Be part of a social community with other parents            | Ability to register and an easily accessible button to 'Log in’                  |
+| Discover and learn new nourishing recipes                   | Explore recipes posted by other parents                                          |
+| Save time in the kitchen by getting inspiration from others | Clear recipe categorisation and ability to search using keywords in a search bar |
+| Ability to share and edit her own recipes                   | Option to add, edit and delete own recipes                                       |
+| Ability to find further inspiration                         | Links for purchasing recipe books for further inspiration                        |
+
 ### **<u>Wireframes</u>**
 
 As part of the design process, before starting my project I sketched out initial drawings then used [Balsamiq](https://balsamiq.com/?gclid=Cj0KCQjw28T8BRDbARIsAEOMBczzBYzsoMjbTtqNXQaE1EgOWA2u_Qux7sLl2IUHe-p0lDC-294BfVgaAr-oEALw_wcB) to create sharper-looking wireframes. Creating these mock-ups helped me plan the basic structure and arrangement of the features for my site.
@@ -124,9 +136,38 @@ As part of the design process, before starting my project I sketched out initial
 
 #### Features used:
 
+- Navigation header with dropdown menu
+- Buttons
+     - 'Login’
+     - ‘Explore recipes’
+     - ‘Add recipe’
+     - ‘Shop recipe books’
+- User input fields
+   - Login/Register
+   - Adding/Editing a recipe
+   - Search bar
+- Drop-downs
+   - Cuisine selector
+   - Food category selector
+   - Retailer purchase options
+- Checkbox
+  - Age checkbox
+- Tabs
+  - Ingredients and menu
+- Card listings
+  - Recipe cards
+   - Recipe book
+- User input- Login and register popup
+- Carousel 
+- Recipe categories (homepage)
+
 #### To-do list:
 
 #### Status
+
+> Project is: <u>ongoing</u>
+
+I will continue to update my website with more cuisines as I develop my userbase. 
 
 **Future Development plans**
 
@@ -136,7 +177,61 @@ As part of the design process, before starting my project I sketched out initial
 
 #### Languages
 
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
 #### Frameworks, Libraries & Programs
+
+ - [**Materialize CSS**](https://getbootstrap.com/)
+
+  - Materialize was used to assist with the responsiveness and styling of the website using design templates.
+
+- [**Google fonts**](https://fonts.google.com/)
+
+  - Google fonts were used to import the fonts into the CSS file which is used on all pages throughout the project.
+
+- [**Font Awesome 4.7.0**](https://fontawesome.com/)
+
+  - Font Awesome was used to add icons for aesthetic and UX purposes.
+
+- [**jQuery:**](https://jquery.com/)
+
+  - jQuery came with Materialize to make the components used responsive.
+  - Included at end of body tag within HTML file to ensure a smooth running of HMTL and CSS.
+
+- [**Git**](https://git-scm.com/)
+
+  - Git was used for version control by utilizing the Gitpod terminal to commit to Git and push to GitHub.
+
+- [**GitHub**](https://github.com/)
+
+  - GitHub is used to store the project code after being pushed from Git.
+
+- [**Heroku**](https://github.com/)
+
+  - Heroku is used to store the project code after being pushed from Git.
+
+- [**Balsamiq**](https://balsamiq.com/)
+
+  - Balsamiq was used to create the wireframes during the design process.
+
+- [**Grammarly**](https://www.grammarly.com/)
+
+  - Grammarly was used to ensure any grammar errors are eliminated.
+
+- [**HTML Formatter**](https://www.freeformatter.com/html-formatter.html) and [**CSS Formatter**](https://www.freeformatter.com/css-beautifier.html)
+
+  - Used to format my HTML and CSS file with desired indentation level for optimal readability.
+
+- [**EmailJS**](https://www.emailjs.com/)
+
+  - Used to send emails directly from a from to my Gmail account.
+
+- [**Tablesgenerator**](https://www.tablesgenerator.com/markdown_tables)
+
+  - Used to create tables in my readme file.
 
 ---
 
@@ -144,7 +239,84 @@ As part of the design process, before starting my project I sketched out initial
 
 #### Deploy to Github
 
+The project was deployed to GitHub Pages using the following steps...
+
+1. Log in to GitHub and locate the GitHub Repository.
+
+2. At the top of the Repository (not top of page), locate the "Settings" button on the menu.
+
+![Deploy-settings](assets/images/readme/deploy-settings.png)
+
+3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
+
+4. Under "Source", click the dropdown called "None" and select "Master Branch".
+
+![Deploy-settings](assets/images/readme/deploy-GHsource.png)
+
+5. The page will automatically refresh.
+
+6. Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
+
+#### Deploy to Heroku
+
 #### Accessing code
+
+Follow the steps below if you are wanting to propose changes to the project or to use the project as a starting point for your own idea.
+
+- **Forking the GitHub Repository**
+
+  Forking allows you to create a copy of the original repository and propose changes to the repository owner via a pull request.
+
+  1. Log in to GitHub and locate the GitHub Repository
+
+  2. At the top of the Repository (not top of page) just above the "Settings" button on the menu, locate the "Fork" button.
+
+  ![forking](assets/images/readme/forking.png)
+
+  3. You should now have a copy of the original repository in your GitHub account.
+
+- **Making a Local Clone**
+
+When you clone a repository, the repository is copied on to your local machine.
+
+1. Log in to GitHub and locate the GitHub Repository.
+
+2. Under the repository name, click the "download code" option.
+
+![Clone](assets/images/readme/clone.png)
+
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+
+![Clone-link](assets/images/readme/clone-link.png)
+
+4. Open Git Bash
+
+5. Change the current working directory to the location where you want the cloned directory to be made.
+
+6. Type git clone, and then paste the URL you copied in Step 3.
+
+```
+$ git clone https://github.com/YOUR-USERNAME/BRITbrAIN.git
+```
+
+7. Press Enter. Your local clone will be created.
+
+```
+$ git clone https://github.com/YOUR-USERNAME/BRITbrAIN.git
+
+> Cloning into `BRITbrAIN`...
+> remote: Enumerating objects: 299, done.
+> remote: Counting objects: 100%, (299/299),  done.
+> remote: Compressing objects: 100% (156/156), done.
+> Receiving objects: remove: Total 299 (delta 145), reused 267 (delta 126), pack-reused 0
+> Receiving objects: 100% (299/299), 4.61MiB | 2.98 MiB/s, done.
+> Resolving deltas: 100% (145/145), done. Unpacking objects: 100% (10/10), done.
+```
+
+Now, you have a local copy of your fork of the BRITbrAIN repository.
+
+> Note: The repository name and output numbers that you see on your computer, representing the total file size, etc, may differ from the example I have provided above.
+
 
 - **Forking the GitHub Repository**
 
@@ -156,20 +328,107 @@ As part of the design process, before starting my project I sketched out initial
 
 #### Testing user stories
 
+Testing my user's <u>key priorities</u>:
+
+**1.** Simple, user-friendly site that is easy to navigate
+
+ - Site includes a main navbar with a dropdown menu with links for different and same page navigation.
+- Navigation menu is fixed so is always visible to the user.
+- Logo directs user back to homepage from anywhere on the site.
+ 
+**2.** Ability to register to site
+
+**3.** Easily accessible button to 'Log in’ 
+
+**4.** Clear recipe by cuisine categorisation
+
+**5.** Ability to search using keywords in a search bar
+
+**6.** Option to add recipes
+
+**7.** Option to edit own recipes
+
+**8.** Option to delete own recipes
+
+**9.** Browse and purchase recipe books
+
 
 #### Manual function testing
 
+To ensure my site was working correctly I carried out some manual function testing;
+
+**1. Site navigation**
+
+- I checked the site dropdown menu was working correctly by starting on the home-page and navigating around the site from and to every screen the user would be faced with.
+- I checked the logo homepage naviagtion was working by clicking on the image from every page.
+- 404 Error page was tested by creating a broken link in the game URL and making sure it responded with my custom page.
+
+**2. Hover, focus and active effects**
+
+- Hovered over the following button elements to ensure the correct brightness effects were in place;
+  - 'Login' and 'Logout'
+  - 'Explore recipes'
+  - 'Add recipes'
+  - About icons changed colour
+  - Cuisine links on carousel
+  - 'Shop recipe books'
+
+
+
 #### Validator checks
+
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project. Code was entered through direct input. JS hint was used to check for any errors with my Javascript files. 
+JS was also tested by opening the developer console window on Chrome and checking for any errors as I clicked through the site.
+
+- [**HTML Validator**](https://validator.w3.org/nu/#textarea)
+
+- [**CSS Validator**](https://jigsaw.w3.org/css-validator/#validate_by_input)
+
+
+- [**JS hint**](https://jshint.com/)
+
+- Python validator
+
 
 #### Audits
 
+[Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to run a series of audits to improve the quality of web pages. Overall performance and errors highlighted below.
+
+![Lighthouse overall performance](assets/images/readme/lhSummary.png)
+
+<u>Performance</u>
+
+![Lighthouse render-blocking resources](assets/images/readme/1-lh.png)
+
 #### Responsive Design
 
+- Site created as a mobile-first design.
+
+- Viewport tag included in the head of HTML files to tell the browser how to respond to different resolutions, particularly mobile ones.
+
+- Media queries used in the CSS file to target larger devices.
+
 #### Additional Testing
+
+- The Website was tested on Google Chrome, Internet Explorer, Safari browsers, Firefox and Edge. Internet Explorer was the only browser experiencing errors, specific details have been added to bugs section.
+
+- The website was viewed on a variety of devices including HP Laptop, Macbook pro, Ipad and IPhones (Version 6,7,8,11).
+
+- Friends and family members were asked to review the site to point out any bugs, user experience issues and/or suggestions.
+
+  - Feedback action:
+
+- Project posted on Slack, asking for feedback from fellow students.
 
 #### Bugs
 
 ## &rarr; **Credits**
+
+- My Mentor for continuous help and support throughout the project.
+
+- The [Code Institute](https://codeinstitute.net/) Slack Community.
+
+- Friends & Family for continuous feedback and support.
 
 #### Content
 
