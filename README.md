@@ -5,6 +5,12 @@
 
 **A recipe site that allows users to connect, explore and share their own weaning recipes.**
 
+The project focuses on the concept of <u>CRUD</u>:
+- Create
+- Read
+- update
+- Delete
+
 This app was built using [GitHub Pages](https://pages.github.com/) and [Heroku](https://www.heroku.com/)
 
 [View here](https://lucyjpjones.github.io/wean-cuisine/)
@@ -82,15 +88,17 @@ I was inspired to create this application after finding out I was due to become 
 
 - For this site I created my own logo design with inspiration from [Flaticon](https://www.flaticon.com/) and [VectorStock](https://www.vectorstock.com/).
 
+- Following website conventions, my website logo is a link to the homepage. Over time through trial and error, many people have learned that clicking on a site’s logo leads them back to the homepage so adopting this standard reduces confusion by matching the UI to users’ expectations. The logo is also left-aligned which is the most familiar placement, and is where users look to find it.
+
 <img src="static/assets/images/readme/logo-design.png">
 
 ### **<u>User Experience</u>**
 
 <img src="static/assets/images/readme/flowchart.png">
 
-**User profile**
+**My user profile**
 
-As a first time mum, Katie  wants to be able to connect with other parents to find inspiring weaning recipes. Since Katie is a working mum, anything she can do to save time in the kitchen without comprising on nourishment is highly valuable. She wants to share her experience with others and be part of a diverse community as she begins her weaning journey.
+As a first time mum, Katie  wants to be able to connect with other parents from around the world to share inspiring weaning recipes. Since Katie is a working mum, anything she can do to save time in the kitchen without comprising on nourishment is highly valuable. She wants to share her experience with others and be part of a diverse community as she begins her weaning journey.
 
 **User stories**
 
@@ -136,41 +144,54 @@ As part of the design process, before starting my project I sketched out initial
 
 #### Features used:
 
-- Navigation header with dropdown menu
-- Buttons
-     - 'Login’
-     - ‘Explore recipes’
-     - ‘Add recipe’
-     - ‘Shop recipe books’
-- User input fields
-   - Login/Register
-   - Adding/Editing a recipe
-   - Search bar
-- Drop-downs
-   - Cuisine selector
-   - Food category selector
-   - Retailer purchase options
-- Checkbox
-  - Age checkbox
-- Tabs
-  - Ingredients and menu
-- Card listings
-  - Recipe cards
-   - Recipe book
-- User input- Login and register popup
-- Carousel 
-- Recipe categories (homepage)
+- **Responsive on all device sizes**
+  - Mobile-first design, responsive on all devices through using the Materialize grid system and CSS media queries.
+
+- **A user-friendly interface with easy navigation throughout the site**
+  - Attractive, minimalistic design with visuals and information presented clearly and concisely.
+  - Easily readable fonts and simple navigation throughout the site.
+    - Fixed navigation bar visible on every page including a menu dropdown and brand logo to link back to homepage.
+  - An aestheticly pleasing 404 page if the user is directed to a non-existent page.
+
+- **Buttons**
+    - Clear interative buttons used for a effortless user journey.
+
+- **Forms**
+  - Forms used for login and register, and adding and editing the recipe and cuisine cards.
+  - Materilize elements used include: input fields, textarea fields, radio buttons, select dropdowns and submit buttons.
+
+- **Tabs**
+  - Interactive tab used to allow user to flip between recipe ingredients and method.
+
+- **Card Listings**
+  - Used to display recipes, cuisine categories and recipe books.
+  - Image included contributing to the visual look.
+
+- **Modals**
+  - Used for login and register form and, recipe and cusine card delete confirmation.
+
+- **Carousel**
+  - Used for recipe categories displayed on the homepage.
+
+- **Search bar**
+  - Allows user to search recipes by keywords using text index searching. Ingredients and recipe name included as keywords in query.
+
 
 #### To-do list:
+
+- Dietry requirements
+- Forgot password link
 
 #### Status
 
 > Project is: <u>ongoing</u>
 
-I will continue to update my website with more cuisines as I develop my userbase. 
+I will continue to update my website as I grow my platform of users.
 
 **Future Development plans**
-
+- Create more cuisine cards 
+- Add review option for users
+- Parent forum
 ---
 
 ## &rarr; **Technologies**
@@ -179,14 +200,27 @@ I will continue to update my website with more cuisines as I develop my userbase
 
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
 - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
-- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
-- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [JavaScript](https://www.javascript.com/
+- [Python](https://www.python.org/)
 
 #### Frameworks, Libraries & Programs
 
- - [**Materialize CSS**](https://getbootstrap.com/)
+- [**MongoDB**](https://www.mongodb.com/)
+  - The document database used for this project.
+
+- [**Flask**](https://flask.palletsprojects.com/en/1.1.x/)
+  - A web framework used to provide tools, libraries and technologies for the application.
+
+- [**Werkzeug**](https://werkzeug.palletsprojects.com/en/1.0.x/)
+  - Used with Flask to make user authentication more secure using password hashing.
+
+- [**Materialize CSS**](https://materializecss.com/)
 
   - Materialize was used to assist with the responsiveness and styling of the website using design templates.
+
+- [**Randomkeygen**](https://randomkeygen.com/)
+
+  - Fort Knox Passwords for password security.
 
 - [**Google fonts**](https://fonts.google.com/)
 
@@ -334,9 +368,13 @@ Testing my user's <u>key priorities</u>:
 
  - Site includes a main navbar with a dropdown menu with links for different and same page navigation.
 - Navigation menu is fixed so is always visible to the user.
-- Logo directs user back to homepage from anywhere on the site.
+- Brand logo directs user back to homepage from anywhere on the site.
  
 **2.** Ability to register to site
+
+- Clear login btn displayed on navbar as soon as user is faced with landing page.
+- After clicking login button, user is presented with a modal displaying a login from and option to register if not already a member.
+- Registering allows the user to add and edit their own recipes.
 
 **3.** Easily accessible button to 'Log in’ 
 
