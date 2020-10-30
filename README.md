@@ -28,6 +28,7 @@ This app was built using [GitHub Pages](https://pages.github.com/) and [Heroku](
   - [Wireframes](#wireframes)
 - [&rarr; **Features**](#-rarr----features--)
   - [Features used](#features-used)
+  - [To do list](#to-do-list:)
   - [Status](#status)
 - [&rarr; **Technologies**](#-rarr----technologies--)
   - [Languages](#languages)
@@ -101,31 +102,16 @@ As a first time mum, Katie  wants to be able to connect with other parents from 
 
 **User stories**
 
-**1.** Simple, user-friendly site that is easy to navigate
- 
-**2.** Ability to register to site
+|   | Needs/Goals                                                 | Task                                                                             |
+|---|-------------------------------------------------------------|----------------------------------------------------------------------------------|
+| **1** | An easy-to-use recipe site                                  | Simple, user-friendly site that is easy to navigate                              |
+| **2** | Be part of a social community with other  parents           | Ability to register and an easily accessible button to 'Log in’                  |
+| **3** | Discover and learn new nourishing recipes                   | Explore recipes posted by others                                                 |
+| **4** | Save time in the kitchen by getting inspiration from others | Clear recipe categorisation and ability to search using keywords in a search bar |
+| **5** | Ability to share and edit her own recipes                   | Option to add, edit and delete own recipes                                       |
+| **6** | Ability to find further inspiration                         | Links for purchasing recipe books for further inspiration                        |
 
-**3.** Easily accessible button to 'Log in’ 
 
-**4.** Clear recipe by cuisine categorisation
-
-**5.** Ability to search using keywords in a search bar
-
-**6.** Option to add recipes
-
-**7.** Option to edit own recipes
-
-**8.** Option to delete own recipes
-
-**9.** Browse and purchase recipe books
-
-| Needs/Goals                                                 | Task                                                                             |
-|-------------------------------------------------------------|----------------------------------------------------------------------------------|
-| Be part of a social community with other parents            | Ability to register and an easily accessible button to 'Log in’                  |
-| Discover and learn new nourishing recipes                   | Explore recipes posted by other parents                                          |
-| Save time in the kitchen by getting inspiration from others | Clear recipe categorisation and ability to search using keywords in a search bar |
-| Ability to share and edit her own recipes                   | Option to add, edit and delete own recipes                                       |
-| Ability to find further inspiration                         | Links for purchasing recipe books for further inspiration                        |
 
 ### **<u>Wireframes</u>**
 
@@ -174,6 +160,8 @@ As part of the design process, before starting my project I sketched out initial
 
 - **Search bar**
   - Allows user to search recipes by keywords using text index searching. Ingredients and recipe name included as keywords in query.
+
+#### To do list:
 
 #### Status
 
@@ -326,7 +314,7 @@ This is the name of your repo in GitHub. It is good practice to use an identical
 
    - Heroku will now recieve the code from GitHub and start building the app using the required packages.
    - Once built you will recieve the message 'Your app was successfully deployed' and you can click 'View' to launch your new app.
-   
+
    > **Note:** 
 In Manual deploy dropdown 'master' is selected'
 
@@ -391,7 +379,7 @@ Now, you have a local copy of your fork of the Wean Cuisine repository.
 
 **Additional steps** 
 
-1. Add a env.py file with the following content:
+1. Add a env.py file to store environment variables:
    - Import os 
    - os.environ.setdefault("IP", "To be added by user") 
    - os.environ.setdefault("PORT", "To be added by user") 
@@ -399,7 +387,9 @@ Now, you have a local copy of your fork of the Wean Cuisine repository.
    - os.environ.setdefault("MONGO_URI", "To be added by user") 
    - os.environ.setdefault("MONGO_DBNAME", "To be added by user")
 
- 2. Create a file named .gitignore and include .env.py so this final is not pushed to GitHub.
+   > **Note:** I used [RandomKeygen.com](https://randomkeygen.com/) to get my secure SECRET_KEY password. A SECRET_KEY is required when using the flash and session functions of Flask.
+
+ 2. Create a file named .gitignore and include env.py to ensure this file is never pushed to GitHub.
  > **Note:** This is important as
 
 ---
@@ -411,31 +401,62 @@ Now, you have a local copy of your fork of the Wean Cuisine repository.
 Testing my user's <u>key priorities</u>:
 
 **1.** Simple, user-friendly site that is easy to navigate
-
- - Site includes a main navbar with a dropdown menu with links for different and same page navigation.
+ - Site includes a main navbar featuring a dropdown menu with page navigation.
 - Navigation menu is fixed so is always visible to the user.
 - Brand logo directs user back to homepage from anywhere on the site.
+
+![Navbar with brand logo](static/assets/images/readme/navbar.png)
  
-**2.** Ability to register to site
+**2.** Ability to register and an easily accessible button to 'Log in’
 
-- Clear login btn displayed on navbar as soon as user is faced with landing page.
-- After clicking login button, user is presented with a modal displaying a login from and option to register if not already a member.
-- Registering allows the user to add and edit their own recipes.
+- Clear login button visible on navbar as soon as user enters the site.
+- After clicking login button, user is presented with a modal giving the user an option to login or register.
+- After logging in or registering the user has the option to add, edit and delete their own recipes.
 
-**3.** Easily accessible button to 'Log in’ 
+![Login btn and modal](static/assets/images/readme/login.png)
 
-**4.** Clear recipe by cuisine categorisation
+**3.** Explore recipes posted by others
 
-**5.** Ability to search using keywords in a search bar
+- ‘Explore recipes’ button visible on callout section as soon as user enters the site. 
+- Navigation link to recipes also included in dropdown menu.
 
-**6.** Option to add recipes
+![Explore recipes nav ](static/assets/images/readme/callout.png)
 
-**7.** Option to edit own recipes
+- Recipe card displaying recipe image, recipe name, cuisine and who the recipe was created by.
 
-**8.** Option to delete own recipes
+![Recipe card page](static/assets/images/readme/recipe-card.png)
 
-**9.** Browse and purchase recipe books
+**4.** Clear recipe categorisation and ability to search using keywords in a search bar
+- Search bar to allow the user to search for recipes using keywords. The search bar is set up to filter recipes based on recipe name and ingredients.
 
+![Search bar](static/assets/images/readme/search-bar.png)
+
+- Link in dropdown menu to page displaying cuisine categories. User can click on cuisine to view all recipes in that category.
+
+![Dropdown menu](static/assets/images/readme/cuisine-dd.png)
+- Carousel on homepage to link directly to recipes for specific cuisine.
+
+ ![Carousel](static/assets/images/readme/carousel.png)
+
+- Admin control over adding, editing and deleting new cuisines. Buttons only visible when specified admin is logged in.
+
+ ![Buttons logged in vs logged out](static/assets/images/readme/cuisine-btns.png)
+
+**5.** Option to add, edit and delete own recipes
+- When user is logged the ‘add recipe’ button is visible to the user on the first view of the site. The link is also accessible via the dropdown menu.
+
+ ![Add recipe logged in vs logged out](static/assets/images/readme/add-recipe.png)
+
+- The edit and delete buttons are only available to the user who created the recipes. These are found on the individual recipe cards and are only visible when the user is logged in.
+
+ ![Edit/delete btns logged in vs logged out](static/assets/images/readme/edit-delete.png)
+
+**6.** Links for purchasing recipe books for further inspiration
+- User can access the ‘shop recipe books’ page via a link on homepage or through the includes an image of the book and a buy dropdown list with links to external retailer sites.
+
+ ![Homepage display](static/assets/images/readme/book-hp.png)
+
+  ![Recipe book page](static/assets/images/readme/book-page.png)
 
 #### Manual function testing
 
@@ -446,6 +467,7 @@ To ensure my site was working correctly I carried out some manual function testi
 - I checked the site dropdown menu was working correctly by starting on the home-page and navigating around the site from and to every screen the user would be faced with.
 - I checked the logo homepage naviagtion was working by clicking on the image from every page.
 - 404 Error page was tested by creating a broken link in the game URL and making sure it responded with my custom page.
+- The links to recipe book retailers were checked by ensuring that each dropdown link navigated to the correct site opened on a new window. This was tested for every dropdown.
 
 **2. Hover, focus and active effects**
 
@@ -457,6 +479,36 @@ To ensure my site was working correctly I carried out some manual function testi
   - Cuisine links on carousel
   - 'Shop recipe books'
 
+**3. Log in, register and logout function**
+
+- To check the log in functionality was working I first clicked on the 'log in' button to ensure the modal appeared. When presented with the modal I filled out the form with an already registered username and password then clicked 'Log in'. The modal closed and the log in button changed to log out and further buttons were available to me so i knew it was working. This was tested throughout all pages of the site.
+- To check the register functionality was working I first clicked on the 'log in' button so the modal appeared. I then clicked on the register tab and filled out the form with a username and password, then clicked 'Register'. The modal closed and the log in button changed to log out and further buttons were available to me so i knew it was working. This was tested throughout all pages of the site.
+- Once I was logged in and the 'log out' button was available I clicked this to check that it logged me out correctly. The log out button changed to log in and the additional buttons were no longer visible to me so i knew it was working. This was tested throughout all pages of the site.
+
+**4.** Form validation checks
+- username and password pattern check
+
+**5.** Explore recipes and search bar
+- links
+- search bar filter
+
+**6.** Viewing recipes
+
+**7.** Adding recipe
+
+**8.** Editing recipe
+
+**9.** Deleting recipe
+- modal confirmation
+
+**10.** Link to cuisine page
+
+**11.** Adding cuisine
+
+**12.** Editing cuisine
+
+**13.** Deleting cuisine
+- modal confirmation
 
 
 #### Validator checks
