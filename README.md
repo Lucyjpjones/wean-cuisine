@@ -28,13 +28,12 @@ This app was built using [GitHub Pages](https://pages.github.com/) and [Heroku](
   - [Wireframes](#wireframes)
 - [&rarr; **Features**](#-rarr----features--)
   - [Features used](#features-used)
-  - [To-do list](#to-do-list)
   - [Status](#status)
 - [&rarr; **Technologies**](#-rarr----technologies--)
   - [Languages](#languages)
   - [Frameworks, Libraries & Programs](#frameworks--libraries---programs)
 - [&rarr; **Deployment**](#-rarr----deployment--)
-  - [Deploy to Github](#deploy-to-github)
+  - [Deploy to Heroku](#deploy-to-heroku)
   - [Accessing code](#accessing-code)
 - [&rarr; **Testing**](#-rarr----testing--)
   - [Testing user stories](#testing-user-stories)
@@ -176,22 +175,18 @@ As part of the design process, before starting my project I sketched out initial
 - **Search bar**
   - Allows user to search recipes by keywords using text index searching. Ingredients and recipe name included as keywords in query.
 
-
-#### To-do list:
-
-- Dietry requirements
-- Forgot password link
-
 #### Status
 
 > Project is: <u>ongoing</u>
 
-I will continue to update my website as I grow my platform of users.
+I will continue to update my website as I grow my platform of users. I have future development plans which I have listed below.
 
 **Future Development plans**
-- Create more cuisine cards 
+- Add more cuisine cards 
 - Add review option for users
 - Parent forum
+- Dietry requirements
+- Forgot password link
 ---
 
 ## &rarr; **Technologies**
@@ -200,7 +195,7 @@ I will continue to update my website as I grow my platform of users.
 
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
 - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
-- [JavaScript](https://www.javascript.com/
+- [JavaScript](https://www.javascript.com/)
 - [Python](https://www.python.org/)
 
 #### Frameworks, Libraries & Programs
@@ -259,10 +254,6 @@ I will continue to update my website as I grow my platform of users.
 
   - Used to format my HTML and CSS file with desired indentation level for optimal readability.
 
-- [**EmailJS**](https://www.emailjs.com/)
-
-  - Used to send emails directly from a from to my Gmail account.
-
 - [**Tablesgenerator**](https://www.tablesgenerator.com/markdown_tables)
 
   - Used to create tables in my readme file.
@@ -271,31 +262,11 @@ I will continue to update my website as I grow my platform of users.
 
 ## &rarr; **Deployment**
 
-#### Deploy to Github
-
-The project was deployed to GitHub Pages using the following steps...
-
-1. Log in to GitHub and locate the GitHub Repository.
-
-2. At the top of the Repository (not top of page), locate the "Settings" button on the menu.
-
-![Deploy-settings](assets/images/readme/deploy-settings.png)
-
-3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
-
-4. Under "Source", click the dropdown called "None" and select "Master Branch".
-
-![Deploy-settings](assets/images/readme/deploy-GHsource.png)
-
-5. The page will automatically refresh.
-
-6. Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
-
 #### Deploy to Heroku
 
 The project was connected to Heroku using automatic deployment from my GitPod repository, using the following steps...
 
-> **Note:** Before following the below steps ensure you have already created your new repo in Github and created an env.py file to store your sensitive data.
+> **Note:** Before following the below steps ensure you have already created your new repo in Github and set up an env.py file to store your sensitive data.
 
 1. In the terminal create requirements.txt and Procfile files using the commands below:
    - $ pip3 freeze --local > requirements.txt
@@ -367,11 +338,11 @@ Follow the steps below if you are wanting to propose changes to the project or t
 
   Forking allows you to create a copy of the original repository and propose changes to the repository owner via a pull request.
 
-  1. Log in to GitHub and locate the GitHub Repository
+  1. Log in to GitHub and locate the GitHub Repository.
 
   2. At the top of the Repository (not top of page) just above the "Settings" button on the menu, locate the "Fork" button.
 
-  ![forking](assets/images/readme/forking.png)
+     ![forking](static/assets/images/readme/forking.png)
 
   3. You should now have a copy of the original repository in your GitHub account.
 
@@ -380,14 +351,15 @@ Follow the steps below if you are wanting to propose changes to the project or t
 When you clone a repository, the repository is copied on to your local machine.
 
 1. Log in to GitHub and locate the GitHub Repository.
+   - Wean Cuisine repository can be found [here](https://github.com/Lucyjpjones/wean-cuisine/)
 
 2. Under the repository name, click the "download code" option.
 
-![Clone](assets/images/readme/clone.png)
+   ![Clone](static/assets/images/readme/clone.png)
 
 3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
 
-![Clone-link](assets/images/readme/clone-link.png)
+   ![Clone-link](static/assets/images/readme/clone-link.png)
 
 4. Open Git Bash
 
@@ -396,15 +368,15 @@ When you clone a repository, the repository is copied on to your local machine.
 6. Type git clone, and then paste the URL you copied in Step 3.
 
 ```
-$ git clone https://github.com/YOUR-USERNAME/BRITbrAIN.git
+$ git clone https://github.com/YOUR-USERNAME/wean-cuisine.git
 ```
 
 7. Press Enter. Your local clone will be created.
 
 ```
-$ git clone https://github.com/YOUR-USERNAME/BRITbrAIN.git
+$ git clone https://github.com/YOUR-USERNAME/wean-cuisine.git
 
-> Cloning into `BRITbrAIN`...
+> Cloning into `wean-cuisine`...
 > remote: Enumerating objects: 299, done.
 > remote: Counting objects: 100%, (299/299),  done.
 > remote: Compressing objects: 100% (156/156), done.
@@ -413,14 +385,22 @@ $ git clone https://github.com/YOUR-USERNAME/BRITbrAIN.git
 > Resolving deltas: 100% (145/145), done. Unpacking objects: 100% (10/10), done.
 ```
 
-Now, you have a local copy of your fork of the BRITbrAIN repository.
+Now, you have a local copy of your fork of the Wean Cuisine repository.
 
 > Note: The repository name and output numbers that you see on your computer, representing the total file size, etc, may differ from the example I have provided above.
 
+**Additional steps** 
 
-- **Forking the GitHub Repository**
+1. Add a env.py file with the following content:
+   - Import os 
+   - os.environ.setdefault("IP", "To be added by user") 
+   - os.environ.setdefault("PORT", "To be added by user") 
+   - os.environ.setdefault("SECRET_KEY", "To be added by user") 
+   - os.environ.setdefault("MONGO_URI", "To be added by user") 
+   - os.environ.setdefault("MONGO_DBNAME", "To be added by user")
 
-- **Making a Local Clone**
+ 2. Create a file named .gitignore and include .env.py so this final is not pushed to GitHub.
+ > **Note:** This is important as
 
 ---
 
