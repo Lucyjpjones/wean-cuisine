@@ -293,6 +293,72 @@ The project was deployed to GitHub Pages using the following steps...
 
 #### Deploy to Heroku
 
+The project was connected to Heroku using automatic deployment from my GitPod repository, using the following steps...
+
+> **Note:** Before following the below steps ensure you have already created your new repo in Github and created an env.py file to store your sensitive data.
+
+1. In the terminal create requirements.txt and Procfile files using the commands below:
+   - $ pip3 freeze --local > requirements.txt
+
+   - $ echo web: python app.py > Procfile
+
+   > **Note:** 
+The **P**rocfile must be assigned a capital P.
+
+2. Log in (or Register) to [Heroku](https://www.heroku.com/) and from your dashboard click 'new' > 'create new app'.
+
+   ![New app btn](static/assets/images/readme/new-app.png)
+
+3. Enter your 'App name' and choose the appropriate region, then click 'Create app'.
+   > **Note:** 
+ The app name must be unique, all lowercase and '-' to be used instead of spaces.
+The region chosen should be the one closest to you.
+
+   ![Create new app](static/assets/images/readme/create-new-app.png)
+
+4. From the Heroku deploy tab, select the Deployment method 'GitHub'.
+
+   ![Deployment method](static/assets/images/readme/deployment-method.jpeg)
+
+5. On 'Connect to GitHub' section make sure your GitHub profile is displayed then add your repository name and click 'Search'.
+
+   > **Note:** 
+This is the name of your repo in GitHub. It is good practice to use an identical name for your heroku app.
+
+    ![Deploy GitHub](static/assets/images/readme/deployment-git.jpeg)
+
+6. Your repo should now be displayed below, click 'Connect' to connect to this app.
+
+7. Go to Settings tab on Heroku, scroll to 'Config Vars' section and click 'Reveal Config Vars'. 
+
+   ![Config Vars](static/assets/images/readme/config-vars.png)
+
+   Enter variables (key and value) contained in env.py file. The keys are listed below and values are tailored to the user.
+     - IP
+   - PORT
+   - SECRET_KEY
+   - MONGO_URI
+   - MONGO_DBNAME
+
+8. Push requirements.txt and Procfile to repository:
+  <u>requirements.txt</u>
+    - $ git add requirements.txt
+    - $ git commit -m "Added requirements.txt"
+ 
+    <u>Procfile</u>
+   - $ git add Procfile
+   - $ git commit -m "Added Procfile"
+
+9. Go to Deploy tab on Heroku and under Automatic deployment section, click 'Enable Automatic Deploys'. Then under Manual deploy click 'Deploy Branch'.
+
+   ![Enable Automatic Deploys](static/assets/images/readme/enable-deploys.jpeg)
+
+   - Heroku will now recieve the code from GitHub and start building the app using the required packages.
+   - Once built you will recieve the message 'Your app was successfully deployed' and you can click 'View' to launch your new app.
+   
+   > **Note:** 
+In Manual deploy dropdown 'master' is selected'
+
 #### Accessing code
 
 Follow the steps below if you are wanting to propose changes to the project or to use the project as a starting point for your own idea.
