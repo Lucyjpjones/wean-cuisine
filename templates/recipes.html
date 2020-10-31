@@ -1,18 +1,18 @@
 {% extends "base.html" %} {% block content %}
 
 <!--Page callout header-->
-<section class="container" id="page-callout">
+<section class="container page-callout">
   <img
-    id="page-img"
+    class="page-callout-img"
     src="{{ url_for('static', filename='assets/images/recipes-img.jpg') }}"
     alt="background"
   />
-  <div id="page-overlay-text">
+  <div class="page-callout-text">
     <!--Page Title-->
     <h3>Recipes</h3>
     <!--Add recipes btn-->
     {% if session.user %}
-    <a id="add-recipe-btn" class="btn" href="{{ url_for('add_recipe') }}"
+    <a class="btn callout-add-btn" href="{{ url_for('add_recipe') }}"
       >Add recipe <i class="material-icons">add_circle_outline</i>
     </a>
     {% endif %}
@@ -52,19 +52,19 @@
 {% if recipes|length > 0 %}
 
 <!--Recipe card structure-->
-<div id="card-container">
+<div class="card-container">
   <div class="row">
     {% for recipe in recipes %}
     <div class="col s6 m4 l3">
       <div href="" id="recipe-card" class="card">
         <!--Recipe card image-->
-        <div class="card-image" id="card-img">
+        <div class="card-image card-img">
           <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}">
             <img src="{{ recipe.img_url }}" alt="Recipe image" />
           </a>
         </div>
         <!--Recipe card recipe name, created by and cuisine name-->
-        <div id="card-info" class="row card-content">
+        <div class="row card-content card-info">
           <div class="col s12">
             <p id="card-title"><strong>{{ recipe.recipe_name }}</strong></p>
             <p>by: {{ recipe.created_by }}</p>
@@ -72,24 +72,22 @@
           </div>
 
           <!--Recipe card edit & delete btns, only visible to user who added recipe card-->
-          <div id="card-btns">
-            <div id="card-edit-row" class="col s12">
+          <div>
+            <div class="col s12 card-btns">
               {% if session.user|lower == recipe.created_by|lower %}
               <!--Edit btn-->
               <a
                 href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
-                id="card-edit"
-                class="btn right"
+                class="btn right card-btn"
                 >Edit</a
               >
             </div>
             <!--Delete btn and modal for delete confirmation-->
-            <div id="card-delete-row" class="col s12">
+            <div class="col s12 card-btns">
               <!-- Delete btn and modal trigger -->
               <a
                 data-target="{{ recipe._id }}"
-                id="card-del"
-                class="btn right modal-trigger"
+                class="btn right modal-trigger card-btn"
                 >Delete</a
               >
               {% endif %}
@@ -101,13 +99,12 @@
                 </div>
                 <br />
                 <div class="modal-footer">
-                  <a href="#!" id="modal-close" class="modal-close btn"
+                  <a href="#" class="modal-close btn modal-del-btns"
                     >cancel</a
                   >
                   <a
                     href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
-                    id="modal-confirm"
-                    class="btn"
+                    class="btn modal-del-btns"
                     >Confirm</a
                   >
                 </div>

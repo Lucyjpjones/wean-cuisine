@@ -1,23 +1,23 @@
 {% extends "base.html" %} {% block content %}
 
 <!--Page callout header-->
-<section class="container" id="cuisine-callout">
+<section class="container page-callout">
   <img
-    id="page-img"
+    class="page-callout-img"
     src="{{ url_for('static', filename='assets/images/recipes-img.jpg') }}"
     alt="background"
   />
-  <div id="page-overlay-text">
+  <div class="page-callout-text">
     <!--Page title-->
     <h3>Cuisines</h3>
     <!--Add recipes btn-->
     {% if session.user|lower == "lucyjpj"|lower %}
-    <a id="add-recipe-btn" class="btn" href="{{ url_for('add_cuisine') }}"
+    <a class="btn callout-add-btn" href="{{ url_for('add_cuisine') }}"
       >Add cuisine <i class="material-icons">add_circle_outline</i>
     </a>
     {% endif %}
     <!--Callout text-->
-    <div class="row form-row">
+    <div>
       <p id="cuisine-p">
         Travel the world from your own kitchen with a wide collection of tasty
         cuisines.
@@ -27,19 +27,19 @@
 </section>
 
 <!--Cuisine card structure-->
-<div id="card-container">
+<div class="card-container">
   <div class="row">
     {% for cuisine in cuisines %}
     <div class="col s6 m4 l3">
       <div href="" id="cuisine-card" class="card">
         <!--Cuisine card image-->
-        <div class="card-image" id="card-img">
+        <div class="card-image card-img">
           <a href="">
             <img src="{{ cuisine.img_url }}" alt="Cuisine image" />
           </a>
         </div>
         <!--Cuisine card cuisine name-->
-        <div id="card-info" class="row card-content">
+        <div class="row card-content card-info">
           <div class="col s12">
             <p id="card-title">
               <strong
@@ -51,24 +51,22 @@
           </div>
 
           <!--Cuisine card edit & delete btns, only visible when logged in as lucyjpj-->
-          <div id="card-btns">
-            <div id="card-edit-row" class="col s12">
+          <div>
+            <div class="col s12 card-btns">
               {% if session.user|lower == "lucyjpj"|lower %}
               <!--Edit btn-->
               <a
                 href="{{ url_for('edit_cuisine', cuisine_id=cuisine._id) }}"
-                id="card-edit"
-                class="btn right"
+                class="btn right card-btn"
                 >Edit</a
               >
             </div>
             <!--Delete btn and modal for delete confirmation-->
-            <div id="card-delete-row" class="col s12">
+            <div class="col s12 card-btns">
               <!-- Delete btn and modal trigger -->
               <a
                 data-target="{{ cuisine._id }}"
-                id="card-del"
-                class="btn right modal-trigger"
+                class="btn right modal-trigger card-btn"
                 >Delete</a
               >
               {% endif %}
@@ -80,13 +78,12 @@
                 </div>
                 <br />
                 <div class="modal-footer">
-                  <a href="#!" id="modal-close" class="modal-close btn"
+                  <a href="#!" class="modal-close btn modal-del-btns"
                     >cancel</a
                   >
                   <a
                     href="{{ url_for('delete_cuisine', cuisine_id=cuisine._id) }}"
-                    id="modal-confirm"
-                    class="btn"
+                    class="btn modal-del-btns"
                     >Confirm</a
                   >
                 </div>

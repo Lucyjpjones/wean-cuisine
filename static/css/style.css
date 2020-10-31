@@ -3,23 +3,23 @@
 /* -------------------- General*/
 body {
   background-color: #fafafa;
-  text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
-  color: #666666;
-  margin: 0;
-  padding: 0;
+  color: #4d4c4c;
+  font-size: 14px;
 }
 
+.form-row {
+  margin-bottom: 5px;
+}
+
+/* ---------- Footer*/
 #page-container {
   position: relative;
   min-height: 100vh;
 }
-
 #content-wrap {
   padding-bottom: 40px;
 }
-
-/* --------------------Footer */
 footer {
   position: absolute;
   bottom: 0;
@@ -28,153 +28,73 @@ footer {
   width: 100%;
   height: 40px;
 }
-
 footer h6 {
   font-size: 10px;
   padding: 5px;
 }
 
-main {
-  flex: 1 0 auto;
-}
+/* ---------- Typography*/
 
+h1,
+h2,
 h3,
 h5,
 p {
   margin: 0;
 }
 
-row {
-  margin-bottom: 20px;
-}
-
-row.col {
-  padding: 0;
-}
-
-.container {
-  margin: auto;
-  padding-top: 90px;
-  margin-bottom: 10%;
-}
-
-#section1 {
-  padding-top: 10%;
-}
-
-hr {
-  width: 200px;
-  margin-bottom: 5%;
-}
-
+/* ---------- Buttons*/
 a.btn:hover,
 a.btn:focus,
 .carousel-item p:hover {
   filter: brightness(120%);
 }
 
-/* -------------------- Header*/
+/* -------------------- Navbar*/
 
-#navbar-fixed {
-  width: 100%;
+nav {
+  position: fixed;
+  z-index: 1100;
   background-color: #cef3ed;
 }
 
-#navbar-fixed nav {
-  padding: 6px;
-  background-color: inherit;
-  border: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  height: 70px;
-  top: 0;
-  z-index: 997;
-}
-
+/* ---------- Brand logo*/
 nav .brand-logo {
-  left: 0%;
+  left: 2%;
+  top: 10%;
   transform: none;
   z-index: 1000;
   width: 30%;
   max-width: 150px;
 }
 
+/* ---------- Login btn*/
 #login-btn,
 #logout-btn {
   background-color: #fff7ae;
-  color: #666666;
+  color: #4d4c4c;
   font-size: 11px;
   border-radius: 6px;
   font-weight: 500;
   margin: 0;
-  padding: 0 10px;
+  padding: 0 12px;
 }
 
-#menu {
-  margin: 0;
-}
-
-#menu-icon {
-  color: #c89f98;
-  font-size: 40px;
-}
-
-.sidenav {
-  width: 100%;
-  margin-top: 70px;
-  text-align: center;
-}
-
-#menu-items {
-  padding-top: 40px;
-}
-
-#menu-items li a {
-  font-size: 14px;
-  text-transform: none;
-}
-
-/* -------------------- Login/Register modal*/
-
-.modal {
-  width: 80%;
-}
-
-.modal .modal-content {
-  padding: 24px 30px 0px 30px;
-}
-
-.modal-content h4 {
-  color: #c89f98;
-  font-size: 24px;
-}
-#modal-btn-outer {
-  margin-top: 20px;
-  width: 30%;
-}
-#modal-btn-inner {
-  background-color: #c89f98;
-  color: #666666;
-  padding: 6px;
-  border: 1px solid #666666;
-  border-radius: 6px;
-  width: 100%;
-}
+/* ---------- Login/register modal*/
 
 #login-modal-close {
-  color: #666666;
-  padding: 0;
-  font-size: 30px;
+  color: #4d4c4c;
+  padding: 10px 0px 5px 0px;
+  font-size: 25px;
 }
-
 .tabs {
-  background-color: #fafafa;
+  background-color: inherit;
 }
-
-.divider {
-  margin-bottom: 20px;
+.modal-login-content h4 {
+  color: #c89f98;
+  font-size: 18px;
+  line-height: 2.5;
 }
-
 input#password,
 input#username {
   width: 95%;
@@ -182,43 +102,24 @@ input#username {
   border-radius: 6px;
   margin-top: 20px;
   padding-left: 10px;
-  height: 2rem;
-}
-
-#modal-link {
+  height: 30px;
   font-size: 12px;
-  text-transform: capitalize;
-  line-height: 1;
-  color: #666666;
-  padding-left: 10px;
-}
-
-#modal-link a {
-  display: inline;
-  color: #c89f98;
-  font-weight: 500;
-}
-
-.form-row {
-  margin-bottom: 10px;
 }
 
 #login-btn-inner,
 #register-btn-inner {
   background-color: #c89f98;
-  color: #666666;
+  color: #4d4c4c;
   padding: 6px;
-  border: 1px solid #666666;
+  border: 1px solid #4d4c4c;
   border-radius: 6px;
   width: 100%;
-  text-align: center;
 }
 
 #login-btn-outer,
-#register-btn-inner {
+#register-btn-outer {
   width: 40%;
   margin: auto;
-  margin-top: 10px;
 }
 
 div#login.col.s12,
@@ -226,53 +127,53 @@ div#register.col.s12 {
   margin-top: 20px;
 }
 
-.modal-login-content {
-  padding: 10px;
+/* ---------- Menu dropdown, sidenav*/
+#menu {
+  margin: 0;
+  display: inline !important; /* menu was not appearing on view_recipe page*/
 }
-
-.modal-login-content h4 {
+#menu-icon {
   color: #c89f98;
-  font-size: 18px;
-  line-height: 2.5;
+  font-size: 35px;
 }
-
-/* -------------------- Callout*/
-
-#callout-outer {
-  position: relative;
-}
-#bg-img {
-  position: relative;
+.sidenav {
   width: 100%;
-  opacity: 0.7;
+  margin-top: 55px;
+  padding-top: 40px;
+  text-align: center;
 }
 
+/* -------------------- Homepage*/
+
+/* -------- Callout*/
+
+#callout {
+  position: relative;
+}
+#callout-img {
+  width: 100%;
+  opacity: 0.8;
+  margin-top: 55px;
+}
 #overlay-text {
   background-color: #fff7ae;
-  opacity: 0.8;
-  color: #666666;
+  opacity: 0.85;
   border-radius: 6px;
   padding: 8px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   position: absolute;
-  top: 65%;
-  left: 32%;
-  transform: translate(-50%, -50%);
-  margin-left: 10px;
+  top: 57%;
+  left: 3%;
 }
 
-#overlay-text h3 {
+#overlay-text h1 {
   font-size: 18px;
   font-weight: 500;
 }
 
-#overlay-text h5 {
+#overlay-text h3 {
   font-size: 13px;
-}
-
-#callout-btns {
-  margin-top: 5px;
 }
 
 #callout-btns a {
@@ -286,17 +187,19 @@ div#register.col.s12 {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
-
 #callout-btns a i {
   vertical-align: bottom;
 }
 
-/* -------------------- How does it work?*/
+/* -------- About*/
+
+#about {
+  padding-top: 10%;
+}
 
 .title {
   text-align: center;
   font-size: 16px;
-  margin-top: 25px;
   margin-bottom: 25px;
   font-weight: 500;
 }
@@ -306,54 +209,58 @@ div#register.col.s12 {
   font-size: 20px;
   color: #c89f98;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 .img-circle {
   border-radius: 50%;
   width: 120px;
-  height: 120px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   opacity: 0.9;
 }
-
 .img-circle:hover {
   filter: brightness(110%);
 }
 
-.info-title {
+.about-title {
+  font-size: 13px;
+  text-transform: uppercase;
   font-weight: 500;
 }
 
 .info {
   font-size: 11px;
-  width: 65%;
+  width: 70%;
   margin: auto;
   margin-bottom: 20px;
 }
 
-/* -------------------- Cuisine carousel */
+/* -------- Cuisine carousel*/
 
 #carousel-outer {
   width: 85%;
   margin: auto;
+  margin-top: 10%;
+}
+.carousel {
+  height: 360px;
 }
 
-#my-carousel {
+#carousel {
   top: -80px;
 }
 
 .carousel-img {
   border-radius: 50%;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .carousel-item p {
-  color: #666666;
-  font-size: 14px;
+  color: #4d4c4c;
   font-weight: 500;
   background-color: #fff7ae;
-  opacity: 0.9;
+  opacity: 0.85;
   padding: 5px 10px 5px 10px;
   border-radius: 6px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
@@ -364,71 +271,61 @@ div#register.col.s12 {
   transform: translate(-50%, -50%);
 }
 
-/* -------------------- Shope Recipe Books*/
-
-#page-callout {
-  padding-top: 10%;
-  margin-bottom: 20%;
-}
+/* -------- Shop recipe books*/
 
 #shop-books {
   position: relative;
   width: 85%;
   margin: auto;
-  top: -100px;
+  top: -90px;
 }
 
 #shop-books-img {
-  position: relative;
   width: 100%;
-  opacity: 0.8;
+  margin-bottom: -50px;
+  opacity: 0.85;
   border-radius: 6px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
-.bk-img {
-  height: 140px;
-}
-
 #shop-link a {
-  font-size: 13px;
   font-weight: 500;
   background-color: #8ce3d5;
-  opacity: 0.9;
-  color: #666666;
+  opacity: 0.85;
+  color: #4d4c4c;
   border-radius: 6px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   position: absolute;
-  top: 80%;
+  top: 105%;
   left: 50%;
   transform: translate(-50%, -50%);
   line-height: normal;
   padding: 5px 10px 5px 10px;
   height: auto;
+  text-transform: none;
 }
 
-/* --------------------Page title */
+/* -------------------- Explore recipes & Cuisines*/
 
-#page-callout {
+.page-callout {
   position: relative;
 }
 
-#page-img {
-  position: relative;
+.page-callout-img {
   width: 100%;
   height: auto;
-  opacity: 0.9;
+  margin-top: 75px;
+  opacity: 0.85;
   border-radius: 6px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
-#page-overlay-text {
+.page-callout-text {
   width: 85%;
   background-color: #fafafa;
-  color: #666666;
   border-radius: 6px;
   padding: 20px 20px 10px 20px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
@@ -440,17 +337,107 @@ div#register.col.s12 {
   text-align: center;
 }
 
-#page-overlay-text h3 {
+.card-container {
+  width: 95%;
+  margin: auto;
+  margin-top: 15%;
+}
+
+.card {
+  padding: 10px;
+}
+.card .card-content {
+  padding: 14px;
+}
+
+#recipe-card {
+  height: 220px;
+}
+
+.card-img {
+  width: 130px;
+  height: 110px;
+  overflow: hidden;
+  margin: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-info {
+  padding: 10px 10px 0px 10px;
+  margin: 0;
+}
+
+#card-title {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+div.col.s12.card-btns {
+  padding: 0px 0px;
+}
+
+.card-btn {
+  font-size: 8px;
+  font-weight: 500;
+  padding: 2px;
+  line-height: normal;
+  height: 15px;
+  margin-bottom: 3px;
+  background-color: #f9dce4;
+  color: #4d4c4c;
+}
+
+.modal {
+  top: 40% !important;
+}
+
+.modal-overlay {
+  opacity: 0.7 !important;
+}
+
+.modal .modal-content {
+  padding: 24px 30px 0px 30px;
+}
+
+.modal-content h5 {
+  font-size: 16px;
+  text-align: center;
+}
+
+.modal .modal-footer {
+  text-align: center;
+}
+
+.modal-del-btns {
+  font-size: 10px;
+  font-weight: 500;
+  background-color: #f9dce4;
+  color: #4d4c4c;
+  border-radius: 6px;
+  margin: 6px 3px !important;
+  padding: 0 8px;
+  height: 20px;
+  line-height: 20px;
+}
+
+.modal-content h4 {
+  color: #c89f98;
+  font-size: 24px;
+}
+
+.page-callout-text h3 {
   font-size: 20px;
   font-weight: 500px;
 }
 
-#page-overlay-text p {
+.page-callout-text p {
   font-size: 11px;
 }
 
-#page-overlay-text #add-recipe-btn {
-  font-size: 12px;
+.page-callout-text .callout-add-btn {
+  font-size: 10px;
   font-weight: 500;
   background-color: #c89f98;
   color: #4d4c4c;
@@ -461,56 +448,48 @@ div#register.col.s12 {
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
-#page-overlay-text #add-recipe-btn i {
+.page-callout-text .callout-add-btn i {
+  font-size: 16px;
   vertical-align: bottom;
-  padding-bottom: 1px;
 }
 
-/* --------------------Search bar */
+#cuisine-card {
+  height: 210px;
+}
+
+/* -------- Search bar*/
 
 #search-bar {
   padding: 0 10px 0 10px;
   margin: 10px 0px;
   border-radius: 6px;
 }
-
 #search-bar form {
   width: 100%;
 }
-
 #input-outer {
   margin-bottom: 0;
 }
-
 #input-outer .input-field {
   margin: 0;
 }
-
 #input-outer .input-field label {
-  font-size: 10px;
+  font-size: 11px;
 }
-
 button#search-btn {
   background: none;
   border: none;
   color: #8ce3d5;
 }
-
 a#clear-btn {
   background-color: none;
   border: none;
   color: #c89f98;
 }
-
-div.col.s1 {
-  padding: 0px;
-}
-
 button#search-btn i,
 a#clear-btn i {
   font-size: 18px;
 }
-
 #no-results {
   font-size: 18px;
   font-weight: 500;
@@ -518,34 +497,24 @@ a#clear-btn i {
   text-align: center;
 }
 
+
+
+
+
+div.col.s1 {
+  padding: 0px;
+}
+
+
 /* --------------------Recipe cards */
-
-.card {
-  padding: 10px;
-  margin-top: 25x;
-}
-
-#recipe-card {
-  height: 220px;
-}
-
-#card-container {
-  width: 95%;
-  margin: auto;
-}
 
 .card-content {
   font-size: 9px;
 }
 
-#card-info {
-  padding: 10px 10px 0px 10px;
-  margin: 0;
-}
-
-#card-img {
+#book-img {
   width: 110px;
-  height: 110px;
+  height: 140px;
   overflow: hidden;
   margin: auto;
   border-radius: 6px;
@@ -553,36 +522,8 @@ a#clear-btn i {
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
-#card-edit,
-#card-del {
-  font-size: 8px;
-  font-weight: 500;
-  padding: 2px;
-  line-height: normal;
-  height: 15px;
-  margin-bottom: 3px;
-  background-color: #f9dce4;
-  color: #666666;
-}
-
-#card-title {
-  font-size: 11px;
-  font-weight: 500;
-}
-
 #card-info p {
   margin-bottom: 3px;
-}
-
-#card-edit-row,
-#card-delete-row {
-  padding-right: 0px;
-}
-
-#card-btns {
-  position: absolute;
-  bottom: 10px;
-  right: 20px;
 }
 
 /* --------------------Shop recipe books */
@@ -661,10 +602,6 @@ textarea.materialize-textarea {
   color: #c89f98;
 }
 
-.form-row {
-  margin-bottom: 0px;
-}
-
 #recipe-form button {
   width: 100%;
   background-color: #fafafa;
@@ -732,7 +669,6 @@ textarea.materialize-textarea {
 }
 
 #yellow-container-inner {
-  margin-bottom: 0px;
   padding: 5px;
   font-size: 11px;
   font-weight: 500;
@@ -748,8 +684,6 @@ textarea.materialize-textarea {
   border-radius: 6px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-  padding-top: 0px;
-  padding-bottom: 3px;
 }
 
 .tabs .tab a {
@@ -801,30 +735,6 @@ textarea.materialize-textarea {
   padding: 0 10px;
 }
 
-#modal-close,
-#modal-confirm {
-  font-size: 10px;
-  font-weight: 600px;
-  background-color: #f9dce4;
-  color: #666666;
-  border-radius: 6px;
-  margin: 6px 3px;
-  padding: 0 8px;
-  height: 20px;
-  line-height: 20px;
-}
-.modal-content h5 {
-  font-size: 16px;
-  color: #666666;
-  text-transform: none;
-  text-align: center;
-}
-
-.modal .modal-footer {
-  height: 50px;
-  text-align: center;
-}
-
 /* --------------------Cuisines page */
 #cuisine-p {
   font-size: 11px;
@@ -838,10 +748,14 @@ textarea.materialize-textarea {
   padding-top: 10%;
 }
 
-#cuisine-card {
-  height: 200px;
-}
+
 
 .add-container {
   padding-top: 15%;
+}
+
+/*------------------delete modal*/
+
+.bk-img {
+  height: 140px;
 }
