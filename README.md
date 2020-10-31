@@ -5,12 +5,6 @@
 
 **A recipe site that allows users to connect, explore and share their own weaning recipes.**
 
-The project focuses on the concept of <u>CRUD</u>:
-- Create
-- Read
-- update
-- Delete
-
 This app was built using [GitHub Pages](https://pages.github.com/) and [Heroku](https://www.heroku.com/)
 
 [View here](https://lucyjpjones.github.io/wean-cuisine/)
@@ -64,6 +58,8 @@ From living in London, one of the world's most diverse cities, I am spoilt for
 
 I was inspired to create this application after finding out I was due to become an Auntie in December.
 
+By completing this project I will have shown greater experience in HTML, CSS and Javascript, and demonstrated my understanding of Python+Flask and MongoDB. The project focuses on the concept of <u>CRUD</u>, creating functionality for users to create, locate, display, edit and delete recipes.
+
 ### **<u>Design</u>**
 
 **Structure**
@@ -96,11 +92,19 @@ I was inspired to create this application after finding out I was due to become 
 
 <img src="static/assets/images/readme/flowchart.png">
 
-**My user profile**
+<u>**User profiles**</u>
+
+**User profile: Site member**
 
 As a first time mum, Katie  wants to be able to connect with other parents from around the world to share inspiring weaning recipes. Since Katie is a working mum, anything she can do to save time in the kitchen without comprising on nourishment is highly valuable. She wants to share her experience with others and be part of a diverse community as she begins her weaning journey.
 
-**User stories**
+**User profile: Site owner**
+
+As the site owner, I want to be able to continually monitor and update the site to manage my users expectations. I have already got future plans which I have highlighted in my features section below. As my site categorisation is based around cuisines I want to be able to login as an admin user and add or update the listed cuisines for my users. By creating this application I will hopefully have gained inspiration on recipes I can cook for my niece and own children in the future.
+
+<u>**User stories**</u>
+
+**User stories: Site member**
 
 |   | Needs/Goals                                                 | Task                                                                             |
 |---|-------------------------------------------------------------|----------------------------------------------------------------------------------|
@@ -111,6 +115,9 @@ As a first time mum, Katie  wants to be able to connect with other parents from 
 | **5** | Ability to share and edit her own recipes                   | Option to add, edit and delete own recipes                                       |
 | **6** | Ability to find further inspiration                         | Links for purchasing recipe books for further inspiration                        |
 
+**User stories: Site owner**
+
+**User stories:**
 
 
 ### **<u>Wireframes</u>**
@@ -377,7 +384,7 @@ Now, you have a local copy of your fork of the Wean Cuisine repository.
 
 > Note: The repository name and output numbers that you see on your computer, representing the total file size, etc, may differ from the example I have provided above.
 
-**Additional steps** 
+**Creating env.py file** 
 
 1. Add a env.py file to store environment variables:
    - Import os 
@@ -387,7 +394,7 @@ Now, you have a local copy of your fork of the Wean Cuisine repository.
    - os.environ.setdefault("MONGO_URI", "To be added by user") 
    - os.environ.setdefault("MONGO_DBNAME", "To be added by user")
 
-   > **Note:** I used [RandomKeygen.com](https://randomkeygen.com/) to get my secure SECRET_KEY password. A SECRET_KEY is required when using the flash and session functions of Flask.
+> **Note:** I used [RandomKeygen.com](https://randomkeygen.com/) to get my secure SECRET_KEY password. A SECRET_KEY is required when using the flash and session functions of Flask.
 
  2. Create a file named .gitignore and include env.py to ensure this file is never pushed to GitHub.
  > **Note:** This is important as
