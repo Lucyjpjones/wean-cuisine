@@ -348,10 +348,11 @@ div#register.col.s12 {
 }
 .card .card-content {
   padding: 14px;
+  font-size: 9px;
 }
 
 #recipe-card {
-  height: 220px;
+  height: 230px;
 }
 
 .card-img {
@@ -374,6 +375,10 @@ div#register.col.s12 {
   font-weight: 500;
 }
 
+.card .card-info p {
+    margin-bottom: 2px;
+}
+
 div.col.s12.card-btns {
   padding: 0px 0px;
 }
@@ -391,6 +396,8 @@ div.col.s12.card-btns {
 
 .modal {
   top: 40% !important;
+  border-radius: 6px;
+  padding: 0 10px;
 }
 
 .modal-overlay {
@@ -497,67 +504,11 @@ a#clear-btn i {
   text-align: center;
 }
 
+/* -------------------- Add/Edit recipes & Cuisines*/
 
-
-
-
-div.col.s1 {
-  padding: 0px;
+.add-container {
+  padding-top: 95px;
 }
-
-
-/* --------------------Recipe cards */
-
-.card-content {
-  font-size: 9px;
-}
-
-#book-img {
-  width: 110px;
-  height: 140px;
-  overflow: hidden;
-  margin: auto;
-  border-radius: 6px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-}
-
-#card-info p {
-  margin-bottom: 3px;
-}
-
-/* --------------------Shop recipe books */
-
-#dropdown-btn {
-  display: initial;
-  font-size: 11px;
-  font-weight: 500;
-  margin-bottom: 3px;
-  background-color: #f9dce4;
-  color: #666666;
-  margin-top: 10px;
-  padding: 2px 0px 2px 12px;
-}
-
-#dropdown-btn i {
-  font-size: 30px;
-  vertical-align: bottom;
-  padding-left: 10px;
-  padding-bottom: 3px;
-}
-
-.dropdown-content li {
-  width: 100%;
-  min-height: 25px;
-}
-.dropdown-content li > a {
-  font-size: 11px;
-  color: #c89f98;
-  font-weight: 500;
-  padding: 0px 10px;
-}
-
-/* --------------------Add/Edit Recipe */
 
 .add-header {
   text-align: center;
@@ -646,7 +597,7 @@ textarea.materialize-textarea {
   margin-bottom: 0px;
 }
 
-/* --------------------View Recipe */
+/* -------------------- View recipe*/
 
 #view-recipe-img {
   position: relative;
@@ -728,34 +679,47 @@ textarea.materialize-textarea {
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* --------------------Delete recipe modal */
+/* --------------------Shop recipe books */
 
-.modal {
-  border-radius: 6px;
-  padding: 0 10px;
-}
-
-/* --------------------Cuisines page */
-#cuisine-p {
-  font-size: 11px;
-  text-transform: none;
-  padding: 6px;
-}
-
-#cuisine-callout {
-  position: relative;
-  margin-bottom: 12%;
-  padding-top: 10%;
-}
-
-
-
-.add-container {
-  padding-top: 15%;
-}
-
-/*------------------delete modal*/
-
-.bk-img {
+.book-img {
+  width: 110px;
   height: 140px;
+  overflow: hidden;
+  margin: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.book-card {
+    height: 210px;
+}
+
+#dropdown-btn {
+  display: initial;
+  font-size: 11px;
+  font-weight: 500;
+  margin-bottom: 3px;
+  background-color: #f9dce4;
+  color: #666666;
+  margin-top: 10px;
+  padding: 2px 0px 2px 12px;
+}
+
+#dropdown-btn i {
+  font-size: 30px;
+  vertical-align: bottom;
+  padding-left: 10px;
+  padding-bottom: 3px;
+}
+
+.dropdown-content li {
+  width: 100%;
+  min-height: 25px;
+}
+.dropdown-content li > a {
+  font-size: 11px;
+  color: #c89f98;
+  font-weight: 500;
+  padding: 0px 10px;
 }

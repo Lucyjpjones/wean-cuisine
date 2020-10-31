@@ -1,30 +1,29 @@
 {% extends "base.html" %} {% block content %}
 
 <!--Page callout header-->
-<section class="container" id="page-callout">
+<section class="container page-callout" >
   <img
-    id="page-img"
+    class="page-callout-img"
     src="{{ url_for('static', filename='assets/images/shop-img.jpg') }}"
     alt="background"
   />
-  <div id="page-overlay-text">
+  <div class="page-callout-text">
     <!--Page Title-->
     <h3>Shop Recipe Books</h3>
     <!--Callout text-->
     <div class="row form-row">
-        Need more inspiration? Shop our recommended recipe books.
-      </p>
+      <p>Need more inspiration? Shop our recommended recipe books.</p>
     </div>
   </div>
 </section>
 
 <!--Book card structure-->
-<div id="card-container">
+<div class="card-container">
   <div class="row">
     <div class="col s6 m4 l3">
-      <div href="" class="card">
+      <div href="" class="card book-card">
         <!--Book card image-->
-        <div class="card-image" id="book-img">
+        <div class="card-image book-img">
           <img
             class="bk-img"
             src="{{ url_for('static', filename='assets/images/bk-weanin15.jpg') }}"
@@ -69,9 +68,9 @@
       </div>
     </div>
     <div class="col s6 m4 l3">
-      <div href="" class="card">
+      <div href="" class="card book-card">
         <!--Book card image-->
-        <div class="card-image" id="book-img">
+        <div class="card-image book-img">
           <img
             class="bk-img"
             src="{{ url_for('static', filename='assets/images/bk-ella.jpg') }}"
@@ -116,9 +115,9 @@
       </div>
     </div>
     <div class="col s6 m4 l3">
-      <div href="" class="card">
+      <div href="" class="card book-card">
         <!--Book card image-->
-        <div class="card-image" id="book-img">
+        <div class="card-image book-img">
           <img
             class="bk-img"
             src="{{ url_for('static', filename='assets/images/bk-lilvegeats.jpg') }}"
@@ -163,9 +162,9 @@
       </div>
     </div>
     <div class="col s6 m4 l3">
-      <div href="" class="card">
+      <div href="" class="card book-card">
         <!--Book card image-->
-        <div class="card-image" id="book-img">
+        <div class="card-image book-img">
           <img
             class="bk-img"
             src="{{ url_for('static', filename='assets/images/bk-ak.jpg') }}"
@@ -210,9 +209,9 @@
       </div>
     </div>
     <div class="col s6 m4 l3">
-      <div href="" class="card">
+      <div href="" class="card book-card">
         <!--Book card image-->
-        <div class="card-image" id="book-img">
+        <div class="card-image book-img">
           <img
             class="bk-img"
             src="{{ url_for('static', filename='assets/images/bk-holly.jpg') }}"
@@ -257,9 +256,9 @@
       </div>
     </div>
     <div class="col s6 m4 l3">
-      <div href="" class="card">
+      <div href="" class="card book-card">
         <!--Book card image-->
-        <div class="card-image" id="book-img">
+        <div class="card-image book-img">
           <img
             class="bk-img"
             src="{{ url_for('static', filename='assets/images/bk-yg.jpg') }}"
