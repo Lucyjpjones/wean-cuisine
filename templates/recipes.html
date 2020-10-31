@@ -11,9 +11,11 @@
     <!--Page Title-->
     <h3>Recipes</h3>
     <!--Add recipes btn-->
+    {% if session.user %}
     <a id="add-recipe-btn" class="btn" href="{{ url_for('add_recipe') }}"
       >Add recipe <i class="material-icons">add_circle_outline</i>
     </a>
+    {% endif %}
     <!--Search bar-->
     <div id="search-bar" class="row card-panel grey lighten-5">
       <form action="{{ url_for('search') }}" method="POST" class="col s8">

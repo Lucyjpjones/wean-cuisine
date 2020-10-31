@@ -20,7 +20,6 @@
 	<div id="page-container">
 		<div id="content-wrap">
 			<header>
-				<div id="navbar-fixed">
 					<nav>
 						<div class="nav-wrapper">
 							<!--Navbar brand logo-->
@@ -169,7 +168,7 @@
 
 									<!-- Dropdown sidenav menu Trigger -->
 									<li>
-										<a href="#" id="menu" data-target="menu-items"
+										<a href="{{ url_for('homepage') }}" id="menu" data-target="menu-items"
 											class="sidenav-trigger show-on-large"><i id="menu-icon" class="material-icons">menu</i></a>
 									</li>
 								</ul>
@@ -203,11 +202,10 @@
 								</ul>
 						</div>
 					</nav>
-				</div>
 			</header>
 
 			<!--Main HTML content-->
-			<div>{% block content %} {% endblock %}</div>
+			<main>{% block content %} {% endblock %}</main>
 		</div>
 
 		<!--Site footer-->
