@@ -282,6 +282,8 @@ div#register.col.s12 {
 }
 
 #shop-books-img {
+  max-height: 350px;
+  object-fit: cover;
   width: 100%;
   margin-bottom: -40px;
   opacity: 0.85;
@@ -465,6 +467,10 @@ div.col.s12.card-btns {
 }
 
 /* -------- Search bar*/
+
+div.col.s1 {
+  padding: 0px;
+}
 
 #search-bar {
   padding: 0 10px 0 10px;
@@ -746,12 +752,14 @@ textarea.materialize-textarea {
     font-size: 16px;
   }
 
-  #callout-btns a {
+  #callout-btns a,
+  .page-callout-text .callout-add-btn {
     font-size: 10px;
   }
 
   .title,
-  .title span {
+  .title span,
+  .page-callout-text h3 {
     font-size: 120%;
   }
 
@@ -789,7 +797,7 @@ textarea.materialize-textarea {
   }
 
   .card-container {
-    margin-top: 10% !important;
+    margin-top: 12% !important;
   }
 
   .page-callout-text {
@@ -818,12 +826,14 @@ textarea.materialize-textarea {
     font-size: 20px;
   }
 
-  #callout-btns a {
+  #callout-btns a,
+  .page-callout-text .callout-add-btn {
     font-size: 12px;
   }
 
   .title,
-  .title span {
+  .title span,
+  .page-callout-text h3 {
     font-size: 130%;
   }
 
@@ -862,7 +872,7 @@ textarea.materialize-textarea {
   }
 
   .card-container {
-    margin-top: 8% !important;
+    margin-top: 10% !important;
   }
 
   #yellow-container {
@@ -886,12 +896,14 @@ textarea.materialize-textarea {
     font-size: 24px;
   }
 
-  #callout-btns a {
+  #callout-btns a,
+  .page-callout-text .callout-add-btn {
     font-size: 12px;
   }
 
   .title,
-  .title span {
+  .title span,
+  .page-callout-text h3 {
     font-size: 140%;
   }
 
@@ -915,12 +927,14 @@ textarea.materialize-textarea {
   #shop-books {
     width: 70%;
   }
+
   #shop-link a {
     font-size: 140%;
+    top: 70%;
   }
 
   .card-container {
-    margin-top: 6% !important;
+    margin-top: 8% !important;
   }
 
   #yellow-container {
@@ -953,7 +967,7 @@ textarea.materialize-textarea {
   }
 
   .card-container {
-    margin-top: 10%;
+    margin-top: 6%;
   }
 
   #yellow-container {
