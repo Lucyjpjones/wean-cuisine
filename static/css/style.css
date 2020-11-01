@@ -278,12 +278,12 @@ div#register.col.s12 {
   position: relative;
   width: 85%;
   margin: auto;
-  top: -90px;
+  top: -80px;
 }
 
 #shop-books-img {
   width: 100%;
-  margin-bottom: -50px;
+  margin-bottom: -40px;
   opacity: 0.85;
   border-radius: 6px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
@@ -299,7 +299,7 @@ div#register.col.s12 {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   position: absolute;
-  top: 105%;
+  top: 95%;
   left: 50%;
   transform: translate(-50%, -50%);
   line-height: normal;
@@ -339,8 +339,6 @@ div#register.col.s12 {
 }
 
 .card-container {
-  width: 95%;
-  margin: auto;
   margin-top: 15%;
 }
 
@@ -377,7 +375,7 @@ div#register.col.s12 {
 }
 
 .card .card-info p {
-    margin-bottom: 2px;
+  margin-bottom: 2px;
 }
 
 div.col.s12.card-btns {
@@ -666,7 +664,7 @@ textarea.materialize-textarea {
 
 #ingredients,
 #method {
-    padding-top: 10px;
+  padding-top: 10px;
 }
 
 #ingredients p,
@@ -692,7 +690,7 @@ textarea.materialize-textarea {
 }
 
 .book-card {
-    height: 210px;
+  height: 210px;
 }
 
 #dropdown-btn {
@@ -722,4 +720,222 @@ textarea.materialize-textarea {
   color: #c89f98;
   font-weight: 500;
   padding: 0px 10px;
+}
+
+/* --------------------Media queries*/
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  nav {
+    padding: 0 2%;
+  }
+
+  #overlay-text {
+    top: 65%;
+    padding: 12px;
+  }
+
+  #overlay-text h1 {
+    font-size: 24px;
+  }
+
+  #overlay-text h3 {
+    font-size: 16px;
+  }
+
+  #callout-btns a {
+    font-size: 10px;
+  }
+
+  .title,
+  .title span {
+    font-size: 120%;
+  }
+
+  .title {
+    margin-bottom: 40px;
+  }
+
+  #about .about-title {
+    padding-top: 5%;
+    font-size: 15px;
+  }
+
+  #about .info {
+    font-size: 13px;
+  }
+
+  .img-circle {
+    width: 140px;
+  }
+
+  #shop-link a {
+    top: 100%;
+    font-size: 110%;
+  }
+  .carousel-item p {
+    font-size: 110%;
+  }
+
+  /*---------- Add/Edit recipes*/
+
+  .page-callout-img {
+    margin-top: 100px;
+    max-height: 250px;
+    object-fit: cover;
+  }
+
+  .card-container {
+    margin-top: 10% !important;
+  }
+
+  .page-callout-text {
+    top: 95%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  /*---------- Home page */
+
+  #overlay-text {
+    padding: 16px 50px 16px 16px;
+  }
+
+  #overlay-text h1 {
+    font-size: 32px;
+  }
+
+  #overlay-text h3 {
+    font-size: 20px;
+  }
+
+  #callout-btns a {
+    font-size: 12px;
+  }
+
+  .title,
+  .title span {
+    font-size: 130%;
+  }
+
+  .title {
+    margin-bottom: 40px;
+  }
+
+  #about .about-title {
+    padding-top: 5%;
+    font-size: 16px;
+  }
+
+  #about .info {
+    font-size: 14px;
+  }
+
+  .img-circle {
+    width: 140px;
+  }
+  #shop-books {
+    top: -50%;
+    width: 75%;
+  }
+
+  #shop-books-img {
+    margin-bottom: 10%;
+  }
+
+  #shop-link a {
+    top: 75%;
+  }
+
+  #shop-link a,
+  .carousel-item p {
+    font-size: 120%;
+  }
+
+  .card-container {
+    margin-top: 8% !important;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #overlay-text {
+    top: 70%;
+    padding: 18px 70px 18px 18px;
+  }
+
+  #overlay-text h1 {
+    font-size: 36px;
+  }
+
+  #overlay-text h3 {
+    font-size: 24px;
+  }
+
+  #callout-btns a {
+    font-size: 12px;
+  }
+
+  .title,
+  .title span {
+    font-size: 140%;
+  }
+
+  .title {
+    margin-bottom: 50px;
+  }
+
+  #about .about-title {
+    padding-top: 5%;
+    font-size: 110%;
+  }
+
+  #about .info {
+    font-size: 13px;
+  }
+
+  .img-circle {
+    width: 160px;
+  }
+
+  #shop-books {
+    width: 70%;
+  }
+  #shop-link a {
+    font-size: 140%;
+  }
+
+  .card-container {
+    margin-top: 6% !important;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #overlay-text {
+    top: 72%;
+    padding: 20px 80px 20px 20px;
+  }
+
+  #overlay-text h1 {
+    font-size: 38px;
+  }
+
+  #overlay-text h3 {
+    font-size: 26px;
+  }
+
+  #callout-btns a {
+    font-size: 13px;
+  }
+
+  #callout-img {
+    max-height: 550px;
+    object-fit: cover;
+  }
+
+  .card-container {
+    margin-top: 10%;
+  }
 }
