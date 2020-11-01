@@ -326,6 +326,7 @@ div#register.col.s12 {
 
 .page-callout-text {
   width: 85%;
+  max-width: 600px;
   background-color: #fafafa;
   border-radius: 6px;
   padding: 20px 20px 10px 20px;
@@ -612,8 +613,8 @@ textarea.materialize-textarea {
   text-align: center;
   font-size: 12px;
   font-weight: 500;
-  right: 10px;
-  bottom: -25px;
+  right: -20px;
+  bottom: -15px;
   width: 70px;
   height: 60px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
@@ -621,6 +622,7 @@ textarea.materialize-textarea {
 }
 
 #yellow-container {
+  max-width: 750px;
   background-color: #fff7ae;
   border-radius: 6px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
@@ -642,6 +644,7 @@ textarea.materialize-textarea {
 }
 
 #tab-container {
+  max-width: 750px;
   border-radius: 6px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
@@ -792,6 +795,11 @@ textarea.materialize-textarea {
   .page-callout-text {
     top: 95%;
   }
+
+  #yellow-container {
+    margin-top: 12%;
+    margin-bottom: 6%;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -856,6 +864,11 @@ textarea.materialize-textarea {
   .card-container {
     margin-top: 8% !important;
   }
+
+  #yellow-container {
+    margin-top: 10%;
+    margin-bottom: 4%;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -909,6 +922,10 @@ textarea.materialize-textarea {
   .card-container {
     margin-top: 6% !important;
   }
+
+  #yellow-container {
+    margin-top: 8%;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -937,5 +954,10 @@ textarea.materialize-textarea {
 
   .card-container {
     margin-top: 10%;
+  }
+
+  #yellow-container {
+    margin-top: 6%;
+    margin-bottom: 3%;
   }
 }
