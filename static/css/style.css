@@ -353,7 +353,8 @@ div#register.col.s12 {
   font-size: 9px;
 }
 
-#recipe-card {
+#recipe-card,
+#cuisine-card {
   height: 230px;
 }
 
@@ -796,8 +797,13 @@ textarea.materialize-textarea {
     object-fit: cover;
   }
 
-  .card-container {
+  #recipe-card-container,
+  #cuisine-card-container {
     margin-top: 12% !important;
+  }
+
+  #book-card-container {
+    margin-top: 10% !important;
   }
 
   .page-callout-text {
@@ -818,15 +824,55 @@ textarea.materialize-textarea {
   }
 
   .card-btn {
-      font-size: 10px;
+    font-size: 10px;
   }
 
-  button#search-btn i, a#clear-btn i {
-      font-size: 22px;
+  button#search-btn i,
+  a#clear-btn i {
+    font-size: 22px;
   }
 
   #input-outer .input-field label {
-      font-size: 13px;
+    font-size: 13px;
+  }
+
+  .page-callout-text p {
+    font-size: 12px;
+  }
+
+  .add-container {
+    padding-top: 160px;
+  }
+
+  .recipe-form {
+    margin-top: 50px;
+  }
+
+  .add-header {
+    font-size: 24px;
+  }
+
+  .recipe-form label span,
+  .recipe-form input,
+  textarea.materialize-textarea,
+  .recipe-form label,
+  .recipe-form p,
+  .dropdown-content li > span {
+    font-size: 14px !important;
+  }
+
+   .dropdown-content li > a {
+       font-size: 13px !important;
+   }
+
+  .recipe-form label span,
+  .input-field .helper-text {
+    font-size: 12px !important;
+  }
+
+  .recipe-form button i {
+      font-size: 26px;
+      padding: 8px;
   }
 }
 
@@ -891,8 +937,13 @@ textarea.materialize-textarea {
     font-size: 120%;
   }
 
-  .card-container {
+  #recipe-card-container,
+  #cuisine-card-container {
     margin-top: 10% !important;
+  }
+
+  #book-card-container {
+    margin-top: 8% !important;
   }
 
   #yellow-container {
@@ -908,8 +959,13 @@ textarea.materialize-textarea {
     height: 260px;
   }
 
-  button#search-btn i, a#clear-btn i {
-      font-size: 24px;
+  #cuisine-card {
+      height: 240px;
+  }
+
+  button#search-btn i,
+  a#clear-btn i {
+    font-size: 24px;
   }
 }
 
@@ -969,8 +1025,13 @@ textarea.materialize-textarea {
     top: 70%;
   }
 
-  .card-container {
+  #recipe-card-container,
+  #cuisine-card-container {
     margin-top: 8% !important;
+  }
+
+  #book-card-container {
+    margin-top: 6% !important;
   }
 
   #yellow-container {
@@ -986,15 +1047,20 @@ textarea.materialize-textarea {
   }
 
   .card-btn {
-      font-size: 11px;
+    font-size: 11px;
   }
 
-  button#search-btn i, a#clear-btn i {
-      font-size: 28px;
+  button#search-btn i,
+  a#clear-btn i {
+    font-size: 28px;
   }
 
-   #input-outer .input-field label {
-      font-size: 14px;
+  #input-outer .input-field label {
+    font-size: 14px;
+  }
+
+  .add-header {
+    font-size: 26px;
   }
 }
 
@@ -1022,8 +1088,13 @@ textarea.materialize-textarea {
     object-fit: cover;
   }
 
-  .card-container {
-    margin-top: 6%;
+  #recipe-card-container,
+  #cuisine-card-container {
+    margin-top: 6% !important;
+  }
+
+  #book-card-container {
+    margin-top: 4% !important;
   }
 
   #yellow-container {
@@ -1037,5 +1108,13 @@ textarea.materialize-textarea {
 
   #recipe-card {
     height: 300px;
+  }
+
+  #cuisine-card {
+    height: 290px;
+  }
+
+  .add-header {
+    font-size: 28px;
   }
 }
