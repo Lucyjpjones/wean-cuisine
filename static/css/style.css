@@ -46,7 +46,8 @@ p {
 /* ---------- Buttons*/
 a.btn:hover,
 a.btn:focus,
-.carousel-item p:hover {
+.carousel-item p:hover,
+.recipe-form button i:hover {
   filter: brightness(120%);
 }
 
@@ -516,36 +517,36 @@ a#clear-btn i {
   font-weight: 500;
 }
 
-#recipe-form {
+/* -------- Form*/
+.recipe-form {
   border-radius: 6px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   margin-top: 20px;
-  padding: 15px 30px 10px 30px;
+  padding: 15px 30px 10px 30px !important;
 }
 
-#recipe-form label span,
-#recipe-form input,
+.recipe-form label span,
+.recipe-form input,
 textarea.materialize-textarea {
-  font-size: 11px;
-  text-transform: uppercase;
-  color: #666666;
+  font-size: 11px !important;
+  color: #4d4c4c;
 }
 
-#recipe-form label,
-#recipe-form p {
+.recipe-form label,
+.recipe-form p {
   color: #c89f98;
   font-size: 11px;
   font-weight: 500;
 }
 
-#recipe-form p {
+.recipe-form p {
   margin-bottom: 10px;
 }
 
-#recipe-form label span {
-  font-size: 9px;
-  line-height: 9px;
+.recipe-form label span {
+  font-size: 9px !important;
+  line-height: 9px !important;
 }
 
 #photo-icon {
@@ -553,21 +554,21 @@ textarea.materialize-textarea {
   color: #c89f98;
 }
 
-#recipe-form button {
+.recipe-form button {
   width: 100%;
   background-color: #fafafa;
   border: none;
   margin-top: 10px;
 }
 
-#recipe-form button i {
-  font-size: 35px;
-  color: #8ce3d5;
+.recipe-form button i {
+  font-size: 20px;
+  color: #666666;
   text-align: center;
-}
-
-select option {
-  font-size: 10px;
+  background-color: #8ce3d5;
+  opacity: 0.85;
+  padding: 5px;
+  border-radius: 50%;
 }
 
 #select-options-f887f309-4256-1049-9ebc-2cb32164536e {
@@ -576,7 +577,7 @@ select option {
 
 .dropdown-content li > a,
 .dropdown-content li > span {
-  font-size: 10px;
+  font-size: 11px;
   padding: 5px 10px;
   color: #c89f98;
 }
@@ -600,23 +601,34 @@ textarea.materialize-textarea {
 /* -------------------- View recipe*/
 
 #view-recipe-img {
-  position: relative;
-  width: 100%;
   height: 200px;
   object-fit: cover;
-  opacity: 0.9;
-  border-radius: 6px;
+}
+
+#age-circle {
+  position: absolute;
+  background-color: #8ce3d5;
+  color: #fafafa;
+  border-radius: 35%;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  right: 10px;
+  bottom: -25px;
+  width: 70px;
+  height: 60px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 #yellow-container {
   background-color: #fff7ae;
-  line-height: initial;
   border-radius: 6px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-  padding-top: 0px;
+  margin-top: 10%;
+  margin-bottom: 8%;
 }
 
 #yellow-container-inner {
@@ -638,7 +650,7 @@ textarea.materialize-textarea {
 }
 
 .tabs .tab a {
-  color: #666666;
+  color: #4e4e4e;
   font-weight: 500;
 }
 
@@ -652,6 +664,11 @@ textarea.materialize-textarea {
   background-color: #c89f98;
 }
 
+#ingredients,
+#method {
+    padding-top: 10px;
+}
+
 #ingredients p,
 #method p {
   text-transform: capitalize;
@@ -660,23 +677,6 @@ textarea.materialize-textarea {
 
 #page-callout p {
   font-size: 11px;
-}
-
-#age-circle {
-  position: absolute;
-  background-color: #8ce3d5;
-  color: #fafafa;
-  border-radius: 35%;
-  padding-top: 10px;
-  text-align: center;
-  font-size: 12px;
-  font-weight: 500;
-  right: 10px;
-  bottom: -30px;
-  width: 70px;
-  height: 60px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* --------------------Shop recipe books */

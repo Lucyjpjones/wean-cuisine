@@ -1,14 +1,13 @@
 {% extends "base.html" %} {% block content %}
 
 <!--Page header-->
-<section class="container">
-  <h3 class="add-header">Edit Recipe</h3>
+<section class="container add-container">
+  <h3 class="add-header">Edit recipe</h3>
 
   <!--Edit recipe form-->
   <div class="row">
     <form
-      id="recipe-form"
-      class="col s12"
+      class="col s12 recipe-form"
       method="POST"
       action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
     >
@@ -202,7 +201,7 @@
       </div>
       <!--Edit recipe btn-->
       <button type="submit">
-        <i class="material-icons">border_color</i>
+        <i class="fas fa-edit"></i>
       </button>
     </form>
   </div>

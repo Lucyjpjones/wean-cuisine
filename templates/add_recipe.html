@@ -2,13 +2,12 @@
 
 <!--Page header-->
 <section class="container add-container">
-  <h3 class="add-header">Add Recipe</h3>
+  <h3 class="add-header">Add recipe</h3>
 
   <!--Add recipe form-->
   <div class="row">
     <form
-      id="recipe-form"
-      class="col s12"
+      class="col s12 recipe-form"
       method="POST"
       action="{{ url_for('add_recipe') }}"
     >
@@ -173,7 +172,7 @@
 
       <!--Add recipe btn-->
       <button type="submit">
-        <i class="material-icons">add_circle</i>
+        <i class="material-icons">add_circle_outline</i>
       </button>
     </form>
   </div>
