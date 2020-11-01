@@ -358,8 +358,8 @@ div#register.col.s12 {
 }
 
 .card-img {
-  width: 130px;
-  height: 110px;
+  width: 85%;
+  height: 100px;
   overflow: hidden;
   margin: auto;
   border-radius: 6px;
@@ -808,6 +808,26 @@ textarea.materialize-textarea {
     margin-top: 12%;
     margin-bottom: 6%;
   }
+
+  #card-title {
+    font-size: 13px;
+  }
+
+  .card .card-content {
+    font-size: 11px;
+  }
+
+  .card-btn {
+      font-size: 10px;
+  }
+
+  button#search-btn i, a#clear-btn i {
+      font-size: 22px;
+  }
+
+  #input-outer .input-field label {
+      font-size: 13px;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -879,10 +899,26 @@ textarea.materialize-textarea {
     margin-top: 10%;
     margin-bottom: 4%;
   }
+
+  .card-img {
+    height: 130px;
+  }
+
+  #recipe-card {
+    height: 260px;
+  }
+
+  button#search-btn i, a#clear-btn i {
+      font-size: 24px;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  .card-container {
+    width: 80% !important;
+  }
+
   #overlay-text {
     top: 70%;
     padding: 18px 70px 18px 18px;
@@ -940,6 +976,26 @@ textarea.materialize-textarea {
   #yellow-container {
     margin-top: 8%;
   }
+
+  .card-img {
+    height: 120px;
+  }
+
+  #recipe-card {
+    height: 250px;
+  }
+
+  .card-btn {
+      font-size: 11px;
+  }
+
+  button#search-btn i, a#clear-btn i {
+      font-size: 28px;
+  }
+
+   #input-outer .input-field label {
+      font-size: 14px;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -973,5 +1029,13 @@ textarea.materialize-textarea {
   #yellow-container {
     margin-top: 6%;
     margin-bottom: 3%;
+  }
+
+  .card-img {
+    height: 170px;
+  }
+
+  #recipe-card {
+    height: 300px;
   }
 }
