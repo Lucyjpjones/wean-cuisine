@@ -374,6 +374,11 @@ div#register.col.s12 {
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
+.card-img img {
+    height: 100px;
+    object-fit: cover;
+  }
+
 .card-info {
   padding: 10px 10px 0px 10px;
   margin: 0;
@@ -679,9 +684,8 @@ textarea.materialize-textarea {
   background-color: #c89f98;
 }
 
-#ingredients,
-#method {
-  padding-top: 10px;
+div#ingredients.col.s12, div#method.col.s12 {
+    padding: 10px 20px;
 }
 
 #ingredients p,
@@ -926,6 +930,9 @@ textarea.materialize-textarea {
   .card-img {
     height: 130px;
   }
+  .card-img img {
+    min-height: 130px;
+  }
   #recipe-card {
     height: 260px;
   }
@@ -962,7 +969,7 @@ textarea.materialize-textarea {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .card-container {
-    width: 80% !important;
+    width: 85% !important;
   }
 
   nav .brand-logo {
@@ -1025,6 +1032,9 @@ textarea.materialize-textarea {
     margin-top: 8%;
   }
   .card-img {
+    height: 120px;
+  }
+  .card-img img {
     height: 120px;
   }
   #recipe-card {
@@ -1105,6 +1115,9 @@ textarea.materialize-textarea {
     margin-bottom: 3%;
   }
   .card-img {
+    height: 170px;
+  }
+  .card-img img {
     height: 170px;
   }
   #recipe-card {
