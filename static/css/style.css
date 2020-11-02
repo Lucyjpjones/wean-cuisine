@@ -699,7 +699,7 @@ div#ingredients.col.s12, div#method.col.s12 {
 #ingredients p,
 #method p {
   text-transform: capitalize;
-  padding: 2px 5px;
+  padding: 10px 5px 5px 5px;
 }
 
 #page-callout p {
