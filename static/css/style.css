@@ -158,7 +158,7 @@ div#register.col.s12 {
 }
 #callout-img {
   width: 100%;
-  opacity: 0.8;
+  opacity: 0.7;
   margin-top: 55px;
 }
 #overlay-text {
@@ -282,6 +282,7 @@ div#register.col.s12 {
 #shop-books {
   position: relative;
   width: 85%;
+  max-width: 750px;
   margin: auto;
   top: -80px;
 }
@@ -893,6 +894,10 @@ textarea.materialize-textarea {
   .img-circle {
     width: 140px;
   }
+  .carousel .carousel-item {
+    width: 230px;
+    height: 230px;
+  }
   #shop-books {
     top: -50%;
     width: 75%;
@@ -943,6 +948,7 @@ textarea.materialize-textarea {
   #login-btn,
   #logout-btn {
     font-size: 13px;
+    padding: 0 15px;
   }
   #menu-icon {
     font-size: 48px;
@@ -957,6 +963,10 @@ textarea.materialize-textarea {
 @media only screen and (min-width: 992px) {
   .card-container {
     width: 80% !important;
+  }
+
+  nav .brand-logo {
+    max-width: 170px;
   }
   .page-callout-img {
     margin-top: 120px;
@@ -992,6 +1002,10 @@ textarea.materialize-textarea {
   }
   .img-circle {
     width: 160px;
+  }
+  .carousel .carousel-item {
+    width: 250px;
+    height: 250px;
   }
   #shop-books {
     width: 70%;
@@ -1038,6 +1052,7 @@ textarea.materialize-textarea {
   #login-btn,
   #logout-btn {
     font-size: 15px;
+    padding: 0 20px;
   }
   #menu-icon {
     font-size: 58px;
@@ -1054,6 +1069,9 @@ textarea.materialize-textarea {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  nav .brand-logo {
+    max-width: 180px;
+  }
   #overlay-text {
     top: 72%;
     padding: 20px 80px 20px 20px;
@@ -1070,6 +1088,10 @@ textarea.materialize-textarea {
   #callout-img {
     max-height: 550px;
     object-fit: cover;
+  }
+  .carousel .carousel-item {
+    width: 270px;
+    height: 270px;
   }
   #recipe-card-container,
   #cuisine-card-container {
