@@ -176,6 +176,13 @@
                             <label for="password">Password</label>
                           </div>
                         </div>
+                        <div>
+                          <!-- Flash messages -->
+                          {% with messages = get_flashed_messages() %} {% if
+                          messages %} {% for message in messages %}
+                          <p class="flash-message">{{ message }}</p>
+                          {% endfor %} {% endif %} {%endwith %}
+                        </div>
                         <!--Login submit btn-->
                         <div class="row" id="login-btn-outer">
                           <button
@@ -223,6 +230,13 @@
                             />
                             <label for="password">Password</label>
                           </div>
+                        </div>
+                        <div>
+                          <!-- Flash messages -->
+                          {% with messages = get_flashed_messages() %} {% if
+                          messages %} {% for message in messages %}
+                          <p class="flash-message">{{ message }}</p>
+                          {% endfor %} {% endif %} {%endwith %}
                         </div>
                         <!--Register submit btn-->
                         <div class="row" id="register-btn-outer">
