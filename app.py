@@ -214,12 +214,11 @@ def delete_cuisine(cuisine_id):
 
 
 # Filter recipes by cuisine function
-@app.route("/filter_cuisine", methods=["GET", "POST"])
-def filter_cuisine():
-    query = request.form.get("query")
-    recipes = list(mongo.db.recipes.find({"cuisine_name": query}))
-
-    return render_template("view_recipe.html", recipes=recipes)
+@app.route("/filter_cuisines")
+def filter_cuisines():
+    recipes = mongo.db.recipes
+    cuisines = recipes.find({'cuisine_name': 'Indian'})
+    return render_template("recipes.html", cuisines=cuisines, recipes=recipes)
 
 
 # Shop recipe books function

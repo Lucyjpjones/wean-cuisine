@@ -3,19 +3,26 @@
 <!--Page header-->
 <section class="container page-callout">
   <!--Recipe image-->
-  <img class="page-callout-img" id="view-recipe-img" src="{{ recipe.img_url }}" alt="background" />
+  <img
+    class="page-callout-img"
+    id="view-recipe-img"
+    src="{{ recipe.img_url }}"
+    alt="background"
+  />
   <div class="page-callout-text">
     <!--Recipe name title-->
-    <h3>{{ recipe.recipe_name }}</h3>
-    <br />
-    <!--Recipe created by-->
-    <p>by: {{ recipe.created_by }}</p>
-    <!--Recipe cuisine name-->
-    <p><i class="fas fa-globe-europe"></i> {{ recipe.cuisine_name }}</p>
-  </div>
-  <!--Recipe age-range circle-->
-  <div id="age-circle">
-    <p>{{ recipe.age_range }}</p>
+    <div>
+      <h3>{{ recipe.recipe_name }}</h3>
+      <br />
+      <!--Recipe created by-->
+      <p>by: {{ recipe.created_by }}</p>
+      <!--Recipe cuisine name-->
+      <p><i class="fas fa-globe-europe"></i> {{ recipe.cuisine_name }}</p>
+    </div>
+    <!--Recipe age-range circle-->
+    <div id="age-circle">
+      <p>{{ recipe.age_range }}</p>
+    </div>
   </div>
 </section>
 

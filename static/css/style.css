@@ -882,7 +882,7 @@ textarea.materialize-textarea {
     font-size: 130%;
   }
   .title {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
   #about .about-title {
     padding-top: 5%;
@@ -991,7 +991,7 @@ textarea.materialize-textarea {
     font-size: 140%;
   }
   .title {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
   }
   #about .about-title {
     padding-top: 5%;
@@ -1055,7 +1055,7 @@ textarea.materialize-textarea {
     padding: 0 20px;
   }
   #menu-icon {
-    font-size: 58px;
+    font-size: 60px;
   }
   #callout-img,
   .sidenav {
@@ -1090,8 +1090,8 @@ textarea.materialize-textarea {
     object-fit: cover;
   }
   .carousel .carousel-item {
-    width: 270px;
-    height: 270px;
+    width: 280px;
+    height: 280px;
   }
   #recipe-card-container,
   #cuisine-card-container {

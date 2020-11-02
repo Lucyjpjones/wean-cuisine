@@ -52,7 +52,7 @@
 {% if recipes|length > 0 %}
 
 <!--Recipe card structure-->
-<div class="card-container">
+<div id="recipe-card-container" class="container card-container">
   <div class="row">
     {% for recipe in recipes %}
     <div class="col s6 m4 l3">
@@ -99,9 +99,7 @@
                 </div>
                 <br />
                 <div class="modal-footer">
-                  <a href="#" class="modal-close btn modal-del-btns"
-                    >cancel</a
-                  >
+                  <a href="#" class="modal-close btn modal-del-btns">cancel</a>
                   <a
                     href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
                     class="btn modal-del-btns"
