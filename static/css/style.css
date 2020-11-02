@@ -47,7 +47,8 @@ p {
 a.btn:hover,
 a.btn:focus,
 .carousel-item p:hover,
-.recipe-form button i:hover {
+.recipe-form button i:hover,
+#menu-icon:hover {
   filter: brightness(120%);
 }
 
@@ -133,7 +134,11 @@ div#register.col.s12 {
   margin: 0;
   display: inline !important; /* menu was not appearing on view_recipe page*/
 }
+#menu:hover {
+  background: none;
+}
 #menu-icon {
+  transform: rotateY(45deg);
   color: #c89f98;
   font-size: 35px;
 }
@@ -331,7 +336,7 @@ div#register.col.s12 {
   max-width: 600px;
   background-color: #fafafa;
   border-radius: 6px;
-  padding: 20px 20px 10px 20px;
+  padding: 20px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   position: absolute;
@@ -398,9 +403,10 @@ div.col.s12.card-btns {
 }
 
 .modal {
-  top: 40% !important;
+  top: 20% !important;
   border-radius: 6px;
   padding: 0 10px;
+  max-width: 400px;
 }
 
 .modal-overlay {
@@ -439,7 +445,7 @@ div.col.s12.card-btns {
 
 .page-callout-text h3 {
   font-size: 20px;
-  font-weight: 500px;
+  font-weight: 500;
 }
 
 .page-callout-text p {
@@ -496,7 +502,7 @@ button#search-btn {
   color: #8ce3d5;
 }
 a#clear-btn {
-  background-color: none;
+  background-color: transparent;
   border: none;
   color: #c89f98;
 }
@@ -739,48 +745,42 @@ textarea.materialize-textarea {
   nav {
     padding: 0 2%;
   }
-
   #overlay-text {
     top: 65%;
     padding: 12px;
   }
-
   #overlay-text h1 {
     font-size: 24px;
   }
-
   #overlay-text h3 {
     font-size: 16px;
   }
-
   #callout-btns a,
   .page-callout-text .callout-add-btn {
     font-size: 10px;
   }
-
+  #login-btn,
+  #logout-btn {
+    margin-right: 10px;
+  }
   .title,
   .title span,
   .page-callout-text h3 {
     font-size: 120%;
   }
-
   .title {
     margin-bottom: 40px;
   }
-
   #about .about-title {
     padding-top: 5%;
     font-size: 15px;
   }
-
   #about .info {
     font-size: 13px;
   }
-
   .img-circle {
     width: 140px;
   }
-
   #shop-link a {
     top: 100%;
     font-size: 110%;
@@ -788,15 +788,11 @@ textarea.materialize-textarea {
   .carousel-item p {
     font-size: 110%;
   }
-
-  /*---------- Add/Edit recipes*/
-
   .page-callout-img {
-    margin-top: 100px;
+    margin-top: 110px;
     max-height: 250px;
     object-fit: cover;
   }
-
   #recipe-card-container,
   #cuisine-card-container {
     margin-top: 12% !important;
@@ -805,53 +801,41 @@ textarea.materialize-textarea {
   #book-card-container {
     margin-top: 10% !important;
   }
-
   .page-callout-text {
     top: 95%;
   }
-
   #yellow-container {
     margin-top: 12%;
     margin-bottom: 6%;
   }
-
   #card-title {
     font-size: 13px;
   }
-
   .card .card-content {
     font-size: 11px;
   }
-
   .card-btn {
     font-size: 10px;
   }
-
   button#search-btn i,
   a#clear-btn i {
     font-size: 22px;
   }
-
   #input-outer .input-field label {
     font-size: 13px;
   }
-
   .page-callout-text p {
     font-size: 12px;
   }
-
   .add-container {
     padding-top: 160px;
   }
-
   .recipe-form {
     margin-top: 50px;
   }
-
   .add-header {
     font-size: 24px;
   }
-
   .recipe-form label span,
   .recipe-form input,
   textarea.materialize-textarea,
@@ -860,62 +844,52 @@ textarea.materialize-textarea {
   .dropdown-content li > span {
     font-size: 14px !important;
   }
-
-   .dropdown-content li > a {
-       font-size: 13px !important;
-   }
-
+  .dropdown-content li > a {
+    font-size: 13px !important;
+  }
   .recipe-form label span,
   .input-field .helper-text {
     font-size: 12px !important;
   }
-
   .recipe-form button i {
-      font-size: 26px;
-      padding: 8px;
+    font-size: 26px;
+    padding: 8px;
+  }
+  #menu-icon {
+    font-size: 44px;
   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  /*---------- Home page */
-
   #overlay-text {
     padding: 16px 50px 16px 16px;
   }
-
   #overlay-text h1 {
     font-size: 32px;
   }
-
   #overlay-text h3 {
     font-size: 20px;
   }
-
   #callout-btns a,
   .page-callout-text .callout-add-btn {
     font-size: 12px;
   }
-
   .title,
   .title span,
   .page-callout-text h3 {
     font-size: 130%;
   }
-
   .title {
     margin-bottom: 40px;
   }
-
   #about .about-title {
     padding-top: 5%;
     font-size: 16px;
   }
-
   #about .info {
     font-size: 14px;
   }
-
   .img-circle {
     width: 140px;
   }
@@ -923,49 +897,59 @@ textarea.materialize-textarea {
     top: -50%;
     width: 75%;
   }
-
   #shop-books-img {
     margin-bottom: 10%;
   }
-
   #shop-link a {
     top: 75%;
   }
-
   #shop-link a,
   .carousel-item p {
     font-size: 120%;
   }
-
   #recipe-card-container,
   #cuisine-card-container {
     margin-top: 10% !important;
   }
-
   #book-card-container {
     margin-top: 8% !important;
   }
-
   #yellow-container {
     margin-top: 10%;
     margin-bottom: 4%;
   }
-
   .card-img {
     height: 130px;
   }
-
   #recipe-card {
     height: 260px;
   }
-
   #cuisine-card {
-      height: 240px;
+    height: 240px;
   }
-
   button#search-btn i,
   a#clear-btn i {
     font-size: 24px;
+  }
+  nav,
+  nav a.sidenav-trigger,
+  nav a.sidenav-trigger i {
+    height: 70px;
+    line-height: 70px;
+  }
+  nav .brand-logo {
+    max-width: 160px;
+  }
+  #login-btn,
+  #logout-btn {
+    font-size: 13px;
+  }
+  #menu-icon {
+    font-size: 48px;
+  }
+  #callout-img,
+  .sidenav {
+    margin-top: 70px;
   }
 }
 
@@ -974,93 +958,97 @@ textarea.materialize-textarea {
   .card-container {
     width: 80% !important;
   }
-
+  .page-callout-img {
+    margin-top: 120px;
+  }
   #overlay-text {
     top: 70%;
     padding: 18px 70px 18px 18px;
   }
-
   #overlay-text h1 {
     font-size: 36px;
   }
-
   #overlay-text h3 {
     font-size: 24px;
   }
-
   #callout-btns a,
   .page-callout-text .callout-add-btn {
     font-size: 12px;
   }
-
   .title,
   .title span,
   .page-callout-text h3 {
     font-size: 140%;
   }
-
   .title {
     margin-bottom: 50px;
   }
-
   #about .about-title {
     padding-top: 5%;
     font-size: 110%;
   }
-
   #about .info {
     font-size: 13px;
   }
-
   .img-circle {
     width: 160px;
   }
-
   #shop-books {
     width: 70%;
   }
-
   #shop-link a {
     font-size: 140%;
     top: 70%;
   }
-
   #recipe-card-container,
   #cuisine-card-container {
     margin-top: 8% !important;
   }
-
   #book-card-container {
     margin-top: 6% !important;
   }
-
   #yellow-container {
     margin-top: 8%;
   }
-
   .card-img {
     height: 120px;
   }
-
   #recipe-card {
     height: 250px;
   }
-
   .card-btn {
     font-size: 11px;
   }
-
   button#search-btn i,
   a#clear-btn i {
     font-size: 28px;
   }
-
   #input-outer .input-field label {
     font-size: 14px;
   }
-
   .add-header {
     font-size: 26px;
+  }
+  nav,
+  nav a.sidenav-trigger,
+  nav a.sidenav-trigger i {
+    height: 90px;
+    line-height: 90px;
+  }
+  #login-btn,
+  #logout-btn {
+    font-size: 15px;
+  }
+  #menu-icon {
+    font-size: 58px;
+  }
+  #callout-img,
+  .sidenav {
+    margin-top: 90px;
+  }
+
+  .sidenav li > a {
+    font-size: 16px;
   }
 }
 
@@ -1070,50 +1058,39 @@ textarea.materialize-textarea {
     top: 72%;
     padding: 20px 80px 20px 20px;
   }
-
   #overlay-text h1 {
     font-size: 38px;
   }
-
   #overlay-text h3 {
     font-size: 26px;
   }
-
   #callout-btns a {
     font-size: 13px;
   }
-
   #callout-img {
     max-height: 550px;
     object-fit: cover;
   }
-
   #recipe-card-container,
   #cuisine-card-container {
     margin-top: 6% !important;
   }
-
   #book-card-container {
     margin-top: 4% !important;
   }
-
   #yellow-container {
     margin-top: 6%;
     margin-bottom: 3%;
   }
-
   .card-img {
     height: 170px;
   }
-
   #recipe-card {
     height: 300px;
   }
-
   #cuisine-card {
     height: 290px;
   }
-
   .add-header {
     font-size: 28px;
   }
