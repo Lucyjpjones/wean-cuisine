@@ -17,6 +17,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+
 # Homepage function
 @app.route("/")
 @app.route("/homepage")
@@ -47,8 +48,7 @@ def register():
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            flash("Username already exists")
-            return redirect(url_for("register"))
+            flash("Username already exists, please log in")
 
         register = {
             "username": request.form.get("username").lower(),
@@ -57,7 +57,7 @@ def register():
         mongo.db.users.insert_one(register)
 
         session["user"] = request.form.get("username").lower()
-        flash("registration successful")
+        flash("Registration successful")
         return redirect(url_for("homepage", username=session["user"]))
 
     return redirect(url_for("homepage"))
@@ -77,12 +77,10 @@ def login():
                 flash("Welcome, {}".format(request.form.get("username")))
                 return redirect(url_for("homepage", username=session["user"]))
             else:
-                flash("incorrect Username and/or password")
-                return redirect(url_for("login"))
+                flash("Incorrect Username and/or password")
 
         else:
             flash("Incorrect Username and/or Password")
-            return redirect(url_for("login"))
 
     return redirect(url_for("homepage"))
 
