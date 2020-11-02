@@ -64,6 +64,8 @@ By completing this project I will have shown greater experience in HTML, CSS and
 
 **Structure**
 
+- A simple design structure with a fixed navbar and a dropdown sidenav accessible from every page. A brand logo is displayed in the top left of the screen to allow easy navigation back to the homepage.
+
 **Colour scheme**
 
 <img src="static/assets/images/readme/moodboard.jpeg">
@@ -117,7 +119,11 @@ As the site owner, I want to be able to continually monitor and update the site 
 
 **User stories: Site owner**
 
-**User stories:**
+
+|   | Needs/Goals                                                 | Task                                                                             |
+|---|-------------------------------------------------------------|----------------------------------------------------------------------------------|
+| **1** | Ability to share and edit my own recipes                             | Option to add, edit and delete own recipes 
+| **2** | Ability to manage cuisine cards           | When logged in as admin user, have the option to add, update and delete cuisine cards                  |
 
 
 ### **<u>Wireframes</u>**
@@ -153,6 +159,7 @@ As part of the design process, before starting my project I sketched out initial
   - Materilize elements used include: input fields, textarea fields, radio buttons, select dropdowns and submit buttons.
 
 - **Tabs**
+  - Tab used for login and register so the user can easy swith to the appropriate field.
   - Interactive tab used to allow user to flip between recipe ingredients and method.
 
 - **Card Listings**
@@ -177,11 +184,11 @@ As part of the design process, before starting my project I sketched out initial
 I will continue to update my website as I grow my platform of users. I have future development plans which I have listed below.
 
 **Future Development plans**
-- Add more cuisine cards 
-- Add review option for users
-- Parent forum
-- Dietry requirements
-- Forgot password link
+- I will continue to add more cuisine cards as I grow my user base.
+- I would liek to add a review option so my users can share their options on recipes they have tried.
+- Create a parent forum to add more social interaction between my users.
+- Add Dietry requirements information to recipes.
+- link log in and register with users email and create a link for forgetting password.
 ---
 
 ## &rarr; **Technologies**
@@ -548,15 +555,15 @@ To ensure my site was working correctly I carried out some manual function testi
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project. Code was entered through direct input. JS hint was used to check for any errors with my Javascript files. 
 JS was also tested by opening the developer console window on Chrome and checking for any errors as I clicked through the site.
+I used PEP8 online checking tool to inspect my Python code against the style conventions in PEP 8.
 
 - [**HTML Validator**](https://validator.w3.org/nu/#textarea)
 
 - [**CSS Validator**](https://jigsaw.w3.org/css-validator/#validate_by_input)
 
-
 - [**JS hint**](https://jshint.com/)
 
-- Python validator
+- [**PEP8 online check**](http://pep8online.com/checkresult)
 
 
 #### Audits
