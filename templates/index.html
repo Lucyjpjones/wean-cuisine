@@ -2,126 +2,128 @@
 
 <!--call out-->
 <section id="callout">
-	<img
+  <img
     id="callout-img"
     src="{{ url_for('static', filename='assets/images/callout-img1.jpg') }}"
     alt="callout image"
   />
-	<div id="overlay-text">
-		<h1>Taste the world</h1>
-		<h3>One weany step at a time</h3>
-		<div id="callout-btns">
-			<a class="btn" href="{{ url_for('get_recipes') }}">Explore recipes</a>
-			{% if session.user %}
-			<a class="btn" href="{{ url_for('add_recipe') }}">Add recipe
-				<i class="material-icons">add_circle_outline</i></a>
-			{% endif %}
-		</div>
-	</div>
+  <div id="overlay-text">
+    <h1>Taste the world</h1>
+    <h3>One weany step at a time</h3>
+    <div id="callout-btns">
+      <a class="btn" href="{{ url_for('get_recipes') }}">Explore recipes</a>
+      {% if session.user %}
+      <a class="btn" href="{{ url_for('add_recipe') }}"
+        >Add recipe <i class="material-icons">add_circle_outline</i></a
+      >
+      {% endif %}
+    </div>
+    <a id="section1"></a>
+  </div>
 </section>
 
 <!--How does it work?-->
 <section id="about" class="container">
-	<h5 class="title">How does <span>Wean Cuisine</span> work?</h5>
-	<div class="row">
-		<div class="col s12 m4 center-align">
-			<img
+  <h5 class="title">How does <span>Wean Cuisine</span> work?</h5>
+  <div class="row">
+    <div class="col s12 m4 center-align">
+      <img
         class="img-circle"
         src="{{ url_for('static', filename='assets/images/connect-icon.png') }}"
         alt="connect"
       />
-			<p class="about-title">Connect</p>
-			<p class="info">
-				Become part of a weaning-focused social network, connecting with other
-				parents from around the globe.
-			</p>
-		</div>
-		<div class="col s12 m4 center-align">
-			<img
+      <p class="about-title">Connect</p>
+      <p class="info">
+        Become part of a weaning-focused social network, connecting with other
+        parents from around the globe.
+      </p>
+    </div>
+    <div class="col s12 m4 center-align">
+      <img
         class="img-circle"
         src="{{ url_for('static', filename='assets/images/explore-icon.png') }}"
         alt="explore"
       />
-			<p class="about-title">Explore</p>
-			<p class="info">
-				Discover a variety of weaning recipes with bites of inspiration from
-				every cuisine.
-			</p>
-		</div>
-		<div class="col s12 m4 center-align">
-			<img
+      <p class="about-title">Explore</p>
+      <p class="info">
+        Discover a variety of weaning recipes with bites of inspiration from
+        every cuisine.
+      </p>
+    </div>
+    <div class="col s12 m4 center-align">
+      <img
         class="img-circle"
         src="{{ url_for('static', filename='assets/images/share-icon.png') }}"
         alt="share"
       />
-			<p class="about-title">Share</p>
-			<p class="info">
-				Add your own weaning recipes to help other parents on their weaning
-				journey.
-			</p>
-		</div>
-	</div>
+      <p class="about-title">Share</p>
+      <p class="info">
+        Add your own weaning recipes to help other parents on their weaning
+        journey.
+      </p>
+    </div>
+  </div>
 </section>
 
 <!--Cuisine carousel-->
 <section id="carousel-outer">
-	<h5 class="title">Cuisines</h5>
-	<div class="carousel" id="carousel">
-		<a class="carousel-item" href="#">
-			<img
+  <h5 class="title">Cuisines</h5>
+  <div class="carousel" id="carousel">
+    <a class="carousel-item" href="#">
+      <img
         class="carousel-img"
         src="{{ url_for('static', filename='assets/images/fish-and-chips.jpg') }}"
       />
-			<p>British</p>
-		</a>
-		<a class="carousel-item" href="#">
-			<img
+      <p>British</p>
+    </a>
+    <a class="carousel-item" href="#">
+      <img
         class="carousel-img"
         src="{{ url_for('static', filename='assets/images/indian.jpg') }}"
       />
-			<p>Indian</p>
-		</a>
-		<a class="carousel-item" href="#">
-			<img
+      <p>Indian</p>
+    </a>
+    <a class="carousel-item" href="#">
+      <img
         class="carousel-img"
         src="{{ url_for('static', filename='assets/images/italian.jpg') }}"
       />
-			<p>Italian</p>
-		</a>
-		<a class="carousel-item" href="#">
-			<img
+      <p>Italian</p>
+    </a>
+    <a class="carousel-item" href="#">
+      <img
         class="carousel-img"
         src="{{ url_for('static', filename='assets/images/thai.jpg') }}"
       />
-			<p>Thai</p>
-		</a>
-		<a class="carousel-item" href="#">
-			<img
+      <p>Thai</p>
+    </a>
+    <a class="carousel-item" href="#">
+      <img
         class="carousel-img"
         src="{{ url_for('static', filename='assets/images/japanese.jpg') }}"
       />
-			<p>Japanese</p>
-		</a>
-		<a class="carousel-item" href="#">
-			<img
+      <p>Japanese</p>
+    </a>
+    <a class="carousel-item" href="#">
+      <img
         class="carousel-img"
         src="{{ url_for('static', filename='assets/images/mexican.jpg') }}"
       />
-			<p>Mexican</p>
-		</a>
-	</div>
+      <p>Mexican</p>
+    </a>
+  </div>
 </section>
 
 <!--Shop recipe books-->
 <section id="shop-books">
-	<img
+  <img
     id="shop-books-img"
     class="responsive-img"
     src="{{ url_for('static', filename='assets/images/recipe-books.jpg') }}"
     alt="recipe books"
   />
-	<div id="shop-link">
-		<a class="btn" href="{{ url_for('shop_books') }}">Shop recipe books</a>
-	</div>
+  <div id="shop-link">
+    <a class="btn" href="{{ url_for('shop_books') }}">Shop recipe books</a>
+  </div>
 </section>
 {% endblock %}

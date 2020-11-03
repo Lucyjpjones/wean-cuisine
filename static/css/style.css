@@ -208,7 +208,7 @@ div#register.col.s12 {
 /* -------- About*/
 
 #about {
-  padding-top: 10%;
+  padding-top: 12%;
 }
 
 .title {
@@ -216,6 +216,8 @@ div#register.col.s12 {
   font-size: 16px;
   margin-bottom: 25px;
   font-weight: 500;
+  padding: 0 30%;
+  line-height: 20px;
 }
 
 .title span {
