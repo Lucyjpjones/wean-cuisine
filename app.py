@@ -57,7 +57,6 @@ def register():
         mongo.db.users.insert_one(register)
 
         session["user"] = request.form.get("username").lower()
-        flash("Registration successful")
         return redirect(url_for("homepage", username=session["user"]))
 
     return redirect(url_for("homepage"))
@@ -74,7 +73,6 @@ def login():
             if check_password_hash(
                     existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
-                flash("Welcome, {}".format(request.form.get("username")))
                 return redirect(url_for("homepage", username=session["user"]))
             else:
                 flash("Incorrect Username and/or password")
@@ -88,7 +86,6 @@ def login():
 # Logout function
 @app.route("/logout")
 def logout():
-    flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
 
@@ -110,7 +107,6 @@ def add_recipe():
             "created_by": session["user"]
         }
         mongo.db.recipes.insert_one(recipe)
-        flash("Recipe Added")
         return redirect(url_for("get_recipes"))
 
     cuisines = mongo.db.cuisines.find().sort("cuisine_name", 1)
@@ -138,7 +134,6 @@ def edit_recipe(recipe_id):
         }
 
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
-        flash("Task Successfully Updated")
         return redirect(url_for("get_recipes"))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
@@ -154,7 +149,6 @@ def edit_recipe(recipe_id):
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
-    flash("Task successfully Deleted")
     return redirect(url_for("get_recipes"))
 
 
@@ -181,7 +175,6 @@ def add_cuisine():
             "img_url": request.form.get("img_url")
         }
         mongo.db.cuisines.insert_one(cuisine)
-        flash("New Cuisine Added")
         return redirect(url_for("get_cuisines"))
 
     return render_template("add_cuisine.html")
@@ -196,7 +189,6 @@ def edit_cuisine(cuisine_id):
             "img_url": request.form.get("img_url")
         }
         mongo.db.cuisines.update({"_id": ObjectId(cuisine_id)}, submit)
-        flash("Cuisine Successfully Updated")
         return redirect(url_for("get_cuisines"))
 
     cuisine = mongo.db.cuisines.find_one({"_id": ObjectId(cuisine_id)})
@@ -207,16 +199,18 @@ def edit_cuisine(cuisine_id):
 @app.route("/delete_cuisine/<cuisine_id>")
 def delete_cuisine(cuisine_id):
     mongo.db.cuisines.remove({"_id": ObjectId(cuisine_id)})
-    flash("Category Successfully Deleted")
     return redirect(url_for("get_cuisines"))
 
 
 # Filter recipes by cuisine function
-@app.route("/filter_cuisines")
-def filter_cuisines():
-    recipes = mongo.db.recipes
-    cuisines = recipes.find({'cuisine_name': 'Indian'})
-    return render_template("recipes.html", cuisines=cuisines, recipes=recipes)
+@app.route("/filter_cuisine/<cuisine_id>", methods=["GET", "POST"])
+def filter_cuisine(cuisine_id):
+    filter = mongo.db.cuisines.find_one(
+        {"_id": ObjectId(cuisine_id)})
+    cuisine = ("cuisine_name").find(filter)
+    recipes = list(mongo.db.recipes.find(
+        {"cuisine_name": cuisine}))
+    return render_template("recipes.html", recipes=recipes)
 
 
 # Shop recipe books function

@@ -31,11 +31,11 @@
   <div class="row">
     {% for cuisine in cuisines %}
     <div class="col s6 m4 l3">
-      <div href="" id="cuisine-card" class="card">
+      <div id="cuisine-card" class="card">
         <!--Cuisine card image-->
         <div class="card-image card-img">
-          <a href="">
-            <img src="{{ cuisine.img_url }}" alt="Cuisine image" />
+          <a href="{{ url_for('filter_cuisine', cuisine_id=cuisine._id) }}">
+            <img id="filter" src="{{ cuisine.img_url }}" alt="Cuisine image" />
           </a>
         </div>
         <!--Cuisine card cuisine name-->
