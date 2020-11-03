@@ -34,7 +34,7 @@
       <div id="cuisine-card" class="card">
         <!--Cuisine card image-->
         <div class="card-image card-img">
-          <a href="{{ url_for('filter_cuisine', cuisine_id=cuisine._id) }}">
+          <a href="{{ url_for('filter_cuisine', cuisine_name=cuisine.cuisine_name) }}">
             <img id="filter" src="{{ cuisine.img_url }}" alt="Cuisine image" />
           </a>
         </div>
