@@ -76,6 +76,12 @@ By completing this project I will have shown greater experience in HTML, CSS and
 
 **Typography**
 
+- The main font used throughout the site is 'Montserrat' which belongs to the sans-serif typeface family. The font is clean and elegant, making it a good choice for web design.
+
+- I have used 'Kalam' font for the 'Wean Cuisine' title as pairs well with my logo branding.
+
+- Sans Serif as the fallback font if for any reason the font isn't being imported into the site correctly.
+
 **Research**
 
 - I spent some time researching other recipe sites to gain inspiration, and created a moodboard with a collection of elements which caught my eye.
@@ -173,7 +179,7 @@ As part of the design process, before starting my project I sketched out initial
   - Used for recipe categories displayed on the homepage.
 
 - **Search bar**
-  - Allows user to search recipes by keywords using text index searching. Ingredients and recipe name included as keywords in query.
+  - Allows user to search recipes by keywords using text index searching. Recipe name, cuisine name, ingredients and food category are included as the keywords for the query.
 
 #### To do list:
 
@@ -515,6 +521,8 @@ To ensure my site was working correctly I carried out some manual function testi
 **5.** Explore recipes and search bar
 - I clicked on the 'Explore recipes' button on the homepage callout section and the link within the dropdown menu, and both correctly navigated to the recipes page.
 
+- After adding my search indexes via the python interpreter I entered 'mongo.db.recipes.index_information()' to check that the correct details had been added. I also checked this by clicking on the 'indexes' section on MongoDB.
+
 - I submitted a selection of words into the recipe search bar to ensure the query function was filtering the recipes correctly.
 
 **6.** Viewing recipes
@@ -607,6 +615,10 @@ I used PEP8 online checking tool to inspect my Python code against the style con
 - Friends & Family for continuous feedback and support.
 
 #### Content
+
+- **Recipes:** All recipes added by users lucyjpj (admin) and susan are taken from [Organix](https://www.organix.com/) and [Annabel Karmel](https://www.annabelkarmel.com/). All other recipes have been added from user testing.
+
+- **Recipe images:** All recipe images added by users lucyjpj (admin) and susan are from [Organix](https://www.organix.com/) and [Annabel Karmel](https://www.annabelkarmel.com/) recipes. All other recipes have been added from user testing.
 
 #### Media
 
