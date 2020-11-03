@@ -1087,7 +1087,8 @@ div#method.col.s12 {
   #login-btn,
   #logout-btn {
     font-size: 15px;
-    padding: 0 20px;
+    padding: 20px;
+    line-height: 2px;
   }
   #menu-icon {
     font-size: 60px;
