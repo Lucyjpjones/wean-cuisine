@@ -97,8 +97,10 @@ nav .brand-logo {
   font-size: 18px;
   line-height: 2.5;
 }
-input#password,
-input#username {
+input#login-password,
+input#login-username,
+input#register-password,
+input#register-username {
   width: 95%;
   border: 1px solid #e0e0e0;
   border-radius: 6px;
@@ -135,6 +137,10 @@ div#register.col.s12 {
   color: red;
   padding-left: 5px;
   padding-bottom: 15px;
+}
+
+.toast {
+    display: none;
 }
 
 /* ---------- Menu dropdown, sidenav*/
@@ -419,7 +425,6 @@ div.col.s12.card-btns {
 }
 
 .modal {
-  top: 30% !important;
   border-radius: 6px;
   padding: 0 10px;
   max-width: 400px;
@@ -877,8 +882,10 @@ div#method.col.s12 {
   .modal {
     top: 30% !important;
   }
-  input#password,
-  input#username {
+  input#login-password,
+  input#login-username,
+  input#register-password,
+  input#register-username {
     font-size: 14px;
   }
   .input-field > label {
