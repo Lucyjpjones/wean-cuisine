@@ -148,7 +148,7 @@
                           <div class="input-field col s12">
                             <input
                               placeholder="Enter username"
-                              id="username"
+                              id="login-username"
                               name="username"
                               type="text"
                               minlength="5"
@@ -165,7 +165,7 @@
                           <div class="input-field col s12">
                             <input
                               placeholder="Enter password"
-                              id="password"
+                              id="login-password"
                               name="password"
                               type="password"
                               minlength="5"
@@ -179,9 +179,10 @@
                         <div>
                           <!-- Flash messages -->
                           {% with messages = get_flashed_messages() %} {% if
-                          messages %} {% for message in messages %}
+                          messages %} {% for message in messages %} {% if
+                          message == "Incorrect Username and/or password", "Username already exists, please log in" %}
                           <p class="flash-message">{{ message }}</p>
-                          {% endfor %} {% endif %} {%endwith %}
+                          {% endif %} {% endfor %} {% endif %} {%endwith %}
                         </div>
                         <!--Login submit btn-->
                         <div class="row" id="login-btn-outer">
@@ -202,7 +203,7 @@
                           <div class="input-field col s12">
                             <input
                               placeholder="Enter username"
-                              id="username"
+                              id="register-username"
                               name="username"
                               type="text"
                               minlength="5"
@@ -219,7 +220,7 @@
                           <div class="input-field col s12">
                             <input
                               placeholder="Enter password"
-                              id="password"
+                              id="register-password"
                               name="password"
                               type="password"
                               minlength="5"
@@ -234,9 +235,10 @@
                         <div>
                           <!-- Flash messages -->
                           {% with messages = get_flashed_messages() %} {% if
-                          messages %} {% for message in messages %}
+                          messages %} {% for message in messages %} {% if
+                          message == "Username already exists, please log in" %}
                           <p class="flash-message">{{ message }}</p>
-                          {% endfor %} {% endif %} {%endwith %}
+                          {% endif %} {% endfor %} {% endif %} {%endwith %}
                         </div>
                         <!--Register submit btn-->
                         <div class="row" id="register-btn-outer">
@@ -275,5 +277,13 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>
+      {% with messages = get_flashed_messages() %} {% if
+                            messages %}
+        $(document).ready(function () {
+          $("#login-modal").modal("open");
+        });
+        {% endif %} {%endwith %}
+    </script>
   </body>
 </html>
