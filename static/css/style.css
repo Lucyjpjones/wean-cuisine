@@ -145,10 +145,6 @@ i.fas.fa-exclamation {
   padding-right: 3px;
 }
 
-.toast {
-  display: hidden;
-}
-
 /* ---------- Menu dropdown, sidenav*/
 #menu {
   margin: 0;
@@ -160,7 +156,7 @@ i.fas.fa-exclamation {
 #menu-icon {
   transform: rotateY(45deg);
   color: #c89f98;
-  font-size: 35px;
+  font-size: 30px;
 }
 .sidenav {
   width: 100%;
@@ -760,10 +756,9 @@ div#method.col.s12 {
 }
 
 .dropdown-btn i {
-  font-size: 30px;
+  font-size: 20px;
   vertical-align: bottom;
-  padding-left: 10px;
-  padding-bottom: 3px;
+  padding: 3px 10px;
 }
 
 .dropdown-content li {
@@ -892,7 +887,7 @@ div#method.col.s12 {
     padding: 8px;
   }
   #menu-icon {
-    font-size: 44px;
+    font-size: 40px;
   }
   .modal {
     top: 30% !important;
@@ -999,9 +994,6 @@ div#method.col.s12 {
   #logout-btn {
     font-size: 13px;
     padding: 0 15px;
-  }
-  #menu-icon {
-    font-size: 48px;
   }
   #callout-img,
   .sidenav {
@@ -1112,7 +1104,7 @@ div#method.col.s12 {
     line-height: 2px;
   }
   #menu-icon {
-    font-size: 60px;
+    font-size: 45px;
   }
   #callout-img,
   .sidenav {
