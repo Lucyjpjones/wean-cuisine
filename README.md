@@ -1,13 +1,13 @@
 <div align="center">
-  <img src="assets/images/readme/responsive-WeanCuisine.png">
-  <img src="assets/images/readme/title.png">
+  <img src="static/assets/images/readme/responsive-WeanCuisine.png">
+  <img src="static/assets/images/readme/title.png">
 <hr>
 
-**A recipe site that allows users to connect, explore and share their own weaning recipes.**
+**A recipe site that allows users to connect, explore and share their weaning recipes.**
 
-This app was built using [GitHub Pages](https://pages.github.com/) and [Heroku](https://www.heroku.com/)
+This app was built using [GitHub](https://pages.github.com/) and deployed to [Heroku](https://www.heroku.com/).
 
-[View here](https://lucyjpjones.github.io/wean-cuisine/)
+[Explore Wean Cuisine](https://lucyjpjones.github.io/wean-cuisine/)
 
 </div>
 
@@ -22,7 +22,7 @@ This app was built using [GitHub Pages](https://pages.github.com/) and [Heroku](
   - [Wireframes](#wireframes)
 - [&rarr; **Features**](#-rarr----features--)
   - [Features used](#features-used)
-  - [To do list](#to-do-list:)
+  - [To do list](#to-do-list)
   - [Status](#status)
 - [&rarr; **Technologies**](#-rarr----technologies--)
   - [Languages](#languages)
@@ -146,7 +146,7 @@ As part of the design process, before starting my project I sketched out initial
 
 ## &rarr; **Features**
 
-#### Features used:
+### **Features used**
 
 - **Responsive on all device sizes**
   - Mobile-first design, responsive on all devices through using the Materialize grid system and CSS media queries.
@@ -181,7 +181,7 @@ As part of the design process, before starting my project I sketched out initial
 - **Search bar**
   - Allows user to search recipes by keywords using text index searching. Recipe name, cuisine name, ingredients and food category are included as the keywords for the query.
 
-#### To do list:
+### **To do list**
 
 #### Status
 
@@ -191,7 +191,7 @@ I will continue to update my website as I grow my platform of users. I have futu
 
 **Future Development plans**
 - I will continue to add more cuisine cards as I grow my user base.
-- I would liek to add a review option so my users can share their options on recipes they have tried.
+- Add a review option so my users can share their options on recipes they have tried.
 - Create a parent forum to add more social interaction between my users.
 - Add Dietry requirements information to recipes.
 - link log in and register with users email and create a link for forgetting password.
@@ -262,7 +262,7 @@ I will continue to update my website as I grow my platform of users. I have futu
 
   - Used to format my HTML and CSS file with desired indentation level for optimal readability.
 
-- [**Tablesgenerator**](https://www.tablesgenerator.com/markdown_tables)
+- [**Tables Generator**](https://www.tablesgenerator.com/markdown_tables)
 
   - Used to create tables in my readme file.
 
@@ -410,7 +410,7 @@ Now, you have a local copy of your fork of the Wean Cuisine repository.
 > **Note:** I used [RandomKeygen.com](https://randomkeygen.com/) to get my secure SECRET_KEY password. A SECRET_KEY is required when using the flash and session functions of Flask.
 
  2. Create a file named .gitignore and include env.py to ensure this file is never pushed to GitHub.
- > **Note:** This is important as
+ > **Note:** It is important that the env.py file is not tracked as any github user can access your confidential data.
 
 ---
 
@@ -420,14 +420,14 @@ Now, you have a local copy of your fork of the Wean Cuisine repository.
 
 Testing my user's <u>key priorities</u>:
 
-**1.** Simple, user-friendly site that is easy to navigate
+**1. Simple, user-friendly site that is easy to navigate**
  - Site includes a main navbar featuring a dropdown menu with page navigation.
 - Navigation menu is fixed so is always visible to the user.
 - Brand logo directs user back to homepage from anywhere on the site.
 
 ![Navbar with brand logo](static/assets/images/readme/navbar.png)
  
-**2.** Ability to register and an easily accessible button to 'Log in’
+**2. Ability to register and an easily accessible button to 'Log in’**
 
 - Clear login button visible on navbar as soon as user enters the site.
 - After clicking login button, user is presented with a modal giving the user an option to login or register.
@@ -608,23 +608,25 @@ I used PEP8 online checking tool to inspect my Python code against the style con
 
 ## &rarr; **Credits**
 
-- My Mentor for continuous help and support throughout the project.
-
-- The [Code Institute](https://codeinstitute.net/) Slack Community.
-
-- Friends & Family for continuous feedback and support.
-
 #### Content
 
 - **Recipes:** All recipes added by users lucyjpj (admin) and susan are taken from [Organix](https://www.organix.com/) and [Annabel Karmel](https://www.annabelkarmel.com/). All other recipes have been added from user testing.
-
-- **Recipe images:** All recipe images added by users lucyjpj (admin) and susan are from [Organix](https://www.organix.com/) and [Annabel Karmel](https://www.annabelkarmel.com/) recipes. All other recipes have been added from user testing.
 
 #### Media
 
 - [Flaticon](https://www.flaticon.com/) and [VectorStock](https://www.vectorstock.com/): used as inspiration for the Wean Cuisine logo.
 
+- **Recipe images:** All recipe images added by users lucyjpj (admin) and susan are from [Organix](https://www.organix.com/) and [Annabel Karmel](https://www.annabelkarmel.com/) recipes. All other recipes have been added from user testing.
+
+- The mockup image showing all devices on my README.md was created using [Am I Responsive](http://ami.responsivedesign.is/).
+
 #### Acknowledgements
+
+- My Mentor, Aaron for his continuous help and support throughout the project.
+
+- The [Code Institute](https://codeinstitute.net/) Slack Community.
+
+- Friends & Family for continuous feedback and support.
 
 ## &rarr; **Contact**
 
