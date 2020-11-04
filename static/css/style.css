@@ -134,7 +134,7 @@ div#register.col.s12 {
 i.fas.fa-exclamation {
   font-size: 12px;
   height: 24px;
-  line-height: 12px;
+  line-height: 1px;
   color: red;
   padding-left: 5px;
   padding-bottom: 15px;
@@ -165,8 +165,13 @@ i.fas.fa-exclamation {
 .sidenav {
   width: 100%;
   margin-top: 55px;
-  padding-top: 40px;
+  padding-top: 20px;
   text-align: center;
+}
+
+#menu-close {
+    font-size: 20px !important;
+    font-weight: 600 !important;
 }
 
 /* -------------------- Homepage*/
@@ -701,13 +706,13 @@ textarea.materialize-textarea {
 }
 
 .tabs .tab a:hover,
-.tabs .tab a.active {
+.tabs .tab a:active {
   background-color: transparent;
   color: #c89f98;
 }
 
 .tabs .indicator {
-  background-color: #c89f98;
+  background-color: #c89f98;;
 }
 
 div#ingredients.col.s12,
