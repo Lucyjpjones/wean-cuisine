@@ -131,16 +131,23 @@ div#register.col.s12 {
   margin-top: 20px;
 }
 
-.flash-message {
+.flash-message,
+i.fas.fa-exclamation {
   font-size: 12px;
+  height: 24px;
   line-height: 12px;
   color: red;
   padding-left: 5px;
   padding-bottom: 15px;
 }
 
+i.fas.fa-exclamation {
+    font-size: 14px;
+    padding-right: 3px;
+}
+
 .toast {
-    display: none;
+  display: none;
 }
 
 /* ---------- Menu dropdown, sidenav*/

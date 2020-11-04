@@ -180,9 +180,13 @@
                           <!-- Flash messages -->
                           {% with messages = get_flashed_messages() %} {% if
                           messages %} {% for message in messages %} {% if
-                          message == "Incorrect Username and/or password", "Username already exists, please log in" %}
-                          <p class="flash-message">{{ message }}</p>
-                          {% endif %} {% endfor %} {% endif %} {%endwith %}
+                          message == "Incorrect Username and/or password",
+                          "Username already exists, please log in" %}
+                          <p class="flash-message">
+                            <i class="fas fa-exclamation"></i> {{ message
+                            }}
+                          </p>
+                          {% endif %} {% endfor %} {% endif %} {% endwith %}
                         </div>
                         <!--Login submit btn-->
                         <div class="row" id="login-btn-outer">
@@ -238,7 +242,7 @@
                           messages %} {% for message in messages %} {% if
                           message == "Username already exists, please log in" %}
                           <p class="flash-message">{{ message }}</p>
-                          {% endif %} {% endfor %} {% endif %} {%endwith %}
+                          {% endif %} {% endfor %} {% endif %} {% endwith %}
                         </div>
                         <!--Register submit btn-->
                         <div class="row" id="register-btn-outer">
@@ -283,7 +287,7 @@
         $(document).ready(function () {
           $("#login-modal").modal("open");
         });
-        {% endif %} {%endwith %}
+        {% endif %} {% endwith %}
     </script>
   </body>
 </html>
