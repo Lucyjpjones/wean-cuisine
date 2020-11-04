@@ -18,7 +18,8 @@
       >
       {% endif %}
     </div>
-    <a id="section1"></a>
+    <!--Added for nav to about section-->
+    <div id="section1"></div>
   </div>
 </section>
 
@@ -68,49 +69,20 @@
 <!--Cuisine carousel-->
 <section id="carousel-outer">
   <h5 class="title">Cuisines</h5>
-  <div class="carousel" id="carousel">
-    <a class="carousel-item" href="#">
+  <div id="carousel" class="carousel">
+    {% for cuisine in cuisines %}
+    <a
+      class="carousel-item"
+      href="{{ url_for('filter_cuisine', cuisine_name=cuisine.cuisine_name) }}"
+    >
       <img
         class="carousel-img"
-        src="{{ url_for('static', filename='assets/images/fish-and-chips.jpg') }}"
+        src="{{ cuisine.img_url }}"
+        alt="Cuisine image"
       />
-      <p>British</p>
+      <p>{{ cuisine.cuisine_name }}</p>
     </a>
-    <a class="carousel-item" href="#">
-      <img
-        class="carousel-img"
-        src="{{ url_for('static', filename='assets/images/indian.jpg') }}"
-      />
-      <p>Indian</p>
-    </a>
-    <a class="carousel-item" href="#">
-      <img
-        class="carousel-img"
-        src="{{ url_for('static', filename='assets/images/italian.jpg') }}"
-      />
-      <p>Italian</p>
-    </a>
-    <a class="carousel-item" href="#">
-      <img
-        class="carousel-img"
-        src="{{ url_for('static', filename='assets/images/thai.jpg') }}"
-      />
-      <p>Thai</p>
-    </a>
-    <a class="carousel-item" href="#">
-      <img
-        class="carousel-img"
-        src="{{ url_for('static', filename='assets/images/japanese.jpg') }}"
-      />
-      <p>Japanese</p>
-    </a>
-    <a class="carousel-item" href="#">
-      <img
-        class="carousel-img"
-        src="{{ url_for('static', filename='assets/images/mexican.jpg') }}"
-      />
-      <p>Mexican</p>
-    </a>
+    {% endfor %}
   </div>
 </section>
 

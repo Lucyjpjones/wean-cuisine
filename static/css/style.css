@@ -48,7 +48,6 @@ a.btn:hover,
 a.btn:focus,
 .carousel-item p:hover,
 .recipe-form button i:hover {
-  background-color: inherit;
   filter: brightness(120%);
 }
 
@@ -142,12 +141,12 @@ i.fas.fa-exclamation {
 }
 
 i.fas.fa-exclamation {
-    font-size: 14px;
-    padding-right: 3px;
+  font-size: 14px;
+  padding-right: 3px;
 }
 
 .toast {
-  display: none;
+  display: hidden;
 }
 
 /* ---------- Menu dropdown, sidenav*/
@@ -283,6 +282,11 @@ i.fas.fa-exclamation {
 .carousel-img {
   border-radius: 50%;
   opacity: 0.85;
+}
+
+.carousel .carousel-item > img {
+  height: inherit;
+  object-fit: cover;
 }
 
 .carousel-item p {

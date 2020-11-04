@@ -22,7 +22,8 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/homepage")
 def homepage():
-    return render_template("index.html")
+    cuisines = mongo.db.cuisines.find().sort("cuisine_name", 1)
+    return render_template("index.html", cuisines=cuisines)
 
 
 # Recipes page function
@@ -58,6 +59,7 @@ def register():
         mongo.db.users.insert_one(register)
 
         session["user"] = request.form.get("username").lower()
+        flash("Registration successful")
         return redirect(url_for("homepage", username=session["user"]))
 
     return redirect(url_for("homepage"))
@@ -74,6 +76,7 @@ def login():
             if check_password_hash(
                     existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
+                flash("Successfully logged in")
                 return redirect(url_for("homepage", username=session["user"]))
             else:
                 flash("Incorrect Username and/or password")
@@ -90,6 +93,7 @@ def login():
 @app.route("/logout")
 def logout():
     session.pop("user")
+    flash("Successfully logged out")
     return redirect(url_for("login"))
 
 
