@@ -421,7 +421,8 @@ Now, you have a local copy of your fork of the Wean Cuisine repository.
 Testing my user's <u>key priorities</u>:
 
 **1. Simple, user-friendly site that is easy to navigate**
- - Site includes a main navbar featuring a dropdown menu with page navigation.
+ - Site includes a main navbar featuring a dropdown side nav, with same and different page navigation.
+ 
 - Navigation menu is fixed so is always visible to the user.
 - Brand logo directs user back to homepage from anywhere on the site.
 
@@ -435,7 +436,7 @@ Testing my user's <u>key priorities</u>:
 
 ![Login btn and modal](static/assets/images/readme/login.png)
 
-**3.** Explore recipes posted by others
+**3. Explore recipes posted by others**
 
 - ‘Explore recipes’ button visible on callout section as soon as user enters the site. 
 - Navigation link to recipes also included in dropdown menu.
@@ -446,7 +447,7 @@ Testing my user's <u>key priorities</u>:
 
 ![Recipe card page](static/assets/images/readme/recipe-card.png)
 
-**4.** Clear recipe categorisation and ability to search using keywords in a search bar
+**4. Clear recipe categorisation and ability to search using keywords in a search bar**
 - Search bar to allow the user to search for recipes using keywords. The search bar is set up to filter recipes based on recipe name and ingredients.
 
 ![Search bar](static/assets/images/readme/search-bar.png)
@@ -462,7 +463,7 @@ Testing my user's <u>key priorities</u>:
 
  ![Buttons logged in vs logged out](static/assets/images/readme/cuisine-btns.png)
 
-**5.** Option to add, edit and delete own recipes
+**5. Option to add, edit and delete own recipes**
 - When user is logged the ‘add recipe’ button is visible to the user on the first view of the site. The link is also accessible via the dropdown menu.
 
  ![Add recipe logged in vs logged out](static/assets/images/readme/add-recipe.png)
@@ -471,7 +472,7 @@ Testing my user's <u>key priorities</u>:
 
  ![Edit/delete btns logged in vs logged out](static/assets/images/readme/edit-delete.png)
 
-**6.** Links for purchasing recipe books for further inspiration
+**6. Links for purchasing recipe books for further inspiration**
 - User can access the ‘shop recipe books’ page via a link on homepage or through the includes an image of the book and a buy dropdown list with links to external retailer sites.
 
  ![Homepage display](static/assets/images/readme/book-hp.png)
@@ -510,7 +511,7 @@ To ensure my site was working correctly I carried out some manual function testi
 
 - Once I was logged in and the 'log out' button was available I clicked this to check that it logged me out correctly. The log out button changed to log in and the additional buttons were no longer visible to me so i knew it was working. This was tested throughout all pages of the site.
 
-**4.** Form validation checks
+**4. Form validation checks**
 
 - Login/Register form
     - I entered an invalid username into the username field and was displayed with
@@ -518,42 +519,42 @@ To ensure my site was working correctly I carried out some manual function testi
 
 - Add/Edit recipe and cuisine forms
 
-**5.** Explore recipes and search bar
+**5. Explore recipes and search bar**
 - I clicked on the 'Explore recipes' button on the homepage callout section and the link within the dropdown menu, and both correctly navigated to the recipes page.
 
 - After adding my search indexes via the python interpreter I entered 'mongo.db.recipes.index_information()' to check that the correct details had been added. I also checked this by clicking on the 'indexes' section on MongoDB.
 
 - I submitted a selection of words into the recipe search bar to ensure the query function was filtering the recipes correctly.
 
-**6.** Viewing recipes
+**6. Viewing recipes**
 - I clicked on each recipe card to make sure it displayed the correct information to me when naviagted to the view recipes HTML template, and it did.
 
-**7.** Adding recipe
+**7. Adding recipe**
 - I clicked on the 'Add recipe' button on the homepage callout section and the link within the dropdown menu, and both correctly navigated to the add recipe page.
 
-**8.** Editing recipe
+**8. Editing recipe**
 - I logged in as different users to check that the edit button was only visible on the recipes I had added.
 
 - I clicked on the 'Edit' button on all the recipes cards to test that I was correctly navigated to the edit recipe page.
 
-**9.** Deleting recipe
+**9. Deleting recipe**
 - I logged in as different users to check that the delete button was only visible on the recipes I had added.
 
 - I clicked on the 'Delete' button on all the recipes cards to test that I was correctly presented with a modal for delete confirmation. I then clicked the 'delete' button on the modal and checked if the recipe card had been removed.
 
-**10.** Link to cuisine page
+**10. Link to cuisine page**
 
-**11.** Adding cuisine
+**11. Adding cuisine**
 - I logged in as different users to check that the add cusine button was only visible when the specified admin user was logged in.
 
 - I entered the cusine name and image URL into the form and clicked the 'add' icon to check if the new cuisine was added, and it was.
 
-**12.** Editing cuisine
+**12. Editing cuisine**
 - I logged in as different users to check that the edit cusine button was only visible on the cuisine cards if i was logged in as the specified admin user.
 
 - I clicked the edit button on various cusine cards and changed the cusine name and image URL. After clicking the edit icon the information was updated so I knew the function was working correctly.
 
-**13.** Deleting cuisine
+**13. Deleting cuisine**
 - I logged in as different users to check that the delete cusine button was only visible on the cuisine cards if i was logged in as the specified admin user.
 
 - I clicked on the 'Delete' button on all the recipes cards to test that I was correctly presented with a modal for delete confirmation. I then clicked the 'delete' button on the modal and checked if the cuisine card had been removed.
