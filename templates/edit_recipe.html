@@ -123,17 +123,7 @@
                 checked="true"
               />
               <span>{{ age.age_range }}</span>
-              {% else %}
-              <input
-                type="radio"
-                id="{{ age.age_range }}"
-                name="age_range"
-                class="with-gap validate"
-                value="{{ age.age_range }}"
-              />
-              <span>{{ age.age_range }}</span>
             </label>
-            {% endif %}
           </p>
         </div>
         {% endfor %}
