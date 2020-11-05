@@ -52,15 +52,18 @@ def register():
             flash("Username already exists, please log in")
             return redirect(url_for("register"))
 
-        register = {
-            "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password"))
-        }
-        mongo.db.users.insert_one(register)
+        else:
+            register = {
+                "username": request.form.get("username").lower(),
+                "password": generate_password_hash(
+                    request.form.get("password"))
+            }
+            mongo.db.users.insert_one(register)
 
-        session["user"] = request.form.get("username").lower()
-        flash("Registration successful, welcome {}".format(request.form.get("username")))
-        return redirect(url_for("homepage", username=session["user"]))
+            session["user"] = request.form.get("username").lower()
+            flash("Registration successful, welcome {}".format(
+                request.form.get("username")))
+            return redirect(url_for("homepage", username=session["user"]))
 
     return redirect(url_for("homepage"))
 
@@ -76,7 +79,8 @@ def login():
             if check_password_hash(
                     existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
-                flash("{} successfully logged in".format(request.form.get("username")))
+                flash("{} successfully logged in".format(
+                    request.form.get("username")))
                 return redirect(url_for("homepage", username=session["user"]))
             else:
                 flash("Incorrect Username and/or password")
