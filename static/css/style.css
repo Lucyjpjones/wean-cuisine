@@ -143,7 +143,8 @@ i.fas.fa-info-circle.tooltipped {
 .material-tooltip {
   font-size: 10px;
   font-weight: 500;
-  width: 75%;
+  width: 72%;
+  max-width: 320px;
   background-color: #c89f98;
   color: #4e4e4e;
   border-radius: 6px;
@@ -817,6 +818,10 @@ div#method.col.s12 {
   #logout-btn {
     margin-right: 10px;
   }
+  .material-tooltip {
+  font-size: 12px;
+  }
+
   .title,
   .title span,
   .page-callout-text h3 {
