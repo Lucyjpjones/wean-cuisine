@@ -488,7 +488,8 @@ div.col.s12.card-btns {
   color: #4d4c4c;
 }
 
-.card-btn:hover {
+.card-btn:hover,
+.dropdown-btn:hover {
   background-color: #f9dce4;
 }
 
