@@ -29,7 +29,7 @@ def homepage():
 # Recipes page function
 @app.route("/get_recipes")
 def get_recipes():
-    recipes = list(mongo.db.recipes.find())
+    recipes = list(mongo.db.recipes.find().sort("recipe_name", 1))
     return render_template("recipes.html", recipes=recipes)
 
 
