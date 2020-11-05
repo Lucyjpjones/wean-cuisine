@@ -69,7 +69,7 @@
                <input
                   id="recipe_time"
                   name="recipe_time"
-                  type="number"
+                  type="text"
                   minlength="1"
                   maxlength="3"
                   value="{{ recipe.recipe_time }}"
@@ -116,7 +116,7 @@
                      name="age_range"
                      class="with-gap validate"
                      value="{{ age.age_range }}"
-                     checked="true"
+                     checked
                      />
                   {% endif %}
                   <span>{{ age.age_range }}</span>

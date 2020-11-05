@@ -14,9 +14,9 @@
                   class="validate"
                   required
                   >
-                  <option disabled selected>Choose Cuisine</option>
+                  <option value="" disabled selected>Choose Cuisine</option>
                   {% for cuisine in cuisines %}
-                  <option>
+                  <option value="" >
                      {{ cuisine.cuisine_name }}
                   </option>
                   {% endfor %}
@@ -58,7 +58,7 @@
                <input
                   id="recipe_time"
                   name="recipe_time"
-                  type="number"
+                  type="text"
                   minlength="1"
                   maxlength="3"
                   class="validate"
@@ -74,9 +74,9 @@
                   class="validate"
                   required
                   >
-                  <option disabled selected>Category</option>
+                  <option value="" disabled selected>Category</option>
                   {% for category in categories %}
-                  <option>
+                  <option value="" >
                      {{ category.food_category }}
                   </option>
                   {% endfor %}
@@ -117,7 +117,7 @@
                   class="validate"
                   required
                   />
-               <label for="img-url"></label>
+               <label for="img_url"></label>
                <span class="helper-text" data-error="wrong" data-success="right"
                   >To add an image, please enter a valid URL.</span>
             </div>
