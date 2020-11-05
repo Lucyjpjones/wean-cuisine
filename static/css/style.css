@@ -108,7 +108,12 @@ input#register-username {
   height: 30px;
   font-size: 12px;
 }
-
+label {
+  height: 45px;
+}
+label i {
+  height: 25px;
+}
 #login-btn-inner,
 #register-btn-inner {
   background-color: #c89f98;
