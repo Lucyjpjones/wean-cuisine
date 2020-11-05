@@ -122,7 +122,7 @@ def add_recipe():
 
     cuisines = mongo.db.cuisines.find().sort("cuisine_name", 1)
     categories = mongo.db.categories.find().sort("food_category", 1)
-    ages = mongo.db.ages.find().sort("age_range", 1)
+    ages = mongo.db.ages.find().sort("_id", 1)
     return render_template("add_recipe.html", cuisines=cuisines, ages=ages,
                            categories=categories)
 
@@ -151,7 +151,7 @@ def edit_recipe(recipe_id):
 
     cuisines = mongo.db.cuisines.find().sort("cuisine_name", 1)
     categories = mongo.db.categories.find().sort("food_category", 1)
-    ages = mongo.db.ages.find().sort("age_range", 1)
+    ages = mongo.db.ages.find().sort("_id", 1)
     return render_template("edit_recipe.html", recipe=recipe,
                            cuisines=cuisines, ages=ages, categories=categories)
 
