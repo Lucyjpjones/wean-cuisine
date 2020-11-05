@@ -1,60 +1,55 @@
 {% extends "base.html" %} {% block content %}
-
 <!--Page header-->
 <section class="container add-container">
-  <h3 class="add-header">Edit Cuisine</h3>
-
-  <!--Edit cuisine form-->
-  <div class="row">
-    <form
-      class="col s12 recipe-form"
-      method="POST"
-      action="{{ url_for('edit_cuisine', cuisine_id=cuisine._id) }}"
-    >
-      <!--Cuisine name input field-->
-      <div class="row form-row">
-        <div class="input-field col s12">
-          <input
-            id="cuisine_name"
-            name="cuisine_name"
-            type="text"
-            minlength="3"
-            maxlength="15"
-            value="{{ cuisine.cuisine_name }}"
-            class="validate"
-            required
-          />
-          <label for="cuisine_name">Cuisine Name</label>
-        </div>
-      </div>
-
-      <!--Image URL input field-->
-      <div class="row form-row">
-        <div class="input-field col s12">
-          <i id="photo-icon" class="material-icons prefix">add_a_photo</i>
-          <input
-            id="img_url"
-            name="img_url"
-            type="text"
-            minlength="5"
-            value="{{ cuisine.img_url }}"
-            pattern="https://.*"
-            class="validate"
-            required
-          />
-          <label for="img-url"></label>
-          <span class="helper-text" data-error="wrong" data-success="right"
-            >To add an image, please enter a valid URL.</span
-          >
-        </div>
-      </div>
-
-      <!--Edit cuisine btn-->
-      <button type="submit">
-        <i class="material-icons">edit</i>
-      </button>
-    </form>
-  </div>
+   <h3 class="add-header">Edit Cuisine</h3>
+   <!--Edit cuisine form-->
+   <div class="row">
+      <form
+         class="col s12 recipe-form"
+         method="POST"
+         action="{{ url_for('edit_cuisine', cuisine_id=cuisine._id) }}"
+         >
+         <!--Cuisine name input field-->
+         <div class="row form-row">
+            <div class="input-field col s12">
+               <input
+                  id="cuisine_name"
+                  name="cuisine_name"
+                  type="text"
+                  minlength="3"
+                  maxlength="15"
+                  value="{{ cuisine.cuisine_name }}"
+                  class="validate"
+                  required
+                  />
+               <label for="cuisine_name">Cuisine Name</label>
+            </div>
+         </div>
+         <!--Image URL input field-->
+         <div class="row form-row">
+            <div class="input-field col s12">
+               <i id="photo-icon" class="material-icons prefix">add_a_photo</i>
+               <input
+                  id="img_url"
+                  name="img_url"
+                  type="text"
+                  minlength="5"
+                  value="{{ cuisine.img_url }}"
+                  pattern="https://.*"
+                  class="validate"
+                  required
+                  />
+               <label for="img-url"></label>
+               <span class="helper-text" data-error="wrong" data-success="right"
+                  >To add an image, please enter a valid URL.</span
+                  >
+            </div>
+         </div>
+         <!--Edit cuisine btn-->
+         <button type="submit">
+         <i class="material-icons">edit</i>
+         </button>
+      </form>
+   </div>
 </section>
-
 {% endblock %}
