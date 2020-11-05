@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* -------------------- General*/
+
 body {
   background-color: #fafafa;
   font-family: "Montserrat", sans-serif;
@@ -12,14 +13,18 @@ body {
   margin-bottom: 5px;
 }
 
+
 /* ---------- Footer*/
+
 #page-container {
   position: relative;
   min-height: 100vh;
 }
+
 #content-wrap {
   padding-bottom: 40px;
 }
+
 footer {
   position: absolute;
   bottom: 0;
@@ -28,10 +33,12 @@ footer {
   width: 100%;
   height: 40px;
 }
+
 footer h6 {
   font-size: 10px;
   padding: 5px;
 }
+
 
 /* ---------- Typography*/
 
@@ -43,13 +50,16 @@ p {
   margin: 0;
 }
 
+
 /* ---------- Buttons*/
+
 a.btn:hover,
 a.btn:focus,
 .carousel-item p:hover,
 .recipe-form button i:hover {
   filter: brightness(110%);
 }
+
 
 /* -------------------- Navbar*/
 
@@ -59,7 +69,9 @@ nav {
   background-color: #cef3ed;
 }
 
+
 /* ---------- Brand logo*/
+
 nav .brand-logo {
   left: 2%;
   top: 10%;
@@ -69,7 +81,9 @@ nav .brand-logo {
   max-width: 150px;
 }
 
+
 /* ---------- Login btn*/
+
 #login-btn,
 #logout-btn {
   background-color: #fff7ae;
@@ -81,6 +95,7 @@ nav .brand-logo {
   padding: 0 12px;
 }
 
+
 /* ---------- Login/register modal*/
 
 #login-modal-close {
@@ -88,14 +103,17 @@ nav .brand-logo {
   padding: 10px 0px 5px 0px;
   font-size: 25px;
 }
+
 .tabs {
   background-color: inherit;
 }
+
 .modal-login-content h4 {
   color: #c89f98;
   font-size: 18px;
   line-height: 2.5;
 }
+
 input#login-password,
 input#login-username,
 input#register-password,
@@ -108,12 +126,15 @@ input#register-username {
   height: 30px;
   font-size: 12px;
 }
+
 label {
   height: 45px;
 }
+
 label i {
   height: 25px;
 }
+
 #login-btn-inner,
 #register-btn-inner {
   background-color: #c89f98;
@@ -134,10 +155,12 @@ div#login.col.s12,
 div#register.col.s12 {
   margin-top: 20px;
 }
+
 i.fas.fa-info-circle.tooltipped {
   color: #c89f98;
   font-size: 16px;
 }
+
 .material-tooltip {
   font-size: 10px;
   font-weight: 500;
@@ -148,6 +171,7 @@ i.fas.fa-info-circle.tooltipped {
   border-radius: 6px;
   padding: 8px;
 }
+
 .flash-message,
 i.fas.fa-exclamation {
   font-size: 12px;
@@ -163,19 +187,25 @@ i.fas.fa-exclamation {
   padding-right: 3px;
 }
 
+
 /* ---------- Menu dropdown, sidenav*/
+
 #menu {
   margin: 0;
-  display: inline !important; /* menu was not appearing on view_recipe page*/
+  display: inline !important;
+  /* menu was not appearing on view_recipe page*/
 }
+
 #menu:hover {
   background: none;
 }
+
 #menu-icon {
   transform: rotateY(45deg);
   color: #c89f98;
   font-size: 30px;
 }
+
 .sidenav {
   width: 100%;
   margin-top: 55px;
@@ -188,25 +218,28 @@ i.fas.fa-exclamation {
   font-weight: 600 !important;
 }
 
+
 /* -------------------- Homepage*/
+
 
 /* -------- Callout*/
 
 #callout {
   position: relative;
 }
+
 #callout-img {
   width: 100%;
   opacity: 0.7;
   margin-top: 55px;
 }
+
 #overlay-text {
   background-color: #fff7ae;
   opacity: 0.85;
   border-radius: 6px;
   padding: 8px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 57%;
   left: 3%;
@@ -229,12 +262,13 @@ i.fas.fa-exclamation {
   border-radius: 6px;
   display: inline;
   padding: 3px 5px 3px 5px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
+
 #callout-btns a i {
   vertical-align: bottom;
 }
+
 
 /* -------- About*/
 
@@ -262,8 +296,7 @@ i.fas.fa-exclamation {
 .img-circle {
   border-radius: 50%;
   width: 120px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   opacity: 0.9;
 }
 
@@ -280,6 +313,7 @@ i.fas.fa-exclamation {
   margin-bottom: 20px;
 }
 
+
 /* -------- Cuisine carousel*/
 
 #carousel-outer {
@@ -287,6 +321,7 @@ i.fas.fa-exclamation {
   margin: auto;
   margin-top: 10%;
 }
+
 .carousel {
   height: 360px;
 }
@@ -300,7 +335,7 @@ i.fas.fa-exclamation {
   opacity: 0.85;
 }
 
-.carousel .carousel-item > img {
+.carousel .carousel-item>img {
   height: inherit;
   object-fit: cover;
 }
@@ -312,13 +347,13 @@ i.fas.fa-exclamation {
   opacity: 0.85;
   padding: 5px 10px 5px 10px;
   border-radius: 6px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 
 /* -------- Shop recipe books*/
 
@@ -337,8 +372,7 @@ i.fas.fa-exclamation {
   margin-bottom: -40px;
   opacity: 0.85;
   border-radius: 6px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 #shop-link a {
@@ -347,8 +381,7 @@ i.fas.fa-exclamation {
   opacity: 0.85;
   color: #4d4c4c;
   border-radius: 6px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 95%;
   left: 50%;
@@ -358,6 +391,7 @@ i.fas.fa-exclamation {
   height: auto;
   text-transform: capitalize;
 }
+
 
 /* -------------------- Explore recipes & Cuisines*/
 
@@ -371,8 +405,7 @@ i.fas.fa-exclamation {
   margin-top: 75px;
   opacity: 0.85;
   border-radius: 6px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .page-callout-text {
@@ -381,8 +414,7 @@ i.fas.fa-exclamation {
   background-color: #fafafa;
   border-radius: 6px;
   padding: 20px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 85%;
   left: 50%;
@@ -401,6 +433,7 @@ i.fas.fa-exclamation {
 .card {
   padding: 10px;
 }
+
 .card .card-content {
   padding: 14px;
   font-size: 9px;
@@ -418,8 +451,7 @@ i.fas.fa-exclamation {
   overflow: hidden;
   margin: auto;
   border-radius: 6px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .card-img img {
@@ -517,8 +549,7 @@ div.col.s12.card-btns {
   border-radius: 6px;
   display: inline;
   padding: 3px 10px 3px 10px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .page-callout-text .callout-add-btn i {
@@ -529,6 +560,7 @@ div.col.s12.card-btns {
 #cuisine-card {
   height: 210px;
 }
+
 
 /* -------- Search bar*/
 
@@ -541,38 +573,47 @@ div.col.s1 {
   margin: 10px 0px;
   border-radius: 6px;
 }
+
 #search-bar form {
   width: 100%;
 }
+
 #input-outer {
   margin-bottom: 0;
 }
+
 #input-outer .input-field {
   margin: 0;
 }
+
 #input-outer .input-field label {
   font-size: 11px;
 }
+
 button#search-btn {
   background: none;
   border: none;
   color: #8ce3d5;
 }
+
 a#clear-btn {
   background-color: transparent;
   border: none;
   color: #c89f98;
 }
+
 button#search-btn i,
 a#clear-btn i {
   font-size: 18px;
 }
+
 #no-results {
   font-size: 18px;
   font-weight: 500;
   color: #c89f98;
   text-align: center;
 }
+
 
 /* -------------------- Add/Edit recipes & Cuisines*/
 
@@ -586,11 +627,12 @@ a#clear-btn i {
   font-weight: 500;
 }
 
+
 /* -------- Form*/
+
 .recipe-form {
   border-radius: 6px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   margin-top: 20px;
   padding: 15px 30px 10px 30px !important;
 }
@@ -644,8 +686,8 @@ textarea.materialize-textarea {
   height: auto;
 }
 
-.dropdown-content li > a,
-.dropdown-content li > span {
+.dropdown-content li>a,
+.dropdown-content li>span {
   font-size: 11px;
   padding: 5px 10px;
   color: #c89f98;
@@ -659,13 +701,14 @@ textarea.materialize-textarea {
   font-size: 9px;
 }
 
-.input-field .prefix ~ .helper-text {
+.input-field .prefix~.helper-text {
   margin-left: 0px;
 }
 
 textarea.materialize-textarea {
   margin-bottom: 0px;
 }
+
 
 /* -------------------- View recipe*/
 
@@ -687,16 +730,14 @@ textarea.materialize-textarea {
   bottom: -15px;
   width: 70px;
   height: 60px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 #yellow-container {
   max-width: 750px;
   background-color: #fff7ae;
   border-radius: 6px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   margin-top: 10%;
   margin-bottom: 8%;
 }
@@ -716,8 +757,7 @@ textarea.materialize-textarea {
 #tab-container {
   max-width: 750px;
   border-radius: 6px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .tabs .tab a {
@@ -751,6 +791,7 @@ div#method.col.s12 {
   font-size: 11px;
 }
 
+
 /* --------------------Shop recipe books */
 
 .book-img {
@@ -759,8 +800,7 @@ div#method.col.s12 {
   overflow: hidden;
   margin: auto;
   border-radius: 6px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .book-card {
@@ -788,16 +828,20 @@ div#method.col.s12 {
   width: 100%;
   min-height: 25px;
 }
-.dropdown-content li > a {
+
+.dropdown-content li>a {
   font-size: 11px;
   color: #c89f98;
   font-weight: 500;
   padding: 0px 10px;
 }
 
+
 /* --------------------Media queries*/
 
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
+
 @media only screen and (min-width: 600px) {
   nav {
     padding: 0 2%;
@@ -812,11 +856,9 @@ div#method.col.s12 {
   #overlay-text h3 {
     font-size: 16px;
   }
-
   #callout-btns a {
     margin-right: 5px;
   }
-
   #callout-btns a,
   .page-callout-text .callout-add-btn {
     font-size: 10px;
@@ -828,7 +870,6 @@ div#method.col.s12 {
   .material-tooltip {
     font-size: 12px;
   }
-
   .title,
   .title span,
   .page-callout-text h3 {
@@ -904,10 +945,10 @@ div#method.col.s12 {
   textarea.materialize-textarea,
   .recipe-form label,
   .recipe-form p,
-  .dropdown-content li > span {
+  .dropdown-content li>span {
     font-size: 14px !important;
   }
-  .dropdown-content li > a {
+  .dropdown-content li>a {
     font-size: 13px !important;
   }
   .recipe-form label span,
@@ -930,12 +971,14 @@ div#method.col.s12 {
   input#register-username {
     font-size: 14px;
   }
-  .input-field > label {
+  .input-field>label {
     font-size: 16px;
   }
 }
 
+
 /* Medium devices (landscape tablets, 768px and up) */
+
 @media only screen and (min-width: 768px) {
   #overlay-text {
     padding: 16px 50px 16px 16px;
@@ -1039,12 +1082,13 @@ div#method.col.s12 {
   }
 }
 
+
 /* Large devices (laptops/desktops, 992px and up) */
+
 @media only screen and (min-width: 992px) {
   .card-container {
     width: 85% !important;
   }
-
   nav .brand-logo {
     max-width: 170px;
   }
@@ -1142,13 +1186,14 @@ div#method.col.s12 {
   .sidenav {
     margin-top: 90px;
   }
-
-  .sidenav li > a {
+  .sidenav li>a {
     font-size: 16px;
   }
 }
 
+
 /* Extra large devices (large laptops and desktops, 1200px and up) */
+
 @media only screen and (min-width: 1200px) {
   nav .brand-logo {
     max-width: 180px;
