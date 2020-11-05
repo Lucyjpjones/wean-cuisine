@@ -312,12 +312,11 @@
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <!-- Login modal to stay open when error flash message appears -->
     <script>
-      {% with messages = get_flashed_messages() %} {% if
-                              messages %} {% for message in messages %} {% if
-                              (message == 'Incorrect Username and/or password' or message == 'Username already exists, please log in') %}
+      {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %} {% if (message == 'Incorrect Username and/or password' or message == 'Username already exists, please log in') %}
             $(document).ready(function () {
               $("#login-modal").modal("open");
-            {% endif %} {% endfor %} {% endif %} {% endwith %}
+            });
+        {% endif %} {% endfor %} {% endif %} {% endwith %}
     </script>
     <!-- Flash message toasts for login modal success -->
     <script>
