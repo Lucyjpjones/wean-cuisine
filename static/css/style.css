@@ -48,7 +48,7 @@ a.btn:hover,
 a.btn:focus,
 .carousel-item p:hover,
 .recipe-form button i:hover {
-  filter: brightness(120%);
+  filter: brightness(110%);
 }
 
 /* -------------------- Navbar*/
@@ -134,12 +134,10 @@ div#login.col.s12,
 div#register.col.s12 {
   margin-top: 20px;
 }
-
 i.fas.fa-info-circle.tooltipped {
   color: #c89f98;
   font-size: 16px;
 }
-
 .material-tooltip {
   font-size: 10px;
   font-weight: 500;
@@ -150,7 +148,6 @@ i.fas.fa-info-circle.tooltipped {
   border-radius: 6px;
   padding: 8px;
 }
-
 .flash-message,
 i.fas.fa-exclamation {
   font-size: 12px;
@@ -459,6 +456,10 @@ div.col.s12.card-btns {
   color: #4d4c4c;
 }
 
+.card-btn:hover {
+  background-color: #f9dce4;
+}
+
 .modal {
   border-radius: 6px;
   padding: 0 10px;
@@ -720,10 +721,11 @@ textarea.materialize-textarea {
 }
 
 .tabs .tab a {
-  color: #4e4e4e;
+  color: #c89f98;
   font-weight: 500;
 }
 
+.tabs .tab a.active,
 .tabs .tab a:hover,
 .tabs .tab a:active {
   background-color: transparent;
@@ -810,6 +812,11 @@ div#method.col.s12 {
   #overlay-text h3 {
     font-size: 16px;
   }
+
+  #callout-btns a {
+    margin-right: 5px;
+  }
+
   #callout-btns a,
   .page-callout-text .callout-add-btn {
     font-size: 10px;
@@ -819,7 +826,7 @@ div#method.col.s12 {
     margin-right: 10px;
   }
   .material-tooltip {
-  font-size: 12px;
+    font-size: 12px;
   }
 
   .title,
