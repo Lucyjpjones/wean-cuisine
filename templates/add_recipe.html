@@ -22,7 +22,7 @@
           >
             <option value="" disabled selected>Choose Cuisine</option>
             {% for cuisine in cuisines %}
-            <option value="{{ cuisine.cuisine_name }}">
+            <option value="">
               {{ cuisine.cuisine_name }}
             </option>
             {% endfor %}
@@ -84,7 +84,7 @@
           >
             <option value="" disabled selected>Category</option>
             {% for category in categories %}
-            <option value="{{ category.food_category }}">
+            <option value="">
               {{ category.food_category }}
             </option>
             {% endfor %}
