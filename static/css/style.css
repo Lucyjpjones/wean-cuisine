@@ -846,6 +846,9 @@ div#method.col.s12 {
   nav {
     padding: 0 2%;
   }
+  .sidenav {
+      width: 50%;
+  }
   #overlay-text {
     top: 65%;
     padding: 12px;
