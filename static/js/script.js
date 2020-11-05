@@ -5,6 +5,7 @@ $(document).ready(function () {
   $(".dropdown-trigger").dropdown();
   $("select").formSelect();
   $(".tabs").tabs();
+  $(".tooltipped").tooltip();
 
   validateMaterializeSelect();
   function validateMaterializeSelect() {

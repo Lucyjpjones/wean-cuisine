@@ -130,6 +130,21 @@ div#register.col.s12 {
   margin-top: 20px;
 }
 
+i.fas.fa-info-circle.tooltipped {
+  color: #c89f98;
+  font-size: 16px;
+}
+
+.material-tooltip {
+  font-size: 10px;
+  font-weight: 500;
+  width: 75%;
+  background-color: #c89f98;
+  color: #4e4e4e;
+  border-radius: 6px;
+  padding: 8px;
+}
+
 .flash-message,
 i.fas.fa-exclamation {
   font-size: 12px;

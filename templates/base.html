@@ -71,14 +71,16 @@
                     id="menu"
                     data-target="menu-items"
                     class="sidenav-trigger show-on-large"
-                    ><i id="menu-icon" <i class="fas fa-bars"></i></i></a
-                  >
+                    ><i id="menu-icon" <i class="fas fa-bars"></i
+                  ></a>
                 </li>
               </ul>
               <!--Menu nav links-->
               <ul id="menu-items" class="sidenav right">
                 <li>
-                  <a id="menu-close" class="sidenav-close material-icons">close</a>
+                  <a id="menu-close" class="sidenav-close material-icons"
+                    >close</a
+                  >
                 </li>
                 <li>
                   <a
@@ -160,7 +162,14 @@
                               class="validate"
                               required
                             />
-                            <label for="username">Username</label>
+                            <label for="username"
+                              >Username
+                              <i
+                                class="fas fa-info-circle tooltipped"
+                                data-position="top"
+                                data-tooltip="Username must only contain letters and numbers and be a minimum of 5 characters long."
+                              ></i
+                            ></label>
                           </div>
                         </div>
                         <!--Password-->
@@ -176,7 +185,14 @@
                               pattern="^[a-zA-Z0-9]{5,15}$"
                               class="validate"
                             />
-                            <label for="password">Password</label>
+                            <label for="password"
+                              >Password
+                              <i
+                                class="fas fa-info-circle tooltipped"
+                                data-position="top"
+                                data-tooltip="Password must only contain letters and numbers and be a minimum of 5 characters long."
+                              ></i
+                            ></label>
                           </div>
                         </div>
                         <div>
@@ -219,7 +235,14 @@
                               class="validate"
                               required
                             />
-                            <label for="username">Username</label>
+                            <label for="username"
+                              >Username
+                              <i
+                                class="fas fa-info-circle tooltipped"
+                                data-position="top"
+                                data-tooltip="Username must only contain letters and numbers and be a minimum of 5 characters long."
+                              ></i
+                            ></label>
                           </div>
                         </div>
                         <!--Password-->
@@ -236,7 +259,14 @@
                               class="validate"
                               required
                             />
-                            <label for="password">Password</label>
+                            <label for="password"
+                              >Password
+                              <i
+                                class="fas fa-info-circle tooltipped"
+                                data-position="top"
+                                data-tooltip="Password must only contain letters and numbers and be a minimum of 5 characters long."
+                              ></i
+                            ></label>
                           </div>
                         </div>
                         <div>
@@ -286,15 +316,17 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    <!-- Login modal to stay open when error flash message appears -->
     <script>
       {% with messages = get_flashed_messages() %} {% if
                               messages %} {% for message in messages %} {% if
                               (message == 'Incorrect Username and/or password' or message == 'Username already exists, please log in') %}
             $(document).ready(function () {
               $("#login-modal").modal("open");
-            });
             {% endif %} {% endfor %} {% endif %} {% endwith %}
     </script>
+    <!-- Flash message toasts for login modal success -->
     <script>
       {% with messages = get_flashed_messages() %} {% if
                                 messages %} {% for message in messages %} {% if not
