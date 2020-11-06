@@ -487,8 +487,12 @@ div.col.s12.card-btns {
 }
 
 .card-btn:hover,
-.dropdown-btn:hover {
-  background-color: #f9dce4;
+.card-btn:focus,
+.card-btn:active,
+.dropdown-btn:hover,
+.dropdown-btn:focus,
+.dropdown-btn:active {
+  background-color: #f9dce4 !important;
 }
 
 .modal {
@@ -767,7 +771,7 @@ textarea.materialize-textarea {
 
 .tabs .tab a.active,
 .tabs .tab a:hover,
-.tabs .tab a:active {
+.tabs .tab a:focus {
   background-color: transparent;
   color: #c89f98;
 }
