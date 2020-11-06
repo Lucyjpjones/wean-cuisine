@@ -24,7 +24,7 @@
 						<!--Navbar brand logo-->
 						<a href="{{ url_for('homepage') }}" class="brand-logo">
 							<img
-                  class="responsive-img"
+                  class="responsive-img lazyload"
                   src="{{ url_for('static', filename='assets/images/logo.png') }}"
                   alt="Wean Cuisine Logo"
                 />
@@ -262,6 +262,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 	<script src="{{ url_for('static', filename='js/select.js') }}"></script>
+    <script src="lazysizes.min.js" async></script>
 	<!-- Login modal to stay open when error flash message appears -->
 	<script>
 		{% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %} {% if (message == 'Incorrect Username and/or password' or message == 'Username already exists, please log in') %}

@@ -2,7 +2,7 @@
 <!--Page callout header-->
 <section class="container page-callout">
    <img
-      class="page-callout-img"
+      class="page-callout-img lazyload"
       src="{{ url_for('static', filename='assets/images/recipes-img.jpg') }}"
       alt="background"
       />
@@ -31,9 +31,9 @@
       <div class="col s6 m4 l3">
          <div id="cuisine-card" class="card">
             <!--Cuisine card image-->
-            <div class="card-image card-img">
+            <div class="card-image card-img lazyload">
                <a href="{{ url_for('filter_cuisine', cuisine_name=cuisine.cuisine_name) }}">
-               <img src="{{ cuisine.img_url }}" alt="Cuisine image" />
+               <img src="{{ cuisine.img_url }}" alt="Cuisine image" class="lazyload"/>
                </a>
             </div>
             <!--Cuisine card cuisine name-->
