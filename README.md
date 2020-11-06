@@ -447,7 +447,7 @@ Testing my user's <u>key priorities</u>:
 
   - Recognisable info icon with tootip to let the user know which characters can be used.
 
-![Tooltips](static/assets/images/readme/login-tt.png)
+![Tooltips](static/assets/images/readme/tooltip.png)
 
 - User responses included to notify the user if any errors or successful:
   - Errors shown below password in modal
@@ -462,23 +462,23 @@ Testing my user's <u>key priorities</u>:
 - ‘Explore recipes’ button visible on callout section as soon as user enters the site. 
 - Navigation link to recipes also included in dropdown menu.
 
-![Explore recipes nav ](static/assets/images/readme/callout.png)
+    ![Explore recipes nav ](static/assets/images/readme/recipes-nav.png)
 
 - Recipe card displaying recipe image, recipe name, cuisine and who the recipe was created by.
 
-![Recipe card page](static/assets/images/readme/recipe-card.png)
+    ![Recipes page](static/assets/images/readme/recipes-page.png)
 
 **4. Clear recipe categorisation and ability to search using keywords in a search bar**
 - Search bar to allow the user to search for recipes using keywords. The search bar is set up to filter recipes based on recipe name and ingredients.
 
-![Search bar](static/assets/images/readme/search-bar.png)
+    ![Search bar](static/assets/images/readme/search.png)
 
 - Link in dropdown menu to page displaying cuisine categories. User can click on cuisine to view all recipes in that category.
 
 ![Dropdown menu](static/assets/images/readme/cuisine-dd.png)
 - Carousel on homepage to link directly to recipes for specific cuisine.
 
- ![Carousel](static/assets/images/readme/carousel.png)
+    ![Carousel](static/assets/images/readme/carousel.png)
 
 - Admin control over adding, editing and deleting new cuisines. Buttons only visible when specified admin is logged in.
 
