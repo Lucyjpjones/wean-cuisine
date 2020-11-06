@@ -411,7 +411,7 @@ i.fas.fa-exclamation {
 .page-callout-text {
   width: 85%;
   max-width: 600px;
-  background-color: #fafafa;
+  background-color: #fff;
   border-radius: 6px;
   padding: 20px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
@@ -947,6 +947,7 @@ div#method.col.s12 {
   }
   .recipe-form {
     margin-top: 50px;
+    background-color: #fff;
   }
   .add-header {
     font-size: 24px;
