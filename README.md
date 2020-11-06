@@ -7,7 +7,7 @@
 
 This app was built using [GitHub](https://pages.github.com/) and deployed to [Heroku](https://www.heroku.com/).
 
-[Explore Wean Cuisine](https://lucyjpjones.github.io/wean-cuisine/)
+[Explore Wean Cuisine](https://wean-cuisine.herokuapp.com/)
 
 </div>
 
@@ -50,7 +50,7 @@ This app was built using [GitHub](https://pages.github.com/) and deployed to [He
 
 ### **<u>Purpose</u>**
 
-The purpose of this app is to create a platform where parents can connect, explore and share weaning recipes, with a specific focus on type of cuisine. 
+The purpose of this app is to create a platform where parents can connect, explore and share weaning recipes, with a specific focus on different cuisines. 
 
 Baby-led weaning is becoming an increasingly popular way of introducing babies to different foods, carrying many benefits including the ability to simplify feeding times for parents, better appetite control, less fussiness around foods, and protection against obesity later in life.
 
@@ -335,8 +335,8 @@ This is the name of your repo in GitHub. It is good practice to use an identical
    - Heroku will now recieve the code from GitHub and start building the app using the required packages.
    - Once built you will recieve the message 'Your app was successfully deployed' and you can click 'View' to launch your new app.
 
-   > **Note:** 
-In Manual deploy dropdown 'master' is selected'
+        > **Note:** 
+        In Manual deploy dropdown 'master' is selected'
 
 #### Accessing code
 
@@ -375,27 +375,31 @@ When you clone a repository, the repository is copied on to your local machine.
 
 6. Type git clone, and then paste the URL you copied in Step 3.
 
-```
-$ git clone https://github.com/YOUR-USERNAME/wean-cuisine.git
-```
+    ```
+    $ git clone https://github.com/YOUR-USERNAME/wean-cuisine.git
+    ```
 
 7. Press Enter. Your local clone will be created.
 
-```
-$ git clone https://github.com/YOUR-USERNAME/wean-cuisine.git
+    ```
+    $ git clone https://github.com/YOUR-USERNAME/wean-cuisine.git
 
-> Cloning into `wean-cuisine`...
-> remote: Enumerating objects: 299, done.
-> remote: Counting objects: 100%, (299/299),  done.
-> remote: Compressing objects: 100% (156/156), done.
-> Receiving objects: remove: Total 299 (delta 145), reused 267 (delta 126), pack-reused 0
-> Receiving objects: 100% (299/299), 4.61MiB | 2.98 MiB/s, done.
-> Resolving deltas: 100% (145/145), done. Unpacking objects: 100% (10/10), done.
-```
+    > Cloning into `wean-cuisine`...
+    > remote: Enumerating objects: 299, done.
+    > remote: Counting objects: 100%, (299/299),  done.
+    > remote: Compressing objects: 100% (156/156), done.
+    > Receiving objects: remove: Total 299 (delta 145), reused 267 (delta 126), pack-reused 0
+    > Receiving objects: 100% (299/299), 4.61MiB | 2.98 MiB/s, done.
+    > Resolving deltas: 100% (145/145), done. Unpacking objects: 100% (10/10), done.
+    ```
 
-Now, you have a local copy of your fork of the Wean Cuisine repository.
+    Now, you have a local copy of your fork of the Wean Cuisine repository.
 
-> Note: The repository name and output numbers that you see on your computer, representing the total file size, etc, may differ from the example I have provided above.
+    > **Note:** The repository name and output numbers that you see on your computer, representing the total file size, etc, may differ from the example I have provided above.
+
+8. Add a env.py file to your workspace to include your environment variables (more details below).
+
+   > **Note:** Contact the site owner if you want more information on the environment variables which have been included.
 
 **Creating env.py file** 
 
@@ -407,10 +411,10 @@ Now, you have a local copy of your fork of the Wean Cuisine repository.
    - os.environ.setdefault("MONGO_URI", "To be added by user") 
    - os.environ.setdefault("MONGO_DBNAME", "To be added by user")
 
-> **Note:** I used [RandomKeygen.com](https://randomkeygen.com/) to get my secure SECRET_KEY password. A SECRET_KEY is required when using the flash and session functions of Flask.
+   > **Note:** I used [RandomKeygen.com](https://randomkeygen.com/) to get my secure SECRET_KEY password. A SECRET_KEY is required when using the flash and session functions of Flask.
 
  2. Create a file named .gitignore and include env.py to ensure this file is never pushed to GitHub.
- > **Note:** It is important that the env.py file is not tracked as any github user can access your confidential data.
+    > **Note:** It is important that the env.py file is not tracked as any github user can access your confidential data.
 
 ---
 
@@ -431,10 +435,27 @@ Testing my user's <u>key priorities</u>:
 **2. Ability to register and an easily accessible button to 'Log in’**
 
 - Clear login button visible on navbar as soon as user enters the site.
-- After clicking login button, user is presented with a modal giving the user an option to login or register.
-- After logging in or registering the user has the option to add, edit and delete their own recipes.
+  - As the navbar is repeated on all pages of the site, the user can log in from any page.
+  - If a user is logged in, the button will display 'log out'.
 
-![Login btn and modal](static/assets/images/readme/login.png)
+  ![Login btn](static/assets/images/readme/login-btn.png)
+
+- After clicking login button, user is presented with a modal containing two tabs, giving the user an option to login or register.
+  - Validation is included on the input fields to let the user know if their input is valid through colour formatting.
+
+  ![Validation](static/assets/images/readme/validation.png)
+
+  - Recognisable info icon with tootip to let the user know which characters can be used.
+
+![Tooltips](static/assets/images/readme/login-tt.png)
+
+- User responses included to notify the user if any errors or successful:
+  - Errors shown below password in modal
+  - Success messages presented as a toast after modal closes.
+
+![User responses](static/assets/images/readme/user-responses.png)
+
+- After logging in or registering the user will have the option to add, edit and delete their own recipes.
 
 **3. Explore recipes posted by others**
 
@@ -566,9 +587,9 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 JS was also tested by opening the developer console window on Chrome and checking for any errors as I clicked through the site.
 I used PEP8 online checking tool to inspect my Python code against the style conventions in PEP 8.
 
-- [**HTML Validator**](https://validator.w3.org/nu/#textarea)
+- [**HTML Validator**](https://validator.w3.org/)
 
-- [**CSS Validator**](https://jigsaw.w3.org/css-validator/#validate_by_input)
+- [**CSS Validator**](https://jigsaw.w3.org/css-validator/)
 
 - [**JS hint**](https://jshint.com/)
 
@@ -606,6 +627,13 @@ I used PEP8 online checking tool to inspect my Python code against the style con
 - Project posted on Slack, asking for feedback from fellow students.
 
 #### Bugs
+
+|     | Bug                                                                           | Action                                                            |
+|-----|-------------------------------------------------------------------------------|-------------------------------------------------------------------|
+| [X] | Materialize select not working correctly on iOS                     | Solution found on GitHub, [select.js](https://github.com/Dogfalo/materialize/blob/c0da34049deec36efbd4681f73b3446e92918ca8/js/select.js) added with code to fix bug  |
+| [X] | Materialize dropdown not working correctly on iOS                     | Action |
+| [X] | Materialize select showing browser default arrow  on iOS                     | [css code]() added to fix bug |
+  |
 
 ## &rarr; **Credits**
 
