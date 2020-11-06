@@ -1,14 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* -------------------- General*/
-.dropdown-content {
-  width: max-content !important;
-  height: auto !important;
-}
-
-select::-ms-expand {
-  display: none;
-}
 body {
   background-color: #fafafa;
   font-family: "Montserrat", sans-serif;
