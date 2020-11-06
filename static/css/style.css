@@ -598,6 +598,7 @@ div.col.s1 {
 }
 
 button#search-btn {
+  padding: 1px 0px 1px 3px;
   background: none;
   border: none;
   color: #8ce3d5;
