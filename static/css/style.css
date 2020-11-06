@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* -------------------- General*/
+
 body {
   background-color: #fafafa;
   font-family: "Montserrat", sans-serif;
@@ -52,7 +53,9 @@ p {
 a.btn:hover,
 a.btn:focus,
 .carousel-item p:hover,
-.recipe-form button i:hover {
+.recipe-form button i:hover,
+.modal-del-btns:hover,
+.modal-del-btns:focus {
   filter: brightness(110%);
 }
 
@@ -492,6 +495,7 @@ div.col.s12.card-btns {
 }
 
 .modal {
+  top: 20% !important;
   border-radius: 6px;
   padding: 0 10px;
   max-width: 400px;
@@ -524,6 +528,11 @@ div.col.s12.card-btns {
   padding: 0 8px;
   height: 20px;
   line-height: 20px;
+}
+
+.modal-del-btns:hover,
+.modal-del-btns:focus {
+  background-color: #f9dce4;
 }
 
 .modal-content h4 {
