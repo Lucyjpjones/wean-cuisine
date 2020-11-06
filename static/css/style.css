@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* -------------------- General*/
-
+.dropdown-content {
+  width: max-content !important;
+  height: auto !important;
+}
 body {
   background-color: #fafafa;
   font-family: "Montserrat", sans-serif;
@@ -12,7 +15,6 @@ body {
 .form-row {
   margin-bottom: 5px;
 }
-
 
 /* ---------- Footer*/
 
@@ -39,7 +41,6 @@ footer h6 {
   padding: 5px;
 }
 
-
 /* ---------- Typography*/
 
 h1,
@@ -50,7 +51,6 @@ p {
   margin: 0;
 }
 
-
 /* ---------- Buttons*/
 
 a.btn:hover,
@@ -60,7 +60,6 @@ a.btn:focus,
   filter: brightness(110%);
 }
 
-
 /* -------------------- Navbar*/
 
 nav {
@@ -68,7 +67,6 @@ nav {
   z-index: 1100;
   background-color: #cef3ed;
 }
-
 
 /* ---------- Brand logo*/
 
@@ -80,7 +78,6 @@ nav .brand-logo {
   width: 30%;
   max-width: 150px;
 }
-
 
 /* ---------- Login btn*/
 
@@ -94,7 +91,6 @@ nav .brand-logo {
   margin: 0;
   padding: 0 12px;
 }
-
 
 /* ---------- Login/register modal*/
 
@@ -187,7 +183,6 @@ i.fas.fa-exclamation {
   padding-right: 3px;
 }
 
-
 /* ---------- Menu dropdown, sidenav*/
 
 #menu {
@@ -218,9 +213,7 @@ i.fas.fa-exclamation {
   font-weight: 600 !important;
 }
 
-
 /* -------------------- Homepage*/
-
 
 /* -------- Callout*/
 
@@ -239,7 +232,8 @@ i.fas.fa-exclamation {
   opacity: 0.85;
   border-radius: 6px;
   padding: 8px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 57%;
   left: 3%;
@@ -262,13 +256,13 @@ i.fas.fa-exclamation {
   border-radius: 6px;
   display: inline;
   padding: 3px 5px 3px 5px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 #callout-btns a i {
   vertical-align: bottom;
 }
-
 
 /* -------- About*/
 
@@ -296,7 +290,8 @@ i.fas.fa-exclamation {
 .img-circle {
   border-radius: 50%;
   width: 120px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   opacity: 0.9;
 }
 
@@ -312,7 +307,6 @@ i.fas.fa-exclamation {
   margin: auto;
   margin-bottom: 20px;
 }
-
 
 /* -------- Cuisine carousel*/
 
@@ -335,7 +329,7 @@ i.fas.fa-exclamation {
   opacity: 0.85;
 }
 
-.carousel .carousel-item>img {
+.carousel .carousel-item > img {
   height: inherit;
   object-fit: cover;
 }
@@ -347,13 +341,13 @@ i.fas.fa-exclamation {
   opacity: 0.85;
   padding: 5px 10px 5px 10px;
   border-radius: 6px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 
 /* -------- Shop recipe books*/
 
@@ -372,7 +366,8 @@ i.fas.fa-exclamation {
   margin-bottom: -40px;
   opacity: 0.85;
   border-radius: 6px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 #shop-link a {
@@ -381,7 +376,8 @@ i.fas.fa-exclamation {
   opacity: 0.85;
   color: #4d4c4c;
   border-radius: 6px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 95%;
   left: 50%;
@@ -391,7 +387,6 @@ i.fas.fa-exclamation {
   height: auto;
   text-transform: capitalize;
 }
-
 
 /* -------------------- Explore recipes & Cuisines*/
 
@@ -405,7 +400,8 @@ i.fas.fa-exclamation {
   margin-top: 75px;
   opacity: 0.85;
   border-radius: 6px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .page-callout-text {
@@ -414,7 +410,8 @@ i.fas.fa-exclamation {
   background-color: #fafafa;
   border-radius: 6px;
   padding: 20px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 85%;
   left: 50%;
@@ -451,7 +448,8 @@ i.fas.fa-exclamation {
   overflow: hidden;
   margin: auto;
   border-radius: 6px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .card-img img {
@@ -550,7 +548,8 @@ div.col.s12.card-btns {
   border-radius: 6px;
   display: inline;
   padding: 3px 10px 3px 10px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .page-callout-text .callout-add-btn i {
@@ -561,7 +560,6 @@ div.col.s12.card-btns {
 #cuisine-card {
   height: 210px;
 }
-
 
 /* -------- Search bar*/
 
@@ -615,7 +613,6 @@ a#clear-btn i {
   text-align: center;
 }
 
-
 /* -------------------- Add/Edit recipes & Cuisines*/
 
 .add-container {
@@ -628,12 +625,12 @@ a#clear-btn i {
   font-weight: 500;
 }
 
-
 /* -------- Form*/
 
 .recipe-form {
   border-radius: 6px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   margin-top: 20px;
   padding: 15px 30px 10px 30px !important;
 }
@@ -687,8 +684,8 @@ textarea.materialize-textarea {
   height: auto;
 }
 
-.dropdown-content li>a,
-.dropdown-content li>span {
+.dropdown-content li > a,
+.dropdown-content li > span {
   font-size: 11px;
   padding: 5px 10px;
   color: #c89f98;
@@ -702,14 +699,13 @@ textarea.materialize-textarea {
   font-size: 9px;
 }
 
-.input-field .prefix~.helper-text {
+.input-field .prefix ~ .helper-text {
   margin-left: 0px;
 }
 
 textarea.materialize-textarea {
   margin-bottom: 0px;
 }
-
 
 /* -------------------- View recipe*/
 
@@ -731,14 +727,16 @@ textarea.materialize-textarea {
   bottom: -15px;
   width: 70px;
   height: 60px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 #yellow-container {
   max-width: 750px;
   background-color: #fff7ae;
   border-radius: 6px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   margin-top: 10%;
   margin-bottom: 8%;
 }
@@ -758,7 +756,8 @@ textarea.materialize-textarea {
 #tab-container {
   max-width: 750px;
   border-radius: 6px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .tabs .tab a {
@@ -792,7 +791,6 @@ div#method.col.s12 {
   font-size: 11px;
 }
 
-
 /* --------------------Shop recipe books */
 
 .book-img {
@@ -801,7 +799,8 @@ div#method.col.s12 {
   overflow: hidden;
   margin: auto;
   border-radius: 6px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .book-card {
@@ -830,16 +829,14 @@ div#method.col.s12 {
   min-height: 25px;
 }
 
-.dropdown-content li>a {
+.dropdown-content li > a {
   font-size: 11px;
   color: #c89f98;
   font-weight: 500;
   padding: 0px 10px;
 }
 
-
 /* --------------------Media queries*/
-
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 
@@ -848,7 +845,7 @@ div#method.col.s12 {
     padding: 0 2%;
   }
   .sidenav {
-      width: 50%;
+    width: 50%;
   }
   #overlay-text {
     top: 65%;
@@ -949,10 +946,10 @@ div#method.col.s12 {
   textarea.materialize-textarea,
   .recipe-form label,
   .recipe-form p,
-  .dropdown-content li>span {
+  .dropdown-content li > span {
     font-size: 14px !important;
   }
-  .dropdown-content li>a {
+  .dropdown-content li > a {
     font-size: 13px !important;
   }
   .recipe-form label span,
@@ -975,11 +972,10 @@ div#method.col.s12 {
   input#register-username {
     font-size: 14px;
   }
-  .input-field>label {
+  .input-field > label {
     font-size: 16px;
   }
 }
-
 
 /* Medium devices (landscape tablets, 768px and up) */
 
@@ -1086,7 +1082,6 @@ div#method.col.s12 {
   }
 }
 
-
 /* Large devices (laptops/desktops, 992px and up) */
 
 @media only screen and (min-width: 992px) {
@@ -1190,11 +1185,10 @@ div#method.col.s12 {
   .sidenav {
     margin-top: 90px;
   }
-  .sidenav li>a {
+  .sidenav li > a {
     font-size: 16px;
   }
 }
-
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 
