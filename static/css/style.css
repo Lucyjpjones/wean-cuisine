@@ -5,6 +5,10 @@
   width: max-content !important;
   height: auto !important;
 }
+
+select::-ms-expand {
+    display: none;
+}
 body {
   background-color: #fafafa;
   font-family: "Montserrat", sans-serif;
