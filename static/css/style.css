@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* -------------------- General*/
-
 body {
   background-color: #fafafa;
   font-family: "Montserrat", sans-serif;
@@ -419,7 +418,7 @@ i.fas.fa-exclamation {
 }
 
 .card-container {
-  margin-top: 15%;
+  margin-top: 20%;
 }
 
 #book-card-container {
@@ -499,6 +498,7 @@ div.col.s12.card-btns {
   border-radius: 6px;
   padding: 0 10px;
   max-width: 400px;
+  text-transform: none;
 }
 
 .modal-overlay {
