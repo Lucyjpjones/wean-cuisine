@@ -16,7 +16,7 @@
                   >
                   <option value="" disabled selected>Choose Cuisine</option>
                   {% for cuisine in cuisines %}
-                  <option value="" >
+                  <option value="{{ cuisine.cuisine_name }}" >
                      {{ cuisine.cuisine_name }}
                   </option>
                   {% endfor %}
@@ -53,7 +53,7 @@
                   />
                <label for="recipe_serving">Serving</label>
             </div>
-            <!--Serving input field-->
+            <!--Recipe time input field-->
             <div class="input-field inline col s3">
                <input
                   id="recipe_time"
@@ -76,7 +76,7 @@
                   >
                   <option value="" disabled selected>Category</option>
                   {% for category in categories %}
-                  <option value="" >
+                  <option value="{{ category.food_category }}" >
                      {{ category.food_category }}
                   </option>
                   {% endfor %}
@@ -95,6 +95,7 @@
                      type="radio"
                      id="{{ age.age_range }}"
                      name="age_range"
+                     value="{{ age.age_range }}"
                      class="with-gap validate"
                      required
                      />
