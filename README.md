@@ -467,7 +467,7 @@ Testing my site members's <u>key priorities</u>:
 - The recipe page contains recipe card displaying recipe image, recipe name, cuisine and who the recipe was created by.
    - The user can click onto the recipe card to view more details including age range, serving, time, food course, ingredients and method.
 
-    ![Recipes page](static/assets/images/readme/recipes-page.png)
+    ![Recipes page](static/assets/images/readme/recipe-page.png)
 
 **4. Clear recipe categorisation and search bar to allow quick browsing**
 
