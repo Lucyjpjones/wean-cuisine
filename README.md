@@ -533,77 +533,86 @@ To ensure my site was working correctly I carried out some manual function testi
 
 - I checked the site dropdown menu was working correctly by starting on the home-page and navigating around the site from and to every screen the user would be faced with.
 
-- I checked the logo homepage naviagtion was working by clicking on the image from every page.
+- I checked the logo homepage naviagtion was working by clicking on the brand image from every page.
 
 - 404 Error page was tested by creating a broken link in the game URL and making sure it responded with my custom page.
 
-- The links to recipe book retailers were checked by ensuring that each dropdown link navigated to the correct site opened on a new window. This was tested for every dropdown.
+- The links to recipe book retailers were checked by ensuring that each dropdown link navigated to the correct site opened on a new window. This was tested for every dropdown item.
 
 **2. Hover, focus and active effects**
 
-- Hovered over the following button elements to ensure the correct brightness effects were in place;
-  - 'Login' and 'Logout'
-  - 'Explore recipes'
-  - 'Add recipes'
-  - About icons changed colour
-  - Cuisine links on carousel
-  - 'Shop recipe books'
+- I hovered over every button element to ensure the correct brightness effect was in place.
 
 **3. Log in, register and logout function**
 
-- To check the log in functionality was working I first clicked on the 'log in' button to ensure the modal appeared. When presented with the modal I filled out the form with an already registered username and password then clicked 'Log in'. The modal closed and the log in button changed to log out and further buttons were available to me so i knew it was working. This was tested throughout all pages of the site.
+- To check the log in functionality was working I first clicked on the 'log in' button to ensure the modal appeared, which it did. When presented with the modal I conducted various checks;
+  - I filled out the log in form with an already registered username and password then clicked 'Log in'. The modal closed, the log in button changed to log out and I received a message 'lucyjpj successfully logged in'.
+   - I filled out the log in form with an a new username and password then clicked 'Log in'. The modal stayed open and responded with a red flash message 'Incorrect Username and/or password'.
 
-- To check the register functionality was working I first clicked on the 'log in' button so the modal appeared. I then clicked on the register tab and filled out the form with a username and password, then clicked 'Register'. The modal closed and the log in button changed to log out and further buttons were available to me so i knew it was working. This was tested throughout all pages of the site.
+- To check the Register functionality was working I first clicked on the 'log in' button to ensure the modal appeared, which it did. Then I located the register tab and conducted some checks;
+  - I filled out the register form with a new username and password then clicked 'Register'. The modal closed, the log in button changed to log out and I received a message 'lucyjpj successfully logged in'.
 
-- Once I was logged in and the 'log out' button was available I clicked this to check that it logged me out correctly. The log out button changed to log in and the additional buttons were no longer visible to me so i knew it was working. This was tested throughout all pages of the site.
+   - I filled out the log in form with an already registered username and password then clicked 'Register'. The modal stayed open and responded with a red flash message 'Username already exists, please log in'.
+  
+- I could also see that after logging in and registering successfully I had additional buttons displayed to me so i knew it was working. The log in modal was tested throughout all pages of the site.
+
+- Once I was logged in and the 'log out' button was available I clicked this to check that it logged me out correctly. The log out button changed to log in, I reicived a message 'Successfully logged out' and the additional buttons were no longer visible to me so I knew it was working. This was tested throughout all pages of the site.
 
 **4. Form validation checks**
 
-- Login/Register form
-    - I entered an invalid username into the username field and was displayed with
-  - I entered an invalid password into the password field and was displayed with
+- Login/Register form validation errors;
+  - I entered an invalid username into the username field and was displayed with 'Please match the format requested'.
+  - I entered an invalid password into the password field and was displayed with 'Please match the format requested'.
 
-- Add/Edit recipe and cuisine forms
+- I checked the information tooltips were working by hovering over the information icon.
+
+- I tested the the add/edit recipe and cuisine templates by inputting valid and invalid data and checking that I received the correct responses.
 
 **5. Explore recipes and search bar**
-- I clicked on the 'Explore recipes' button on the homepage callout section and the link within the dropdown menu, and both correctly navigated to the recipes page.
+- I clicked on the 'Explore recipes' button on the homepage callout section and the link within the dropdown menu, and both correctly navigated to the recipes page. This was checked from all pages of the site.
 
 - After adding my search indexes via the python interpreter I entered 'mongo.db.recipes.index_information()' to check that the correct details had been added. I also checked this by clicking on the 'indexes' section on MongoDB.
 
-- I submitted a selection of words into the recipe search bar to ensure the query function was filtering the recipes correctly.
+- I submitted a selection of words into the recipe search bar to ensure the query function was filtering the recipes correctly, and all worked correctly.
 
 **6. Viewing recipes**
 - I clicked on each recipe card to make sure it displayed the correct information to me when naviagted to the view recipes HTML template, and it did.
 
 **7. Adding recipe**
-- I clicked on the 'Add recipe' button on the homepage callout section and the link within the dropdown menu, and both correctly navigated to the add recipe page.
+- I clicked on the 'Add recipe' button on the homepage callout section and the link within the dropdown menu, and both correctly navigated to the add recipe page. This was checked from all pages of the site.
 
 **8. Editing recipe**
-- I logged in as different users to check that the edit button was only visible on the recipes I had added.
+- I logged in as a variety of different users to check that the edit button was only visible on the recipes the specific user had added.
 
-- I clicked on the 'Edit' button on all the recipes cards to test that I was correctly navigated to the edit recipe page.
+- I clicked on the 'Edit' button on the recipe cards to test that I was correctly navigated to the edit recipe page and that the fields were already prefilled with the previous data inputted.
 
 **9. Deleting recipe**
-- I logged in as different users to check that the delete button was only visible on the recipes I had added.
+- I logged in as a variety of different users to check that the delete button was only visible on the recipes the specific user had added.
 
-- I clicked on the 'Delete' button on all the recipes cards to test that I was correctly presented with a modal for delete confirmation. I then clicked the 'delete' button on the modal and checked if the recipe card had been removed.
+- I clicked on the 'Delete' button on the recipe cards to test that I was correctly presented with a modal for a delete confirmation. I then clicked the 'delete' button on the modal and checked if the recipe card had been removed.
 
 **10. Link to cuisine page**
+- I clicked on the 'Cuisines' link within the dropdown menu to check that I was correctly navigated to the cuisine page. This was checked from all pages of the site.
+  - Once on the cuisine page I clicked on each cuisine card to ensure I was correctly navigated to the recipes page, filtered by the correct cuisine type.
+
+- On the homepage, I clicked on every carousel item to ensure I was directed to the recipes page, filtered by the correct cuisine type.
 
 **11. Adding cuisine**
-- I logged in as different users to check that the add cusine button was only visible when the specified admin user was logged in.
+- I logged in as different users to check that the 'add cuisine' option in the dropdown menu and the 'add cuisine' button on the cuisine page was only visible when the specified admin user was logged in.
 
-- I entered the cusine name and image URL into the form and clicked the 'add' icon to check if the new cuisine was added, and it was.
+- I clicked on 'add cuisine' to ensure that I was directed to the add cuisine page. I then entered the cusine name and image URL into the form and clicked the submit 'add' icon to check if the new cuisine was added, and it was.
+
 
 **12. Editing cuisine**
-- I logged in as different users to check that the edit cusine button was only visible on the cuisine cards if i was logged in as the specified admin user.
 
-- I clicked the edit button on various cusine cards and changed the cusine name and image URL. After clicking the edit icon the information was updated so I knew the function was working correctly.
+- I logged in as different users to check that the 'edit' button was only visible on the cuisine cards if i was logged in as the specified admin user.
+
+- I clicked on 'edit' button on various cusine cards to ensure that I was directed to the edit cuisine page. I then updated the cusine name and image URL and clicked the submit 'edit' icon to check if the cuisine had been updated, and it was.
 
 **13. Deleting cuisine**
-- I logged in as different users to check that the delete cusine button was only visible on the cuisine cards if i was logged in as the specified admin user.
+- I logged in as different users to check that the 'Delete' button was only visible on the cuisine cards if i was logged in as the specified admin user.
 
-- I clicked on the 'Delete' button on all the recipes cards to test that I was correctly presented with a modal for delete confirmation. I then clicked the 'delete' button on the modal and checked if the cuisine card had been removed.
+- I clicked on the 'Delete' button on all the recipes cards to test that I was correctly presented with a modal for delete confirmation. I then clicked the 'Delete' button on the modal and checked if the cuisine card had been removed, it it had.
 
 
 #### Validator checks
