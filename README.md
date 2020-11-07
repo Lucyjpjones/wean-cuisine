@@ -431,6 +431,10 @@ Testing my site members's <u>key priorities</u>:
 - Brand logo directs user back to homepage from anywhere on the site.
 
 ![Navbar with brand logo](static/assets/images/readme/navbar.png)
+
+- 404 Error page: I decided to create a custom 404.html page for my user so if they are directed to a non-existent domain, they are presented with an appealing page and an easy navigation button back to the homepage.
+
+  ![Navbar with brand logo](static/assets/images/readme/404.png)
  
 **2. Ability to register and an easily accessible button to 'Log in’**
 
