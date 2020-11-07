@@ -18,7 +18,7 @@ This app was built using [GitHub](https://pages.github.com/) and deployed to [He
 - [&rarr; **User Experience (UX)**](#-rarr----user-experience--ux---)
   - [Purpose](#purpose)
   - [Design](#design)
-  - [User stories](#user-stories)
+  - [User experience](#user-experience)
   - [Wireframes](#wireframes)
 - [&rarr; **Features**](#-rarr----features--)
   - [Features used](#features-used)
@@ -119,7 +119,7 @@ As the site owner, I want to be able to continually monitor and update the site 
 | **1** | An easy-to-use recipe site                                  | Simple, user-friendly site that is easy to navigate                              |
 | **2** | Be part of a social community with other  parents           | Ability to register and an easily accessible button to 'Log in’                  |
 | **3** | Discover and learn new nourishing recipes                   | Explore recipes posted by others                                                 |
-| **4** | Save time in the kitchen by getting inspiration from others | Clear recipe categorisation and ability to search using keywords in a search bar |
+| **4** | Save time in the kitchen by getting inspiration from others | Clear recipe categorisation and search bar to allow quick browsing |
 | **5** | Ability to share and edit her own recipes                   | Option to add, edit and delete own recipes                                       |
 | **6** | Ability to find further inspiration                         | Links for purchasing recipe books for further inspiration                        |
 
@@ -422,7 +422,7 @@ When you clone a repository, the repository is copied on to your local machine.
 
 #### Testing user stories
 
-Testing my user's <u>key priorities</u>:
+Testing my site members's <u>key priorities</u>:
 
 **1. Simple, user-friendly site that is easy to navigate**
  - Site includes a main navbar featuring a dropdown side nav, with same and different page navigation.
@@ -464,41 +464,66 @@ Testing my user's <u>key priorities</u>:
 
     ![Explore recipes nav ](static/assets/images/readme/recipes-nav.png)
 
-- Recipe card displaying recipe image, recipe name, cuisine and who the recipe was created by.
+- The recipe page contains recipe card displaying recipe image, recipe name, cuisine and who the recipe was created by.
+   - The user can click onto the recipe card to view more details including age range, serving, time, food course, ingredients and method.
 
     ![Recipes page](static/assets/images/readme/recipes-page.png)
 
-**4. Clear recipe categorisation and ability to search using keywords in a search bar**
-- Search bar to allow the user to search for recipes using keywords. The search bar is set up to filter recipes based on recipe name and ingredients.
+**4. Clear recipe categorisation and search bar to allow quick browsing**
+
+- Link in dropdown menu to page displaying cuisine categories.
+
+![Dropdown menu](static/assets/images/readme/cuisine-dd.png)
+
+- There is also a Carousel on the homepage which takes the user to the specific cuisine they click on.
+
+  ![Carousel](static/assets/images/readme/carousel.png)
+
+- Once on the cuisine page the user can click on a cuisine card to view all recipes within that category.
+
+![Dropdown menu](static/assets/images/readme/cuisine-page.png)
+
+- Search bar to allow the user to search for recipes using keywords. The search bar is set up to filter recipes based on cuisine name, recipe name and ingredients.
+   - Search bar input label to give user ideas of what to query by.
 
     ![Search bar](static/assets/images/readme/search.png)
 
-- Link in dropdown menu to page displaying cuisine categories. User can click on cuisine to view all recipes in that category.
 
-![Dropdown menu](static/assets/images/readme/cuisine-dd.png)
-- Carousel on homepage to link directly to recipes for specific cuisine.
+**5. Option to add, edit and delete own recipes**
+- When the user is logged in the ‘add recipe’ button is visible to the user on the first view of the site. The link is also accessible via the dropdown menu.
 
-    ![Carousel](static/assets/images/readme/carousel.png)
+- When the user clicks 'Add recipe' they are taken to the add recipe page which presents the user with a template of inputs to fill out.
+
+     ![Edit/delete btns logged in vs logged out](static/assets/images/readme/add-nav.png)
+
+- The edit and delete buttons are only available to the user who created the recipes. These are found on the individual recipe cards and are only visible when the user is logged in.
+  - When the user clicks edit they will be directed to the edit page which is the same template as the add recipe page but input fields are already pre-filled with previous input.
+
+  - When the user selects delete they will be presented with a confirmation pop-up to confirm their action.
+
+   ![Edit/delete btns logged in vs logged out](static/assets/images/readme/e&d-recipe.png)
+
+**6. Links for purchasing recipe books for further inspiration**
+- User can access the ‘shop recipe books’ page via a link on the homepage or through the dropdown menu. 
+
+   ![Homepage display](static/assets/images/readme/nav-books.png)
+
+- The 'shop recipe books' page includes cards with the book image and a 'buy' button featuring a dropdown list with links to external retailer sites.
+  - When the user clicks on a retailer link, a seperate tab is opened for the site.
+
+  ![Recipe book page](static/assets/images/readme/book-page.png)
+
+Testing my site owner's <u>key priorities</u>:
+
+**1. When logged in as admin user, have the option to add, update and delete cuisine cards**
+
+- Follows same instructions as site member testing number 5 noted above.
+
+**2. When logged in as admin user, have the option to add, update and delete cuisine cards**
 
 - Admin control over adding, editing and deleting new cuisines. Buttons only visible when specified admin is logged in.
 
- ![Buttons logged in vs logged out](static/assets/images/readme/cuisine-btns.png)
-
-**5. Option to add, edit and delete own recipes**
-- When user is logged the ‘add recipe’ button is visible to the user on the first view of the site. The link is also accessible via the dropdown menu.
-
- ![Add recipe logged in vs logged out](static/assets/images/readme/add-recipe.png)
-
-- The edit and delete buttons are only available to the user who created the recipes. These are found on the individual recipe cards and are only visible when the user is logged in.
-
- ![Edit/delete btns logged in vs logged out](static/assets/images/readme/edit-delete.png)
-
-**6. Links for purchasing recipe books for further inspiration**
-- User can access the ‘shop recipe books’ page via a link on homepage or through the includes an image of the book and a buy dropdown list with links to external retailer sites.
-
- ![Homepage display](static/assets/images/readme/book-hp.png)
-
-  ![Recipe book page](static/assets/images/readme/book-page.png)
+  ![Recipe book page](static/assets/images/readme/admin-cuisine.png)
 
 #### Manual function testing
 
@@ -630,8 +655,8 @@ I used PEP8 online checking tool to inspect my Python code against the style con
 
 |     | Bug                                                                           | Action                                                            |
 |-----|-------------------------------------------------------------------------------|-------------------------------------------------------------------|
-| [X] | Materialize select not working correctly on iOS                     | Solution found on GitHub, [select.js](https://github.com/Dogfalo/materialize/blob/c0da34049deec36efbd4681f73b3446e92918ca8/js/select.js) added with code to fix bug  |
-| [X] | Materialize dropdown not working correctly on iOS                     | Action |
+| [X] | Materialize select not working correctly on iphone                     | I found that is was a known issue with materialize select that has already been raised regarding with the new IOS. I found a temporary Solution on GitHub, and added the code to [select.js](https://github.com/Dogfalo/materialize/blob/c0da34049deec36efbd4681f73b3446e92918ca8/js/select.js) which has fixed the bug  |
+| [X] | Materialize dropdown menu selecting is out of sync                     | Action |
 | [X] | Materialize select showing browser default arrow  on iOS                     | [css code]() added to fix bug |
   |
 
