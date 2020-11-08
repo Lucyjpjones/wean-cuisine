@@ -39,7 +39,7 @@ This app was built using [GitHub](https://pages.github.com/) and deployed to [He
 </details>
 
 **<details><summary> Testing</summary>**
-  - [Testing Documentation](https://github.com/)
+  - [Testing Documentation](https://github.com/Lucyjpjones/wean-cuisine/blob/master/testing.md)
 </details>
 
 **<details><summary> Credits</summary>**
