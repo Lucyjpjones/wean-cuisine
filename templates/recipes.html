@@ -49,11 +49,11 @@
 <!--Checks if any results from search bar, if no results skips to else statement-->
 {% if recipes|length > 0 %}
 <!--Recipe card structure-->
-<div id="recipe-card-container" class="container card-container">
+<div class="container card-container recipe-card-container">
    <div class="row">
       {% for recipe in recipes %}
       <div class="col s6 m4 l3">
-         <div id="recipe-card" class="card">
+         <div class="card recipe-card">
             <!--Recipe card image-->
             <div class="card-image card-img">
                <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}">
@@ -63,7 +63,7 @@
             <!--Recipe card recipe name, created by and cuisine name-->
             <div class="row card-content card-info">
                <div class="col s12">
-                  <p id="card-title"><strong>{{ recipe.recipe_name }}</strong></p>
+                  <p class="cards-title"><strong>{{ recipe.recipe_name }}</strong></p>
                   <p>by: {{ recipe.created_by }}</p>
                   <p><i class="fas fa-globe-europe"></i> {{ recipe.cuisine_name }}</p>
                </div>

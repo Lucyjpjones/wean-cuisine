@@ -435,8 +435,8 @@ i.fas.fa-exclamation {
   text-transform: capitalize;
 }
 
-#recipe-card,
-#cuisine-card {
+.recipe-card,
+.cuisine-card {
   height: 230px;
 }
 
@@ -460,7 +460,7 @@ i.fas.fa-exclamation {
   margin: 0;
 }
 
-#card-title {
+.cards-title {
   font-size: 11px;
   font-weight: 500;
 }
@@ -566,7 +566,7 @@ div.col.s12.card-btns {
   vertical-align: bottom;
 }
 
-#cuisine-card {
+.cuisine-card {
   height: 210px;
 }
 
@@ -913,8 +913,8 @@ div#method.col.s12 {
     max-height: 250px;
     object-fit: cover;
   }
-  #recipe-card-container,
-  #cuisine-card-container {
+  .recipe-card-container,
+  .cuisine-card-container {
     margin-top: 12% !important;
   }
   .page-callout-text {
@@ -924,7 +924,7 @@ div#method.col.s12 {
     margin-top: 12%;
     margin-bottom: 6%;
   }
-  #card-title {
+  .cards-title {
     font-size: 13px;
   }
   .card .card-content {
@@ -1042,8 +1042,8 @@ div#method.col.s12 {
   .carousel-item p {
     font-size: 120%;
   }
-  #recipe-card-container,
-  #cuisine-card-container {
+  .recipe-card-container,
+  .cuisine-card-container {
     margin-top: 10% !important;
   }
   #book-card-container {
@@ -1059,10 +1059,10 @@ div#method.col.s12 {
   .card-img img {
     min-height: 130px;
   }
-  #recipe-card {
+  .recipe-card {
     height: 260px;
   }
-  #cuisine-card {
+  .cuisine-card {
     height: 240px;
   }
   button#search-btn i,
@@ -1150,8 +1150,8 @@ div#method.col.s12 {
     font-size: 140%;
     top: 70%;
   }
-  #recipe-card-container,
-  #cuisine-card-container {
+  .recipe-card-container,
+  .cuisine-card-container {
     margin-top: 8% !important;
   }
   #yellow-container {
@@ -1163,7 +1163,7 @@ div#method.col.s12 {
   .card-img img {
     height: 120px;
   }
-  #recipe-card {
+  .recipe-card {
     height: 250px;
   }
   .card-btn {
@@ -1230,8 +1230,8 @@ div#method.col.s12 {
     width: 280px;
     height: 280px;
   }
-  #recipe-card-container,
-  #cuisine-card-container {
+  .recipe-card-container,
+  .cuisine-card-container {
     margin-top: 6% !important;
   }
   #book-card-container {
@@ -1247,10 +1247,10 @@ div#method.col.s12 {
   .card-img img {
     height: 170px;
   }
-  #recipe-card {
+  .recipe-card {
     height: 300px;
   }
-  #cuisine-card {
+  .cuisine-card {
     height: 290px;
   }
   .add-header {

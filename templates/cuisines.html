@@ -25,11 +25,11 @@
    </div>
 </section>
 <!--Cuisine card structure-->
-<div id="cuisine-card-container" class="container card-container">
+<div class="container card-container cuisine-card-container">
    <div class="row">
       {% for cuisine in cuisines %}
       <div class="col s6 m4 l3">
-         <div id="cuisine-card" class="card">
+         <div class="card cuisine-card">
             <!--Cuisine card image-->
             <div class="card-image card-img lazyload">
                <a href="{{ url_for('filter_cuisine', cuisine_name=cuisine.cuisine_name) }}">
@@ -39,7 +39,7 @@
             <!--Cuisine card cuisine name-->
             <div class="row card-content card-info">
                <div class="col s12">
-                  <p id="card-title">
+                  <p class="cards-title">
                      <strong
                         ><i class="fas fa-globe-europe"></i> {{ cuisine.cuisine_name
                      }}</strong
