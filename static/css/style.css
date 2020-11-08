@@ -42,7 +42,7 @@ footer h6 {
 h1,
 h2,
 h3,
-h5,
+h4,
 p {
   margin: 0;
 }
@@ -102,7 +102,7 @@ nav .brand-logo {
   background-color: inherit;
 }
 
-.modal-login-content h4 {
+.modal-login-content h5 {
   color: #c89f98;
   font-size: 18px;
   line-height: 2.5;
@@ -535,7 +535,7 @@ div.col.s12.card-btns {
   background-color: #f9dce4;
 }
 
-.modal-content h4 {
+.modal-content h5 {
   color: #c89f98;
   font-size: 24px;
 }
