@@ -596,6 +596,7 @@ div.col.s1 {
 
 #input-outer .input-field label {
   font-size: 11px;
+  line-height: 12px;
 }
 
 button#search-btn {
