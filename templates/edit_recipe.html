@@ -19,8 +19,8 @@
             required
           >
             <option value="" disabled>Choose Cuisine</option>
-            {% for cuisine in cuisines %} {% if cuisine.cuisine_name ==
-            recipe.cuisine_name %}
+            {% for cuisine in cuisines %} 
+            {% if cuisine.cuisine_name == recipe.cuisine_name %}
             <option value="{{ cuisine.cuisine_name }}" selected>
               {{ cuisine.cuisine_name }}
             </option>
@@ -109,8 +109,8 @@
           <p>
             <label for="{{ age.age_range }}">
               <input type="radio" id="{{ age.age_range }}" name="age_range"
-              class="with-gap validate" value="{{ age.age_range }}" {% if
-              age.age_range == recipe.age_range %} checked {% endif %} />
+              class="with-gap validate" value="{{ age.age_range }}" 
+              {% if age.age_range == recipe.age_range %} checked {% endif %} />
               <span>{{ age.age_range }} months</span>
             </label>
           </p>

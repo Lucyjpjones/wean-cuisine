@@ -681,9 +681,6 @@ I used PEP8 online checking tool to inspect my Python code against the style con
 
 ![Lighthouse overall performance](assets/images/readme/lhSummary.png)
 
-<u>Performance</u>
-
-![Lighthouse render-blocking resources](assets/images/readme/1-lh.png)
 
 #### Responsive Design
 
@@ -697,11 +694,12 @@ I used PEP8 online checking tool to inspect my Python code against the style con
 
 - The Website was tested on Google Chrome, Internet Explorer, Safari browsers, Firefox and Edge. Internet Explorer was the only browser experiencing errors, specific details have been added to bugs section.
 
-- The website was viewed on a variety of devices including HP Laptop, Macbook pro, Ipad and IPhones (Version 6,7,8,11).
+- The website was viewed on a variety of devices including HP Laptop, Macbook pro, Ipad and IPhones (Version 6,7,8,11, 12)
 
 - Friends and family members were asked to review the site to point out any bugs, user experience issues and/or suggestions.
 
   - Feedback action:
+    - Would like site to include dietary requirements- this is included in my future development plans.
 
 - Project posted on Slack, asking for feedback from fellow students.
 
