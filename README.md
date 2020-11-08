@@ -68,6 +68,8 @@ By completing this project I will have shown greater experience in HTML, CSS and
 
 **Colour scheme**
 
+- The #fafafa shade of white has been used for the main background throughout the site with all the forms using a #fff shade of white creating a slight contrast.
+
 <img src="static/assets/images/readme/moodboard.jpeg">
 
 - After undergoing some research into baby focused websites and recipe books, I decided a pastel colour scheme was a appropriate for my app. I created my final palette using [Coolors](https://coolors.co).
@@ -181,6 +183,12 @@ As part of the design process, before starting my project I sketched out initial
 - **Search bar**
   - Allows user to search recipes by keywords using text index searching. Recipe name, cuisine name, ingredients and food category are included as the keywords for the query.
 
+- **Toasts**
+  - Used for login and register form success responses.
+
+- **Flash Messages**
+  - Used for login and register form error responses.
+
 ### **To do list**
 
 #### Status
@@ -194,7 +202,7 @@ I will continue to update my website as I grow my platform of users. I have futu
 - Add a review option so my users can share their options on recipes they have tried.
 - Create a parent forum to add more social interaction between my users.
 - Add Dietry requirements information to recipes.
-- link log in and register with users email and create a link for forgetting password.
+- Add email address to the register modal so if a user forgets their password I can send a link to their email to reset it.
 ---
 
 ## &rarr; **Technologies**
@@ -627,12 +635,45 @@ I used PEP8 online checking tool to inspect my Python code against the style con
 
 - [**HTML Validator**](https://validator.w3.org/)
 
+  One warning message received;
+
+  ![Homepage validation error](static/assets/images/readme/validator-w1.png)
+    
+  Code not altered as I did not want this section to have a heading for visual reasons.
+
 - [**CSS Validator**](https://jigsaw.w3.org/css-validator/)
+  
+  No error or warning messages received.
 
 - [**JS hint**](https://jshint.com/)
 
-- [**PEP8 online check**](http://pep8online.com/checkresult)
 
+  ![JShint warnings](static/assets/images/readme/jshint-w.png)
+
+  <u>Warnings received;</u>
+
+  > 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+
+  Warnings occurred as JShint is using ECMAScript 5.1 specification and my code uses ECMAScript 6 specific syntax. However, all code is valid.
+
+  <u>Undefined variables;</u>
+
+  > $
+
+  $ (Jquery) defined in base.html.
+
+
+- [**PEP8 online check**](http://pep8online.com/checkresult)
+  
+  app.py:
+
+  'All right'
+
+  env.py:
+
+  ![env.py py error message](static/assets/images/readme/py-error.png)
+
+   My .gitignore file ignores env.py so the error can be disregarded.
 
 #### Audits
 
@@ -668,9 +709,9 @@ I used PEP8 online checking tool to inspect my Python code against the style con
 
 |     | Bug                                                                           | Action                                                            |
 |-----|-------------------------------------------------------------------------------|-------------------------------------------------------------------|
-| [X] | Materialize select not working correctly on iphone                     | I found that is was a known issue with materialize select that has already been raised regarding with the new IOS. I found a temporary Solution on GitHub, and added the code to [select.js](https://github.com/Dogfalo/materialize/blob/c0da34049deec36efbd4681f73b3446e92918ca8/js/select.js) which has fixed the bug  |
-| [X] | Materialize dropdown menu selecting is out of sync                     | Action |
-| [X] | Materialize select showing browser default arrow  on iOS                     | [css code]() added to fix bug |
+| [X] | Materialize select not working correctly on iphone                     | I found that this is a [known issue](https://github.com/Dogfalo/materialize/issues/6464) with materialize select not working correctly on new iOS. I found a temporary Solution on GitHub, and added the code to [select.js](https://github.com/Dogfalo/materialize/blob/c0da34049deec36efbd4681f73b3446e92918ca8/js/select.js) which has fixed the bug  |
+| [ ] | Materialize dropdown menu selecting is out of sync                     | I found that this is a [known issue](https://github.com/Dogfalo/materialize/issues/6464) with materialize dropdown not working correctly on new iOS, but there is not yet a solution available for this bug |
+| [ ] | Materialize select showing browser default arrow  on iphone                    | [css code]() Known issue with iOS, doesn't affect the functionality for the user but I will elimate once I find a solution |
   |
 
 ## &rarr; **Credits**
