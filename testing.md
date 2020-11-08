@@ -14,13 +14,13 @@
 
 #### Testing user stories
 
-Testing my site members's <u>key priorities</u>:
+Testing my site member's <u>key priorities</u>:
 
-**1. Simple, user-friendly site that is easy to navigate**
- - Site includes a main navbar featuring a dropdown side nav, with same and different page navigation.
+**1. A Simple, user-friendly site that is easy to navigate**
+ - Site includes a main navbar featuring a dropdown side nav, with the same and different page navigation.
  
 - Navigation menu is fixed so is always visible to the user.
-- Brand logo directs user back to homepage from anywhere on the site.
+- Brand logo directs the user back to the homepage from anywhere on the site.
 
 ![Navbar with brand logo](static/assets/images/readme/navbar.png)
 
@@ -30,44 +30,44 @@ Testing my site members's <u>key priorities</u>:
  
 **2. Ability to register and an easily accessible button to 'Log in’**
 
-- Clear login button visible on navbar as soon as user enters the site.
+- Clear login button visible on the navbar as soon as the user enters the site.
   - As the navbar is repeated on all pages of the site, the user can log in from any page.
   - If a user is logged in, the button will display 'log out'.
 
   ![Login btn](static/assets/images/readme/login-btn.png)
 
-- After clicking login button, user is presented with a modal containing two tabs, giving the user an option to login or register.
-  - Validation is included on the input fields to let the user know if their input is valid through colour formatting.
+- After clicking the log in button, the user is presented with a modal containing two tabs, giving the user an option to log in or register.
+  - Validation is included in the input fields to let the user know if their input is valid through colour formatting.
 
   ![Validation](static/assets/images/readme/validation.png)
 
-  - Recognisable info icon with tootip to let the user know which characters can be used.
+  - Recognisable info icon with tooltip to let the user know which characters can be used.
 
 ![Tooltips](static/assets/images/readme/tooltip.png)
 
-- User responses included to notify the user if any errors or successful:
-  - Errors shown below password in modal
-  - Success messages presented as a toast after modal closes.
+- User responses included notifying the user if any errors or successful:
+  - Errors are shown below password in modal
+  - Success messages presented as a toast after the modal closes.
 
 ![User responses](static/assets/images/readme/user-responses.png)
 
-- After logging in or registering the user will have the option to add, edit and delete their own recipes.
+- After logging in or registering the user will have the option to add, edit, and delete their own recipes.
 
 **3. Explore recipes posted by others**
 
-- ‘Explore recipes’ button visible on callout section as soon as user enters the site. 
-- Navigation link to recipes also included in dropdown menu.
+- ‘Explore recipes’ button visible on the callout section as soon as the user enters the site. 
+- Navigation-link to recipes also included in the dropdown menu.
 
     ![Explore recipes nav ](static/assets/images/readme/recipes-nav.png)
 
-- The recipe page contains recipe card displaying recipe image, recipe name, cuisine and who the recipe was created by.
-   - The user can click onto the recipe card to view more details including age range, serving, time, food course, ingredients and method.
+- The recipe page contains recipe cards displaying recipe image, recipe name, cuisine, and who the recipe was created by.
+   - The user can click onto the recipe card to view more details including age range, serving, time, food course, ingredients, and method.
 
     ![Recipes page](static/assets/images/readme/recipe-page.png)
 
 **4. Clear recipe categorisation and search bar to allow quick browsing**
 
-- Link in dropdown menu to page displaying cuisine categories.
+- Link in the dropdown menu to the page displaying cuisine categories.
 
 ![Dropdown menu](static/assets/images/readme/cuisine-dd.png)
 
@@ -79,7 +79,7 @@ Testing my site members's <u>key priorities</u>:
 
 ![Dropdown menu](static/assets/images/readme/cuisine-page.png)
 
-- Search bar to allow the user to search for recipes using keywords. The search bar is set up to filter recipes based on cuisine name, recipe name and ingredients.
+- Search bar to allow the user to search for recipes using keywords. The search bar is set up to filter recipes based on cuisine name, recipe name, and ingredients.
    - Search bar input label to give user ideas of what to query by.
 
     ![Search bar](static/assets/images/readme/search.png)
@@ -100,12 +100,12 @@ Testing my site members's <u>key priorities</u>:
    ![Edit/delete btns logged in vs logged out](static/assets/images/readme/e&d-recipe.png)
 
 **6. Links for purchasing recipe books for further inspiration**
-- User can access the ‘shop recipe books’ page via a link on the homepage or through the dropdown menu. 
+- Users can access the ‘shop recipe books’ page via a link on the homepage or through the dropdown menu. 
 
    ![Homepage display](static/assets/images/readme/nav-books.png)
 
 - The 'shop recipe books' page includes cards with the book image and a 'buy' button featuring a dropdown list with links to external retailer sites.
-  - When the user clicks on a retailer link, a seperate tab is opened for the site.
+  - When the user clicks on a retailer link, a separate tab is opened for the site.
 
   ![Recipe book page](static/assets/images/readme/book-page.png)
 
@@ -113,11 +113,11 @@ Testing my site owner's <u>key priorities</u>:
 
 **1. When logged in as admin user, have the option to add, update and delete cuisine cards**
 
-- Follows same instructions as site member testing number 5 noted above.
+- Follows the same instructions as site member testing number 5 noted above.
 
 **2. When logged in as admin user, have the option to add, update and delete cuisine cards**
 
-- Admin control over adding, editing and deleting new cuisines. Buttons only visible when specified admin is logged in.
+- Admin control over adding, editing, and deleting new cuisines. Buttons only visible when the specified admin is logged in.
 
   ![Recipe book page](static/assets/images/readme/admin-cuisine.png)
 
@@ -129,30 +129,30 @@ To ensure my site was working correctly I carried out some manual function testi
 
 - I checked the site dropdown menu was working correctly by starting on the home-page and navigating around the site from and to every screen the user would be faced with.
 
-- I checked the logo homepage naviagtion was working by clicking on the brand image from every page.
+- I checked the logo homepage navigation was working by clicking on the brand image from every page.
 
 - 404 Error page was tested by creating a broken link in the game URL and making sure it responded with my custom page.
 
 - The links to recipe book retailers were checked by ensuring that each dropdown link navigated to the correct site opened on a new window. This was tested for every dropdown item.
 
-**2. Hover, focus and active effects**
+**2. Hover, focus, and active effects**
 
 - I hovered over every button element to ensure the correct brightness effect was in place.
 
-**3. Log in, register and logout function**
+**3. Log in, register, and logout function**
 
-- To check the log in functionality was working I first clicked on the 'log in' button to ensure the modal appeared, which it did. When presented with the modal I conducted various checks;
-  - I filled out the log in form with an already registered username and password then clicked 'Log in'. The modal closed, the log in button changed to log out and I received a message 'lucyjpj successfully logged in'.
-   - I filled out the log in form with an a new username and password then clicked 'Log in'. The modal stayed open and responded with a red flash message 'Incorrect Username and/or password'.
+- To check the login functionality was working I first clicked on the 'login' button to ensure the modal appeared, which it did. When presented with the modal I conducted various checks;
+  - I filled out the login form with an already registered username and password then clicked 'Login'. The modal closed, the login button changed to log out and I received a message 'lucyjpj successfully logged in'.
+   - I filled out the login form with a new username and password then clicked 'Login'. The modal stayed open and responded with a red flash message 'Incorrect Username and/or password'.
 
-- To check the Register functionality was working I first clicked on the 'log in' button to ensure the modal appeared, which it did. Then I located the register tab and conducted some checks;
+- To check the Register functionality was working I first clicked on the 'login' button to ensure the modal appeared, which it did. Then I located the register tab and conducted some checks;
   - I filled out the register form with a new username and password then clicked 'Register'. The modal closed, the log in button changed to log out and I received a message 'lucyjpj successfully logged in'.
 
-   - I filled out the log in form with an already registered username and password then clicked 'Register'. The modal stayed open and responded with a red flash message 'Username already exists, please log in'.
+   - I filled out the login form with an already registered username and password then clicked 'Register'. The modal stayed open and responded with a red flash message 'Username already exists, please log in'.
   
-- I could also see that after logging in and registering successfully I had additional buttons displayed to me so i knew it was working. The log in modal was tested throughout all pages of the site.
+- I could also see that after logging in and registering successfully I had additional buttons displayed to me so I knew it was working. The log in modal was tested throughout all pages of the site.
 
-- Once I was logged in and the 'log out' button was available I clicked this to check that it logged me out correctly. The log out button changed to log in, I reicived a message 'Successfully logged out' and the additional buttons were no longer visible to me so I knew it was working. This was tested throughout all pages of the site.
+- Once I was logged in and the 'log out' button was available I clicked this to check that it logged me out correctly. The log out button changed to log in, I received a message 'Successfully logged out' and the additional buttons were no longer visible to me so I knew it was working. This was tested throughout all pages of the site.
 
 **4. Form validation checks**
 
@@ -162,7 +162,7 @@ To ensure my site was working correctly I carried out some manual function testi
 
 - I checked the information tooltips were working by hovering over the information icon.
 
-- I tested the the add/edit recipe and cuisine templates by inputting valid and invalid data and checking that I received the correct responses.
+- I tested the add/edit recipe and cuisine templates by inputting valid and invalid data and checking that I received the correct responses.
 
 **5. Explore recipes and search bar**
 - I clicked on the 'Explore recipes' button on the homepage callout section and the link within the dropdown menu, and both correctly navigated to the recipes page. This was checked from all pages of the site.
@@ -172,7 +172,7 @@ To ensure my site was working correctly I carried out some manual function testi
 - I submitted a selection of words into the recipe search bar to ensure the query function was filtering the recipes correctly, and all worked correctly.
 
 **6. Viewing recipes**
-- I clicked on each recipe card to make sure it displayed the correct information to me when naviagted to the view recipes HTML template, and it did.
+- I clicked on each recipe card to make sure it displayed the correct information to me when navigated to the view recipes HTML template, and it did.
 
 **7. Adding recipe**
 - I clicked on the 'Add recipe' button on the homepage callout section and the link within the dropdown menu, and both correctly navigated to the add recipe page. This was checked from all pages of the site.
@@ -185,7 +185,7 @@ To ensure my site was working correctly I carried out some manual function testi
 **9. Deleting recipe**
 - I logged in as a variety of different users to check that the delete button was only visible on the recipes the specific user had added.
 
-- I clicked on the 'Delete' button on the recipe cards to test that I was correctly presented with a modal for a delete confirmation. I then clicked the 'delete' button on the modal and checked if the recipe card had been removed.
+- I clicked on the 'Delete' button on the recipe cards to test that I was correctly presented with a modal for delete confirmation. I then clicked the 'delete' button on the modal and checked if the recipe card had been removed.
 
 **10. Link to cuisine page**
 - I clicked on the 'Cuisines' link within the dropdown menu to check that I was correctly navigated to the cuisine page. This was checked from all pages of the site.
@@ -196,26 +196,26 @@ To ensure my site was working correctly I carried out some manual function testi
 **11. Adding cuisine**
 - I logged in as different users to check that the 'add cuisine' option in the dropdown menu and the 'add cuisine' button on the cuisine page was only visible when the specified admin user was logged in.
 
-- I clicked on 'add cuisine' to ensure that I was directed to the add cuisine page. I then entered the cusine name and image URL into the form and clicked the submit 'add' icon to check if the new cuisine was added, and it was.
+- I clicked on 'add cuisine' to ensure that I was directed to the add cuisine page. I then entered the cuisine name and image URL into the form and clicked the submit 'add' icon to check if the new cuisine was added, and it was.
 
 
 **12. Editing cuisine**
 
-- I logged in as different users to check that the 'edit' button was only visible on the cuisine cards if i was logged in as the specified admin user.
+- I logged in as different users to check that the 'edit' button was only visible on the cuisine cards if I was logged in as the specified admin user.
 
-- I clicked on 'edit' button on various cusine cards to ensure that I was directed to the edit cuisine page. I then updated the cusine name and image URL and clicked the submit 'edit' icon to check if the cuisine had been updated, and it was.
+- I clicked on the 'edit' button on various cuisine cards to ensure that I was directed to the edit cuisine page. I then updated the cuisine name and image URL and clicked the submit 'edit' icon to check if the cuisine had been updated, and it was.
 
 **13. Deleting cuisine**
-- I logged in as different users to check that the 'Delete' button was only visible on the cuisine cards if i was logged in as the specified admin user.
+- I logged in as different users to check that the 'Delete' button was only visible on the cuisine cards if I was logged in as the specified admin user.
 
-- I clicked on the 'Delete' button on all the recipes cards to test that I was correctly presented with a modal for delete confirmation. I then clicked the 'Delete' button on the modal and checked if the cuisine card had been removed, it it had.
+- I clicked on the 'Delete' button on all the recipe cards to test that I was correctly presented with a modal for delete confirmation. I then clicked the 'Delete' button on the modal and checked if the cuisine card had been removed, it had.
 
 
 #### Validator checks
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project. Code was entered through direct input. JS hint was used to check for any errors with my Javascript files. 
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project. The code was entered through direct input. JS hint was used to check for any errors with my Javascript files. 
 JS was also tested by opening the developer console window on Chrome and checking for any errors as I clicked through the site.
-I used PEP8 online checking tool to inspect my Python code against the style conventions in PEP 8.
+I used the PEP8 online checking tool to inspect my Python code against the style conventions in PEP 8.
 
 - [**HTML Validator**](https://validator.w3.org/)
 
@@ -223,11 +223,11 @@ I used PEP8 online checking tool to inspect my Python code against the style con
 
   ![Homepage validation error](static/assets/images/readme/validator-w1.png)
     
-  Code not altered as I did not want this section to have a heading for visual reasons.
+  The code was not altered as I did not want this section to have a heading for visual reasons.
 
 - [**CSS Validator**](https://jigsaw.w3.org/css-validator/)
   
-  No error or warning messages received.
+  No error or warning messages were received.
 
 - [**JS hint**](https://jshint.com/)
 
@@ -261,7 +261,7 @@ I used PEP8 online checking tool to inspect my Python code against the style con
 
 #### Audits
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to run a series of audits to improve the quality of web pages. Overall performance and errors highlighted below.
+[Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to run a series of audits to improve the quality of web pages. Overall performance and errors are highlighted below.
 
 ![Lighthouse overall performance](assets/images/readme/lhSummary.png)
 
@@ -276,14 +276,14 @@ I used PEP8 online checking tool to inspect my Python code against the style con
 
 #### Additional Testing
 
-- The Website was tested on Google Chrome, Internet Explorer, Safari browsers, Firefox and Edge. Internet Explorer was the only browser experiencing errors, specific details have been added to bugs section.
+- The Website was tested on Google Chrome, Internet Explorer, Safari browsers, Firefox, and Edge. Internet Explorer was the only browser experiencing errors, specific details have been added to the bugs section.
 
 - The website was viewed on a variety of devices including HP Laptop, Macbook pro, Ipad and IPhones (Version 6,7,8,11, 12)
 
-- Friends and family members were asked to review the site to point out any bugs, user experience issues and/or suggestions.
+- Friends and family members were asked to review the site to point out any bugs, user experience issues, and/or suggestions.
 
   - Feedback action:
-    - Would like site to include dietary requirements- this is included in my future development plans.
+    - Would like the site to include dietary requirements- this is included in my future development plans.
 
 - Project posted on Slack, asking for feedback from fellow students.
 
@@ -291,7 +291,7 @@ I used PEP8 online checking tool to inspect my Python code against the style con
 
 |     | Bug                                                                           | Action                                                            |
 |-----|-------------------------------------------------------------------------------|-------------------------------------------------------------------|
-| [X] | Materialize select not working correctly on iphone                     | I found that this is a [known issue](https://github.com/Dogfalo/materialize/issues/6464) with materialize select not working correctly on new iOS. I found a temporary Solution on GitHub, and added the code to [select.js](https://github.com/Dogfalo/materialize/blob/c0da34049deec36efbd4681f73b3446e92918ca8/js/select.js) which has fixed the bug  |
-| [ ] | Materialize dropdown menu selecting is out of sync                     | I found that this is a [known issue](https://github.com/Dogfalo/materialize/issues/6464) with materialize dropdown not working correctly on new iOS, but there is not yet a solution available for this bug |
-| [ ] | Materialize select showing browser default arrow  on iphone                    | [css code]() Known issue with iOS, doesn't affect the functionality for the user but I will elimate once I find a solution |
+| [X] | Materialize select not working correctly on iPhone                     | I found that this is a [known issue](https://github.com/Dogfalo/materialize/issues/6464) with Materialize select not working correctly on new iOS. I found a temporary solution on GitHub, and added the code to [select.js](https://github.com/Dogfalo/materialize/blob/c0da34049deec36efbd4681f73b3446e92918ca8/js/select.js) which has fixed the bug  |
+| [ ] | Materialize dropdown menu is out of sync when selecting links                    | I found that this is a [known issue](https://github.com/Dogfalo/materialize/issues/6464) with materialize dropdown not working correctly on new iOS, but there is not yet a solution available for this bug |
+| [ ] | Materialize select showing browser default arrow on iPhone                    | [css code]() Known issue with iOS, doesn't affect the functionality for the user but I will eliminate once I find a solution |
   |
