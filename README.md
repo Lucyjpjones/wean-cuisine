@@ -15,35 +15,42 @@ This app was built using [GitHub](https://pages.github.com/) and deployed to [He
 
 ## <u>Table of contents</u>
 
-- [&rarr; **User Experience (UX)**](#-rarr----user-experience--ux---)
+**<details><summary> User Experience (UX)</summary>**
   - [Purpose](#purpose)
   - [Design](#design)
   - [User experience](#user-experience)
   - [Wireframes](#wireframes)
-- [&rarr; **Features**](#-rarr----features--)
+</details>
+
+**<details><summary> Features</summary>**
   - [Features used](#features-used)
   - [To do list](#to-do-list)
   - [Status](#status)
-- [&rarr; **Technologies**](#-rarr----technologies--)
+</details>
+
+**<details><summary> Technologies</summary>**
   - [Languages](#languages)
   - [Frameworks, Libraries & Programs](#frameworks--libraries---programs)
-- [&rarr; **Deployment**](#-rarr----deployment--)
+</details>
+
+**<details><summary> Deployment</summary>**
   - [Deploy to Heroku](#deploy-to-heroku)
   - [Accessing code](#accessing-code)
-- [&rarr; **Testing**](#-rarr----testing--)
-  - [Testing user stories](#testing-user-stories)
-  - [Manual function testing](#manual-function-testing)
-  - [Validator checks](#validator-checks)
-  - [Audits](#audits)
-  - [Responsive Design](#responsive-design)
-  - [Additional Testing](#additional-testing)
-  - [Bugs](#bugs)
-- [&rarr; **Credits**](#-rarr----credits--)
+</details>
+
+**<details><summary> Testing</summary>**
+  - [Testing Documentation](https://github.com/)
+</details>
+
+**<details><summary> Credits</summary>**
   - [Content](#content)
   - [Media](#media)
   - [Acknowledgements](#acknowledgements)
-- [&rarr; **Contact**](#-rarr----contact--)
+</details>
 
+**<details><summary> Contact</summary>**
+  - [Contact details](#contact-details) 
+</details>
 ---
 
 # &rarr; **User Experience (UX)**
@@ -735,6 +742,8 @@ I used PEP8 online checking tool to inspect my Python code against the style con
 - Friends & Family for continuous feedback and support.
 
 ## &rarr; **Contact**
+
+#### Contact details
 
 Created by @lucyjpjones
 
