@@ -277,6 +277,7 @@ I used the PEP8 online checking tool to inspect my Python code against the style
 
 ![Lighthouse overall performance](assets/images/readme/lhSummary.png)
 
+- To improve performance I added [lazy loading](https://web.dev/browser-level-image-lazy-loading/) to all my images to reduce page weight, allowing for a quicker page load time.
 
 #### Responsive Design
 
