@@ -22,6 +22,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/homepage")
 def homepage():
+    """Carousel sorted by cuisine name."""
     cuisines = mongo.db.cuisines.find().sort("cuisine_name", 1)
     return render_template("index.html", cuisines=cuisines)
 
@@ -29,6 +30,7 @@ def homepage():
 # Recipes page function
 @app.route("/get_recipes")
 def get_recipes():
+    """Direct to recipes page with recipe cards sorted by recipe name"""
     recipes = list(mongo.db.recipes.find().sort("recipe_name", 1))
     return render_template("recipes.html", recipes=recipes)
 
@@ -36,6 +38,10 @@ def get_recipes():
 # Search bar function
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    """
+    Perform text index search on the recipes
+    collection using the query variable
+    """
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template("recipes.html", recipes=recipes)
@@ -45,13 +51,12 @@ def search():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
+        """Check is username already exists in db"""
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-
         if existing_user:
             flash("Username already exists, please log in")
             return redirect(url_for("register"))
-
         else:
             register = {
                 "username": request.form.get("username").lower(),
@@ -60,6 +65,7 @@ def register():
             }
             mongo.db.users.insert_one(register)
 
+            """Put the new user into 'session' cookie"""
             session["user"] = request.form.get("username").lower()
             flash("Registration successful, welcome {}".format(
                 request.form.get("username")))
@@ -71,22 +77,26 @@ def register():
 # Login modal function
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    """Check if username exists in db"""
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-
         if existing_user:
+            """Ensure hashed password matches user input"""
             if check_password_hash(
                     existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("{} successfully logged in".format(
                     request.form.get("username")))
                 return redirect(url_for("homepage", username=session["user"]))
+
             else:
+                """Invalid password match"""
                 flash("Incorrect Username and/or password")
                 return redirect(url_for("login"))
 
         else:
+            """Username doesn't exist"""
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
 
@@ -96,6 +106,7 @@ def login():
 # Logout function
 @app.route("/logout")
 def logout():
+    """remove user from session cookie"""
     session.pop("user")
     flash("Successfully logged out")
     return redirect(url_for("login"))
@@ -104,6 +115,10 @@ def logout():
 # Add recipe function
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+    """
+    Check if post method, create dictionary for form
+    and insert user input into db
+    """
     if request.method == "POST":
         recipe = {
             "cuisine_name": request.form.get("cuisine_name"),
@@ -120,6 +135,7 @@ def add_recipe():
         mongo.db.recipes.insert_one(recipe)
         return redirect(url_for("get_recipes"))
 
+    """In form template sort values in alphabetical order"""
     cuisines = mongo.db.cuisines.find().sort("cuisine_name", 1)
     categories = mongo.db.categories.find().sort("food_category", 1)
     ages = mongo.db.ages.find().sort("_id", 1)
@@ -130,6 +146,10 @@ def add_recipe():
 # Edit recipe function
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
+    """
+    Check if post method, find recipe by id
+    and update db with new input
+    """
     if request.method == "POST":
         submit = {
             "cuisine_name": request.form.get("cuisine_name"),
@@ -159,6 +179,7 @@ def edit_recipe(recipe_id):
 # Delete recipe function
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
+    """Find recipe by id and remove from db"""
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     return redirect(url_for("get_recipes"))
 
@@ -166,6 +187,7 @@ def delete_recipe(recipe_id):
 # View recipe information function
 @app.route("/view_recipe/<recipe_id>", methods=["GET"])
 def view_recipe(recipe_id):
+    """Find recipe by id and direct to view recipe page"""
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("view_recipe.html", recipe=recipe)
 
@@ -173,6 +195,7 @@ def view_recipe(recipe_id):
 # Cuisines page function
 @app.route("/get_cuisines")
 def get_cuisines():
+    """Direct to cuisine page with cuisine cards sorted by cuisine name"""
     cuisines = mongo.db.cuisines.find().sort("cuisine_name", 1)
     return render_template("cuisines.html", cuisines=cuisines)
 
@@ -180,6 +203,10 @@ def get_cuisines():
 # Add cuisine function
 @app.route("/add_cuisine", methods=["GET", "POST"])
 def add_cuisine():
+    """
+    Check if post method, create dictionary for form
+    and insert user input into db
+    """
     if request.method == "POST":
         cuisine = {
             "cuisine_name": request.form.get("cuisine_name"),
@@ -194,6 +221,10 @@ def add_cuisine():
 # Edit cuisine function
 @app.route("/edit_cuisine/<cuisine_id>", methods=["GET", "POST"])
 def edit_cuisine(cuisine_id):
+    """
+    Check if post method, find recipe by id
+    and update db with new input
+    """
     if request.method == "POST":
         submit = {
             "cuisine_name": request.form.get("cuisine_name"),
@@ -209,6 +240,7 @@ def edit_cuisine(cuisine_id):
 # Delete cuisine function
 @app.route("/delete_cuisine/<cuisine_id>")
 def delete_cuisine(cuisine_id):
+    """Find cuisine by id and remove from db"""
     mongo.db.cuisines.remove({"_id": ObjectId(cuisine_id)})
     return redirect(url_for("get_cuisines"))
 
@@ -216,6 +248,7 @@ def delete_cuisine(cuisine_id):
 # Filter recipes by cuisine function
 @app.route("/filter_cuisine/<cuisine_name>", methods=["GET", "POST"])
 def filter_cuisine(cuisine_name):
+    """Direct to recipes page filted by the cuisine name selected by user """
     recipes = list(mongo.db.recipes.find(
         {"cuisine_name": cuisine_name}))
     return render_template("recipes.html", recipes=recipes)
@@ -228,6 +261,7 @@ def shop_books():
 
 
 # 404 page function
+# Code from 'https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/'
 @app.errorhandler(404)
 def page_not_found(e):
     # note that we set the 404 status explicitly
