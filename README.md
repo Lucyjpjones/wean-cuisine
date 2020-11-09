@@ -18,7 +18,7 @@ This app was built using [GitHub](https://pages.github.com/) and deployed to [He
 **<details><summary> User Experience (UX)</summary>**
   - [Purpose](#purpose)
   - [Design](#design)
-  - [User experience](#user-experience)
+  - [User stories](#user-experience)
   - [Wireframes](#wireframes)
 </details>
 
@@ -73,6 +73,8 @@ By completing this project I will have shown greater experience in HTML, CSS, an
 
 - A simple design structure with a fixed navbar and a dropdown side navigation menu accessible from every page. A brand logo is displayed in the top left of the screen to allow easy navigation back to the homepage.
 
+- As well as including a page title on my base.html, I have also added the meta description tag to help optimize my click through rate from search engine result pages.
+
 **Colour scheme**
 
 - The #fafafa shade of white has been used for the main background throughout the site with all the forms using a #fff shade of white creating a slight contrast.
@@ -105,7 +107,7 @@ By completing this project I will have shown greater experience in HTML, CSS, an
 
 <img src="static/assets/images/readme/logo-design.png">
 
-### **<u>User Experience</u>**
+### **<u>User Stories</u>**
 
 <img src="static/assets/images/readme/flowchart.png">
 
