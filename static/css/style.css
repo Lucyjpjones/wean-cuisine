@@ -925,6 +925,16 @@ div#method.col.s12 {
     margin-top: 12%;
     margin-bottom: 6%;
   }
+  #age-circle {
+    font-size: 13px !important;
+    padding: 12px;
+  }
+  #yellow-container-inner {
+    font-size: 13px;
+  }
+  #yellow-container-inner i {
+    font-size: 19px;
+  }
   .cards-title {
     font-size: 13px;
   }
