@@ -45,7 +45,7 @@ Testing my site member's <u>key priorities</u>:
 
 ![Tooltips](static/assets/images/readme/tooltip.png)
 
-- User responses included notifying the user if any errors or successful:
+- User responses including notifying the user of any errors or successful:
   - Errors are shown below password in modal
   - Success messages presented as a toast after the modal closes.
 
@@ -61,9 +61,12 @@ Testing my site member's <u>key priorities</u>:
     ![Explore recipes nav ](static/assets/images/readme/recipes-nav.png)
 
 - The recipe page contains recipe cards displaying recipe image, recipe name, cuisine, and who the recipe was created by.
-   - The user can click onto the recipe card to view more details including age range, serving, time, food course, ingredients, and method.
 
     ![Recipes page](static/assets/images/readme/recipe-page.png)
+
+- The user can click onto a recipe card to direct them to the view recipe page which provides more details including age range, serving, time, food course, ingredients, and method.
+
+    ![View recipes page](static/assets/images/readme/v-recipe-page.png)
 
 **4. Clear recipe categorisation and search bar to allow quick browsing**
 
