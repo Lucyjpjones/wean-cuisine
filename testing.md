@@ -249,6 +249,14 @@ I used the PEP8 online checking tool to inspect my Python code against the style
 
   $ (Jquery) defined in base.html.
 
+- **Developer tools**
+
+  Error message present in console. 
+
+    ![env.py py error message](static/assets/images/readme/console-error.png)
+
+    I found a discussion relating to this error on [stack overflow](https://stackoverflow.com/questions/30693021/chrome-developer-tools-shows-favicon-404-error-in-brackets-livepreview) and added the suggested reference to my base.html to solve this error.
+
 
 - [**PEP8 online check**](http://pep8online.com/checkresult)
   
@@ -261,6 +269,7 @@ I used the PEP8 online checking tool to inspect my Python code against the style
   ![env.py py error message](static/assets/images/readme/py-error.png)
 
    My .gitignore file ignores env.py so the error can be disregarded.
+
 
 #### Audits
 
