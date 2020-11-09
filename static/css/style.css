@@ -914,7 +914,7 @@ div#method.col.s12 {
   }
   .page-callout-img {
     margin-top: 110px;
-    max-height: 300px;
+    max-height: 200px;
     object-fit: cover;
   }
   .recipe-card-container,
@@ -1103,6 +1103,9 @@ div#method.col.s12 {
   .sidenav {
     margin-top: 70px;
   }
+  #view-recipe-img {
+  height: 250px;
+  }
   .modal-del-btns {
     font-size: 12px;
   }
@@ -1172,6 +1175,10 @@ div#method.col.s12 {
   .recipe-card-container,
   .cuisine-card-container {
     margin-top: 8% !important;
+  }
+
+  #view-recipe-img {
+  height: 300px;
   }
   #yellow-container {
     margin-top: 8%;
