@@ -914,7 +914,7 @@ div#method.col.s12 {
   }
   .page-callout-img {
     margin-top: 110px;
-    max-height: 200px;
+    height: 200px;
     object-fit: cover;
   }
   .recipe-card-container,
