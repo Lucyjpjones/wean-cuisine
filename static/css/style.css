@@ -884,9 +884,12 @@ div#method.col.s12 {
     font-size: 12px;
   }
   .title,
-  .title span,
   .page-callout-text h3 {
-    font-size: 120%;
+    font-size: 18px;
+  }
+
+  .title span {
+      font-size: 22px;
   }
   .title {
     margin-bottom: 40px;
@@ -904,10 +907,10 @@ div#method.col.s12 {
   }
   #shop-link a {
     top: 100%;
-    font-size: 110%;
+    font-size: 16px;
   }
   .carousel-item p {
-    font-size: 110%;
+    font-size: 16px;
   }
   .page-callout-img {
     margin-top: 110px;
@@ -1018,9 +1021,11 @@ div#method.col.s12 {
     font-size: 12px;
   }
   .title,
-  .title span,
   .page-callout-text h3 {
-    font-size: 140%;
+    font-size: 20px;
+  }
+  .title span {
+      font-size: 24px;
   }
   .title {
     margin-bottom: 50px;
@@ -1051,7 +1056,7 @@ div#method.col.s12 {
   }
   #shop-link a,
   .carousel-item p {
-    font-size: 120%;
+    font-size: 18px;
   }
   .recipe-card-container,
   .cuisine-card-container {
@@ -1133,16 +1138,20 @@ div#method.col.s12 {
     font-size: 12px;
   }
   .title,
-  .title span,
   .page-callout-text h3 {
-    font-size: 160%;
+    font-size: 24px;
   }
+
+  .title span {
+      font-size: 28px;
+  }
+  
   .title {
     margin-bottom: 70px;
   }
   #about .about-title {
     padding-top: 5%;
-    font-size: 110%;
+    font-size: 16px;
   }
   #about .info {
     font-size: 13px;
@@ -1158,7 +1167,7 @@ div#method.col.s12 {
     width: 70%;
   }
   #shop-link a {
-    font-size: 140%;
+    font-size: 18px;
     top: 70%;
   }
   .recipe-card-container,
