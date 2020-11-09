@@ -275,9 +275,21 @@ I used the PEP8 online checking tool to inspect my Python code against the style
 
 [Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to run a series of audits to improve the quality of web pages. Overall performance and errors are highlighted below.
 
-![Lighthouse overall performance](assets/images/readme/lhSummary.png)
+![Lighthouse overall performance](static/assets/images/readme/lh-results.png)
 
 - To improve performance I added [lazy loading](https://web.dev/browser-level-image-lazy-loading/) to all my images to reduce page weight, allowing for a quicker page load time.
+
+<u>Performance</u>
+
+The low performance review was based on the following metrics:
+
+- Properly size images;
+
+  As images are uploaded through the image URL form input I am not able to take any action on adjusting image sizes.
+
+- Serve images in next-gen formats;
+
+  I tried converting my images to JPEG 2000 as suggested, however, the images were not loading as they are not accessible on certain browsers. Therefore I have kept my image in a PNG and JPG format.
 
 #### Responsive Design
 
