@@ -438,13 +438,33 @@ When you clone a repository, the repository is copied on to your local machine.
 
 #### Content
 
-- **Recipes:** All recipes added by users lucyjpj (admin) and susan are taken from [Organix](https://www.organix.com/) and [Annabel Karmel](https://www.annabelkarmel.com/). All other recipes have been added from user testing.
+- [Materialize 1.0.0](https://materializecss.com/): Materialize Library used throughout the project, components used include the grid System, forms, buttons, modals, navbar, dropdown, sidenav, tabs, carousel, cards, toasts and tooltips.
+
+- [Stack overflow](https://stackoverflow.com/):
+  - Code included in select.js file to fix select bug taken from [here](https://github.com/Dogfalo/materialize/blob/c0da34049deec36efbd4681f73b3446e92918ca8/js/select.js).
+  - Code to fix console favicon error taken from [here](https://stackoverflow.com/questions/30693021/chrome-developer-tools-shows-favicon-404-error-in-brackets-livepreview).
+
+- [HTML Dog](https://htmldog.com/techniques/404/): Helped with creating custom error page '404'.
+
+- All recipes added by users lucyjpj (admin) and susan are taken from [Organix](https://www.organix.com/) and [Annabel Karmel](https://www.annabelkarmel.com/). All other recipes have been added from user testing.
 
 #### Media
 
+> **Please note:** The images on this site are only being used for non-profit educational purposes.
+
+- The callout image on the homepage is from ['About kids health'](https://www.aboutkidshealth.ca/article?contentid=635&language=english).
+
 - [Flaticon](https://www.flaticon.com/) and [VectorStock](https://www.vectorstock.com/): used as inspiration for the Wean Cuisine logo.
 
-- **Recipe images:** All recipe images added by users lucyjpj (admin) and susan are from [Organix](https://www.organix.com/) and [Annabel Karmel](https://www.annabelkarmel.com/) recipes. All other recipes have been added from user testing.
+- Icon circle images displayed on homepage are from [Flaticon](https://www.flaticon.com/) and edited using [Paint S](https://apps.apple.com/gb/app/paint-s/id736473980?mt=12).
+
+- The image used for the 'Shop recipe books' section on the homepage is from [The Reading List](https://readinglist.click/sub/cheesy-pea-quinoa-risotto-for-you-and-the-baby-from-joe-wickss-wean-in-15/).
+
+- The images used for the callout on the recipes, cuisines and books page are all from [Annabel Karmel](https://www.annabelkarmel.com/).
+
+- All recipe images added by users lucyjpj (admin) and susan are from [Organix](https://www.organix.com/) and [Annabel Karmel](https://www.annabelkarmel.com/) recipes. All other recipes have been added from user testing.
+
+- Recipe book images are taken from the [Amazon](https://www.amazon.com/).
 
 - The mockup image showing all devices on my README.md was created using [Am I Responsive](http://ami.responsivedesign.is/).
 
