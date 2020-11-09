@@ -7,7 +7,6 @@ body {
   color: #4d4c4c;
   font-size: 14px;
 }
-
 .form-row {
   margin-bottom: 5px;
 }
@@ -534,10 +533,11 @@ div.col.s12.card-btns {
 .modal-del-btns:focus {
   background-color: #f9dce4;
 }
-
+h5.del-modal {
+  color: #4e4e4e !important;
+}
 .modal-content h5 {
   color: #c89f98;
-  font-size: 24px;
 }
 
 .page-callout-text h3 {
@@ -889,7 +889,7 @@ div#method.col.s12 {
   }
 
   .title span {
-      font-size: 22px;
+    font-size: 22px;
   }
   .title {
     margin-bottom: 40px;
@@ -1025,7 +1025,7 @@ div#method.col.s12 {
     font-size: 20px;
   }
   .title span {
-      font-size: 24px;
+    font-size: 24px;
   }
   .title {
     margin-bottom: 50px;
@@ -1107,9 +1107,8 @@ div#method.col.s12 {
     font-size: 12px;
   }
   .modal-content h5 {
-    font-size: 18px;
+    font-size: 18px !important;
   }
-}
 
 /* Large devices (laptops/desktops, 992px and up) */
 
@@ -1143,9 +1142,9 @@ div#method.col.s12 {
   }
 
   .title span {
-      font-size: 28px;
+    font-size: 28px;
   }
-  
+
   .title {
     margin-bottom: 70px;
   }
