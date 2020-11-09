@@ -1,95 +1,82 @@
 {% extends "base.html" %} {% block content %}
 <!--Page callout header-->
 <section class="container page-callout">
-   <img
-      class="page-callout-img lazyload"
+	<img
+      class="page-callout-img" loading="lazy"
       src="{{ url_for('static', filename='assets/images/recipes-img.jpg') }}"
       alt="background"
       />
-   <div class="page-callout-text">
-      <!--Page title-->
-      <h3>Cuisines</h3>
-      <!--Add recipes btn-->
-      {% if session.user|lower == "lucyjpj"|lower %}
-      <a class="btn callout-add-btn" href="{{ url_for('add_cuisine') }}"
-         >Add cuisine <i class="material-icons">add_circle_outline</i>
-      </a>
-      {% endif %}
-      <!--Callout text-->
-      <div>
-         <p id="cuisine-p">
-            Travel the world from your own kitchen with a wide collection of tasty
-            cuisines.
-         </p>
-      </div>
-   </div>
+	<div class="page-callout-text">
+		<!--Page title-->
+		<h3>Cuisines</h3>
+		<!--Add recipes btn-->
+		{% if session.user|lower == "lucyjpj"|lower %}
+		<a class="btn callout-add-btn" href="{{ url_for('add_cuisine') }}">Add cuisine
+			<i class="material-icons">add_circle_outline</i>
+		</a>
+		{% endif %}
+		<!--Callout text-->
+		<div>
+			<p id="cuisine-p">
+				Travel the world from your own kitchen with a wide collection of tasty
+				cuisines.
+			</p>
+		</div>
+	</div>
 </section>
 <!--Cuisine card structure-->
 <div class="container card-container cuisine-card-container">
-   <div class="row">
-      {% for cuisine in cuisines %}
-      <div class="col s6 m4 l3">
-         <div class="card cuisine-card">
-            <!--Cuisine card image-->
-            <div class="card-image card-img lazyload">
-               <a href="{{ url_for('filter_cuisine', cuisine_name=cuisine.cuisine_name) }}">
-               <img src="{{ cuisine.img_url }}" alt="Cuisine image" class="lazyload"/>
+	<div class="row">
+		{% for cuisine in cuisines %}
+		<div class="col s6 m4 l3">
+			<div class="card cuisine-card">
+				<!--Cuisine card image-->
+				<div class="card-image card-img" loading="lazy">
+					<a href="{{ url_for('filter_cuisine', cuisine_name=cuisine.cuisine_name) }}">
+						<img src="{{ cuisine.img_url }}" alt="Cuisine image" loading="lazy"/>
                </a>
-            </div>
-            <!--Cuisine card cuisine name-->
-            <div class="row card-content card-info">
-               <div class="col s12">
-                  <p class="cards-title">
-                     <strong
+				</div>
+				<!--Cuisine card cuisine name-->
+				<div class="row card-content card-info">
+					<div class="col s12">
+						<p class="cards-title">
+							<strong
                         ><i class="fas fa-globe-europe"></i> {{ cuisine.cuisine_name
-                     }}</strong
-                        >
-                  </p>
-                  <p>Cuisine</p>
-               </div>
-               <!--Cuisine card edit & delete btns, only visible when logged in as lucyjpj-->
-               <div>
-                  <div class="col s12 card-btns">
-                     {% if session.user|lower == "lucyjpj"|lower %}
-                     <!--Edit btn-->
-                     <a
-                        href="{{ url_for('edit_cuisine', cuisine_id=cuisine._id) }}"
-                        class="btn right card-btn"
-                        >Edit</a
-                        >
-                  </div>
-                  <!--Delete btn and modal for delete confirmation-->
-                  <div class="col s12 card-btns">
-                     <!-- Delete btn and modal trigger -->
-                     <a
-                        data-target="{{ cuisine._id }}"
-                        class="btn right modal-trigger card-btn"
-                        >Delete</a
-                        >
-                     {% endif %}
-                     <!-- Modal structure -->
-                     <div id="{{ cuisine._id }}" class="modal">
-                        <div class="modal-content">
-                           <h5 class="del-modal">Are you sure you want to delete this cuisine?</h5>
-                        </div>
-                        <br />
-                        <div class="modal-footer">
-                           <a href="#!" class="modal-close btn modal-del-btns"
-                              >cancel</a
-                              >
-                           <a
-                              href="{{ url_for('delete_cuisine', cuisine_id=cuisine._id) }}"
-                              class="btn modal-del-btns"
-                              >Confirm</a
-                              >
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      {% endfor %}
-   </div>
+                     }}</strong>
+						</p>
+						<p>Cuisine</p>
+					</div>
+					<!--Cuisine card edit & delete btns, only visible when logged in as lucyjpj-->
+					<div>
+						<div class="col s12 card-btns">
+							{% if session.user|lower == "lucyjpj"|lower %}
+							<!--Edit btn-->
+							<a href="{{ url_for('edit_cuisine', cuisine_id=cuisine._id) }}"
+								class="btn right card-btn">Edit</a>
+						</div>
+						<!--Delete btn and modal for delete confirmation-->
+						<div class="col s12 card-btns">
+							<!-- Delete btn and modal trigger -->
+							<a data-target="{{ cuisine._id }}" class="btn right modal-trigger card-btn">Delete</a>
+							{% endif %}
+							<!-- Modal structure -->
+							<div id="{{ cuisine._id }}" class="modal">
+								<div class="modal-content">
+									<h5 class="del-modal">Are you sure you want to delete this cuisine?</h5>
+								</div>
+								<br />
+								<div class="modal-footer">
+									<a href="#!" class="modal-close btn modal-del-btns">cancel</a>
+									<a href="{{ url_for('delete_cuisine', cuisine_id=cuisine._id) }}"
+										class="btn modal-del-btns">Confirm</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
 </div>
 {% endblock %}

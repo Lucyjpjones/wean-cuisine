@@ -2,7 +2,7 @@
 <!--Page callout header-->
 <section class="container page-callout">
    <img
-      class="page-callout-img lazyload"
+      class="page-callout-img" loading="lazy"
       src="{{ url_for('static', filename='assets/images/recipes-img.jpg') }}"
       alt="background"
       />
@@ -57,7 +57,7 @@
             <!--Recipe card image-->
             <div class="card-image card-img">
                <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}">
-               <img src="{{ recipe.img_url }}" alt="Recipe image" class="lazyload" />
+               <img src="{{ recipe.img_url }}" alt="Recipe image" loading="lazy" />
                </a>
             </div>
             <!--Recipe card recipe name, created by and cuisine name-->
