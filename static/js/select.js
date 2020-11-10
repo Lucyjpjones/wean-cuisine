@@ -1,5 +1,5 @@
 $(document).click(function () {
-  $('li[id^="select-options"]').on("touchend", function (e) {
+  $('.dropdown-content').on("touchend", function (e) {
     e.stopPropagation();
   });
 
