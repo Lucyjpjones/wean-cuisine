@@ -1,185 +1,185 @@
 {% extends "base.html" %} {% block content %}
 <!--Page header-->
 <section class="container add-container">
-  <h3 class="add-header">Edit recipe</h3>
-  <!--Edit recipe form-->
-  <div class="row">
-    <form
-      class="col s12 recipe-form"
-      method="POST"
-      action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
-    >
-      <!--Cuisine select-->
-      <div class="row form-row">
-        <div class="input-field col s12">
-          <select
-            id="cuisine_name"
-            name="cuisine_name"
-            class="validate"
-            required
-          >
-            <option value="" disabled>Choose Cuisine</option>
-            {% for cuisine in cuisines %} 
-            {% if cuisine.cuisine_name == recipe.cuisine_name %}
-            <option value="{{ cuisine.cuisine_name }}" selected>
-              {{ cuisine.cuisine_name }}
-            </option>
-            {% else %}
-            <option value="{{ cuisine.cuisine_name }}">
-              {{ cuisine.cuisine_name }}
-            </option>
-            {% endif %} {% endfor %}
-          </select>
-          <label for="cuisine_name">Choose Cuisine</label>
-        </div>
-      </div>
-      <!--Recipe name input field-->
-      <div class="row form-row">
-        <div class="input-field col s12">
-          <input
-            id="recipe_name"
-            name="recipe_name"
-            type="text"
-            minlength="5"
-            maxlength="30"
-            value="{{ recipe.recipe_name }}"
-            class="validate"
-            required
-          />
-          <label for="recipe_name">Recipe Name</label>
-        </div>
-      </div>
-      <div class="row form-row">
-        <!--Serving input field-->
-        <div class="input-field col s3">
-          <input
-            id="recipe_serving"
-            name="recipe_serving"
-            type="text"
-            minlength="1"
-            maxlength="2"
-            value="{{ recipe.recipe_serving }}"
-            class="validate"
-            required
-          />
-          <label for="recipe_serving">Serving</label>
-        </div>
-        <!--Serving input field-->
-        <div class="input-field inline col s3">
-          <input
-            id="recipe_time"
-            name="recipe_time"
-            type="text"
-            minlength="1"
-            maxlength="3"
-            value="{{ recipe.recipe_time }}"
-            class="validate"
-            required
-          />
-          <label for="recipe_time">Time (mins)</label>
-        </div>
-        <!--Food category select-->
-        <div class="input-field col s6">
-          <select
-            id="food_category"
-            name="food_category"
-            class="validate"
-            required
-          >
-            <option value="" disabled>Category</option>
-            {% for category in categories %} {% if category.food_category ==
-            recipe.food_category %}
-            <option value="{{ category.food_category }}" selected>
-              {{ category.food_category }}
-            </option>
-            {% else %}
-            <option value="{{ category.food_category }}">
-              {{ category.food_category }}
-            </option>
-            {% endif %} {% endfor %}
-          </select>
-          <label for="food_category">Choose Category</label>
-        </div>
-      </div>
-      <!--Ages radio buttons-->
-      <p class="input-field">Ages</p>
-      <div class="row form-row">
-        {% for age in ages %}
-        <div class="col s4">
-          <p>
-            <label for="{{ age.age_range }}">
-              <input type="radio" id="{{ age.age_range }}" name="age_range"
-              class="with-gap validate" value="{{ age.age_range }}" 
-              {% if age.age_range == recipe.age_range %} checked {% endif %} />
-              <span>{{ age.age_range }} months</span>
-            </label>
-          </p>
-        </div>
-        {% endfor %}
-      </div>
-      <!--Image URL input field-->
-      <div class="row form-row">
-        <div class="input-field col s12">
-          <i id="photo-icon" class="material-icons prefix">add_a_photo</i>
-          <input
-            id="img_url"
-            name="img_url"
-            type="text"
-            minlength="5"
-            value="{{ recipe.img_url }}"
-            pattern="https://.*"
-            class="validate lazyload"
-            required
-          />
-          <label for="img_url"></label>
-          <span class="helper-text" data-error="wrong" data-success="right"
-            >To add an image, please enter a valid URL.</span
-          >
-        </div>
-      </div>
-      <!--Ingredients input field-->
-      <div class="row form-row">
-        <div class="input-field col s12">
-          <textarea
-            id="ingredients"
-            name="ingredients"
-            cols="1"
-            rows="15"
-            class="materialize-textarea validate"
-            required
-          >
+   <h3 class="add-header">Edit recipe</h3>
+   <!--Edit recipe form-->
+   <div class="row">
+      <form
+         class="col s12 recipe-form"
+         method="POST"
+         action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+         >
+         <!--Cuisine select-->
+         <div class="row form-row">
+            <div class="input-field col s12">
+               <select
+                  id="cuisine_name"
+                  name="cuisine_name"
+                  class="validate"
+                  required
+                  >
+                  <option value="" disabled>Choose Cuisine</option>
+                  {% for cuisine in cuisines %} 
+                  {% if cuisine.cuisine_name == recipe.cuisine_name %}
+                  <option value="{{ cuisine.cuisine_name }}" selected>
+                     {{ cuisine.cuisine_name }}
+                  </option>
+                  {% else %}
+                  <option value="{{ cuisine.cuisine_name }}">
+                     {{ cuisine.cuisine_name }}
+                  </option>
+                  {% endif %} {% endfor %}
+               </select>
+               <label for="cuisine_name">Choose Cuisine</label>
+            </div>
+         </div>
+         <!--Recipe name input field-->
+         <div class="row form-row">
+            <div class="input-field col s12">
+               <input
+                  id="recipe_name"
+                  name="recipe_name"
+                  type="text"
+                  minlength="5"
+                  maxlength="30"
+                  value="{{ recipe.recipe_name }}"
+                  class="validate"
+                  required
+                  />
+               <label for="recipe_name">Recipe Name</label>
+            </div>
+         </div>
+         <div class="row form-row">
+            <!--Serving input field-->
+            <div class="input-field col s3">
+               <input
+                  id="recipe_serving"
+                  name="recipe_serving"
+                  type="text"
+                  minlength="1"
+                  maxlength="2"
+                  value="{{ recipe.recipe_serving }}"
+                  class="validate"
+                  required
+                  />
+               <label for="recipe_serving">Serving</label>
+            </div>
+            <!--Serving input field-->
+            <div class="input-field inline col s3">
+               <input
+                  id="recipe_time"
+                  name="recipe_time"
+                  type="text"
+                  minlength="1"
+                  maxlength="3"
+                  value="{{ recipe.recipe_time }}"
+                  class="validate"
+                  required
+                  />
+               <label for="recipe_time">Time (mins)</label>
+            </div>
+            <!--Food category select-->
+            <div class="input-field col s6">
+               <select
+                  id="food_category"
+                  name="food_category"
+                  class="validate"
+                  required
+                  >
+                  <option value="" disabled>Category</option>
+                  {% for category in categories %} {% if category.food_category ==
+                  recipe.food_category %}
+                  <option value="{{ category.food_category }}" selected>
+                     {{ category.food_category }}
+                  </option>
+                  {% else %}
+                  <option value="{{ category.food_category }}">
+                     {{ category.food_category }}
+                  </option>
+                  {% endif %} {% endfor %}
+               </select>
+               <label for="food_category">Choose Category</label>
+            </div>
+         </div>
+         <!--Ages radio buttons-->
+         <p class="input-field">Ages</p>
+         <div class="row form-row">
+            {% for age in ages %}
+            <div class="col s4">
+               <p>
+                  <label for="{{ age.age_range }}">
+                  <input type="radio" id="{{ age.age_range }}" name="age_range"
+                  class="with-gap validate" value="{{ age.age_range }}" 
+                  {% if age.age_range == recipe.age_range %} checked {% endif %} />
+                  <span>{{ age.age_range }} months</span>
+                  </label>
+               </p>
+            </div>
+            {% endfor %}
+         </div>
+         <!--Image URL input field-->
+         <div class="row form-row">
+            <div class="input-field col s12">
+               <i id="photo-icon" class="material-icons prefix">add_a_photo</i>
+               <input
+                  id="img_url"
+                  name="img_url"
+                  type="text"
+                  minlength="5"
+                  value="{{ recipe.img_url }}"
+                  pattern="https://.*"
+                  class="validate lazyload"
+                  required
+                  />
+               <label for="img_url"></label>
+               <span class="helper-text" data-error="wrong" data-success="right"
+                  >To add an image, please enter a valid URL.</span
+                  >
+            </div>
+         </div>
+         <!--Ingredients input field-->
+         <div class="row form-row">
+            <div class="input-field col s12">
+               <textarea
+                  id="ingredients"
+                  name="ingredients"
+                  cols="1"
+                  rows="15"
+                  class="materialize-textarea validate"
+                  required
+                  >
                {{ recipe.ingredients }}</textarea
-          >
-          <label for="ingredients">Ingredients</label>
-          <span class="helper-text" data-error="wrong" data-success="right"
-            >Add each ingredient on an individual line.</span
-          >
-        </div>
-      </div>
-      <!--Method input field-->
-      <div class="form-row row">
-        <div class="input-field col s12">
-          <textarea
-            id="method"
-            name="method"
-            cols="1"
-            rows="15"
-            class="materialize-textarea validate"
-            required
-          >
+                  >
+               <label for="ingredients">Ingredients</label>
+               <span class="helper-text" data-error="wrong" data-success="right"
+                  >Add each ingredient on an individual line.</span
+                  >
+            </div>
+         </div>
+         <!--Method input field-->
+         <div class="form-row row">
+            <div class="input-field col s12">
+               <textarea
+                  id="method"
+                  name="method"
+                  cols="1"
+                  rows="15"
+                  class="materialize-textarea validate"
+                  required
+                  >
                {{ recipe.method }}</textarea
-          >
-          <label for="method">Method</label>
-          <span class="helper-text" data-error="wrong" data-success="right"
-            >Add each step on an individual line.</span
-          >
-        </div>
-      </div>
-      <!--Edit recipe btn-->
-      <button type="submit">
-        <i class="fas fa-edit"></i>
-      </button>
-    </form>
-  </div>
+                  >
+               <label for="method">Method</label>
+               <span class="helper-text" data-error="wrong" data-success="right"
+                  >Add each step on an individual line.</span
+                  >
+            </div>
+         </div>
+         <!--Edit recipe btn-->
+         <button type="submit">
+         <i class="fas fa-edit"></i>
+         </button>
+      </form>
+   </div>
 </section>
 {% endblock %}

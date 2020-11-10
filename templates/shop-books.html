@@ -1,352 +1,352 @@
 {% extends "base.html" %} {% block content %}
 <!--Page callout header-->
 <section class="container page-callout">
-  <img
-    class="page-callout-img" loading="lazy"
-    src="{{ url_for('static', filename='assets/images/shop-img.jpg') }}"
-    alt="background"
-  />
-  <div class="page-callout-text">
-    <!--Page Title-->
-    <h3>Shop Recipe Books</h3>
-    <!--Callout text-->
-    <div class="row form-row">
-      <p>Need more inspiration? Shop our recommended recipe books.</p>
-    </div>
-  </div>
+   <img
+      class="page-callout-img" loading="lazy"
+      src="{{ url_for('static', filename='assets/images/shop-img.jpg') }}"
+      alt="background"
+      />
+   <div class="page-callout-text">
+      <!--Page Title-->
+      <h3>Shop Recipe Books</h3>
+      <!--Callout text-->
+      <div class="row form-row">
+         <p>Need more inspiration? Shop our recommended recipe books.</p>
+      </div>
+   </div>
 </section>
 <!--Book card structure-->
 <div id="book-card-container" class="container">
-  <div class="row">
-    <div class="col s6 m4 l3">
-      <div class="card book-card">
-        <!--Book card image-->
-        <div class="card-image book-img">
-          <img
-            class="bk-img" loading="lazy"
-            src="{{ url_for('static', filename='assets/images/bk-weanin15.jpg') }}"
-            alt="book image"
-          />
-        </div>
-        <!--Book retailer dropdown-->
-        <div class="row card-content">
-          <div class="col s12">
-            <!-- Dropdown Trigger -->
-            <a
-              class="btn dropdown-trigger dropdown-btn"
-              href="#"
-              data-target="buy-dropdown1"
-              >Buy
-              <i class="fas fa-caret-down"></i>
-            </a>
-            <!--Dropdown with links to external sites-->
-            <ul id="buy-dropdown1" class="dropdown-content">
-              <li>
-                <a
-                  href="https://www.amazon.co.uk/Wean-15-Joe-Wicks/dp/1529016339"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="This is an external link (opens in a new tab)"
-                  >Amazon</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://blackwells.co.uk/bookshop/product/9781529016338?gC=5a105e8b&gclid=CjwKCAiA4o79BRBvEiwAjteoYCCXsTAJEKCPxLx-R3I9SQZECiGqb1mh4_eatRKRS1hDH8_YVpckCBoCgAMQAvD_BwE"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="This is an external link (opens in a new tab)"
-                  >Blackwells</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.whsmith.co.uk/products/wean-in-15-weaning-advice-and-100-quick-recipes/joe-wicks/hardback/9781529016338.html"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="This is an external link (opens in a new tab)"
-                  >WHSmith</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
+   <div class="row">
+      <div class="col s6 m4 l3">
+         <div class="card book-card">
+            <!--Book card image-->
+            <div class="card-image book-img">
+               <img
+                  class="bk-img" loading="lazy"
+                  src="{{ url_for('static', filename='assets/images/bk-weanin15.jpg') }}"
+                  alt="book image"
+                  />
+            </div>
+            <!--Book retailer dropdown-->
+            <div class="row card-content">
+               <div class="col s12">
+                  <!-- Dropdown Trigger -->
+                  <a
+                     class="btn dropdown-trigger dropdown-btn"
+                     href="#"
+                     data-target="buy-dropdown1"
+                     >Buy
+                  <i class="fas fa-caret-down"></i>
+                  </a>
+                  <!--Dropdown with links to external sites-->
+                  <ul id="buy-dropdown1" class="dropdown-content">
+                     <li>
+                        <a
+                           href="https://www.amazon.co.uk/Wean-15-Joe-Wicks/dp/1529016339"
+                           target="_blank"
+                           rel="noreferrer noopener"
+                           aria-label="This is an external link (opens in a new tab)"
+                           >Amazon</a
+                           >
+                     </li>
+                     <li>
+                        <a
+                           href="https://blackwells.co.uk/bookshop/product/9781529016338?gC=5a105e8b&gclid=CjwKCAiA4o79BRBvEiwAjteoYCCXsTAJEKCPxLx-R3I9SQZECiGqb1mh4_eatRKRS1hDH8_YVpckCBoCgAMQAvD_BwE"
+                           target="_blank"
+                           rel="noreferrer noopener"
+                           aria-label="This is an external link (opens in a new tab)"
+                           >Blackwells</a
+                           >
+                     </li>
+                     <li>
+                        <a
+                           href="https://www.whsmith.co.uk/products/wean-in-15-weaning-advice-and-100-quick-recipes/joe-wicks/hardback/9781529016338.html"
+                           target="_blank"
+                           rel="noreferrer noopener"
+                           aria-label="This is an external link (opens in a new tab)"
+                           >WHSmith</a
+                           >
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
       </div>
-    </div>
-    <div class="col s6 m4 l3">
-      <div class="card book-card">
-        <!--Book card image-->
-        <div class="card-image book-img">
-          <img
-            class="bk-img" loading="lazy"
-            src="{{ url_for('static', filename='assets/images/bk-ella.jpg') }}"
-            alt="book image"
-          />
-        </div>
-        <!--Book retailer dropdown-->
-        <div class="row card-content">
-          <div class="col s12">
-            <!-- Dropdown Trigger -->
-            <a
-              class="btn dropdown-trigger dropdown-btn"
-              href="#"
-              data-target="buy-dropdown2"
-              >Buy
-              <i class="fas fa-caret-down"></i>
-            </a>
-            <!--Dropdown with links to external sites-->
-            <ul id="buy-dropdown2" class="dropdown-content">
-              <li>
-                <a
-                  href="https://www.amazon.co.uk/Ellas-Kitchen-First-Foods-Purple/dp/0600629252/ref=sr_1_3?dchild=1&keywords=weaning+recipes&qid=1603638633&sr=8-3"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="This is an external link (opens in a new tab)"
-                  >Amazon</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://blackwells.co.uk/bookshop/product/9780600629252?gC=5a105e8b&gclid=CjwKCAiA4o79BRBvEiwAjteoYACk7oUow-xE3GJkBxTcJrAg4DtwA2F5wFth0ljUpPl-wCclHcjSdBoCU-0QAvD_BwE"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="This is an external link (opens in a new tab)"
-                  >Blackwells</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.whsmith.co.uk/products/ellas-kitchen-the-first-foods-book-the-purple-one-ellas-kitchen/hardback/9780600629252.html"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="This is an external link (opens in a new tab)"
-                  >WHSmith</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
+      <div class="col s6 m4 l3">
+         <div class="card book-card">
+            <!--Book card image-->
+            <div class="card-image book-img">
+               <img
+                  class="bk-img" loading="lazy"
+                  src="{{ url_for('static', filename='assets/images/bk-ella.jpg') }}"
+                  alt="book image"
+                  />
+            </div>
+            <!--Book retailer dropdown-->
+            <div class="row card-content">
+               <div class="col s12">
+                  <!-- Dropdown Trigger -->
+                  <a
+                     class="btn dropdown-trigger dropdown-btn"
+                     href="#"
+                     data-target="buy-dropdown2"
+                     >Buy
+                  <i class="fas fa-caret-down"></i>
+                  </a>
+                  <!--Dropdown with links to external sites-->
+                  <ul id="buy-dropdown2" class="dropdown-content">
+                     <li>
+                        <a
+                           href="https://www.amazon.co.uk/Ellas-Kitchen-First-Foods-Purple/dp/0600629252/ref=sr_1_3?dchild=1&keywords=weaning+recipes&qid=1603638633&sr=8-3"
+                           target="_blank"
+                           rel="noreferrer noopener"
+                           aria-label="This is an external link (opens in a new tab)"
+                           >Amazon</a
+                           >
+                     </li>
+                     <li>
+                        <a
+                           href="https://blackwells.co.uk/bookshop/product/9780600629252?gC=5a105e8b&gclid=CjwKCAiA4o79BRBvEiwAjteoYACk7oUow-xE3GJkBxTcJrAg4DtwA2F5wFth0ljUpPl-wCclHcjSdBoCU-0QAvD_BwE"
+                           target="_blank"
+                           rel="noreferrer noopener"
+                           aria-label="This is an external link (opens in a new tab)"
+                           >Blackwells</a
+                           >
+                     </li>
+                     <li>
+                        <a
+                           href="https://www.whsmith.co.uk/products/ellas-kitchen-the-first-foods-book-the-purple-one-ellas-kitchen/hardback/9780600629252.html"
+                           target="_blank"
+                           rel="noreferrer noopener"
+                           aria-label="This is an external link (opens in a new tab)"
+                           >WHSmith</a
+                           >
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
       </div>
-    </div>
-    <div class="col s6 m4 l3">
-      <div class="card book-card">
-        <!--Book card image-->
-        <div class="card-image book-img">
-          <img
-            class="bk-img" loading="lazy"
-            src="{{ url_for('static', filename='assets/images/bk-lilvegeats.jpg') }}"
-            alt="book image"
-          />
-        </div>
-        <!--Book retailer dropdown-->
-        <div class="row card-content">
-          <div class="col s12">
-            <!-- Dropdown Trigger -->
-            <a
-              class="btn dropdown-trigger dropdown-btn"
-              href="#"
-              data-target="buy-dropdown3"
-              >Buy
-              <i class="fas fa-caret-down"></i>
-            </a>
-            <!--Dropdown with links to external sites-->
-            <ul id="buy-dropdown3" class="dropdown-content">
-              <li>
-                <a
-                  href="https://www.amazon.co.uk/Little-Veggie-Eats-Weaning-Recipes/dp/178504298X/ref=sr_1_1_sspa?dchild=1&keywords=weaning+recipes&qid=1603638545&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzRzNaSzA2NVUzSENOJmVuY3J5cHRlZElkPUEwMTM4Njg2WkwwVThQTzJTQ0lQJmVuY3J5cHRlZEFkSWQ9QTA3NzMwMzExUFNQV0U2TVJUU0taJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ=="
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="This is an external link (opens in a new tab)"
-                  >Amazon</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://blackwells.co.uk/bookshop/product/9781785042980?gC=5a105e8b&gclid=CjwKCAiA4o79BRBvEiwAjteoYCq4aLPEpGMwwVTjE4qWHmCNw3nawcB0wYfITtAa_w7hTbBb6gZevBoCM8QQAvD_BwE"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="This is an external link (opens in a new tab)"
-                  >Blackwells</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.whsmith.co.uk/products/little-veggie-eats-easy-weaning-recipes-for-all-the-family-to-enjoy/rachel-boyett/hardback/9781785042980.html?gclid=Cj0KCQjwxNT8BRD9ARIsAJ8S5xZ4r456z2suF7aDq5m4l7Yain5FUrC00oCIvJAWBnBlnFT1jcBNEs0aArVREALw_wcB&gclsrc=aw.ds"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="This is an external link (opens in a new tab)"
-                  >WHSmith</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
+      <div class="col s6 m4 l3">
+         <div class="card book-card">
+            <!--Book card image-->
+            <div class="card-image book-img">
+               <img
+                  class="bk-img" loading="lazy"
+                  src="{{ url_for('static', filename='assets/images/bk-lilvegeats.jpg') }}"
+                  alt="book image"
+                  />
+            </div>
+            <!--Book retailer dropdown-->
+            <div class="row card-content">
+               <div class="col s12">
+                  <!-- Dropdown Trigger -->
+                  <a
+                     class="btn dropdown-trigger dropdown-btn"
+                     href="#"
+                     data-target="buy-dropdown3"
+                     >Buy
+                  <i class="fas fa-caret-down"></i>
+                  </a>
+                  <!--Dropdown with links to external sites-->
+                  <ul id="buy-dropdown3" class="dropdown-content">
+                     <li>
+                        <a
+                           href="https://www.amazon.co.uk/Little-Veggie-Eats-Weaning-Recipes/dp/178504298X/ref=sr_1_1_sspa?dchild=1&keywords=weaning+recipes&qid=1603638545&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzRzNaSzA2NVUzSENOJmVuY3J5cHRlZElkPUEwMTM4Njg2WkwwVThQTzJTQ0lQJmVuY3J5cHRlZEFkSWQ9QTA3NzMwMzExUFNQV0U2TVJUU0taJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ=="
+                           target="_blank"
+                           rel="noreferrer noopener"
+                           aria-label="This is an external link (opens in a new tab)"
+                           >Amazon</a
+                           >
+                     </li>
+                     <li>
+                        <a
+                           href="https://blackwells.co.uk/bookshop/product/9781785042980?gC=5a105e8b&gclid=CjwKCAiA4o79BRBvEiwAjteoYCq4aLPEpGMwwVTjE4qWHmCNw3nawcB0wYfITtAa_w7hTbBb6gZevBoCM8QQAvD_BwE"
+                           target="_blank"
+                           rel="noreferrer noopener"
+                           aria-label="This is an external link (opens in a new tab)"
+                           >Blackwells</a
+                           >
+                     </li>
+                     <li>
+                        <a
+                           href="https://www.whsmith.co.uk/products/little-veggie-eats-easy-weaning-recipes-for-all-the-family-to-enjoy/rachel-boyett/hardback/9781785042980.html?gclid=Cj0KCQjwxNT8BRD9ARIsAJ8S5xZ4r456z2suF7aDq5m4l7Yain5FUrC00oCIvJAWBnBlnFT1jcBNEs0aArVREALw_wcB&gclsrc=aw.ds"
+                           target="_blank"
+                           rel="noreferrer noopener"
+                           aria-label="This is an external link (opens in a new tab)"
+                           >WHSmith</a
+                           >
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
       </div>
-    </div>
-    <div class="col s6 m4 l3">
-      <div class="card book-card">
-        <!--Book card image-->
-        <div class="card-image book-img">
-          <img
-            class="bk-img" loading="lazy"
-            src="{{ url_for('static', filename='assets/images/bk-ak.jpg') }}"
-            alt="book image"
-          />
-        </div>
-        <!--Book retailer dropdown-->
-        <div class="row card-content">
-          <div class="col s12">
-            <!-- Dropdown Trigger -->
-            <a
-              class="btn dropdown-trigger dropdown-btn"
-              href="#"
-              data-target="buy-dropdown4"
-              >Buy
-              <i class="fas fa-caret-down"></i>
-            </a>
-            <!--Dropdown with links to external sites-->
-            <ul id="buy-dropdown4" class="dropdown-content">
-              <li>
-                <a
-                  href="https://www.amazon.co.uk/What-Mummy-Makes-Cook-just/dp/0241455154/ref=sr_1_1?adgrpid=91178393747&dchild=1&gclid=Cj0KCQjwxNT8BRD9ARIsAJ8S5xa3JsALw4-xZM9TzlgalXOpVeykOGV54p8lsEYvF1VkjLstmdgeVoIaAp1tEALw_wcB&hvadid=410103359225&hvdev=c&hvlocphy=9045908&hvnetw=g&hvqmt=e&hvrand=12123616421891794779&hvtargid=kwd-875856551692&hydadcr=13687_1824968&keywords=what+mummy+makes&qid=1603639489&sr=8-1&tag=googhydr-21"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="This is an external link (opens in a new tab)"
-                  >Amazon</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://blackwells.co.uk/bookshop/product/9780241455159?gC=5a105e8b&gclid=CjwKCAiA4o79BRBvEiwAjteoYB0SGOx0ZFtJ0prEoXAkJXDaFib_EvHvJ25OYgscNwIHCuw0EctFARoClzsQAvD_BwE"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="This is an external link (opens in a new tab)"
-                  >Blackwells</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.whsmith.co.uk/products/what-mummy-makes/rebecca-wilson/hardback/9780241455159.html?gclid=Cj0KCQjwxNT8BRD9ARIsAJ8S5xZ8SDTenJGIfe7R_iwRnmJulpjxHhoOeQTKb7QPvhJPPRBeIEjeYmMaAvLkEALw_wcB&gclsrc=aw.ds"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="This is an external link (opens in a new tab)"
-                  >WHSmith</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
+      <div class="col s6 m4 l3">
+         <div class="card book-card">
+            <!--Book card image-->
+            <div class="card-image book-img">
+               <img
+                  class="bk-img" loading="lazy"
+                  src="{{ url_for('static', filename='assets/images/bk-ak.jpg') }}"
+                  alt="book image"
+                  />
+            </div>
+            <!--Book retailer dropdown-->
+            <div class="row card-content">
+               <div class="col s12">
+                  <!-- Dropdown Trigger -->
+                  <a
+                     class="btn dropdown-trigger dropdown-btn"
+                     href="#"
+                     data-target="buy-dropdown4"
+                     >Buy
+                  <i class="fas fa-caret-down"></i>
+                  </a>
+                  <!--Dropdown with links to external sites-->
+                  <ul id="buy-dropdown4" class="dropdown-content">
+                     <li>
+                        <a
+                           href="https://www.amazon.co.uk/What-Mummy-Makes-Cook-just/dp/0241455154/ref=sr_1_1?adgrpid=91178393747&dchild=1&gclid=Cj0KCQjwxNT8BRD9ARIsAJ8S5xa3JsALw4-xZM9TzlgalXOpVeykOGV54p8lsEYvF1VkjLstmdgeVoIaAp1tEALw_wcB&hvadid=410103359225&hvdev=c&hvlocphy=9045908&hvnetw=g&hvqmt=e&hvrand=12123616421891794779&hvtargid=kwd-875856551692&hydadcr=13687_1824968&keywords=what+mummy+makes&qid=1603639489&sr=8-1&tag=googhydr-21"
+                           target="_blank"
+                           rel="noreferrer noopener"
+                           aria-label="This is an external link (opens in a new tab)"
+                           >Amazon</a
+                           >
+                     </li>
+                     <li>
+                        <a
+                           href="https://blackwells.co.uk/bookshop/product/9780241455159?gC=5a105e8b&gclid=CjwKCAiA4o79BRBvEiwAjteoYB0SGOx0ZFtJ0prEoXAkJXDaFib_EvHvJ25OYgscNwIHCuw0EctFARoClzsQAvD_BwE"
+                           target="_blank"
+                           rel="noreferrer noopener"
+                           aria-label="This is an external link (opens in a new tab)"
+                           >Blackwells</a
+                           >
+                     </li>
+                     <li>
+                        <a
+                           href="https://www.whsmith.co.uk/products/what-mummy-makes/rebecca-wilson/hardback/9780241455159.html?gclid=Cj0KCQjwxNT8BRD9ARIsAJ8S5xZ8SDTenJGIfe7R_iwRnmJulpjxHhoOeQTKb7QPvhJPPRBeIEjeYmMaAvLkEALw_wcB&gclsrc=aw.ds"
+                           target="_blank"
+                           rel="noreferrer noopener"
+                           aria-label="This is an external link (opens in a new tab)"
+                           >WHSmith</a
+                           >
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
       </div>
-    </div>
-    <div class="col s6 m4 l3">
-      <div class="card book-card">
-        <!--Book card image-->
-        <div class="card-image book-img">
-          <img
-            class="bk-img" loading="lazy"
-            src="{{ url_for('static', filename='assets/images/bk-holly.jpg') }}"
-            alt="book image"
-          />
-        </div>
-        <!--Book retailer dropdown-->
-        <div class="row card-content">
-          <div class="col s12">
-            <!-- Dropdown Trigger -->
-            <a
-              class="btn dropdown-trigger dropdown-btn"
-              href="#"
-              data-target="buy-dropdown5"
-              >Buy
-              <i class="fas fa-caret-down"></i>
-            </a>
-            <!--Dropdown with links to external sites-->
-            <ul id="buy-dropdown5" class="dropdown-content">
-              <li>
-                <a
-                  href="https://www.amazon.co.uk/Truly-Scrumptious-Baby-complete-feeding/dp/0008172560/ref=sr_1_20?dchild=1&keywords=weaning+recipes&qid=1603638633&sr=8-20"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="This is an external link (opens in a new tab)"
-                  >Amazon</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://blackwells.co.uk/bookshop/product/9780008172565?gC=5a105e8b&gclid=CjwKCAiA4o79BRBvEiwAjteoYDnTP2PTA51QISPTGshQqdDHlg2Vozp5qdQeTLvtec--L5anD-bTRhoCdTIQAvD_BwE"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="This is an external link (opens in a new tab)"
-                  >Blackwells</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.whsmith.co.uk/products/truly-scrumptious-baby-my-complete-feeding-and-weaning-plan-for-6-mont/holly-willoughby/hardback/9780008172565.html"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="This is an external link (opens in a new tab)"
-                  >WHSmith</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
+      <div class="col s6 m4 l3">
+         <div class="card book-card">
+            <!--Book card image-->
+            <div class="card-image book-img">
+               <img
+                  class="bk-img" loading="lazy"
+                  src="{{ url_for('static', filename='assets/images/bk-holly.jpg') }}"
+                  alt="book image"
+                  />
+            </div>
+            <!--Book retailer dropdown-->
+            <div class="row card-content">
+               <div class="col s12">
+                  <!-- Dropdown Trigger -->
+                  <a
+                     class="btn dropdown-trigger dropdown-btn"
+                     href="#"
+                     data-target="buy-dropdown5"
+                     >Buy
+                  <i class="fas fa-caret-down"></i>
+                  </a>
+                  <!--Dropdown with links to external sites-->
+                  <ul id="buy-dropdown5" class="dropdown-content">
+                     <li>
+                        <a
+                           href="https://www.amazon.co.uk/Truly-Scrumptious-Baby-complete-feeding/dp/0008172560/ref=sr_1_20?dchild=1&keywords=weaning+recipes&qid=1603638633&sr=8-20"
+                           target="_blank"
+                           rel="noreferrer noopener"
+                           aria-label="This is an external link (opens in a new tab)"
+                           >Amazon</a
+                           >
+                     </li>
+                     <li>
+                        <a
+                           href="https://blackwells.co.uk/bookshop/product/9780008172565?gC=5a105e8b&gclid=CjwKCAiA4o79BRBvEiwAjteoYDnTP2PTA51QISPTGshQqdDHlg2Vozp5qdQeTLvtec--L5anD-bTRhoCdTIQAvD_BwE"
+                           target="_blank"
+                           rel="noreferrer noopener"
+                           aria-label="This is an external link (opens in a new tab)"
+                           >Blackwells</a
+                           >
+                     </li>
+                     <li>
+                        <a
+                           href="https://www.whsmith.co.uk/products/truly-scrumptious-baby-my-complete-feeding-and-weaning-plan-for-6-mont/holly-willoughby/hardback/9780008172565.html"
+                           target="_blank"
+                           rel="noreferrer noopener"
+                           aria-label="This is an external link (opens in a new tab)"
+                           >WHSmith</a
+                           >
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
       </div>
-    </div>
-    <div class="col s6 m4 l3">
-      <div class="card book-card">
-        <!--Book card image-->
-        <div class="card-image book-img">
-          <img
-            class="bk-img" loading="lazy"
-            src="{{ url_for('static', filename='assets/images/bk-yg.jpg') }}"
-            alt="book image"
-          />
-        </div>
-        <!--Book retailer dropdown-->
-        <div class="row card-content">
-          <div class="col s12">
-            <!-- Dropdown Trigger -->
-            <a
-              class="btn dropdown-trigger dropdown-btn"
-              href="#"
-              data-target="buy-dropdown6"
-              >Buy <i class="fas fa-caret-down"></i>
-            </a>
-            <!--Dropdown with links to external sites-->
-            <ul id="buy-dropdown6" class="dropdown-content">
-              <li>
-                <a
-                  href="https://www.amazon.co.uk/Young-Gums-Attitude-Healthy-Weaning/dp/1785038109/ref=sr_1_17?dchild=1&keywords=weaning+recipes&qid=1603638633&sr=8-17"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="This is an external link (opens in a new tab)"
-                  >Amazon</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://blackwells.co.uk/bookshop/product/Young-Gums-by-Beth-Bentley-author/9781785038105"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="This is an external link (opens in a new tab)"
-                  >Blackwells</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.whsmith.co.uk/products/young-gums-baby-food-with-attitude-a-modern-mamas-guide-to-happy-healthy-weaning/beth-bentley/hardback/9781785038105.html?gclid=Cj0KCQjwxNT8BRD9ARIsAJ8S5xbbe4XlejHxGALvb-6OG0so2de7rNePLV-sSUIhHxkFYignv_xfILkaAsWiEALw_wcB&gclsrc=aw.ds"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="This is an external link (opens in a new tab)"
-                  >WHSmith</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
+      <div class="col s6 m4 l3">
+         <div class="card book-card">
+            <!--Book card image-->
+            <div class="card-image book-img">
+               <img
+                  class="bk-img" loading="lazy"
+                  src="{{ url_for('static', filename='assets/images/bk-yg.jpg') }}"
+                  alt="book image"
+                  />
+            </div>
+            <!--Book retailer dropdown-->
+            <div class="row card-content">
+               <div class="col s12">
+                  <!-- Dropdown Trigger -->
+                  <a
+                     class="btn dropdown-trigger dropdown-btn"
+                     href="#"
+                     data-target="buy-dropdown6"
+                     >Buy <i class="fas fa-caret-down"></i>
+                  </a>
+                  <!--Dropdown with links to external sites-->
+                  <ul id="buy-dropdown6" class="dropdown-content">
+                     <li>
+                        <a
+                           href="https://www.amazon.co.uk/Young-Gums-Attitude-Healthy-Weaning/dp/1785038109/ref=sr_1_17?dchild=1&keywords=weaning+recipes&qid=1603638633&sr=8-17"
+                           target="_blank"
+                           rel="noreferrer noopener"
+                           aria-label="This is an external link (opens in a new tab)"
+                           >Amazon</a
+                           >
+                     </li>
+                     <li>
+                        <a
+                           href="https://blackwells.co.uk/bookshop/product/Young-Gums-by-Beth-Bentley-author/9781785038105"
+                           target="_blank"
+                           rel="noreferrer noopener"
+                           aria-label="This is an external link (opens in a new tab)"
+                           >Blackwells</a
+                           >
+                     </li>
+                     <li>
+                        <a
+                           href="https://www.whsmith.co.uk/products/young-gums-baby-food-with-attitude-a-modern-mamas-guide-to-happy-healthy-weaning/beth-bentley/hardback/9781785038105.html?gclid=Cj0KCQjwxNT8BRD9ARIsAJ8S5xbbe4XlejHxGALvb-6OG0so2de7rNePLV-sSUIhHxkFYignv_xfILkaAsWiEALw_wcB&gclsrc=aw.ds"
+                           target="_blank"
+                           rel="noreferrer noopener"
+                           aria-label="This is an external link (opens in a new tab)"
+                           >WHSmith</a
+                           >
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
       </div>
-    </div>
-  </div>
+   </div>
 </div>
 {% endblock %}
