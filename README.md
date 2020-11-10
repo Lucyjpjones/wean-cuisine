@@ -282,6 +282,9 @@ I will continue to update my website as I grow my platform of users. I have futu
 
   - Used to create tables in my readme file.
 
+- [**Favicon**](https://favicon.io/)
+    - Used to create a favicon, displaying my logo on a web browser next to the web address bar, the browser tab, and the bookmarks bar.
+    
 ---
 
 ## &rarr; **Deployment**

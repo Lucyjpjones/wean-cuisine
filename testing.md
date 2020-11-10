@@ -226,11 +226,11 @@ I used the PEP8 online checking tool to inspect my Python code against the style
 
   ![Homepage validation error](static/assets/images/readme/validator-w1.png)
     
-  The code was not altered as I did not want this section to have a heading for visual reasons.
+  The code was not altered as this is only a warning and I did not want this section to have a heading for visual reasons.
 
 - [**CSS Validator**](https://jigsaw.w3.org/css-validator/)
-  
-  No error or warning messages were received.
+
+    No error or warning messages received.
 
 - [**JS hint**](https://jshint.com/)
 
@@ -251,11 +251,13 @@ I used the PEP8 online checking tool to inspect my Python code against the style
 
 - **Developer tools**
 
-  Error message present in console. 
+  Error message present in console: **Fixed**
 
     ![env.py py error message](static/assets/images/readme/console-error.png)
 
-    I found a discussion relating to this error on [stack overflow](https://stackoverflow.com/questions/30693021/chrome-developer-tools-shows-favicon-404-error-in-brackets-livepreview) and added the suggested reference to my base.html to solve this error.
+    I found this was a widely discussed error on [stack overflow](https://stackoverflow.com/questions/30693021/chrome-developer-tools-shows-favicon-404-error-in-brackets-livepreview), where the browser looks for a favicon.ico in the root level of a website and if not found generates an error. To avoid any errors being sent to my concole, I decided to create my own [Favicon](https://favicon.io/) using my site logo. This not only helped to eliminate my console error, but added a personal touch to my website.
+
+  ![Favicon](static/assets/images/readme/favicon-ss.png)  
 
 
 - [**PEP8 online check**](http://pep8online.com/checkresult)
