@@ -153,7 +153,7 @@
 													<!-- Flash messages -->
 													{% with messages = get_flashed_messages() %} {% if
                                        messages %} {% for message in messages %} {% if
-                                       (message == 'Incorrect Username and/or password' or
+                                       (message == 'Incorrect username and/or password' or
                                        message == 'Username already exists, please log in')
                                        %}
 													<p class="flash-message">
@@ -267,7 +267,7 @@
 	<script src="{{ url_for('static', filename='js/select.js') }}"></script>
 	<!-- Login modal to stay open when error flash message appears -->
 	<script>
-		{% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %} {% if (message == 'Incorrect Username and/or password' or message == 'Username already exists, please log in') %}
+		{% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %} {% if (message == 'Incorrect username and/or password' or message == 'Username already exists, please log in') %}
                    $(document).ready(function () {
                      $("#login-modal").modal("open");
                    });
@@ -277,7 +277,7 @@
 	<script>
 		{% with messages = get_flashed_messages() %} {% if
                                        messages %} {% for message in messages %} {% if not
-                                     (message == 'Incorrect Username and/or password' or message == 'Username already exists, please log in') %}
+                                     (message == 'Incorrect username and/or password' or message == 'Username already exists, please log in') %}
                    $(document).ready(function () {
                      M.toast({ html: "{{ message }}" });
                    });

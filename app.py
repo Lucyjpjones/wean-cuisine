@@ -98,12 +98,12 @@ def login():
 
             else:
                 """Invalid password match"""
-                flash("Incorrect Username and/or password")
+                flash("Incorrect username and/or password")
                 return redirect(url_for("login"))
 
         else:
             """Username doesn't exist"""
-            flash("Incorrect Username and/or Password")
+            flash("Incorrect username and/or password")
             return redirect(url_for("login"))
 
     return redirect(url_for("homepage"))
