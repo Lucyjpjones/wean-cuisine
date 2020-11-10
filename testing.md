@@ -249,7 +249,7 @@ I used the PEP8 online checking tool to inspect my Python code against the style
 
 - **Developer tools**
 
-  Error message present in the console: **Fixed**
+  One error message present in the console: **Fixed**
 
     ![env.py py error message](static/assets/images/readme/console-error.png)
 
