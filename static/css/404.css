@@ -1,48 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
 body {
-  background-color: #CEF3ED;
-  color: #C89F98;
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
+   background-color: #CEF3ED;
+   color: #C89F98;
+   font-family: "Montserrat", sans-serif;
+   text-align: center;
 }
 
 .mainbox {
-  margin-top: 150px;
+   margin-top: 150px;
 }
 
 .err {
-  font-size: 110px;
+   font-size: 110px;
 }
 
 .err i {
-  font-size: 110px;
-  padding: 10px;
+   font-size: 110px;
+   padding: 10px;
 }
 
 .msg {
-  font-family: "Kalam", sans-serif;
-  font-size: 26px;
+   font-family: "Kalam", sans-serif;
+   font-size: 26px;
 }
 
 .home {
-  margin-top: 70px;
+   margin-top: 70px;
 }
 
 a {
-  text-transform: uppercase;
-  font-size: 24px;
-  letter-spacing: 1px;
-  color: #C89F98;
-  border: 3px solid #C89F98;
-  border-radius: 5px;
-  margin: 5px;
-  padding: 5px 10px;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #C89F98;
-  background-color: #FFF7AE;
-  text-decoration: none;
+   text-transform: uppercase;
+   font-size: 24px;
+   letter-spacing: 1px;
+   color: #C89F98;
+   border: 3px solid #C89F98;
+   border-radius: 5px;
+   margin: 5px;
+   padding: 5px 10px;
+   text-decoration: none;
 }

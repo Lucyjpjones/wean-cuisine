@@ -1,14 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* -------------------- General*/
+
 body {
   background-color: #fafafa;
   font-family: "Montserrat", sans-serif;
   color: #4d4c4c;
   font-size: 14px;
 }
+
 .form-row {
   margin-bottom: 5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+/* ---------- Buttons*/
+
+a.btn:hover,
+a.btn:focus,
+.carousel-item p:hover,
+.recipe-form button i:hover,
+.modal-del-btns:hover,
+.modal-del-btns:focus {
+  filter: brightness(110%);
 }
 
 /* ---------- Footer*/
@@ -34,27 +55,6 @@ footer {
 footer h6 {
   font-size: 10px;
   padding: 5px;
-}
-
-/* ---------- Typography*/
-
-h1,
-h2,
-h3,
-h4,
-p {
-  margin: 0;
-}
-
-/* ---------- Buttons*/
-
-a.btn:hover,
-a.btn:focus,
-.carousel-item p:hover,
-.recipe-form button i:hover,
-.modal-del-btns:hover,
-.modal-del-btns:focus {
-  filter: brightness(110%);
 }
 
 /* -------------------- Navbar*/
@@ -533,9 +533,11 @@ div.col.s12.card-btns {
 .modal-del-btns:focus {
   background-color: #f9dce4;
 }
+
 h5.del-modal {
   color: #4e4e4e !important;
 }
+
 .modal-content h5 {
   color: #c89f98;
 }
@@ -795,7 +797,6 @@ div#method.col.s12 {
 
 #ingredients p,
 #method p {
-  text-transform: capitalize;
   padding: 10px 5px 5px 5px;
 }
 
@@ -887,7 +888,6 @@ div#method.col.s12 {
   .page-callout-text h3 {
     font-size: 18px;
   }
-
   .title span {
     font-size: 22px;
   }
@@ -1104,7 +1104,7 @@ div#method.col.s12 {
     margin-top: 70px;
   }
   #view-recipe-img {
-  height: 250px;
+    height: 250px;
   }
   .modal-del-btns {
     font-size: 12px;
@@ -1112,174 +1112,168 @@ div#method.col.s12 {
   .modal-content h5 {
     font-size: 18px !important;
   }
-
-/* Large devices (laptops/desktops, 992px and up) */
-
-@media only screen and (min-width: 992px) {
-  .card-container {
-    width: 85% !important;
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    .card-container {
+      width: 85% !important;
+    }
+    nav .brand-logo {
+      max-width: 170px;
+    }
+    .page-callout-img {
+      margin-top: 120px;
+    }
+    #overlay-text {
+      top: 70%;
+      padding: 18px 70px 18px 18px;
+    }
+    #overlay-text h1 {
+      font-size: 36px;
+    }
+    #overlay-text h3 {
+      font-size: 24px;
+    }
+    #callout-btns a,
+    .page-callout-text .callout-add-btn {
+      font-size: 12px;
+    }
+    .title,
+    .page-callout-text h3 {
+      font-size: 24px;
+    }
+    .title span {
+      font-size: 28px;
+    }
+    .title {
+      margin-bottom: 70px;
+    }
+    #about .about-title {
+      padding-top: 5%;
+      font-size: 16px;
+    }
+    #about .info {
+      font-size: 13px;
+    }
+    .img-circle {
+      width: 160px;
+    }
+    .carousel .carousel-item {
+      width: 250px;
+      height: 250px;
+    }
+    #shop-books {
+      width: 70%;
+    }
+    #shop-link a {
+      font-size: 18px;
+      top: 70%;
+    }
+    .recipe-card-container,
+    .cuisine-card-container {
+      margin-top: 8% !important;
+    }
+    #view-recipe-img {
+      height: 300px;
+    }
+    #yellow-container {
+      margin-top: 8%;
+    }
+    .card-img {
+      height: 120px;
+    }
+    .card-img img {
+      height: 120px;
+    }
+    .recipe-card {
+      height: 250px;
+    }
+    .card-btn {
+      font-size: 11px;
+    }
+    button#search-btn i,
+    a#clear-btn i {
+      font-size: 28px;
+    }
+    #input-outer .input-field label {
+      font-size: 14px;
+    }
+    .add-header {
+      font-size: 26px;
+    }
+    nav,
+    nav a.sidenav-trigger,
+    nav a.sidenav-trigger i {
+      height: 90px;
+      line-height: 90px;
+    }
+    #login-btn,
+    #logout-btn {
+      font-size: 15px;
+      padding: 20px;
+      line-height: 2px;
+    }
+    #menu-icon {
+      font-size: 45px;
+    }
+    #callout-img,
+    .sidenav {
+      margin-top: 90px;
+    }
+    .sidenav li > a {
+      font-size: 16px;
+    }
   }
-  nav .brand-logo {
-    max-width: 170px;
-  }
-  .page-callout-img {
-    margin-top: 120px;
-  }
-  #overlay-text {
-    top: 70%;
-    padding: 18px 70px 18px 18px;
-  }
-  #overlay-text h1 {
-    font-size: 36px;
-  }
-  #overlay-text h3 {
-    font-size: 24px;
-  }
-  #callout-btns a,
-  .page-callout-text .callout-add-btn {
-    font-size: 12px;
-  }
-  .title,
-  .page-callout-text h3 {
-    font-size: 24px;
-  }
-
-  .title span {
-    font-size: 28px;
-  }
-
-  .title {
-    margin-bottom: 70px;
-  }
-  #about .about-title {
-    padding-top: 5%;
-    font-size: 16px;
-  }
-  #about .info {
-    font-size: 13px;
-  }
-  .img-circle {
-    width: 160px;
-  }
-  .carousel .carousel-item {
-    width: 250px;
-    height: 250px;
-  }
-  #shop-books {
-    width: 70%;
-  }
-  #shop-link a {
-    font-size: 18px;
-    top: 70%;
-  }
-  .recipe-card-container,
-  .cuisine-card-container {
-    margin-top: 8% !important;
-  }
-
-  #view-recipe-img {
-  height: 300px;
-  }
-  #yellow-container {
-    margin-top: 8%;
-  }
-  .card-img {
-    height: 120px;
-  }
-  .card-img img {
-    height: 120px;
-  }
-  .recipe-card {
-    height: 250px;
-  }
-  .card-btn {
-    font-size: 11px;
-  }
-  button#search-btn i,
-  a#clear-btn i {
-    font-size: 28px;
-  }
-  #input-outer .input-field label {
-    font-size: 14px;
-  }
-  .add-header {
-    font-size: 26px;
-  }
-  nav,
-  nav a.sidenav-trigger,
-  nav a.sidenav-trigger i {
-    height: 90px;
-    line-height: 90px;
-  }
-  #login-btn,
-  #logout-btn {
-    font-size: 15px;
-    padding: 20px;
-    line-height: 2px;
-  }
-  #menu-icon {
-    font-size: 45px;
-  }
-  #callout-img,
-  .sidenav {
-    margin-top: 90px;
-  }
-  .sidenav li > a {
-    font-size: 16px;
-  }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-
-@media only screen and (min-width: 1200px) {
-  nav .brand-logo {
-    max-width: 180px;
-  }
-  #overlay-text {
-    top: 72%;
-    padding: 20px 80px 20px 20px;
-  }
-  #overlay-text h1 {
-    font-size: 38px;
-  }
-  #overlay-text h3 {
-    font-size: 26px;
-  }
-  #callout-btns a {
-    font-size: 13px;
-  }
-  #callout-img {
-    max-height: 550px;
-    object-fit: cover;
-  }
-  .carousel .carousel-item {
-    width: 280px;
-    height: 280px;
-  }
-  .recipe-card-container,
-  .cuisine-card-container {
-    margin-top: 6% !important;
-  }
-  #book-card-container {
-    margin-top: 4% !important;
-  }
-  #yellow-container {
-    margin-top: 6%;
-    margin-bottom: 3%;
-  }
-  .card-img {
-    height: 170px;
-  }
-  .card-img img {
-    height: 170px;
-  }
-  .recipe-card {
-    height: 300px;
-  }
-  .cuisine-card {
-    height: 290px;
-  }
-  .add-header {
-    font-size: 28px;
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    nav .brand-logo {
+      max-width: 180px;
+    }
+    #overlay-text {
+      top: 72%;
+      padding: 20px 80px 20px 20px;
+    }
+    #overlay-text h1 {
+      font-size: 38px;
+    }
+    #overlay-text h3 {
+      font-size: 26px;
+    }
+    #callout-btns a {
+      font-size: 13px;
+    }
+    #callout-img {
+      max-height: 550px;
+      object-fit: cover;
+    }
+    .carousel .carousel-item {
+      width: 280px;
+      height: 280px;
+    }
+    .recipe-card-container,
+    .cuisine-card-container {
+      margin-top: 6% !important;
+    }
+    #book-card-container {
+      margin-top: 4% !important;
+    }
+    #yellow-container {
+      margin-top: 6%;
+      margin-bottom: 3%;
+    }
+    .card-img {
+      height: 170px;
+    }
+    .card-img img {
+      height: 170px;
+    }
+    .recipe-card {
+      height: 300px;
+    }
+    .cuisine-card {
+      height: 290px;
+    }
+    .add-header {
+      font-size: 28px;
+    }
   }
 }
