@@ -3,7 +3,7 @@
   <img src="static/assets/images/readme/title.png">
 <hr>
 
-**A recipe site that allows users to connect, explore and share their weaning recipes.**
+**A recipe site that allows users to connect, explore, and share their weaning recipes.**
 
 This app was built using [GitHub](https://pages.github.com/) and deployed to [Heroku](https://www.heroku.com/).
 
@@ -73,7 +73,7 @@ By completing this project I will have shown greater experience in HTML, CSS, an
 
 - A simple design structure with a fixed navbar and a dropdown side navigation menu accessible from every page. A brand logo is displayed in the top left of the screen to allow easy navigation back to the homepage.
 
-- As well as including a page title on my base.html, I have also added the meta description tag to help optimize my click through rate from search engine result pages.
+- As well as including a page title on my base.html, I have also added the meta description tag to help optimize my click-through rate from search engine result pages.
 
 **Colour scheme**
 
@@ -438,7 +438,7 @@ When you clone a repository, the repository is copied on to your local machine.
 
 #### Content
 
-- [Materialize 1.0.0](https://materializecss.com/): Materialize Library used throughout the project, components used include the grid System, forms, buttons, modals, navbar, dropdown, sidenav, tabs, carousel, cards, toasts and tooltips.
+- [Materialize 1.0.0](https://materializecss.com/): Materialize Library used throughout the project, components used include the grid System, forms, buttons, modals, navbar, dropdown, side nav, tabs, carousel, cards, toasts, and tooltips.
 
 - [Stack overflow](https://stackoverflow.com/):
   - Code included in select.js file to fix select bug taken from [here](https://github.com/Dogfalo/materialize/blob/c0da34049deec36efbd4681f73b3446e92918ca8/js/select.js).
@@ -456,11 +456,11 @@ When you clone a repository, the repository is copied on to your local machine.
 
 - [Flaticon](https://www.flaticon.com/) and [VectorStock](https://www.vectorstock.com/): used as inspiration for the Wean Cuisine logo.
 
-- Icon circle images displayed on homepage are from [Flaticon](https://www.flaticon.com/) and edited using [Paint S](https://apps.apple.com/gb/app/paint-s/id736473980?mt=12).
+- Icon circle images found on the homepage are from [Flaticon](https://www.flaticon.com/) and edited using [Paint S](https://apps.apple.com/gb/app/paint-s/id736473980?mt=12).
 
 - The image used for the 'Shop recipe books' section on the homepage is from [The Reading List](https://readinglist.click/sub/cheesy-pea-quinoa-risotto-for-you-and-the-baby-from-joe-wickss-wean-in-15/).
 
-- The images used for the callout on the recipes, cuisines and books page are all from [Annabel Karmel](https://www.annabelkarmel.com/).
+- The images used for the callout on the recipes, cuisines, and books page are all from [Annabel Karmel](https://www.annabelkarmel.com/).
 
 - All recipe images added by users lucyjpj (admin) and susan are from [Organix](https://www.organix.com/) and [Annabel Karmel](https://www.annabelkarmel.com/) recipes. All other recipes have been added from user testing.
 

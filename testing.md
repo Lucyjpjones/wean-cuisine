@@ -45,7 +45,7 @@ Testing my site member's <u>key priorities</u>:
 
 ![Tooltips](static/assets/images/readme/tooltip.png)
 
-- User responses including notifying the user of any errors or successful:
+- User responses include notifying the user of any errors or success:
   - Errors are shown below password in modal
   - Success messages presented as a toast after the modal closes.
 
@@ -149,7 +149,7 @@ To ensure my site was working correctly I carried out some manual function testi
    - I filled out the login form with a new username and password then clicked 'Login'. The modal stayed open and responded with a red flash message 'Incorrect Username and/or password'.
 
 - To check the Register functionality was working I first clicked on the 'login' button to ensure the modal appeared, which it did. Then I located the register tab and conducted some checks;
-  - I filled out the register form with a new username and password then clicked 'Register'. The modal closed, the log in button changed to log out and I received a message 'lucyjpj successfully logged in'.
+  - I filled out the registration form with a new username and password then clicked 'Register'. The modal closed, the login button changed to log out and I received a message 'lucyjpj successfully logged in'.
 
    - I filled out the login form with an already registered username and password then clicked 'Register'. The modal stayed open and responded with a red flash message 'Username already exists, please log in'.
   
@@ -281,7 +281,7 @@ I used the PEP8 online checking tool to inspect my Python code against the style
 
 <u>Performance</u>
 
-The low performance review was based on the following metrics:
+The low-performance review was mainly driven by the following metrics:
 
 - Properly size images;
 
@@ -289,7 +289,7 @@ The low performance review was based on the following metrics:
 
 - Serve images in next-gen formats;
 
-  I tried converting my images to JPEG 2000 as suggested, however, the images were not loading as they are not accessible on certain browsers. Therefore I have kept my image in a PNG and JPG format.
+  I tried converting my images to JPEG 2000 as suggested, however, the images were not loading due to their limitations of only working on certain browsers. Therefore I have kept my image in a PNG and JPG format.
 
 #### Responsive Design
 
@@ -301,7 +301,7 @@ The low performance review was based on the following metrics:
 
 #### Additional Testing
 
-- The Website was tested on Google Chrome, Internet Explorer, Safari browsers, Firefox, and Edge. Internet Explorer was the only browser experiencing errors, specific details have been added to the bugs section.
+- The Website was tested on Google Chrome, Safari browsers, Firefox, and Edge.
 
 - The website was viewed on a variety of devices including HP Laptop, Macbook pro, Ipad and IPhones (Version 6,7,8,11, 12)
 
