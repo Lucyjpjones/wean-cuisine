@@ -17,7 +17,7 @@
 Testing my site member's <u>key priorities</u>:
 
 **1. A Simple, user-friendly site that is easy to navigate**
- - Site includes a main navbar featuring a dropdown side nav, with the same and different page navigation.
+ - Site includes a main navbar featuring a dropdown side nav, with same and different page navigation.
  
 - Navigation menu is fixed so is always visible to the user.
 - Brand logo directs the user back to the homepage from anywhere on the site.
@@ -116,7 +116,7 @@ Testing my site owner's <u>key priorities</u>:
 
 **1. When logged in as admin user, have the option to add, update and delete cuisine cards**
 
-- Follows the same instructions as site member testing number 5 noted above.
+- See notes for site member testing point 5 above.
 
 **2. When logged in as admin user, have the option to add, update and delete cuisine cards**
 
@@ -178,6 +178,8 @@ To ensure my site was working correctly I carried out some manual function testi
 - I clicked on each recipe card to make sure it displayed the correct information to me when navigated to the view recipes HTML template, and it did.
 
 **7. Adding recipe**
+- I logged in as a variety of different users to check that the add recipe button was only visible on the homepage and recipes page if a user was logged in.
+
 - I clicked on the 'Add recipe' button on the homepage callout section and the link within the dropdown menu, and both correctly navigated to the add recipe page. This was checked from all pages of the site.
 
 **8. Editing recipe**
@@ -222,15 +224,11 @@ I used the PEP8 online checking tool to inspect my Python code against the style
 
 - [**HTML Validator**](https://validator.w3.org/)
 
-  One warning message received;
-
-  ![Homepage validation error](static/assets/images/readme/validator-w1.png)
-    
-  The code was not altered as this is only a warning and I did not want this section to have a heading for visual reasons.
+  No error or warning messages were received.
 
 - [**CSS Validator**](https://jigsaw.w3.org/css-validator/)
 
-    No error or warning messages received.
+    No error or warning messages were received.
 
 - [**JS hint**](https://jshint.com/)
 
@@ -251,11 +249,11 @@ I used the PEP8 online checking tool to inspect my Python code against the style
 
 - **Developer tools**
 
-  Error message present in console: **Fixed**
+  Error message present in the console: **Fixed**
 
     ![env.py py error message](static/assets/images/readme/console-error.png)
 
-    I found this was a widely discussed error on [stack overflow](https://stackoverflow.com/questions/30693021/chrome-developer-tools-shows-favicon-404-error-in-brackets-livepreview), where the browser looks for a favicon.ico in the root level of a website and if not found generates an error. To avoid any errors being sent to my concole, I decided to create my own [Favicon](https://favicon.io/) using my site logo. This not only helped to eliminate my console error, but added a personal touch to my website.
+    I found this was a widely discussed error on [stack overflow](https://stackoverflow.com/questions/30693021/chrome-developer-tools-shows-favicon-404-error-in-brackets-livepreview), where the browser looks for a favicon.ico in the root level of a website and if not found generates an error. To avoid any errors being sent to my console, I decided to create my own [Favicon](https://favicon.io/) using my site logo. This not only helped to eliminate my console error but added a personal touch to my website.
 
   ![Favicon](static/assets/images/readme/favicon-ss.png)  
 

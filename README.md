@@ -18,7 +18,7 @@ This app was built using [GitHub](https://pages.github.com/) and deployed to [He
 **<details><summary> User Experience (UX)</summary>**
   - [Purpose](#purpose)
   - [Design](#design)
-  - [User stories](#user-experience)
+  - [User stories](#user-stories)
   - [Wireframes](#wireframes)
 </details>
 
@@ -30,7 +30,7 @@ This app was built using [GitHub](https://pages.github.com/) and deployed to [He
 
 **<details><summary> Technologies</summary>**
   - [Languages](#languages)
-  - [Frameworks, Libraries & Programs](#frameworks--libraries---programs)
+  - [Frameworks, Libraries & Programs](#frameworks-libraries-programs)
 </details>
 
 **<details><summary> Deployment</summary>**
@@ -97,7 +97,7 @@ By completing this project I will have shown greater experience in HTML, CSS, an
 
 - I spent some time researching other recipe sites to gain inspiration and created a mood board with a collection of elements that caught my eye.
 
-<img src="static/assets/images/readme/design-inspo.jpeg">
+  <img src="static/assets/images/readme/design-inspo.jpeg">
 
 **Logo Design**
 
@@ -105,7 +105,7 @@ By completing this project I will have shown greater experience in HTML, CSS, an
 
 - Following website conventions, my website logo is a link to the homepage. Over time through trial and error, many people have learned that clicking on a site’s logo leads them back to the homepage so adopting this standard reduces confusion by matching the UI to users’ expectations. The logo is also left-aligned which is the most familiar placement, and is where users look to find it.
 
-<img src="static/assets/images/readme/logo-design.png">
+  <img src="static/assets/images/readme/logo-design.png">
 
 ### **<u>User Stories</u>**
 
@@ -150,9 +150,10 @@ As part of the design process, before starting my project I sketched out initial
 - [Homepage](static/assets/files/wf-homepage.pdf)
 - [Recipes page](static/assets/files/wf-recipes.pdf)
 - [Add/Edit recipe page](static/assets/files/wf-addEditRecipe.pdf)
-- [Recipe information page](static/assets/files/wf-recipeInfo.pdf)
+- [View recipe page](static/assets/files/wf-recipeInfo.pdf)
 - [Shop recipe books page](static/assets/files/wf-shopRecipeBooks.pdf)
 
+> **Note:** Pages focused around Cuisine to follow the same structure as recipe page wireframes.
 ---
 
 ## &rarr; **Features**
@@ -164,29 +165,33 @@ As part of the design process, before starting my project I sketched out initial
 
 - **A user-friendly interface with easy navigation throughout the site**
   - Attractive, minimalistic design with visuals and information presented clearly and concisely.
+
   - Easily readable fonts and simple navigation throughout the site.
     - Fixed navigation bar visible on every page including a menu dropdown and brand logo to link back to the homepage.
+
   - An aesthetically pleasing 404 page if the user is directed to a non-existent page.
 
 - **Buttons**
     - Clear interactive buttons used for a effortless user journey.
 
 - **Forms**
-  - Forms used for login and register and adding and editing the recipe and cuisine cards.
-  - Materialize elements used include input fields, text area fields, radio buttons, select dropdowns and submit buttons.
+  - Forms used for login and register modal, and adding/editing recipes and cuisines.
+
+  - Materialize form elements used include input fields, text area fields, radio buttons, select dropdowns and submit buttons.
 
 - **Tabs**
   - Interactive tab used to allow the user to switch between recipe ingredients and method.
 
 - **Card Listings**
   - Used to display recipes, cuisine categories, and recipe books.
+
   - Image included contributing to the visual look.
 
 - **Modals**
-  - Used for login and register form and, recipe and cuisine card delete confirmation.
+  - Used for login and register form, and recipe and cuisine card delete confirmation.
 
 - **Carousel**
-  - Used for recipe categories displayed on the homepage.
+  - Used for cuisine categories displayed on the homepage.
 
 - **Search bar**
   - Allows the user to search recipes by keywords using text index searching. Recipe names, cuisine names, ingredients, and food categories are included as the keywords for the query.
@@ -206,11 +211,16 @@ As part of the design process, before starting my project I sketched out initial
 I will continue to update my website as I grow my platform of users. I have future development plans which I have listed below.
 
 **Future Development plans**
-- I will continue to add more cuisine cards as I grow my user base.
+- I will continue to add more cuisine categories as I grow my user base.
+
 - Add a review option so my users can share their options on recipes they have tried.
+
 - Create a parent forum to add more social interaction between my users.
-- Add Dietary requirements information to recipes.
-- Add an email address input to the register modal so if a user forgets their password I can send a link to their email to reset it.
+
+- Add Dietary requirements information to recipes information.
+
+- Add an email address input field on the registration modal so if a user forget their password they can be sent a link to reset it.
+
 ---
 
 ## &rarr; **Technologies**
@@ -264,7 +274,7 @@ I will continue to update my website as I grow my platform of users. I have futu
 
 - [**Heroku**](https://github.com/)
 
-  - Heroku is used to store the project code after being pushed from Git.
+  - Heroku is the app platform I deployed my project to.
 
 - [**Balsamiq**](https://balsamiq.com/)
 
@@ -293,7 +303,7 @@ I will continue to update my website as I grow my platform of users. I have futu
 
 The project was connected to Heroku using automatic deployment from my GitPod repository, using the following steps...
 
-> **Note:** Before following the below steps ensure you have already created your new repo in Github and set up an env.py file to store your sensitive data.
+> **Note:** Before following the below steps ensure you have already created your new repo in Github and set up an env.py file to store your sensitive data. (Further details on adding an env.py file below)
 
 1. In the terminal create requirements.txt and Procfile files using the commands below:
    - $ pip3 freeze --local > requirements.txt
@@ -331,12 +341,12 @@ This is the name of your repo in GitHub. It is good practice to use an identical
 
    ![Config Vars](static/assets/images/readme/config-vars.png)
 
-   Enter variables (key and value) contained in the env.py file. The keys are listed below and values are tailored to the user.
-     - IP
-   - PORT
-   - SECRET_KEY
-   - MONGO_URI
-   - MONGO_DBNAME
+   Enter variables (key and value) contained in the env.py file. The keys are listed below and values are inputted by the user.
+    - IP
+    - PORT
+    - SECRET_KEY
+    - MONGO_URI
+    - MONGO_DBNAME
 
 8. Push requirements.txt and Procfile to repository:
   <u>requirements.txt</u>
@@ -430,7 +440,7 @@ When you clone a repository, the repository is copied on to your local machine.
    - os.environ.setdefault("MONGO_URI", "To be added by user") 
    - os.environ.setdefault("MONGO_DBNAME", "To be added by user")
 
-   > **Note:** I used [RandomKeygen.com](https://randomkeygen.com/) to get my secure SECRET_KEY password. A SECRET_KEY is required when using the flash and session functions of Flask.
+    > **Note:** I used [RandomKeygen.com](https://randomkeygen.com/) to get my secure SECRET_KEY password. A SECRET_KEY is required when using the flash and session functions of Flask.
 
  2. Create a file named .gitignore and include env.py to ensure this file is never pushed to GitHub.
     > **Note:** The env.py mustn't be tracked as any GitHub user can access your confidential data.
@@ -474,6 +484,8 @@ When you clone a repository, the repository is copied on to your local machine.
 #### Acknowledgements
 
 - My Mentor, Aaron for his continuous help and support throughout the project.
+
+- The help and support recieved by the tutors at [Code Institute](https://codeinstitute.net/).
 
 - The [Code Institute](https://codeinstitute.net/) Slack Community.
 
