@@ -225,6 +225,7 @@ I used the PEP8 online checking tool to inspect my Python code against the style
 - [**HTML Validator**](https://validator.w3.org/)
 
   No error or warning messages were received.
+  - To get the most accurate read of my html for validation, I ran my app and extracted my code from 'View page source'.
 
 - [**CSS Validator**](https://jigsaw.w3.org/css-validator/)
 
