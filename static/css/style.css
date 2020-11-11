@@ -433,7 +433,7 @@ i.fas.fa-exclamation {
 }
 
 .recipe-card {
-  height: 260px;
+  height: 240px;
 }
 .cuisine-card {
   height: 210px;
@@ -917,6 +917,9 @@ div#method.col.s12 {
   .cuisine-card-container {
     margin-top: 12% !important;
   }
+   .recipe-card {
+    height: 250px;
+  }
   .page-callout-text {
     top: 95%;
   }
@@ -1074,7 +1077,6 @@ div#method.col.s12 {
   .recipe-card {
     height: 280px;
   }
-
   .cuisine-card {
   height: 240px;
 }
