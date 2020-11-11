@@ -219,7 +219,9 @@ I will continue to update my website as I grow my platform of users. I have futu
 
 - Add Dietary requirements information to recipes information.
 
-- Add an email address input field on the registration modal so if a user forget their password they can be sent a link to reset it.
+- Add age filter so parents can easily search recipes specific to their childs age.
+
+- Add an email address input field on the registration modal so if a user forgets their password they can be sent a link to reset it.
 
 - Change the image URL input to a media upload option.
 
@@ -477,17 +479,17 @@ When you clone a repository, the repository is copied on to your local machine.
 
 - The images used for the callout on the recipes, cuisines, and books page are all from [Annabel Karmel](https://www.annabelkarmel.com/).
 
-- All recipe images added by users lucyjpj (admin) and susan are from [Organix](https://www.organix.com/), [Annabel Karmel](https://www.annabelkarmel.com/) and and [Baby Foode](https://babyfoode.com/) recipes. All other recipes have been added from user testing.
+- All recipe images added by users lucyjpj (admin) and susan are from [Organix](https://www.organix.com/), [Annabel Karmel](https://www.annabelkarmel.com/) and [Baby Foode](https://babyfoode.com/) recipes. All other recipes have been added from user testing.
 
-- Recipe book images are taken from the [Amazon](https://www.amazon.com/).
+- Recipe book images are taken from [Amazon](https://www.amazon.com/).
 
 - The mockup image showing all devices on my README.md was created using [Am I Responsive](http://ami.responsivedesign.is/).
 
-#### Acknowledgements
+#### Acknowledgments
 
 - My Mentor, Aaron for his continuous help and support throughout the project.
 
-- The help and support recieved by the tutors at [Code Institute](https://codeinstitute.net/).
+- The help and support received from the tutors at [Code Institute](https://codeinstitute.net/).
 
 - The [Code Institute](https://codeinstitute.net/) Slack Community.
 

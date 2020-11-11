@@ -225,7 +225,7 @@ I used the PEP8 online checking tool to inspect my Python code against the style
 - [**HTML Validator**](https://validator.w3.org/)
 
   No error or warning messages were received.
-  - To get the most accurate read of my html for validation, I ran my app and extracted my code from 'View page source'.
+  - To get the most accurate read of my HTML for validation, I ran my app and extracted my code from the 'View page source'.
 
 - [**CSS Validator**](https://jigsaw.w3.org/css-validator/)
 
@@ -334,9 +334,10 @@ The low-performance review was mainly driven by the following metrics:
 - The website was viewed on a variety of devices including HP Laptop, Macbook pro, Ipad and IPhones (Version 6,7,8,11, 12)
 
 - Friends and family members were asked to review the site to point out any bugs, user experience issues, and/or suggestions.
-
   - Feedback action:
     - Would like the site to include dietary requirements- this is included in my future development plans.
+    - Would like to have the option to filter by age- this is included in my future development plans.
+    - Links to the book retailers not working correctly- more details in bug section below.
 
 - Project posted on Slack, asking for feedback from fellow students.
 
