@@ -233,8 +233,7 @@ I used the PEP8 online checking tool to inspect my Python code against the style
 
 - [**JS hint**](https://jshint.com/)
 
-
-  ![JShint warnings](static/assets/images/readme/jshint-w.png)
+  <u>**script.js**</u>
 
   <u>Warnings received;</u>
 
@@ -247,6 +246,34 @@ I used the PEP8 online checking tool to inspect my Python code against the style
   > $
 
   $ (Jquery) defined in base.html.
+
+  <u>**select.js**</u>
+
+  <u>Warnings received;</u>
+
+  > 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+
+  > 'class' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+
+  > 'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
+
+  > 'template literal syntax' is only available in ES6 (use 'esversion: 6').
+
+  Warnings above occurred as JShint is using ECMAScript 5.1 specification and my code uses ECMAScript 6 specific syntax. If I add '/*jshint esversion: 6 */' to my file all of these errors are eliminated.
+
+  > The body of a for in should be wrapped in an if statement to filter unwanted properties from the prototype.
+
+  As this isn't my own code and it is working as expected I chose to ignore this warning.
+
+  <u>Undefined variables;</u>
+
+  > component
+
+  > M
+
+  > cash
+
+    These variables are all Materialize JS which is defined in my base.html.
 
 - **Developer tools**
 

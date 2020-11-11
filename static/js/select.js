@@ -343,8 +343,8 @@ $(document).click(function () {
         let disabledClass = option.disabled ? "disabled " : "";
         let optgroupClass =
           type === "optgroup-option" ? "optgroup-option " : "";
-        let multipleCheckbox = this.isMultiple
-          ? `<label><input type="checkbox"${disabledClass}"/><span>${option.innerHTML}</span></label>`
+        let multipleCheckbox = this.isMultiple ? 
+        `<label><input type="checkbox"${disabledClass}"/><span>${option.innerHTML}</span></label>`
           : option.innerHTML;
         let liEl = $("<li></li>");
         let spanEl = $("<span></span>");
