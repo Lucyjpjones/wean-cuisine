@@ -1,8 +1,10 @@
 $(document).click(function () {
+  // Code sourced from 'https://stackoverflow.com/questions/52850091/materialize-select-and-dropdown-touch-event-selecting-wrong-item?answertab=active#tab-top'
   $('.dropdown-content').on("touchend", function (e) {
     e.stopPropagation();
   });
 
+  // Code sourced from 'https://github.com/Dogfalo/materialize/blob/c0da34049deec36efbd4681f73b3446e92918ca8/js/select.js'
   (function ($) {
     "use strict";
 

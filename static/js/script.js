@@ -7,6 +7,8 @@ $(document).ready(function () {
   $(".tabs").tabs();
   $(".tooltipped").tooltip();
 
+  // Code sourced from Code Institute
+  // JS code for select validation
   validateMaterializeSelect();
   function validateMaterializeSelect() {
     let classValid = {
