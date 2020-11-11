@@ -461,7 +461,7 @@ When you clone a repository, the repository is copied on to your local machine.
 
 - [HTML Dog](https://htmldog.com/techniques/404/): Helped with creating custom error page '404'.
 
-- All recipes added by users lucyjpj (admin) and susan are taken from [Organix](https://www.organix.com/) and [Annabel Karmel](https://www.annabelkarmel.com/). All other recipes have been added from user testing.
+- All recipes added by users lucyjpj (admin) and susan are taken from [Organix](https://www.organix.com/), [Annabel Karmel](https://www.annabelkarmel.com/) and [Baby Foode](https://babyfoode.com/). All other recipes have been added from user testing.
 
 #### Media
 
@@ -477,7 +477,7 @@ When you clone a repository, the repository is copied on to your local machine.
 
 - The images used for the callout on the recipes, cuisines, and books page are all from [Annabel Karmel](https://www.annabelkarmel.com/).
 
-- All recipe images added by users lucyjpj (admin) and susan are from [Organix](https://www.organix.com/) and [Annabel Karmel](https://www.annabelkarmel.com/) recipes. All other recipes have been added from user testing.
+- All recipe images added by users lucyjpj (admin) and susan are from [Organix](https://www.organix.com/), [Annabel Karmel](https://www.annabelkarmel.com/) and and [Baby Foode](https://babyfoode.com/) recipes. All other recipes have been added from user testing.
 
 - Recipe book images are taken from the [Amazon](https://www.amazon.com/).
 
