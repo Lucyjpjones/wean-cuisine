@@ -221,6 +221,8 @@ I will continue to update my website as I grow my platform of users. I have futu
 
 - Add an email address input field on the registration modal so if a user forget their password they can be sent a link to reset it.
 
+- Change the image URL input to a media upload option.
+
 ---
 
 ## &rarr; **Technologies**
