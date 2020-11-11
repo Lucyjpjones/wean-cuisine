@@ -210,9 +210,7 @@ i.fas.fa-exclamation {
   font-weight: 600 !important;
 }
 
-/* -------------------- Homepage*/
-
-/* -------- Callout*/
+/* -------- Homepage callout*/
 
 #callout {
   position: relative;
@@ -261,7 +259,7 @@ i.fas.fa-exclamation {
   vertical-align: bottom;
 }
 
-/* -------- About*/
+/* -------- About section*/
 
 #about {
   padding-top: 12%;
@@ -434,9 +432,11 @@ i.fas.fa-exclamation {
   text-transform: capitalize;
 }
 
-.recipe-card,
+.recipe-card {
+  height: 260px;
+}
 .cuisine-card {
-  height: 230px;
+  height: 210px;
 }
 
 .card-img {
@@ -566,10 +566,6 @@ h5.del-modal {
 .page-callout-text .callout-add-btn i {
   font-size: 16px;
   vertical-align: bottom;
-}
-
-.cuisine-card {
-  height: 210px;
 }
 
 /* -------- Search bar*/
@@ -1076,11 +1072,12 @@ div#method.col.s12 {
     min-height: 130px;
   }
   .recipe-card {
-    height: 260px;
+    height: 280px;
   }
+
   .cuisine-card {
-    height: 240px;
-  }
+  height: 240px;
+}
   button#search-btn i,
   a#clear-btn i {
     font-size: 24px;
@@ -1184,9 +1181,6 @@ div#method.col.s12 {
     .card-img img {
       height: 120px;
     }
-    .recipe-card {
-      height: 250px;
-    }
     .card-btn {
       font-size: 11px;
     }
@@ -1267,7 +1261,7 @@ div#method.col.s12 {
       height: 170px;
     }
     .recipe-card {
-      height: 300px;
+      height: 320px;
     }
     .cuisine-card {
       height: 290px;
