@@ -747,7 +747,7 @@ textarea.materialize-textarea {
   border-radius: 6px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-  margin-top: 10%;
+  margin-top: 15%;
   margin-bottom: 8%;
 }
 
@@ -917,7 +917,7 @@ div#method.col.s12 {
   .cuisine-card-container {
     margin-top: 12% !important;
   }
-   .recipe-card {
+  .recipe-card {
     height: 250px;
   }
   .page-callout-text {
@@ -1064,6 +1064,13 @@ div#method.col.s12 {
   #book-card-container {
     margin-top: 6% !important;
   }
+  #age-circle {
+      width: 80px;
+      height: 70px;
+    }
+    .page-callout-text p {
+      font-size: 13px;
+    }
   #yellow-container {
     margin-top: 10%;
     margin-bottom: 4%;
@@ -1078,8 +1085,8 @@ div#method.col.s12 {
     height: 280px;
   }
   .cuisine-card {
-  height: 240px;
-}
+    height: 240px;
+  }
   button#search-btn i,
   a#clear-btn i {
     font-size: 24px;
@@ -1173,6 +1180,13 @@ div#method.col.s12 {
     }
     #view-recipe-img {
       height: 300px;
+    }
+    #age-circle {
+      width: 90px;
+      height: 80px;
+    }
+    .page-callout-text p {
+      font-size: 14px;
     }
     #yellow-container {
       margin-top: 8%;
